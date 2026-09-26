@@ -60,7 +60,9 @@ def build_payload(summary: DailySummary, page_url: str) -> dict[str, Any]:
     desc = [head] if head else []
     if summary.comment:
         # the index sentence duplicates the headline above
-        comment = summary.comment.split("。", 1)[1] if summary.comment.startswith("日経平均は") else summary.comment
+        comment = summary.comment
+        if comment.startswith("日経平均は"):
+            comment = comment.split("。", 1)[1]
         if comment.strip():
             desc.append(comment.strip())
     if summary.breadth and summary.breadth.total:
