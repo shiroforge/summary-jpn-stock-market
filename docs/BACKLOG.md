@@ -14,7 +14,8 @@
 | P0-5 | done | ダミーデータ生成とテンプレート（日次ページ） | `tests/fixtures/sample_summary.json` から HTML を生成できる |
 | P0-6 | done | ドキュメント（CLAUDE.md, SPEC, DESIGN, BACKLOG, DECISIONS） | — |
 | P0-7 | done | CI（GitHub Actions: lint・型・テスト） | `.github/workflows/ci.yml` |
-| P0-8 | review 🔒 | **G1**: 仕様とモック画面の承認 | ユーザーが承認。フィードバックは P0-9 以降に追加する |
+| P0-8 | done 🔒 | **G1**: 仕様とモック画面の承認 | 「いったん進めて」で仮承認（D-10） |
+| P0-9 | done | テーマ株の銘柄数の拡充（ユーザーの要望） | 19テーマ・257銘柄。全コードを確認済み |
 
 ## Phase 1: データとページ（ローカル）
 
