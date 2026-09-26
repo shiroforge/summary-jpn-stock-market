@@ -49,3 +49,26 @@ def test_render_rates_and_surge(sample: DailySummary) -> None:
     html = render_daily(sample)
     assert 'id="rates"' in html and "bp</td>" in html
     assert "出来高急増" in html and "万株" in html
+
+
+def test_render_trends() -> None:
+    from jpmarket.render.builder import render_trends
+
+    daily = [0.5] * 70
+    trends = {
+        "asof": "2026-09-25",
+        "dates": [(dt.date(2026, 6, 1) + dt.timedelta(days=i)).isoformat() for i in range(70)],
+        "periods": [
+            {"key": "d1", "label": "1日", "scale": 1.0},
+            {"key": "d20", "label": "20日", "scale": 4.472},
+        ],
+        "sectors": [
+            {"id": "s:銀行業", "name": "銀行業", "periods": {"d1": 0.5, "d20": 10.5}, "daily": daily},
+            {"id": "s:鉱業", "name": "鉱業", "periods": {"d1": -0.2, "d20": None}, "daily": daily},
+        ],
+        "themes": [{"id": "t:x", "name": "X</script>", "periods": {"d1": 1.0, "d20": 2.0}, "daily": daily}],
+    }
+    html = render_trends(trends)
+    assert html.index("銀行業") < html.index("鉱業")  # sorted by 20日, missing last
+    assert 'data-chart="s:銀行業"' in html and 'id="trends-data"' in html
+    assert "X<\\/script>" in html  # embedded JSON cannot close the script tag

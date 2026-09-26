@@ -45,14 +45,14 @@
 | P2-1 | done | `notify/discord.py`（Embed・エラー通知・dry-run） | ペイロードのスナップショットテスト |
 | P2-2 | done | `.github/workflows/daily.yml`（cron、再試行、JSONのコミット、Pages へのデプロイ、通知） | 手動実行（workflow_dispatch）で成功する |
 | P2-3 | done | GitHub Actions 上で yfinance の429を確認する | 結果を DECISIONS に記録 |
-| P2-4 | review 🔒 | **G3**: 通知の文面と、公開・cron の有効化の承認 | |
+| P2-4 | done 🔒 | **G3**: 通知の文面と、公開・cron の有効化の承認 | |
 
 ## Phase 3: 拡張（承認を得た順に進める）
 
 | ID | 状態 | タスク |
 |---|---|---|
 | P3-0 | done | クリックで拡大チャート＋外部リンク（D-18） |
-| P3-1 | todo | トレンドページ（60日のヒートマップ、テーマの推移の折れ線） |
+| P3-1 | review | トレンドページ（60日のヒートマップ、テーマの推移の折れ線） |
 | P3-2 | todo 🔒💰 | LLM（Claude API）: ニュース要約・一言コメント・テーマ候補の提案 |
 | P3-3 | todo 🔒 | TDnet の適時開示（上方修正・決算） |
 | P3-4 | todo 🔒💰 | J-Quants への切り替え（公式の33業種・TOPIX） |

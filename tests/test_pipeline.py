@@ -155,7 +155,9 @@ def test_histories_skip_jp_holidays(tmp_path: Path) -> None:
 def test_chart_payload(tmp_path: Path) -> None:
     from jpmarket.pipeline import build
 
-    summary, charts = build(T, settings(tmp_path), deps(FakeSource(), IndexClose(T, 4128.59, 4075.30)))
+    res = build(T, settings(tmp_path), deps(FakeSource(), IndexClose(T, 4128.59, 4075.30)))
+    summary, charts = res.summary, res.charts
+    assert res.trends["sectors"] and res.trends["dates"][-1] == "2026-09-25"
     s = charts["series"]
     assert charts["asof"] == "2026-09-25"
     code = summary.rankings.turnover[0].code

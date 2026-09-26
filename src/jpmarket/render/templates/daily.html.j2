@@ -26,6 +26,7 @@
     <nav class="daynav" aria-label="日付移動">
       {% if prev_date %}<a href="{{ base_url }}/{{ prev_date.isoformat() }}/">← 前営業日</a>{% else %}<span class="dis">← 前営業日</span>{% endif %}
       <a href="{{ base_url }}/archive/">アーカイブ</a>
+      <a href="{{ base_url }}/trends/">トレンド</a>
       {% if next_date %}<a href="{{ base_url }}/{{ next_date.isoformat() }}/">翌営業日 →</a>{% else %}<span class="dis">翌営業日 →</span>{% endif %}
     </nav>
     <div class="colorpref" role="group" aria-label="上昇色">
@@ -181,30 +182,7 @@
   </div>
 </footer>
 <div id="tip" class="tip" role="tooltip" hidden></div>
-<dialog id="chartdlg" class="chartdlg" aria-labelledby="cd-title">
-  <div class="cd-head">
-    <div class="cd-titles">
-      <h2 id="cd-title">チャート</h2>
-      <p id="cd-legend" class="cd-legend mono" aria-live="polite"></p>
-    </div>
-    <button type="button" class="cd-close" id="cd-close" aria-label="閉じる">×</button>
-  </div>
-  <div class="cd-tools">
-    <div class="tabs" role="group" aria-label="期間">
-      <button type="button" data-range="21">1ヶ月</button>
-      <button type="button" data-range="63" aria-selected="true">3ヶ月</button>
-      <button type="button" data-range="126">6ヶ月</button>
-      <button type="button" data-range="0">全期間</button>
-    </div>
-    <p class="cd-ma" id="cd-ma" hidden><i class="ma5"></i>5日 <i class="ma25"></i>25日 <i class="ma75"></i>75日移動平均</p>
-  </div>
-  <div id="cd-chart" class="cd-chart"></div>
-  <p id="cd-msg" class="cd-msg" hidden></p>
-  <div class="cd-foot">
-    <p id="cd-note" class="cd-note"></p>
-    <p id="cd-links" class="cd-links"></p>
-  </div>
-</dialog>
+{{ m.chart_dialog() }}
 <script>
 {{ js | safe }}
 </script>

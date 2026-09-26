@@ -17,17 +17,8 @@
 </style>
 </head>
 <body>
-<header class="topbar">
-  <div class="wrap topbar-in">
-    <a class="brand" href="../">大引けノート</a>
-    <nav class="daynav" aria-label="ナビゲーション"><a href="../">最新</a></nav>
-    <div class="colorpref" role="group" aria-label="上昇色">
-      <span class="lbl">上昇色</span>
-      <button type="button" id="pref-jp" data-updown="jp" aria-pressed="true"><i class="dot up-jp"></i>赤</button>
-      <button type="button" id="pref-us" data-updown="us" aria-pressed="false"><i class="dot up-us"></i>緑</button>
-    </div>
-  </div>
-</header>
+{% import "macros.html.j2" as m %}
+{{ m.topbar("..", "archive") }}
 <main class="wrap">
   <section class="hero"><h1>アーカイブ</h1></section>
   {% for (y, mth), days in months.items() %}

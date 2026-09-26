@@ -1,7 +1,7 @@
 {
  "schema_version": 2,
  "date": "2026-09-25",
- "generated_at": "2026-09-26T18:18:15.143601Z",
+ "generated_at": "2026-09-26T18:49:46.876012Z",
  "sources": [
   "yfinance",
   "JPX TOPIX構成銘柄ウエイト（2026-07-31時点）",
@@ -4099,7 +4099,7 @@
      "volume_ratio": 1.24
     }
    ],
-   "news_count": 7
+   "news_count": 6
   },
   {
    "key": "semi_equipment",
@@ -4559,7 +4559,7 @@
      "volume_ratio": 0.9
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "insurance",
@@ -4649,7 +4649,7 @@
      "volume_ratio": 1.23
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "shipping",
@@ -4739,7 +4739,7 @@
      "volume_ratio": 0.8
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "electronic_parts",
@@ -6409,7 +6409,7 @@
      "volume_ratio": 0.92
     }
    ],
-   "news_count": 4
+   "news_count": 3
   },
   {
    "key": "mlcc",
@@ -6789,7 +6789,7 @@
      "volume_ratio": 1.01
     }
    ],
-   "news_count": 7
+   "news_count": 8
   },
   {
    "key": "space",
@@ -7069,7 +7069,7 @@
      "volume_ratio": 0.47
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "defense",
@@ -8103,26 +8103,6 @@
    ]
   },
   {
-   "title": "パチンコのダイナムがクレーンゲームに参入 160台の店で分かった「意外な客層」（ITmedia ビジネスオンライン）",
-   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1CT2tRNlBjRWdNbnFOYlB4ZWdMbUhkdkxRdVItZWl5T1RnazlUcHdrdVRVcWFGMFdwUVhuTTJVODFBbS00OVdINmtTZlI2aTBBSVhySUk5TTJnR215SGxyS1BzeWFYNjd4VkpVRlVtNU9Wd2pPZ0VzUU1tZ3ViS00?oc=5",
-   "source": "Yahoo!ニュース",
-   "published_at": "2026-09-25T21:10:08Z",
-   "tags": [
-    "game_ent",
-    "construction_machinery"
-   ]
-  },
-  {
-   "title": "金融庁が米データセンター融資の管理体制を注視､3メガや生保‐関係者",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1wb25wVzRrLUpFcnBaVW9MX2lpeTdTSFEzNzlrNjMzYmlXd2pTWjdMUTJUNGFSLXJGbDdWSDBVamJtb1VjS1JncXM1U1B1RVp4NnZ4YlhCeVJZdmEwSVZyWUZ2ZV9ubGVpQ1p6cENueHpJanpnS0tB?oc=5",
-   "source": "bloomberg.com",
-   "published_at": "2026-09-25T07:44:54Z",
-   "tags": [
-    "ai_datacenter",
-    "insurance"
-   ]
-  },
-  {
    "title": "株価 値上がり 金利上昇で銀行銘柄など上昇",
    "url": "https://news.web.nhk/newsweb/na/nd-20260925de52326",
    "source": "NHK経済",
@@ -8160,16 +8140,9 @@
    ]
   },
   {
-   "title": "シカゴ日経平均先物 大取終値比 155円高 （9月25日）(株探ニュース)",
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQbkhIOFJTUVNLV01BNG1nelVnUTZsV0lkT0ZoNGZLMGtmbTVfV2F3MXpzeGRmZXlVRjlIai0wOGtZb0JFWVZuanh6OW1xQk1UT0VKNF9CTDY1VzJCT3diQndKOHVzbmxsMUNWTDNzYWdVVEtCQW51ZzVSQVhDTW8tMzZGUWdUTWM?oc=5",
-   "source": "Yahoo!ファイナンス",
-   "published_at": "2026-09-25T22:45:09Z",
-   "tags": []
-  },
-  {
    "title": "【米国市況】30年債利回りが一段と上昇、原油安で株は堅調－円急伸",
    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5SblZmbFJCTGFBWjdZN3NCcm1fMWEtZkY1N1ZFY1pfbFNfM216dTlzaWxxSnA5SVZteFJJMWg0U01hZHRISEExN19QSEd3LURwWEdUdmRsZjhiQk05UkRMSU9RbmlZbFNkZmZQQkRqRmtwcjBJV2Vj?oc=5",
-   "source": "bloomberg.com",
+   "source": "Bloomberg.com",
    "published_at": "2026-09-25T21:03:17Z",
    "tags": [
     "resources"
@@ -8187,15 +8160,6 @@
    "url": "https://news.web.nhk/newsweb/na/nd-20260925de52314",
    "source": "NHK経済",
    "published_at": "2026-09-25T01:48:00Z",
-   "tags": [
-    "banks"
-   ]
-  },
-  {
-   "title": "米国と日本で起きている「良い金利上昇」と「悪い金利上昇」その見極め方とは？ - media.rakuten-sec.net",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE10QmJzUHhESGxMNVpxUmR1MXhoMjEtNHZ2TWZHS1VDRnZsd1JCUm54V2puSDV2dzJ4SDdMTGVyaWltYllXalpNVWVndmFYQ3dKNnR4NGNRTEhHdw?oc=5",
-   "source": "Google News ビジネス",
-   "published_at": "2026-09-24T22:30:00Z",
    "tags": [
     "banks"
    ]
@@ -8237,12 +8201,12 @@
    ]
   },
   {
-   "title": "ホルムズ海峡「闇タンカー」急増、供給6割に回復 位置情報隠す",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAxVVdVRE5odENwYVFBTWw1S3ZaVURiVW53ajFHVm9GOXZDSUdsU2Q2UWpqdGJaN3hZcUJ0NW02SWlvMEpVYXVqRE1xWTlySXV4YTRjdEdhT0ZKakZmam5OdjNGYldGUDlSdzQ3Zg?oc=5",
-   "source": "日本経済新聞",
-   "published_at": "2026-09-25T18:50:18Z",
+   "title": "ハイパースケーラーAI投資、来年は5割増の1.2兆ドルに－ゴールドマン",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBDTnNzN2tmdy05bVRSRm4wN1hLSXdSeUI4RWY5bkhUU2FRR1NBd19xZlhwZzlYRlh0QmRoOHMyRzlpOGN3V2dDTWg2b3lrVVlaRm9oXzgzandxbDFEdzMwMGloNWo5TkZ3bG80NjROYzRLcEZENEo4?oc=5",
+   "source": "Bloomberg.com",
+   "published_at": "2026-09-25T14:38:48Z",
    "tags": [
-    "shipping"
+    "ai_datacenter"
    ]
   },
   {
@@ -8273,19 +8237,17 @@
    ]
   },
   {
+   "title": "今後１年の日経平均、高値は７万円にとどまる！？ キオクシアなどＡＩ・米中間選挙の動向が焦点 ★★みんなの株価予想",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1fZ0tjUW1FV2NqMmw5bmM2bVNmTlVpVUpWcEhmSXNKcnlzZzNYVV9wSkxHZXJOT1Y1NkItSFhNM1h5MER3MW92Ry1mc2NZd1lBQkpJZ3NR?oc=5",
+   "source": "QUICK Money World",
+   "published_at": "2026-09-25T09:00:00Z",
+   "tags": []
+  },
+  {
    "title": "【速報】大阪・関西万博で活用もトラブル続出の「EVバス」問題受け 大阪メトロが再発防止策を公表 一方で当時の会社トップや責任者などへの追及はこれ以上行わず",
    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE40d0ZsUkpmQjhTd0VJeE1nNFNzdjFfU1ZxWjZFUkZuMFFuUTh1R1laZ3dFMmxac0FPWmFDY2VsVVEzdGZPNVdua05uNnZ3NzdYZ2wxZg?oc=5",
    "source": "Google News ビジネス",
    "published_at": "2026-09-25T08:45:38Z",
-   "tags": [
-    "autos"
-   ]
-  },
-  {
-   "title": "フェラーリ、7623万円のEVを国内披露 CEO「日本市場に期待」",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBYaWJMZnhLbzhZc05hUHBNcmFLYmhocmZRdmNuNWYxZ2pHWVl6ejFFRUFyc0cyZ0FmWldicnFnMnVCX1htazg0dldSNGV6dWRpLXdLVUllem5qNHVwY3MyVmhqLUhHd0p4dXJIWQ?oc=5",
-   "source": "日本経済新聞",
-   "published_at": "2026-09-25T08:00:00Z",
    "tags": [
     "autos"
    ]
@@ -8309,6 +8271,15 @@
    ]
   },
   {
+   "title": "孫正義氏のAI大勝負、膨らむ借金重圧に－OpenAI巨額投資で貸し手警戒",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiZmd2X2xpYlh2aUE1WTZwS3o1VWNwbS01aWdiZGFfRmZBLXktYldUSXd6QXBLamJramNGZFNGZXVQUTJfeEZsd3gyQ1pzN05DMkxHMjF6TEQzNnQwSFI2U3B0VjFWNjNSY2hMb0UwSlF4bklSbGlv?oc=5",
+   "source": "Bloomberg.com",
+   "published_at": "2026-09-25T03:57:49Z",
+   "tags": [
+    "ai_datacenter"
+   ]
+  },
+  {
    "title": "AI議事録の「誰の発言か分からん」を解決。0.1B「Nemotron 3 Diarization」無償公開",
    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9DTmtwSEtSa3RXT0FFVVk3Y2RZWC1pUnM0dC1SUHcwR0lKLTExUDNaNEk3Z3BtX1JUTVkyMnBHTE1DaGNxeENpX0w5cEZVTTZ3TkNzNUwyVHQ1a3JhdjZLOUpHdw?oc=5",
    "source": "PC Watch",
@@ -8327,17 +8298,38 @@
    ]
   },
   {
-   "title": "レーティング週報【最上位を継続＋目標株価を増額】 (9月24日－25日)",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFByMW9FTEVoRU5RWGMyd01VTUpqVnliVnFlbmxxM3FtWGhiM3diYXVGNHUtYklEZE1xc1JObjBSRDczNnZWd2JhN2ZESjVOX1dtRVpFQmRrcEQ0N2RLSzcwYQ?oc=5",
-   "source": "株探",
-   "published_at": "2026-09-25T23:40:05Z",
-   "tags": []
-  },
-  {
    "title": "米国株式市場＝主要3指数上昇、マイクロソフトなどＡＩ関連株がけん引",
    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOZVp4cmhDbzlQYUkyUk9KQVA1MGdWLXMzT1JhQllvcUc2RVAzUGFjWk9YRUw3V19wSUlTVmJESWlIUmh4SW9NRFpFeEU3RFlvWXNlT1BoUGpqZDZmVGV3aTZDNjFKaHBVUTBLclBLVmZ3OWtGMEt1cE5teDE5emFXTUZKYTZyUQ?oc=5",
    "source": "Reuters",
    "published_at": "2026-09-25T20:45:55Z",
+   "tags": []
+  },
+  {
+   "title": "円相場1ドル＝156円台に上昇 1日で2円余円高に 介入警戒強まる",
+   "url": "https://news.web.nhk/newsweb/na/nd-20260926de52516",
+   "source": "NHK経済",
+   "published_at": "2026-09-25T19:50:14Z",
+   "tags": []
+  },
+  {
+   "title": "財務相“日米首脳会談でトランプ大統領から円安懸念示された”",
+   "url": "https://news.web.nhk/newsweb/na/nd-20260925de52321",
+   "source": "NHK経済",
+   "published_at": "2026-09-25T11:00:30Z",
+   "tags": []
+  },
+  {
+   "title": "ジャングリア沖縄 親会社で株主総会 新スポンサーを探す方針",
+   "url": "https://news.web.nhk/newsweb/na/nd-20260925de52445",
+   "source": "NHK経済",
+   "published_at": "2026-09-25T09:29:29Z",
+   "tags": []
+  },
+  {
+   "title": "編集部厳選､注目の経済ニュース！【9月26日】 今週のトピックス＆来週のスケジュール",
+   "url": "https://toyokeizai.net/articles/-/959176?utm_source=rss&utm_medium=http&utm_campaign=link_back",
+   "source": "東洋経済",
+   "published_at": "2026-09-26T00:00:00Z",
    "tags": []
   }
  ],

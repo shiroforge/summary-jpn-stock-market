@@ -13,7 +13,7 @@ import typer
 from jpmarket.calendar import is_trading_day, latest_trading_day
 from jpmarket.config import Settings
 from jpmarket.models import DailySummary
-from jpmarket.pipeline import Deps, StaleDataError, build, save_charts, save_summary, summary_path
+from jpmarket.pipeline import Deps, StaleDataError, build, save_site_data, save_summary, summary_path
 from jpmarket.render.builder import render_daily
 from jpmarket.render.site import build_site, load_all
 from jpmarket.sources.yfinance_src import YFinanceSource
@@ -50,7 +50,6 @@ def run(
         typer.echo(f"{target} is not a trading day; nothing to do")
         raise typer.Exit(EXIT_NOT_TRADING_DAY)
     path = summary_path(settings.data_dir, target)
-    charts = None
     if path.exists() and not force:
         typer.echo(f"{path} exists; skipping collection (use --force to rebuild)")
     else:
@@ -65,17 +64,17 @@ def run(
                 now=dt.datetime.now(dt.UTC),
             )
             try:
-                summary, charts = build(target, settings, deps)
+                result = build(target, settings, deps)
             except StaleDataError as e:
                 typer.echo(f"data not ready: {e}", err=True)
                 raise typer.Exit(EXIT_STALE) from e
+        summary = result.summary
         path = save_summary(summary, settings.data_dir)
+        save_site_data(result, settings.site_dir)
         typer.echo(f"wrote {path}")
         for w in summary.warnings:
             typer.echo(f"warning: {w}", err=True)
     written = build_site(load_all(settings.data_dir), settings.site_dir)
-    if charts is not None:
-        written.append(save_charts(charts, settings.site_dir))
     typer.echo(f"site: {len(written)} files under {settings.site_dir}")
 
 

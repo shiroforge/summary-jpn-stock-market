@@ -120,3 +120,48 @@
   </table>
 </div>
 {% endmacro %}
+
+{% macro chart_dialog() %}
+<dialog id="chartdlg" class="chartdlg" aria-labelledby="cd-title">
+  <div class="cd-head">
+    <div class="cd-titles">
+      <h2 id="cd-title">チャート</h2>
+      <p id="cd-legend" class="cd-legend mono" aria-live="polite"></p>
+    </div>
+    <button type="button" class="cd-close" id="cd-close" aria-label="閉じる">×</button>
+  </div>
+  <div class="cd-tools">
+    <div class="tabs" role="group" aria-label="期間">
+      <button type="button" data-range="21">1ヶ月</button>
+      <button type="button" data-range="63" aria-selected="true">3ヶ月</button>
+      <button type="button" data-range="126">6ヶ月</button>
+      <button type="button" data-range="0">全期間</button>
+    </div>
+    <p class="cd-ma" id="cd-ma" hidden><i class="ma5"></i>5日 <i class="ma25"></i>25日 <i class="ma75"></i>75日移動平均</p>
+  </div>
+  <div id="cd-chart" class="cd-chart"></div>
+  <p id="cd-msg" class="cd-msg" hidden></p>
+  <div class="cd-foot">
+    <p id="cd-note" class="cd-note"></p>
+    <p id="cd-links" class="cd-links"></p>
+  </div>
+</dialog>
+{% endmacro %}
+
+{% macro topbar(base_url, active) %}
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="{{ base_url }}/">大引けノート</a>
+    <nav class="daynav" aria-label="ナビゲーション">
+      <a href="{{ base_url }}/"{% if active == "latest" %} aria-current="page"{% endif %}>最新</a>
+      <a href="{{ base_url }}/archive/"{% if active == "archive" %} aria-current="page"{% endif %}>アーカイブ</a>
+      <a href="{{ base_url }}/trends/"{% if active == "trends" %} aria-current="page"{% endif %}>トレンド</a>
+    </nav>
+    <div class="colorpref" role="group" aria-label="上昇色">
+      <span class="lbl">上昇色</span>
+      <button type="button" id="pref-jp" data-updown="jp" aria-pressed="true"><i class="dot up-jp"></i>赤</button>
+      <button type="button" id="pref-us" data-updown="us" aria-pressed="false"><i class="dot up-us"></i>緑</button>
+    </div>
+  </div>
+</header>
+{% endmacro %}

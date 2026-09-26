@@ -3,11 +3,13 @@
 from __future__ import annotations
 
 import datetime as dt
+import json
 from pathlib import Path
+from typing import Any
 
 from jinja2 import Environment, PackageLoader, StrictUndefined, select_autoescape
 
-from jpmarket.models import DailySummary, QuoteCategory
+from jpmarket.models import DailySummary, QuoteCategory, SeriesHistory
 
 WEEKDAYS_JA = "月火水木金土日"
 JST = dt.timezone(dt.timedelta(hours=9), "JST")
@@ -158,4 +160,51 @@ def render_daily(
         charts_url=charts_url if charts_url is not None else f"{base_url}/data/charts.json",
         css=(STATIC_DIR / "style.css").read_text(encoding="utf-8"),
         js=(STATIC_DIR / "app.js").read_text(encoding="utf-8"),
+    )
+
+
+def _by_d20(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Strongest 20-session performers first; items without a 20-session figure last."""
+    return sorted(rows, key=lambda r: (r["periods"].get("d20") is None, -(r["periods"].get("d20") or 0)))
+
+
+def _heat_history(trends: dict[str, Any], rows: list[dict[str, Any]], n: int = 60) -> SeriesHistory:
+    dates = [dt.date.fromisoformat(d) for d in trends["dates"]][-n:]
+    return SeriesHistory(dates=dates, series={r["id"][2:]: r["daily"][-n:] for r in rows})
+
+
+def render_trends(
+    trends: dict[str, Any], *, standalone: bool = True, base_url: str = "..", charts_url: str | None = None
+) -> str:
+    """Trends page: multi-period table, cumulative line chart, 60-session heatmap."""
+    sectors, themes = _by_d20(trends["sectors"]), _by_d20(trends["themes"])
+    payload = json.dumps(
+        {
+            "dates": trends["dates"],
+            "items": [{"id": r["id"], "name": r["name"], "daily": r["daily"]} for r in sectors + themes],
+        },
+        ensure_ascii=False,
+        separators=(",", ":"),
+    ).replace("</", "<\\/")
+    return (
+        make_env()
+        .get_template("trends.html.j2")
+        .render(
+            standalone=standalone,
+            base_url=base_url,
+            charts_url=charts_url if charts_url is not None else f"{base_url}/data/charts.json",
+            asof=dt.date.fromisoformat(trends["asof"]),
+            periods=trends["periods"],
+            sectors=sectors,
+            themes=themes,
+            heat_s=_heat_history(trends, sectors),
+            heat_s_order=[r["id"][2:] for r in sectors],
+            heat_t=_heat_history(trends, themes),
+            heat_t_order=[r["id"][2:] for r in themes],
+            heat_t_labels={r["id"][2:]: r["name"] for r in themes},
+            payload=payload,
+            css=(STATIC_DIR / "style.css").read_text(encoding="utf-8"),
+            js=(STATIC_DIR / "app.js").read_text(encoding="utf-8"),
+            trends_js=(STATIC_DIR / "trends.js").read_text(encoding="utf-8"),
+        )
     )

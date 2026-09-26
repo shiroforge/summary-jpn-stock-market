@@ -3,10 +3,11 @@
 from __future__ import annotations
 
 import datetime as dt
+import json
 from pathlib import Path
 
 from jpmarket.models import DailySummary
-from jpmarket.render.builder import STATIC_DIR, make_env, render_daily
+from jpmarket.render.builder import STATIC_DIR, make_env, render_daily, render_trends
 
 
 def load_all(data_dir: Path) -> list[DailySummary]:
@@ -39,6 +40,12 @@ def build_site(
         p.write_text(render_daily(s, base_url="..", prev_date=prev_d, next_date=next_d), encoding="utf-8")
         written.append(p)
     written.append(_write_archive(summaries, site_dir))
+    trends_json = site_dir / "data" / "trends.json"
+    if trends_json.exists():
+        p = site_dir / "trends" / "index.html"
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(render_trends(json.loads(trends_json.read_text(encoding="utf-8"))), encoding="utf-8")
+        written.append(p)
     written.append(_write_index(summaries, site_dir))
     (site_dir / ".nojekyll").write_text("", encoding="utf-8")
     return written

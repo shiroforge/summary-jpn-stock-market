@@ -15,6 +15,7 @@ import pandas as pd
 from jpmarket.analytics import core
 from jpmarket.analytics.charts import build_chart_payload
 from jpmarket.analytics.comment import market_comment
+from jpmarket.analytics.trends import build_trends
 from jpmarket.calendar import is_trading_day, prev_trading_day
 from jpmarket.config import QuoteSpec, Settings
 from jpmarket.models import DailySummary, NewsItem, Quote, QuoteCategory
@@ -92,12 +93,19 @@ def topix_quote(
     return q.model_copy(update={"is_proxy": official is None}), warn
 
 
+@dataclass
+class BuildResult:
+    summary: DailySummary
+    charts: dict[str, Any]  # site/data/charts.json
+    trends: dict[str, Any]  # site/data/trends.json
+
+
 def build_summary(target: dt.date, settings: Settings, deps: Deps) -> DailySummary:
-    return build(target, settings, deps)[0]
+    return build(target, settings, deps).summary
 
 
-def build(target: dt.date, settings: Settings, deps: Deps) -> tuple[DailySummary, dict[str, Any]]:
-    """The day's summary plus the chart payload for site/data/charts.json."""
+def build(target: dt.date, settings: Settings, deps: Deps) -> BuildResult:
+    """The day's summary plus the payloads for the chart dialog and the trends page."""
     warnings: list[str] = []
     master = deps.master or load_master(settings.cache_dir, today=target, client=deps.http)
     codes = [c.code for c in master.constituents]
@@ -239,14 +247,19 @@ def build(target: dt.date, settings: Settings, deps: Deps) -> tuple[DailySummary
         fred=fred,
         topix_close=tq.close if tq else None,
     )
-    return summary, charts
+    trends = build_trends(master.constituents, settings.themes, rets, target)
+    return BuildResult(summary=summary, charts=charts, trends=trends)
 
 
-def save_charts(charts: dict[str, Any], site_dir: Path) -> Path:
-    p = site_dir / "data" / "charts.json"
-    p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(charts, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    return p
+def save_site_data(result: BuildResult, site_dir: Path) -> list[Path]:
+    """charts.json / trends.json live only in the built site (raw OHLC; not committed, see D-12/D-18)."""
+    out = []
+    for name, payload in (("charts", result.charts), ("trends", result.trends)):
+        p = site_dir / "data" / f"{name}.json"
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        out.append(p)
+    return out
 
 
 def save_summary(summary: DailySummary, data_dir: Path) -> Path:
