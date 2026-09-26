@@ -1,0 +1,11 @@
+# ニュースRSS。見出しとリンクのみ保存し、本文は保存・転載しない。
+# filter: 指定した場合、見出しにいずれかの語を含むものだけ採用
+feeds:
+  - {name: NHK経済, url: "https://www.nhk.or.jp/rss/news/cat5.xml"}
+  - {name: Yahoo!ニュース経済, url: "https://news.yahoo.co.jp/rss/topics/business.xml"}
+  - {name: Yahoo!ニュース国際, url: "https://news.yahoo.co.jp/rss/topics/world.xml"}
+  - {name: 日経速報, url: "https://assets.wor.jp/rss/rdf/nikkei/news.rdf"}
+  - {name: Google News 株式, url: "https://news.google.com/rss/search?q=%E6%97%A5%E7%B5%8C%E5%B9%B3%E5%9D%87+OR+%E6%9D%B1%E8%A8%BC+when:1d&hl=ja&gl=JP&ceid=JP:ja"}
+  - {name: Google News ビジネス, url: "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=ja&gl=JP&ceid=JP:ja"}
+  - {name: 東洋経済, url: "https://toyokeizai.net/list/feed/rss"}
+max_items: 30

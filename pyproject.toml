@@ -1,0 +1,61 @@
+[project]
+name = "jpmarket"
+version = "0.1.0"
+description = "東証の引け後サマリ（指数・33業種・テーマ・ニュース）を静的サイトとDiscordで配信"
+authors = [
+    { name = "shiroforge", email = "sf.engineer20231201@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "feedparser>=6.0.14",
+    "httpx>=0.28.1",
+    "jinja2>=3.1.6",
+    "jpholiday>=1.0.3",
+    "pandas>=3.0.6",
+    "pydantic>=2",
+    "pydantic-settings>=2.15.0",
+    "pyyaml>=6.0.3",
+    "typer>=0.27.2",
+    "xlrd>=2.0.2",
+    "yfinance>=1.7.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.3.1",
+    "pandas-stubs>=3.0.5.260914",
+    "playwright>=1.63.0",
+    "pytest>=9.1.1",
+    "ruff>=0.16.9",
+    "types-pyyaml>=6.0.12.20260906",
+]
+
+[project.scripts]
+jpmarket = "jpmarket.cli:app"
+
+[tool.ruff]
+line-length = 110
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+ignore = ["RUF001", "RUF002", "RUF003"]  # full-width Japanese punctuation is intentional
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+plugins = ["pydantic.mypy"]
+mypy_path = "src"
+
+[[tool.mypy.overrides]]
+module = ["yfinance.*", "feedparser.*", "jpholiday.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q -m 'not network'"
+markers = ["network: hits real external services (run with -m network)"]

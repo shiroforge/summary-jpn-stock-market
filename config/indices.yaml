@@ -1,0 +1,39 @@
+# 表示する指数・為替・海外指標。source: yfinance | yahoo_jp（TOPIXなどyfinanceで取得できないもの）
+# is_proxy: true の場合は画面に「ETF代用」と表示する
+quotes:
+  - {key: nikkei225, name: 日経平均, ticker: "^N225", category: domestic, source: yfinance}
+  - {key: topix, name: TOPIX, ticker: "998405.T", category: domestic, source: yahoo_jp}
+  - {key: growth250, name: グロース250, ticker: "2516.T", category: domestic, source: yfinance, is_proxy: true}
+  - {key: jpx400, name: JPX日経400, ticker: "1591.T", category: domestic, source: yfinance, is_proxy: true}
+  - {key: nk_futures, name: 日経平均先物(CME), ticker: "NIY=F", category: futures_vol, source: yfinance}
+  - {key: nikkei_vi, name: 日経VI, ticker: "^NKVI.OS", category: futures_vol, source: yfinance}
+  - {key: usdjpy, name: ドル円, ticker: "USDJPY=X", category: fx, source: yfinance, unit: 円}
+  - {key: eurjpy, name: ユーロ円, ticker: "EURJPY=X", category: fx, source: yfinance, unit: 円}
+  - {key: sp500, name: S&P500, ticker: "^GSPC", category: overseas, source: yfinance}
+  - {key: nasdaq, name: NASDAQ, ticker: "^IXIC", category: overseas, source: yfinance}
+  - {key: dow, name: NYダウ, ticker: "^DJI", category: overseas, source: yfinance}
+  - {key: sox, name: SOX指数, ticker: "^SOX", category: overseas, source: yfinance}
+  - {key: us10y, name: 米10年債利回り, ticker: "^TNX", category: overseas, source: yfinance, unit: "%"}
+  - {key: vix, name: VIX, ticker: "^VIX", category: overseas, source: yfinance}
+  - {key: wti, name: WTI原油, ticker: "CL=F", category: commodity, source: yfinance}
+  - {key: gold, name: 金, ticker: "GC=F", category: commodity, source: yfinance}
+
+# TOPIX-17業種ETF（NEXT FUNDS）。補助指標として表示
+sector17_etfs:
+  - {code: "1617", name: 食品}
+  - {code: "1618", name: エネルギー資源}
+  - {code: "1619", name: 建設・資材}
+  - {code: "1620", name: 素材・化学}
+  - {code: "1621", name: 医薬品}
+  - {code: "1622", name: 自動車・輸送機}
+  - {code: "1623", name: 鉄鋼・非鉄}
+  - {code: "1624", name: 機械}
+  - {code: "1625", name: 電機・精密}
+  - {code: "1626", name: 情報通信・サービスその他}
+  - {code: "1627", name: 電力・ガス}
+  - {code: "1628", name: 運輸・物流}
+  - {code: "1629", name: 商社・卸売}
+  - {code: "1630", name: 小売}
+  - {code: "1631", name: 銀行}
+  - {code: "1632", name: 金融（除く銀行）}
+  - {code: "1633", name: 不動産}

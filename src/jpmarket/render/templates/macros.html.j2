@@ -1,0 +1,84 @@
+{% macro spark(values, t, w=120, h=36) %}
+{% set p = spark_path(values, w, h) %}
+<svg class="spark {{ t }}" viewBox="0 0 {{ w }} {{ h }}" width="{{ w }}" height="{{ h }}" aria-hidden="true" focusable="false">
+  <path class="area" d="{{ p.area }}"/>
+  <path class="line" d="{{ p.line }}"/>
+  <circle class="end" cx="{{ '%.1f' % p.x }}" cy="{{ '%.1f' % p.y }}" r="2.5"/>
+</svg>
+{% endmacro %}
+
+{% macro tile(q) %}
+<article class="tile {{ q.change_pct | tone }}">
+  <header>
+    <h3>{{ q.name }}</h3>
+    {% if q.is_proxy %}<span class="proxy" data-tip="指数値を無料で取得できないため、連動ETF（{{ q.ticker }}）の値で代用しています">ETF代用</span>{% endif %}
+  </header>
+  <p class="price mono">{{ q.close | num }}</p>
+  <p class="chg"><span class="mono">{{ q.change | signed }}</span><span class="pill {{ q.change_pct | tone }} mono">{{ q.change_pct | pct }}</span></p>
+  {{ spark(q.spark, q.change_20d_pct | tone) }}
+  <dl class="periods">
+    <div><dt>5日</dt><dd class="mono {{ q.change_5d_pct | tone }}">{{ q.change_5d_pct | pct(1) }}</dd></div>
+    <div><dt>20日</dt><dd class="mono {{ q.change_20d_pct | tone }}">{{ q.change_20d_pct | pct(1) }}</dd></div>
+  </dl>
+</article>
+{% endmacro %}
+
+{% macro breadth(b) %}
+<div class="breadth" aria-label="騰落銘柄数">
+  <div class="bbar" role="img" aria-label="値上がり {{ b.advancers }}、変わらず {{ b.unchanged }}、値下がり {{ b.decliners }}">
+    <span class="seg up" style="flex: {{ b.advancers }}"></span>
+    <span class="seg flat" style="flex: {{ b.unchanged }}"></span>
+    <span class="seg down" style="flex: {{ b.decliners }}"></span>
+  </div>
+  <dl class="bstats">
+    <div><dt>値上がり</dt><dd class="mono up">{{ b.advancers }}</dd></div>
+    <div><dt>変わらず</dt><dd class="mono">{{ b.unchanged }}</dd></div>
+    <div><dt>値下がり</dt><dd class="mono down">{{ b.decliners }}</dd></div>
+    {% if b.adv_dec_ratio_25d is not none %}<div><dt data-tip="25日間の値上がり銘柄数合計÷値下がり銘柄数合計。120%超で過熱、70%未満で売られすぎの目安">騰落レシオ25日</dt><dd class="mono">{{ '%.1f' % b.adv_dec_ratio_25d }}%</dd></div>{% endif %}
+    {% if b.new_highs is not none %}<div><dt>年初来高値</dt><dd class="mono">{{ b.new_highs }}</dd></div>{% endif %}
+    {% if b.new_lows is not none %}<div><dt>年初来安値</dt><dd class="mono">{{ b.new_lows }}</dd></div>{% endif %}
+  </dl>
+</div>
+{% endmacro %}
+
+{% macro heatmap(hist, order, labels) %}
+<div class="tablewrap">
+  <table class="heat">
+    <thead>
+      <tr><th></th>{% for d in hist.dates %}<th class="mono" scope="col">{% if loop.first or d.day <= 7 and hist.dates[loop.index0 - 1].month != d.month %}{{ d.month }}/{% endif %}{{ d.day }}</th>{% endfor %}</tr>
+    </thead>
+    <tbody>
+      {% for key in order if key in hist.series %}
+      <tr>
+        <th scope="row">{{ labels.get(key, key) }}</th>
+        {% for v in hist.series[key] %}
+        <td class="hc {{ v | heat }}" data-tip="{{ labels.get(key, key) }}｜{{ hist.dates[loop.index0].strftime('%m/%d') }} {{ v | pct }}"><span class="sr">{{ v | pct }}</span></td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endmacro %}
+
+{% macro ranktable(title, rows, mode) %}
+<div class="rankcol">
+  <h3>{{ title }}</h3>
+  <table class="rtable">
+    <tbody>
+    {% for r in rows %}
+      <tr>
+        <td class="mono muted">{{ r.code }}</td>
+        <th scope="row"><span class="rname">{{ r.name }}</span>{% if r.sector33 %}<span class="rsec">{{ r.sector33 }}</span>{% endif %}</th>
+        {% if mode == "turnover" %}
+        <td class="r mono">{{ r.turnover | oku }}</td>
+        <td class="r mono {{ r.change_pct | tone }}">{{ r.change_pct | pct(1) }}</td>
+        {% else %}
+        <td class="r mono {{ r.change_pct | tone }}">{{ r.change_pct | pct }}</td>
+        {% endif %}
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endmacro %}

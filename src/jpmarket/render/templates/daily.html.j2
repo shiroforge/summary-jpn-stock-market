@@ -1,0 +1,194 @@
+{% import "macros.html.j2" as m %}
+{% if standalone %}
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+{% endif %}
+<title>大引けノート</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@700;900&display=swap">
+<style>
+{{ css | safe }}
+</style>
+{% if standalone %}
+</head>
+<body>
+{% endif %}
+{% set nk = s.quote("nikkei225") %}
+{% set tp = s.quote("topix") %}
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="{{ base_url }}/">大引けノート</a>
+    <nav class="daynav" aria-label="日付移動">
+      {% if prev_date %}<a href="{{ base_url }}/{{ prev_date.isoformat() }}/">← 前営業日</a>{% else %}<span class="dis">← 前営業日</span>{% endif %}
+      <a href="{{ base_url }}/archive/">アーカイブ</a>
+      {% if next_date %}<a href="{{ base_url }}/{{ next_date.isoformat() }}/">翌営業日 →</a>{% else %}<span class="dis">翌営業日 →</span>{% endif %}
+    </nav>
+    <div class="colorpref" role="group" aria-label="上昇色">
+      <span class="lbl">上昇色</span>
+      <button type="button" id="pref-jp" data-updown="jp" aria-pressed="true"><i class="dot up-jp"></i>赤</button>
+      <button type="button" id="pref-us" data-updown="us" aria-pressed="false"><i class="dot up-us"></i>緑</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero" aria-labelledby="h-date">
+    <p class="eyebrow">東証 大引け ・ 15:30 確定値</p>
+    <h1 id="h-date">{{ s.date | jdate }}</h1>
+    {% for w in s.warnings %}<p class="warn">{{ w }}</p>{% endfor %}
+    {% if s.comment %}<p class="comment">{{ s.comment }}</p>{% endif %}
+
+    <div class="tiles">
+      {% for q in s.quotes if q.category == QuoteCategory.DOMESTIC %}
+        {{ m.tile(q) }}
+      {% endfor %}
+    </div>
+
+    {% if s.breadth %}{{ m.breadth(s.breadth) }}{% endif %}
+  </section>
+
+  <section class="block" id="sectors" aria-labelledby="h-sectors">
+    <div class="block-head">
+      <h2 id="h-sectors">セクター <span class="sub">東証33業種</span></h2>
+      {% if not s.sectors_official %}<span class="badge" data-tip="TOPIX構成銘柄の騰落率をTOPIXウエイトで加重して算出した推計値です。公式の業種別指数とはわずかに異なります。">推計値</span>{% endif %}
+    </div>
+    {% set smax = nice_max(s.sectors | map(attribute="change_pct") | list) %}
+    <div class="divbars" style="--max: {{ smax }}">
+      <div class="axis" aria-hidden="true"><span>{{ pct(-smax, 0) }}</span><span>0</span><span>{{ pct(smax, 0) }}</span></div>
+      {% for sec in s.sectors %}
+        {% set tipt %}{{ sec.name }}｜加重 {{ sec.change_pct | pct }}・中央値 {{ sec.median_pct | pct }}｜上昇 {{ sec.advancers }} / 下落 {{ sec.decliners }}（{{ sec.count }}銘柄）｜TOPIX比率 {{ '%.1f' % sec.topix_weight_pct }}%{% if sec.leaders %}｜牽引: {% for l in sec.leaders %}{{ l.name }} {{ l.change_pct | pct }}{% if not loop.last %}、{% endif %}{% endfor %}{% endif %}{% endset %}
+        <div class="drow" data-tip="{{ tipt }}" tabindex="0">
+          <span class="dlabel">{{ sec.name }}</span>
+          <span class="dtrack"><span class="dbar {{ sec.change_pct | tone }}" style="--v: {{ sec.change_pct }}"></span></span>
+          <span class="dval {{ sec.change_pct | tone }}">{{ sec.change_pct | pct }}</span>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if s.sector17_etfs %}
+    <details class="more">
+      <summary>TOPIX-17業種ETF（NEXT FUNDS）</summary>
+      <div class="etfgrid">
+        {% for q in s.sector17_etfs | sort(attribute="change_pct", reverse=True) %}
+          <div class="etf"><span class="n">{{ q.name }}</span><span class="c mono">{{ q.ticker | replace(".T", "") }}</span><span class="v {{ q.change_pct | tone }}">{{ q.change_pct | pct }}</span></div>
+        {% endfor %}
+      </div>
+    </details>
+    {% endif %}
+  </section>
+
+  <section class="block" id="themes" aria-labelledby="h-themes">
+    <div class="block-head">
+      <h2 id="h-themes">テーマ <span class="sub">構成銘柄の単純平均</span></h2>
+    </div>
+    {% set tmax = nice_max(s.themes | map(attribute="change_pct") | list) %}
+    <ol class="themes" style="--max: {{ tmax }}">
+      {% for t in s.themes %}
+      <li>
+        <details class="theme">
+          <summary>
+            <span class="rank mono">{{ loop.index }}</span>
+            <span class="tname">{{ t.name }}{% if t.news_count %}<span class="newsdot" title="関連ニュース {{ t.news_count }}件">{{ t.news_count }}</span>{% endif %}</span>
+            <span class="dtrack"><span class="dbar {{ t.change_pct | tone }}" style="--v: {{ t.change_pct }}"></span></span>
+            <span class="dval {{ t.change_pct | tone }}">{{ t.change_pct | pct }}</span>
+            <span class="ratio" title="上昇銘柄の比率">上昇 {{ (t.advancers_ratio * t.count) | round | int }}/{{ t.count }}</span>
+          </summary>
+          <ul class="chips">
+            {% for mv in t.members %}
+            <li class="chip"><span class="mono">{{ mv.code }}</span> {{ mv.name }} <b class="{{ mv.change_pct | tone }}">{{ mv.change_pct | pct(1) }}</b></li>
+            {% endfor %}
+          </ul>
+        </details>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <section class="block" id="heatmap" aria-labelledby="h-heat">
+    <div class="block-head">
+      <h2 id="h-heat">20営業日の推移 <span class="sub">日次騰落率</span></h2>
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" id="tab-hs" aria-selected="true" data-panel="heat-sec">セクター</button>
+        <button type="button" role="tab" id="tab-ht" aria-selected="false" data-panel="heat-thm">テーマ</button>
+      </div>
+    </div>
+    <div id="heat-sec" role="tabpanel">{{ m.heatmap(s.sector_history, s.sectors | map(attribute="name") | list, {}) }}</div>
+    <div id="heat-thm" role="tabpanel" hidden>
+      {% set tnames = {} %}{% for t in s.themes %}{% set _ = tnames.update({t.key: t.name}) %}{% endfor %}
+      {{ m.heatmap(s.theme_history, s.themes | map(attribute="key") | list, tnames) }}
+    </div>
+    <div class="legend" aria-hidden="true">
+      <span>下落</span>
+      <i class="hc dn3"></i><i class="hc dn2"></i><i class="hc dn1"></i><i class="hc z"></i><i class="hc up1"></i><i class="hc up2"></i><i class="hc up3"></i>
+      <span>上昇</span><span class="legend-note">±0.25% / ±1% / ±2%</span>
+    </div>
+  </section>
+
+  <section class="block" id="rankings" aria-labelledby="h-rank">
+    <div class="block-head"><h2 id="h-rank">個別銘柄ランキング <span class="sub">TOPIX構成銘柄</span></h2></div>
+    <div class="rankgrid">
+      {{ m.ranktable("値上がり率", s.rankings.gainers, "pct") }}
+      {{ m.ranktable("値下がり率", s.rankings.losers, "pct") }}
+      {{ m.ranktable("売買代金", s.rankings.turnover, "turnover") }}
+    </div>
+  </section>
+
+  <section class="block" id="global" aria-labelledby="h-global">
+    <div class="block-head"><h2 id="h-global">海外・為替・商品</h2></div>
+    <div class="tablewrap">
+      <table class="qtable">
+        <thead><tr><th>銘柄</th><th class="r">終値</th><th class="r">前日比</th><th class="r">5日</th><th class="r">20日</th><th class="r hide-sm">推移</th><th class="r hide-sm">基準日</th></tr></thead>
+        <tbody>
+        {% for q in s.quotes if q.category != QuoteCategory.DOMESTIC %}
+          <tr>
+            <th scope="row">{{ q.name }}</th>
+            <td class="r mono">{{ q.close | num }}{{ q.unit if q.unit == "%" else "" }}</td>
+            <td class="r mono {{ q.change_pct | tone }}">{{ q.change_pct | pct }}</td>
+            <td class="r mono {{ q.change_5d_pct | tone }}">{{ q.change_5d_pct | pct(1) }}</td>
+            <td class="r mono {{ q.change_20d_pct | tone }}">{{ q.change_20d_pct | pct(1) }}</td>
+            <td class="r hide-sm">{{ m.spark(q.spark, q.change_20d_pct | tone, 84, 22) }}</td>
+            <td class="r mono muted hide-sm">{{ q.as_of.strftime("%m/%d") }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block" id="news" aria-labelledby="h-news">
+    <div class="block-head"><h2 id="h-news">ニュース <span class="sub">見出しのみ・各社サイトへリンク</span></h2></div>
+    {% set tnames = {} %}{% for t in s.themes %}{% set _ = tnames.update({t.key: t.name}) %}{% endfor %}
+    <ul class="news">
+      {% for n in s.news %}
+      <li>
+        <a href="{{ n.url }}" target="_blank" rel="noopener">{{ n.title }}</a>
+        <div class="meta">
+          <span>{{ n.source }}</span>
+          {% if n.published_at %}<span class="mono">{{ n.published_at | jst("%m/%d %H:%M") }}</span>{% endif %}
+          {% for tag in n.tags %}<span class="tag">{{ tnames.get(tag, tag) }}</span>{% endfor %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>データ: {{ s.sources | join("、") }}。生成 {{ s.generated_at | jst("%Y-%m-%d %H:%M") }} JST。</p>
+    <p>このページは情報提供のみを目的としており、投資助言ではありません。数値は無料データから算出しており、誤差や欠損を含む場合があります。</p>
+  </div>
+</footer>
+<div id="tip" class="tip" role="tooltip" hidden></div>
+<script>
+{{ js | safe }}
+</script>
+{% if standalone %}
+</body>
+</html>
+{% endif %}
