@@ -36,14 +36,14 @@
 | P1-13 | done | `pipeline.py` と `cli run --date --no-notify --force` | 1コマンドで JSON とサイトを出力。鮮度チェックで失敗したら終了コード 75 |
 | P1-14 | done | サイトビルダー: 日次・index のリダイレクト・アーカイブ・前後の営業日リンク | 複数日の fixture でリンクがつながる |
 | P1-15 | done | 見た目の確認（Playwright でデスクトップ・スマホのスクリーンショット） | `scripts/screenshot.py` を用意 |
-| P1-16 | review 🔒 | **G2**: 実データで生成した日次ページの承認 | 直近の営業日で指数の値を公開値と照らし合わせたメモを添える |
+| P1-16 | done 🔒 | **G2**: 実データで生成した日次ページの承認 | 直近の営業日で指数の値を公開値と照らし合わせたメモを添える |
 
 ## Phase 2: 自動化と通知
 
 | ID | 状態 | タスク | 受け入れ条件 |
 |---|---|---|---|
-| P2-1 | todo | `notify/discord.py`（Embed・エラー通知・dry-run） | ペイロードのスナップショットテスト |
-| P2-2 | todo | `.github/workflows/daily.yml`（cron、再試行、JSONのコミット、Pages へのデプロイ、通知） | 手動実行（workflow_dispatch）で成功する |
+| P2-1 | done | `notify/discord.py`（Embed・エラー通知・dry-run） | ペイロードのスナップショットテスト |
+| P2-2 | doing | `.github/workflows/daily.yml`（cron、再試行、JSONのコミット、Pages へのデプロイ、通知） | 手動実行（workflow_dispatch）で成功する |
 | P2-3 | todo | GitHub Actions 上で yfinance の429を確認する | 結果を DECISIONS に記録 |
 | P2-4 | review 🔒 | **G3**: 通知の文面と、公開・cron の有効化の承認 | |
 

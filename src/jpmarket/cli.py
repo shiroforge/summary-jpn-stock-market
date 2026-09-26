@@ -101,3 +101,74 @@ def render(
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(render_daily(s, standalone=not fragment, charts_url=charts_url), encoding="utf-8")
     typer.echo(f"wrote {out}")
+
+
+def _gh_output(**kv: str) -> None:
+    """Write key=value pairs to $GITHUB_OUTPUT when running in Actions (always echo them too)."""
+    import os
+
+    lines = [f"{k}={v}" for k, v in kv.items()]
+    for line in lines:
+        typer.echo(line)
+    out = os.environ.get("GITHUB_OUTPUT")
+    if out:
+        with open(out, "a", encoding="utf-8") as f:
+            f.write("\n".join(lines) + "\n")
+
+
+@app.command()
+def plan(date: Annotated[str | None, typer.Option(help="Override the target date")] = None) -> None:
+    """Decide the target date and whether it still needs building (for CI)."""
+    settings = Settings()
+    target = _parse_date(date)
+    _gh_output(
+        date=target.isoformat(),
+        trading=str(is_trading_day(target)).lower(),
+        exists=str(summary_path(settings.data_dir, target).exists()).lower(),
+    )
+
+
+def _page_url(settings: Settings, d: dt.date) -> str:
+    return f"{settings.site_base_url.rstrip('/')}/{d.isoformat()}/"
+
+
+@app.command()
+def notify(
+    date: Annotated[str | None, typer.Option(help="Trading date YYYY-MM-DD")] = None,
+    dry_run: Annotated[bool, typer.Option(help="Print the payload instead of sending")] = False,
+) -> None:
+    """Send the day's digest to Discord (DISCORD_WEBHOOK_URL)."""
+    import json
+
+    from jpmarket.notify.discord import DiscordNotifier
+
+    settings = Settings()
+    target = _parse_date(date)
+    path = summary_path(settings.data_dir, target)
+    if not path.exists():
+        typer.echo(f"{path} not found", err=True)
+        raise typer.Exit(1)
+    if not settings.discord_webhook_url and not dry_run:
+        typer.echo("DISCORD_WEBHOOK_URL is not set; skipping notification", err=True)
+        return
+    summary = DailySummary.model_validate_json(path.read_text(encoding="utf-8"))
+    payload = DiscordNotifier(settings.discord_webhook_url).send(
+        summary, _page_url(settings, target), dry_run=dry_run
+    )
+    typer.echo(json.dumps(payload, ensure_ascii=False, indent=1) if dry_run else "sent")
+
+
+@app.command("notify-error")
+def notify_error(
+    message: Annotated[str, typer.Argument(help="What went wrong")],
+    run_url: Annotated[str | None, typer.Option(help="Link to the CI run")] = None,
+) -> None:
+    """Send a failure notice to Discord."""
+    from jpmarket.notify.discord import DiscordNotifier
+
+    settings = Settings()
+    if not settings.discord_webhook_url:
+        typer.echo("DISCORD_WEBHOOK_URL is not set; skipping", err=True)
+        return
+    DiscordNotifier(settings.discord_webhook_url).send_error(message, run_url=run_url)
+    typer.echo("sent")
