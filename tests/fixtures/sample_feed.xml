@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>test</title>
+<item><title>日銀、追加利上げを検討 - テスト新聞</title><link>https://example.com/a</link><pubDate>Fri, 25 Sep 2026 05:00:00 GMT</pubDate></item>
+<item><title>日銀、追加利上げを検討 - 別の新聞</title><link>https://example.com/a2</link><pubDate>Fri, 25 Sep 2026 04:00:00 GMT</pubDate></item>
+<item><title>半導体株が高い　東証</title><link>https://example.com/b</link><pubDate>Fri, 25 Sep 2026 06:10:00 GMT</pubDate></item>
+<item><title>週末の天気</title><link>https://example.com/c</link><pubDate>Fri, 25 Sep 2026 07:00:00 GMT</pubDate></item>
+<item><title>古いニュース</title><link>https://example.com/old</link><pubDate>Mon, 21 Sep 2026 07:00:00 GMT</pubDate></item>
+<item><title>リンクなし</title><pubDate>Fri, 25 Sep 2026 07:00:00 GMT</pubDate></item>
+</channel></rss>
