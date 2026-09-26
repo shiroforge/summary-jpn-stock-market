@@ -148,7 +148,11 @@
           <tr>
             <th scope="row">{{ q.name }}</th>
             <td class="r mono">{{ q.close | num }}{{ q.unit if q.unit == "%" else "" }}</td>
+            {% if q.unit == "%" %}
+            <td class="r mono {{ q.change | tone }}">{{ "%+.1f" % (q.change * 100) }}bp</td>
+            {% else %}
             <td class="r mono {{ q.change_pct | tone }}">{{ q.change_pct | pct }}</td>
+            {% endif %}
             <td class="r mono {{ q.change_5d_pct | tone }}">{{ q.change_5d_pct | pct(1) }}</td>
             <td class="r mono {{ q.change_20d_pct | tone }}">{{ q.change_20d_pct | pct(1) }}</td>
             <td class="r hide-sm">{{ m.spark(q.spark, q.change_20d_pct | tone, 84, 22) }}</td>

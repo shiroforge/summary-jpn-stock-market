@@ -122,3 +122,31 @@ def test_site(tmp_path: Path) -> None:
     assert 'href="../2026-09-24/"' in day and "翌営業日 →</span>" in day
     assert "2026-09-25" in (st.site_dir / "index.html").read_text(encoding="utf-8")
     assert "2026年9月24日" in (st.site_dir / "archive" / "index.html").read_text(encoding="utf-8")
+
+
+class HolidayFxSource(FakeSource):
+    """FX trades on JP holidays (e.g. 2026-09-21..23); stocks do not."""
+
+    def daily_bars(self, symbols: list[str], start: dt.date, end: dt.date) -> pd.DataFrame:
+        df = super().daily_bars(symbols, start, end)
+        extra = [
+            {
+                "symbol": "USDJPY=X",
+                "date": d,
+                "open": 150.0,
+                "high": 150.0,
+                "low": 150.0,
+                "close": 150.0,
+                "volume": 0.0,
+            }
+            for d in (D(2026, 9, 21), D(2026, 9, 22), D(2026, 9, 23))
+            if start <= d <= end and "USDJPY=X" in symbols
+        ]
+        return pd.concat([df, pd.DataFrame(extra)], ignore_index=True)
+
+
+def test_histories_skip_jp_holidays(tmp_path: Path) -> None:
+    s = build_summary(T, settings(tmp_path), deps(HolidayFxSource(), IndexClose(T, 4128.59, 4075.30)))
+    assert all(is_trading_day(d) for d in s.sector_history.dates)
+    assert all(is_trading_day(d) for d in s.theme_history.dates)
+    assert all(v is not None for series in s.sector_history.series.values() for v in series[1:])

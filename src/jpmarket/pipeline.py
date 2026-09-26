@@ -12,7 +12,7 @@ import pandas as pd
 
 from jpmarket.analytics import core
 from jpmarket.analytics.comment import market_comment
-from jpmarket.calendar import prev_trading_day
+from jpmarket.calendar import is_trading_day, prev_trading_day
 from jpmarket.config import QuoteSpec, Settings
 from jpmarket.models import DailySummary, NewsItem, Quote, QuoteCategory
 from jpmarket.news import rss
@@ -99,10 +99,13 @@ def build_summary(target: dt.date, settings: Settings, deps: Deps) -> DailySumma
     store = PriceStore(settings.cache_dir / "prices" / "bars.parquet")
     store.update(deps.source, list(dict.fromkeys(codes + theme_codes + etf_codes + quote_tickers)), target)
     store.save()
-    closes = store.closes(end=target)
-    vols = store.volumes(end=target)
-    if FRESHNESS_SYMBOL not in closes.columns or pd.isna(closes[FRESHNESS_SYMBOL].get(target)):
+    all_closes = store.closes(end=target)
+    if FRESHNESS_SYMBOL not in all_closes.columns or pd.isna(all_closes[FRESHNESS_SYMBOL].get(target)):
         raise StaleDataError(f"{FRESHNESS_SYMBOL} has no close for {target} yet")
+    # Overseas/FX tickers trade on JP holidays; stock-level analytics use TSE sessions only.
+    tse_days = [d for d in all_closes.index if is_trading_day(d)]
+    closes = all_closes.loc[tse_days]
+    vols = store.volumes(end=target).reindex(tse_days)
     rets = core.returns_pct(closes)
 
     weights = pd.Series({c.code: c.topix_weight_pct for c in master.constituents}, dtype=float)
@@ -122,8 +125,8 @@ def build_summary(target: dt.date, settings: Settings, deps: Deps) -> DailySumma
             q, warn = topix_quote(spec, official, est, target, last_topix_close(settings.data_dir, target))
             if warn:
                 warnings.append(warn)
-        elif spec.ticker in closes.columns:
-            q = core.build_quote(spec, closes[spec.ticker].astype(float), target)
+        elif spec.ticker in all_closes.columns:
+            q = core.build_quote(spec, all_closes[spec.ticker].astype(float), target)
         else:
             q = None
         if q is not None:
@@ -167,9 +170,8 @@ def build_summary(target: dt.date, settings: Settings, deps: Deps) -> DailySumma
         raw, failed = rss.fetch_feeds(settings.feeds, client=deps.http)
     else:
         raw, failed = deps.news, deps.failed_feeds
-    news = rss.select(
-        rss.tag(raw, settings.themes), since=since, until=until, max_items=settings.news_max_items
-    )
+    window = rss.select(rss.tag(raw, settings.themes), since=since, until=until, max_items=len(raw))
+    news = rss.rank(window)[: settings.news_max_items]
     if failed:
         warnings.append(f"一部のニュースを取得できませんでした（{'、'.join(failed)}）。")
     counts: dict[str, int] = {}

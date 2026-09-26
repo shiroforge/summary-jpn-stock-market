@@ -21,21 +21,21 @@
 
 | ID | 状態 | タスク | 受け入れ条件 |
 |---|---|---|---|
-| P1-1 | todo | `calendar.py` 営業日判定 | 祝日・年末年始・振替休日のテスト。前後の営業日を返す関数 |
-| P1-2 | todo | `config.py`（pydantic-settings）と YAML の読み込み | 設定の型検証。themes の銘柄コードが重複しても動く |
-| P1-3 | todo | `sources/master.py`: topixweight_j.csv の取得・パース・キャッシュ | CP932 の fixture でテスト。30日以内のキャッシュを再利用 |
-| P1-4 | todo | `sources/yfinance_src.py`: 分割取得・再取得・429 のバックオフ | 取得部分をモックしてテスト（欠損・429）。出力は long 形式 |
-| P1-5 | todo | `sources/yahoo_jp.py`: TOPIX の終値・前日比 | 保存した HTML の fixture でパースをテスト。失敗時は None |
-| P1-6 | todo | 株価履歴のキャッシュ（`data/prices/`）への追記 | 同じ日付を何度追記しても重複しない。初回の自動構築（3か月分） |
-| P1-7 | todo | `analytics/indices.py`: Quote の生成 | 固定値で騰落率・5日・20日の騰落率を検証 |
-| P1-8 | todo | `analytics/sectors.py`: 加重騰落率・中央値・寄与度 | 手計算した値と一致する。カバー率の警告 |
-| P1-9 | todo | `analytics/breadth.py` と `rankings.py` | 騰落レシオ・売買代金の足切り・年初来高安 |
-| P1-10 | todo | `analytics/themes.py` | 欠けた銘柄を除外して平均。全員欠けていればテーマごと除外 |
-| P1-11 | todo | `news/rss.py` とキーワードによるタグ付け | 保存した RSS の fixture でテスト。時間帯で絞り込み・重複を除く |
-| P1-12 | todo | コメント生成（ルールベース） | 典型的な3パターン（全面高・まちまち・全面安）のテスト |
-| P1-13 | todo | `pipeline.py` と `cli run --date --no-notify --force` | 1コマンドで JSON とサイトを出力。鮮度チェックで失敗したら終了コード 75 |
-| P1-14 | todo | サイトビルダー: 日次・index のリダイレクト・アーカイブ・前後の営業日リンク | 複数日の fixture でリンクがつながる |
-| P1-15 | todo | 見た目の確認（Playwright でデスクトップ・スマホのスクリーンショット） | `scripts/screenshot.py` を用意 |
+| P1-1 | done | `calendar.py` 営業日判定 | 祝日・年末年始・振替休日のテスト。前後の営業日を返す関数 |
+| P1-2 | done | `config.py`（pydantic-settings）と YAML の読み込み | 設定の型検証。themes の銘柄コードが重複しても動く |
+| P1-3 | done | `sources/master.py`: topixweight_j.csv の取得・パース・キャッシュ | CP932 の fixture でテスト。30日以内のキャッシュを再利用。保存先は `.cache/`（D-12） |
+| P1-4 | done | `sources/yfinance_src.py`: 分割取得・再取得・429 のバックオフ | 取得部分をモックしてテスト（欠損・429）。出力は long 形式 |
+| P1-5 | done | `sources/yahoo_jp.py`: TOPIX の終値・前日比 | 保存した HTML の fixture でパースをテスト。失敗時は None |
+| P1-6 | done | 株価履歴のキャッシュ（`.cache/prices/`、D-12）への追記 | 同じ日付を何度追記しても重複しない。初回の自動構築（3か月分） |
+| P1-7 | done | `analytics/indices.py`: Quote の生成 | 固定値で騰落率・5日・20日の騰落率を検証 |
+| P1-8 | done | `analytics/sectors.py`: 加重騰落率・中央値・寄与度 | 手計算した値と一致する。カバー率の警告 |
+| P1-9 | done | `analytics/breadth.py` と `rankings.py` | 騰落レシオ・売買代金の足切り・年初来高安 |
+| P1-10 | done | `analytics/themes.py` | 欠けた銘柄を除外して平均。全員欠けていればテーマごと除外 |
+| P1-11 | done | `news/rss.py` とキーワードによるタグ付け | 保存した RSS の fixture でテスト。時間帯で絞り込み・重複を除く |
+| P1-12 | done | コメント生成（ルールベース） | 典型的な3パターン（全面高・まちまち・全面安）のテスト |
+| P1-13 | done | `pipeline.py` と `cli run --date --no-notify --force` | 1コマンドで JSON とサイトを出力。鮮度チェックで失敗したら終了コード 75 |
+| P1-14 | done | サイトビルダー: 日次・index のリダイレクト・アーカイブ・前後の営業日リンク | 複数日の fixture でリンクがつながる |
+| P1-15 | done | 見た目の確認（Playwright でデスクトップ・スマホのスクリーンショット） | `scripts/screenshot.py` を用意 |
 | P1-16 | review 🔒 | **G2**: 実データで生成した日次ページの承認 | 直近の営業日で指数の値を公開値と照らし合わせたメモを添える |
 
 ## Phase 2: 自動化と通知

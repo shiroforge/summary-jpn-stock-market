@@ -4,7 +4,7 @@ from pathlib import Path
 import httpx
 
 from jpmarket.config import FeedSpec, ThemeSpec
-from jpmarket.news.rss import fetch_feeds, highlight, parse_feed, select, tag
+from jpmarket.news.rss import fetch_feeds, highlight, parse_feed, rank, select, tag
 
 XML = (Path(__file__).parent / "fixtures" / "sample_feed.xml").read_bytes()
 UTC = dt.UTC
@@ -55,3 +55,19 @@ def test_fetch_records_failures() -> None:
         [FeedSpec(name="A", url="https://ok/"), FeedSpec(name="B", url="https://ng/")], client=client
     )
     assert len(items) == 5 and failed == ["B"]
+
+
+def test_rank_puts_relevant_first() -> None:
+    items = tag(parse_feed(XML, FeedSpec(name="Google News 株式", url="x")), THEMES)
+    ranked = rank(items)
+    assert ranked[-1].title in ("週末の天気", "古いニュース")
+    assert ranked[0].url == "https://example.com/b"
+
+
+def test_strip_site_suffix() -> None:
+    xml = (
+        b'<?xml version="1.0"?><rss version="2.0"><channel><item><title>'
+        + "見出しです | ライフ | 東洋経済オンライン".encode()
+        + b"</title><link>https://example.com/x</link></item></channel></rss>"
+    )
+    assert parse_feed(xml, FeedSpec(name="東洋経済", url="x"))[0].title == "見出しです"

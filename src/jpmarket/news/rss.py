@@ -43,6 +43,9 @@ def _ts(entry: feedparser.FeedParserDict) -> dt.datetime | None:
 def _clean_title(title: str, source: str) -> tuple[str, str]:
     """Google News appends ' - 媒体名'; split it off to credit the actual publisher."""
     title = re.sub(r"\s+", " ", title).strip()
+    # "見出し | カテゴリ | 東洋経済オンライン" -> "見出し"
+    if " | " in title:
+        title = title.split(" | ")[0].strip()
     if source.startswith("Google News"):
         m = re.match(r"^(.*) - ([^-]{1,40})$", title)
         if m:
@@ -111,11 +114,15 @@ def select(
     return out[:max_items]
 
 
+def relevance(it: NewsItem) -> int:
+    return len(it.tags) * 2 + sum(w in it.title for w in MARKET_WORDS)
+
+
+def rank(items: Sequence[NewsItem]) -> list[NewsItem]:
+    """Market-relevant items first (stable: ties keep their newest-first order)."""
+    return [it for _, it in sorted(enumerate(items), key=lambda p: (-relevance(p[1]), p[0]))]
+
+
 def highlight(items: Sequence[NewsItem], n: int = 3) -> list[NewsItem]:
-    """Most market-relevant items for the notification: tagged or market words first, then newest."""
-
-    def score(it: NewsItem) -> int:
-        return len(it.tags) * 2 + sum(w in it.title for w in MARKET_WORDS)
-
-    ranked = sorted(enumerate(items), key=lambda p: (-score(p[1]), p[0]))
-    return [it for _, it in ranked[:n]]
+    """Most market-relevant items for the notification."""
+    return rank(items)[:n]
