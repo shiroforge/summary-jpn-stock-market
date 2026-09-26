@@ -1,14 +1,16 @@
 {
  "schema_version": 2,
  "date": "2026-09-25",
- "generated_at": "2026-09-26T18:49:46.876012Z",
+ "generated_at": "2026-09-26T18:52:51.970042Z",
  "sources": [
   "yfinance",
   "JPX TOPIX構成銘柄ウエイト（2026-07-31時点）",
   "Yahoo!ファイナンス（TOPIX）",
-  "RSS（NHK経済、Yahoo!ニュース経済、Yahoo!ニュース国際、日経速報、Google News 株式、Google News ビジネス、東洋経済）"
+  "RSS（NHK経済、Yahoo!ニュース経済、Yahoo!ニュース国際、日経速報、東洋経済）"
  ],
- "warnings": [],
+ "warnings": [
+  "一部のニュースを取得できませんでした（Google News 株式、Google News ビジネス）。"
+ ],
  "comment": "日経平均は+1.30%、TOPIXは+1.31%。銀行業・証券、商品先物取引業が上昇を主導し、情報・通信業・建設業が軟調。テーマでは「地銀」(+4.88%)が強い。「建設・国土強靭化」(-1.26%)は売られた。",
  "quotes": [
   {
@@ -4099,7 +4101,7 @@
      "volume_ratio": 1.24
     }
    ],
-   "news_count": 6
+   "news_count": 4
   },
   {
    "key": "semi_equipment",
@@ -4479,7 +4481,7 @@
      "volume_ratio": 1.36
     }
    ],
-   "news_count": 2
+   "news_count": 1
   },
   {
    "key": "construction_machinery",
@@ -5969,7 +5971,7 @@
      "volume_ratio": 0.72
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "real_estate",
@@ -6409,7 +6411,7 @@
      "volume_ratio": 0.92
     }
    ],
-   "news_count": 3
+   "news_count": 2
   },
   {
    "key": "mlcc",
@@ -6629,7 +6631,7 @@
      "volume_ratio": 1.14
     }
    ],
-   "news_count": 2
+   "news_count": 1
   },
   {
    "key": "ai_datacenter",
@@ -6789,7 +6791,7 @@
      "volume_ratio": 1.01
     }
    ],
-   "news_count": 8
+   "news_count": 1
   },
   {
    "key": "space",
@@ -7209,7 +7211,7 @@
      "volume_ratio": 0.2
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "shipbuilding",
@@ -7439,7 +7441,7 @@
      "volume_ratio": 0.62
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "cyber_security",
@@ -8073,16 +8075,6 @@
  },
  "news": [
   {
-   "title": "米長期金利、切り上がる市場の目線 AIブームに利上げは効くか",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBoTDBlMnlVeElsZnk2MEhtajZ6UTdSQkxGa2NKbFFaWXdiTFFiQTRVZlhBekg2VE1Cb3BVWFcyMGtVZXVGdFZzeWgzOE1GXzRqUWhLQlhrb3R0QUhoSHJEXy1zbWRRZjFIYW9seQ?oc=5",
-   "source": "日本経済新聞",
-   "published_at": "2026-09-25T20:46:03Z",
-   "tags": [
-    "ai_datacenter",
-    "banks"
-   ]
-  },
-  {
    "title": "アメリカで住宅ローン金利が7％超え 住宅購入の負担増",
    "url": "https://news.web.nhk/newsweb/na/nd-20260925de52397",
    "source": "NHK経済",
@@ -8093,16 +8085,6 @@
    ]
   },
   {
-   "title": "【今週読まれた記事】AI・半導体調整一巡で“復活近し”！？ 外部環境を確認",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8zMzNyLTJSWE5ucExRekpPeG1rbDY4ckRldjJfUE9UaDJ6WWtteTdTQ29vaTE1aEY2SlJRWGdxam1lZnpBOUF4Y0gxVnVfdUxWM2x1QzM4Wkx1cHlZaU9reQ?oc=5",
-   "source": "株探",
-   "published_at": "2026-09-25T21:30:00Z",
-   "tags": [
-    "semiconductor",
-    "ai_datacenter"
-   ]
-  },
-  {
    "title": "株価 値上がり 金利上昇で銀行銘柄など上昇",
    "url": "https://news.web.nhk/newsweb/na/nd-20260925de52326",
    "source": "NHK経済",
@@ -8110,50 +8092,6 @@
    "tags": [
     "banks"
    ]
-  },
-  {
-   "title": "日銀政策金利、現状1.25%→到達点予想2.5%台に 「行き過ぎ」の声も",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1lQmpGMWxXNkxaN3J3SHYyN2lvX3Z5T1JOcnMzWGNpd2ZmSFhWLXdYRmxRVE1Vd2lZanNjQzFsTGg3VV90SUp0WUpra1YxM3pFU0xpWnBYLWRDQm9WbC1zSzhzRThvNFp3cFVRbg?oc=5",
-   "source": "日本経済新聞",
-   "published_at": "2026-09-25T07:06:48Z",
-   "tags": [
-    "banks"
-   ]
-  },
-  {
-   "title": "中部電力に原発運転の資格なし 浜岡原発不正報告書公表",
-   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFAtblFXRGtHeVlEZHR3N2VSUFNWejduMXVZOU9XanVHLVFkNjVzbTNjVDNnUW5YYkh2c25tRmdGbXk4TDhFOUFmbmNCZ3lnaVJKbUpfYkJLMkNWQWVjVXBF?oc=5",
-   "source": "NHKニュース",
-   "published_at": "2026-09-25T04:39:52Z",
-   "tags": [
-    "nuclear",
-    "power_utilities"
-   ]
-  },
-  {
-   "title": "AI投資の採算懸念でメタ株反落、ザッカーバーグの資産は1日で1.4兆円減少",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBYZzM4SmRQd1RJV1h3YWtZdHNULURTV2cwRVVEd19TSTJnZGdlMnhReDRYRTFfNVo4djdWeHVGZy1GZjFRNXFETlhWcEFOZVBELTJkU2c2X3N3dw?oc=5",
-   "source": "Forbes JAPAN",
-   "published_at": "2026-09-25T23:00:00Z",
-   "tags": [
-    "ai_datacenter"
-   ]
-  },
-  {
-   "title": "【米国市況】30年債利回りが一段と上昇、原油安で株は堅調－円急伸",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5SblZmbFJCTGFBWjdZN3NCcm1fMWEtZkY1N1ZFY1pfbFNfM216dTlzaWxxSnA5SVZteFJJMWg0U01hZHRISEExN19QSEd3LURwWEdUdmRsZjhiQk05UkRMSU9RbmlZbFNkZmZQQkRqRmtwcjBJV2Vj?oc=5",
-   "source": "Bloomberg.com",
-   "published_at": "2026-09-25T21:03:17Z",
-   "tags": [
-    "resources"
-   ]
-  },
-  {
-   "title": "シカゴ日本株先物概況・25日 日経平均先物は780円高の6万6455円",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE81cnVYaExvaGQxOFBHSmw5UDAtanZLSGZVVXE2eDd1OHA2Y3V2VVB6VUQ4c3VSdlVJSDRRb0NHV19uMXJuWmwwaXhMNkc2aWNvdkV4anh5N0FqYUQwWHgzVTUxejhMN2VMWmxzRQ?oc=5",
-   "source": "日本経済新聞",
-   "published_at": "2026-09-25T20:28:42Z",
-   "tags": []
   },
   {
    "title": "長期金利3.115％に上昇 1996年8月以来 約30年ぶりの高水準",
@@ -8201,15 +8139,6 @@
    ]
   },
   {
-   "title": "ハイパースケーラーAI投資、来年は5割増の1.2兆ドルに－ゴールドマン",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBDTnNzN2tmdy05bVRSRm4wN1hLSXdSeUI4RWY5bkhUU2FRR1NBd19xZlhwZzlYRlh0QmRoOHMyRzlpOGN3V2dDTWg2b3lrVVlaRm9oXzgzandxbDFEdzMwMGloNWo5TkZ3bG80NjROYzRLcEZENEo4?oc=5",
-   "source": "Bloomberg.com",
-   "published_at": "2026-09-25T14:38:48Z",
-   "tags": [
-    "ai_datacenter"
-   ]
-  },
-  {
    "title": "「オンチェーン金融」の環境整備へ 銀行などが団体設立",
    "url": "https://news.web.nhk/newsweb/na/nd-20260925de52459",
    "source": "NHK経済",
@@ -8237,31 +8166,6 @@
    ]
   },
   {
-   "title": "今後１年の日経平均、高値は７万円にとどまる！？ キオクシアなどＡＩ・米中間選挙の動向が焦点 ★★みんなの株価予想",
-   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1fZ0tjUW1FV2NqMmw5bmM2bVNmTlVpVUpWcEhmSXNKcnlzZzNYVV9wSkxHZXJOT1Y1NkItSFhNM1h5MER3MW92Ry1mc2NZd1lBQkpJZ3NR?oc=5",
-   "source": "QUICK Money World",
-   "published_at": "2026-09-25T09:00:00Z",
-   "tags": []
-  },
-  {
-   "title": "【速報】大阪・関西万博で活用もトラブル続出の「EVバス」問題受け 大阪メトロが再発防止策を公表 一方で当時の会社トップや責任者などへの追及はこれ以上行わず",
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE40d0ZsUkpmQjhTd0VJeE1nNFNzdjFfU1ZxWjZFUkZuMFFuUTh1R1laZ3dFMmxac0FPWmFDY2VsVVEzdGZPNVdua05uNnZ3NzdYZ2wxZg?oc=5",
-   "source": "Google News ビジネス",
-   "published_at": "2026-09-25T08:45:38Z",
-   "tags": [
-    "autos"
-   ]
-  },
-  {
-   "title": "防衛省、10月に無人機開発へ新興企業の公募 早期に量産体制構築",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9CQ00xZm90TDRyN21DdHFjZGIzSHE3Nk1GclRCNW50QkpqZmtFUTRUZlJSclZxS1hCbGl3Z0RvLXlJSG5tNmk5MVBUU0RGWVZ2Uncyb0l4bF9EQ3ZXRDBTbUdITXFreGZTUF82QQ?oc=5",
-   "source": "日本経済新聞",
-   "published_at": "2026-09-25T06:09:35Z",
-   "tags": [
-    "defense"
-   ]
-  },
-  {
    "title": "小林製薬 日英の投資ファンドから非上場化に向けた提案受ける",
    "url": "https://news.web.nhk/newsweb/na/nd-20260925de52325",
    "source": "NHK経済",
@@ -8269,40 +8173,6 @@
    "tags": [
     "pharma"
    ]
-  },
-  {
-   "title": "孫正義氏のAI大勝負、膨らむ借金重圧に－OpenAI巨額投資で貸し手警戒",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiZmd2X2xpYlh2aUE1WTZwS3o1VWNwbS01aWdiZGFfRmZBLXktYldUSXd6QXBLamJramNGZFNGZXVQUTJfeEZsd3gyQ1pzN05DMkxHMjF6TEQzNnQwSFI2U3B0VjFWNjNSY2hMb0UwSlF4bklSbGlv?oc=5",
-   "source": "Bloomberg.com",
-   "published_at": "2026-09-25T03:57:49Z",
-   "tags": [
-    "ai_datacenter"
-   ]
-  },
-  {
-   "title": "AI議事録の「誰の発言か分からん」を解決。0.1B「Nemotron 3 Diarization」無償公開",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9DTmtwSEtSa3RXT0FFVVk3Y2RZWC1pUnM0dC1SUHcwR0lKLTExUDNaNEk3Z3BtX1JUTVkyMnBHTE1DaGNxeENpX0w5cEZVTTZ3TkNzNUwyVHQ1a3JhdjZLOUpHdw?oc=5",
-   "source": "PC Watch",
-   "published_at": "2026-09-25T03:22:45Z",
-   "tags": [
-    "ai_datacenter"
-   ]
-  },
-  {
-   "title": "Metaはなぜオーディオ専用のAIグラスをつくるのか 「カメラを内蔵しない」本当の意図",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE12TjR0ZlZzUXlueFI0cGxvd0RKeFpDdnBfNG11Zi1kNldzVGxYZUhGLVFjWjF2bXdLSWVXMTNsZE1jVlg0Vy1NX3pRTnNSVkFzclZmVFBWVDlaQQ?oc=5",
-   "source": "Forbes JAPAN",
-   "published_at": "2026-09-25T01:30:00Z",
-   "tags": [
-    "ai_datacenter"
-   ]
-  },
-  {
-   "title": "米国株式市場＝主要3指数上昇、マイクロソフトなどＡＩ関連株がけん引",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOZVp4cmhDbzlQYUkyUk9KQVA1MGdWLXMzT1JhQllvcUc2RVAzUGFjWk9YRUw3V19wSUlTVmJESWlIUmh4SW9NRFpFeEU3RFlvWXNlT1BoUGpqZDZmVGV3aTZDNjFKaHBVUTBLclBLVmZ3OWtGMEt1cE5teDE5emFXTUZKYTZyUQ?oc=5",
-   "source": "Reuters",
-   "published_at": "2026-09-25T20:45:55Z",
-   "tags": []
   },
   {
    "title": "円相場1ドル＝156円台に上昇 1日で2円余円高に 介入警戒強まる",
@@ -8330,6 +8200,111 @@
    "url": "https://toyokeizai.net/articles/-/959176?utm_source=rss&utm_medium=http&utm_campaign=link_back",
    "source": "東洋経済",
    "published_at": "2026-09-26T00:00:00Z",
+   "tags": []
+  },
+  {
+   "title": "｢1泊10万円｣はザラな5つ星ホテルを《予算1800円》で満喫！…コンラッド大阪｢40階の天空ロビー｣へ行ってみた",
+   "url": "https://toyokeizai.net/articles/-/958666?utm_source=rss&utm_medium=http&utm_campaign=link_back",
+   "source": "東洋経済",
+   "published_at": "2026-09-26T00:00:00Z",
+   "tags": []
+  },
+  {
+   "title": "ネパール土石流 捜索打ち切り検討",
+   "url": "https://news.yahoo.co.jp/pickup/6596572?source=rss",
+   "source": "Yahoo!ニュース国際",
+   "published_at": "2026-09-25T23:56:36Z",
+   "tags": []
+  },
+  {
+   "title": "外国人の起業 制度厳格化で急減",
+   "url": "https://news.yahoo.co.jp/pickup/6596569?source=rss",
+   "source": "Yahoo!ニュース経済",
+   "published_at": "2026-09-25T23:40:16Z",
+   "tags": []
+  },
+  {
+   "title": "イオンでもららぽーとでもない！｢新興勢力｣が五反田に開いた\"ミシュラン級フードコート\"の圧倒的実力",
+   "url": "https://toyokeizai.net/articles/-/958622?utm_source=rss&utm_medium=http&utm_campaign=link_back",
+   "source": "東洋経済",
+   "published_at": "2026-09-25T23:00:00Z",
+   "tags": []
+  },
+  {
+   "title": "米中首脳 年内あと2回会談に意欲",
+   "url": "https://news.yahoo.co.jp/pickup/6596562?source=rss",
+   "source": "Yahoo!ニュース国際",
+   "published_at": "2026-09-25T22:20:17Z",
+   "tags": []
+  },
+  {
+   "title": "｢亡き姉の写真が大量に…｣ キッチンのゴミ山で眠る80代の認知症男性に何が？《身寄りのない老後》という残酷な末路",
+   "url": "https://toyokeizai.net/articles/-/959040?utm_source=rss&utm_medium=http&utm_campaign=link_back",
+   "source": "東洋経済",
+   "published_at": "2026-09-25T22:00:00Z",
+   "tags": []
+  },
+  {
+   "title": "〈大学ランキング〉｢利益剰余金が多い国立大学｣全85校､24年度1位は東大1610億円､2位阪大1279億円､10億円以下が2校",
+   "url": "https://toyokeizai.net/articles/-/958311?utm_source=rss&utm_medium=http&utm_campaign=link_back",
+   "source": "東洋経済",
+   "published_at": "2026-09-25T22:00:00Z",
+   "tags": []
+  },
+  {
+   "title": "｢作家の脱走を防ぐ外鍵の痕跡｣｢開高健の幽霊が出るとの噂も｣…新潮社クラブ｢文豪気分モーニング｣の\"意外な実態\"",
+   "url": "https://toyokeizai.net/articles/-/954837?utm_source=rss&utm_medium=http&utm_campaign=link_back",
+   "source": "東洋経済",
+   "published_at": "2026-09-25T21:45:00Z",
+   "tags": []
+  },
+  {
+   "title": "11.3アメリカ中間選挙は本当に｢トランプ共和党敗北｣なのか？｢予測のカギ｣は2018年中間選挙の｢重要データ｣にあり",
+   "url": "https://toyokeizai.net/articles/-/959082?utm_source=rss&utm_medium=http&utm_campaign=link_back",
+   "source": "東洋経済",
+   "published_at": "2026-09-25T21:30:00Z",
+   "tags": []
+  },
+  {
+   "title": "片山財務相がベッセント長官と電話会談 日米協力強化を確認",
+   "url": "https://news.web.nhk/newsweb/na/nd-20260925de52509",
+   "source": "NHK経済",
+   "published_at": "2026-09-25T14:51:00Z",
+   "tags": []
+  },
+  {
+   "title": "ローマ教皇 仏に核軍縮の主導促す",
+   "url": "https://news.yahoo.co.jp/pickup/6596551?source=rss",
+   "source": "Yahoo!ニュース国際",
+   "published_at": "2026-09-25T14:05:41Z",
+   "tags": []
+  },
+  {
+   "title": "ことしのサンマ 全国水揚げ量は去年同時期の16％程度 なぜ不漁",
+   "url": "https://news.web.nhk/newsweb/na/nd-20260925de52488",
+   "source": "NHK経済",
+   "published_at": "2026-09-25T13:28:10Z",
+   "tags": []
+  },
+  {
+   "title": "ジャングリア 追加融資などを要請",
+   "url": "https://news.yahoo.co.jp/pickup/6596547?source=rss",
+   "source": "Yahoo!ニュース経済",
+   "published_at": "2026-09-25T13:02:42Z",
+   "tags": []
+  },
+  {
+   "title": "ドンキ 10月からPBビール値下げ",
+   "url": "https://news.yahoo.co.jp/pickup/6596532?source=rss",
+   "source": "Yahoo!ニュース経済",
+   "published_at": "2026-09-25T11:08:52Z",
+   "tags": []
+  },
+  {
+   "title": "スーパーのコメ価格 5キロ2934円 6週連続で値下がり",
+   "url": "https://news.web.nhk/newsweb/na/nd-20260925de52430",
+   "source": "NHK経済",
+   "published_at": "2026-09-25T10:58:20Z",
    "tags": []
   }
  ],
