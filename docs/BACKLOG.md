@@ -43,8 +43,8 @@
 | ID | 状態 | タスク | 受け入れ条件 |
 |---|---|---|---|
 | P2-1 | done | `notify/discord.py`（Embed・エラー通知・dry-run） | ペイロードのスナップショットテスト |
-| P2-2 | doing | `.github/workflows/daily.yml`（cron、再試行、JSONのコミット、Pages へのデプロイ、通知） | 手動実行（workflow_dispatch）で成功する |
-| P2-3 | todo | GitHub Actions 上で yfinance の429を確認する | 結果を DECISIONS に記録 |
+| P2-2 | done | `.github/workflows/daily.yml`（cron、再試行、JSONのコミット、Pages へのデプロイ、通知） | 手動実行（workflow_dispatch）で成功する |
+| P2-3 | done | GitHub Actions 上で yfinance の429を確認する | 結果を DECISIONS に記録 |
 | P2-4 | review 🔒 | **G3**: 通知の文面と、公開・cron の有効化の承認 | |
 
 ## Phase 3: 拡張（承認を得た順に進める）
