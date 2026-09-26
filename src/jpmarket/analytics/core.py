@@ -25,7 +25,7 @@ def returns_pct(closes: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(out, index=closes.index, columns=closes.columns, dtype=float)
 
 
-def _row(df: pd.DataFrame, d: dt.date) -> pd.Series[float]:
+def row(df: pd.DataFrame, d: dt.date) -> pd.Series[float]:
     """One date's values as a float Series (pandas-stubs types .loc[label] as Series | DataFrame)."""
     return cast("pd.Series[float]", df.loc[d]).astype(float)
 
@@ -122,7 +122,7 @@ def sector_perf(
     vols: pd.DataFrame,
     target: dt.date,
 ) -> list[SectorPerf]:
-    row = _row(rets, target)
+    today = row(rets, target)
     out: list[SectorPerf] = []
     by_sector: dict[str, list[Constituent]] = {}
     for c in master:
@@ -130,7 +130,7 @@ def sector_perf(
     total_w = sum(c.topix_weight_pct for c in master)
     for name, members in by_sector.items():
         w = pd.Series({c.code: c.topix_weight_pct for c in members}, dtype=float)
-        r = row.reindex(w.index).dropna()
+        r = today.reindex(w.index).dropna()
         if r.empty:
             continue
         wr = weighted_return(r, w)
@@ -168,7 +168,7 @@ def sector_history(master: Sequence[Constituent], rets: pd.DataFrame, target: dt
     series: dict[str, list[float | None]] = {}
     for name, wd in weights.items():
         w = pd.Series(wd, dtype=float)
-        vals = [weighted_return(_row(rets, d).reindex(w.index), w) for d in dates]
+        vals = [weighted_return(row(rets, d).reindex(w.index), w) for d in dates]
         series[name] = [None if v is None else _r2(v) for v in vals]
     return SeriesHistory(dates=dates, series=series)
 
@@ -176,7 +176,7 @@ def sector_history(master: Sequence[Constituent], rets: pd.DataFrame, target: dt
 def topix_estimate(master: Sequence[Constituent], rets: pd.DataFrame) -> pd.Series:
     """Estimated TOPIX daily % change per date (weighted by current TOPIX weights)."""
     w = pd.Series({c.code: c.topix_weight_pct for c in master}, dtype=float)
-    return pd.Series({d: weighted_return(_row(rets, d).reindex(w.index), w) for d in rets.index}, dtype=float)
+    return pd.Series({d: weighted_return(row(rets, d).reindex(w.index), w) for d in rets.index}, dtype=float)
 
 
 def chain_levels(last_close: float, daily_pct: pd.Series[float]) -> pd.Series[float]:
@@ -192,7 +192,7 @@ def chain_levels(last_close: float, daily_pct: pd.Series[float]) -> pd.Series[fl
 
 def breadth(codes: Sequence[str], closes: pd.DataFrame, rets: pd.DataFrame, target: dt.date) -> Breadth:
     r = rets.loc[:target, rets.columns.intersection(list(codes))]
-    today = _row(r, target).dropna()
+    today = row(r, target).dropna()
     adv, dec = int((today > 0).sum()), int((today < 0).sum())
     unch = len(today) - adv - dec
     last25 = r.iloc[-25:]
