@@ -10,7 +10,7 @@ from enum import StrEnum
 
 from pydantic import BaseModel, Field
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2  # v2: rates category, absolute 5d/20d changes, volume fields
 
 
 class QuoteCategory(StrEnum):
@@ -19,6 +19,7 @@ class QuoteCategory(StrEnum):
     FX = "fx"  # 為替
     OVERSEAS = "overseas"  # 海外指数・金利
     COMMODITY = "commodity"  # 商品
+    RATES = "rates"  # 金利（国債利回り）
 
 
 class Quote(BaseModel):
@@ -33,6 +34,8 @@ class Quote(BaseModel):
     change_pct: float  # %
     change_5d_pct: float | None = None
     change_20d_pct: float | None = None
+    change_5d: float | None = None  # absolute (price units; for yields: %pt, shown as bp)
+    change_20d: float | None = None
     spark: list[float] = Field(default_factory=list)  # last ~20 closes, oldest first
     as_of: dt.date  # date of `close` (overseas markets may lag the JP date)
     is_proxy: bool = False  # True when an ETF etc. stands in for the index
@@ -46,6 +49,8 @@ class StockMove(BaseModel):
     close: float
     change_pct: float
     turnover: float | None = None  # 売買代金 (JPY), close * volume approximation
+    volume: float | None = None  # 出来高 (shares)
+    volume_ratio: float | None = None  # today's volume / average of the previous 20 sessions
 
 
 class SectorPerf(BaseModel):
@@ -86,6 +91,7 @@ class Rankings(BaseModel):
     gainers: list[StockMove] = Field(default_factory=list)
     losers: list[StockMove] = Field(default_factory=list)
     turnover: list[StockMove] = Field(default_factory=list)
+    volume_surge: list[StockMove] = Field(default_factory=list)  # 出来高急増 (volume_ratio desc)
 
 
 class NewsItem(BaseModel):

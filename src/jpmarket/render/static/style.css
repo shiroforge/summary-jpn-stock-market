@@ -214,7 +214,9 @@ i.hc { display: inline-block; width: 18px; height: 12px; }
 .legend span { margin-inline: 4px; } .legend-note { margin-left: 10px !important; }
 
 /* rankings */
-.rankgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px 28px; }
+.rankgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 20px 32px; }
+.rtable thead th { font-weight: 400; font-size: 11px; color: var(--muted); border-bottom: 1px solid var(--ink-2); padding-bottom: 3px; }
+.rtable thead th.r { text-align: right; }
 .rankcol h3 { margin: 0 0 6px; font: 700 14px/1.4 var(--f-display); color: var(--ink-2); }
 .rtable { width: 100%; font-size: 13px; }
 .rtable tr { border-bottom: 1px solid var(--line); }

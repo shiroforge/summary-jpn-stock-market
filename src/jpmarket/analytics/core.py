@@ -17,6 +17,7 @@ from jpmarket.sources.master import Constituent
 
 SPARK_LEN = 20
 HISTORY_LEN = 20
+VOLUME_AVG_LEN = 20
 
 
 def returns_pct(closes: pd.DataFrame) -> pd.DataFrame:
@@ -53,17 +54,22 @@ def build_quote(spec: QuoteSpec, series: pd.Series[float], target: dt.date) -> Q
     def back(n: int) -> float | None:
         return _r2((close / float(s.iloc[-1 - n]) - 1) * 100) if len(s) > n else None
 
+    def diff(n: int) -> float | None:
+        return round(close - float(s.iloc[-1 - n]), 4) if len(s) > n else None
+
     return Quote(
         key=spec.key,
         name=spec.name,
         ticker=spec.ticker,
         category=spec.category,
-        close=_r2(close),
-        change=_r2(close - prev),
+        close=round(close, 4) if spec.unit == "%" else _r2(close),
+        change=round(close - prev, 4),
         change_pct=_r2((close / prev - 1) * 100),
         change_5d_pct=back(5),
         change_20d_pct=back(20),
-        spark=[_r2(v) for v in s.iloc[-SPARK_LEN:]],
+        change_5d=diff(5),
+        change_20d=diff(20),
+        spark=[round(float(v), 4) for v in s.iloc[-SPARK_LEN:]],
         as_of=s.index[-1],
         is_proxy=spec.is_proxy,
         unit=spec.unit,
@@ -88,7 +94,14 @@ def stock_move(
     if pd.isna(close) or pd.isna(r):
         return None
     vol = _cell(vols, target, code) if code in vols.columns and target in vols.index else None
-    turnover = close * vol if vol is not None and not pd.isna(vol) else None
+    if vol is not None and pd.isna(vol):
+        vol = None
+    turnover = close * vol if vol is not None else None
+    ratio = None
+    if vol is not None:
+        past = vols.loc[vols.index < target, code].dropna().iloc[-VOLUME_AVG_LEN:]
+        avg = float(past.mean()) if len(past) >= VOLUME_AVG_LEN // 2 else 0.0
+        ratio = round(vol / avg, 2) if avg > 0 else None
     return StockMove(
         code=code,
         name=name,
@@ -96,6 +109,8 @@ def stock_move(
         close=_r2(close),
         change_pct=_r2(r),
         turnover=round(turnover, -6) if turnover is not None else None,
+        volume=vol,
+        volume_ratio=ratio,
     )
 
 
@@ -226,6 +241,9 @@ def rankings(moves: Sequence[StockMove], min_turnover: float, n: int = 10) -> Ra
         gainers=sorted(liquid, key=lambda m: m.change_pct, reverse=True)[:n],
         losers=sorted(liquid, key=lambda m: m.change_pct)[:n],
         turnover=sorted(moves, key=lambda m: m.turnover or 0, reverse=True)[:n],
+        volume_surge=sorted(
+            [m for m in liquid if m.volume_ratio is not None], key=lambda m: m.volume_ratio or 0, reverse=True
+        )[:n],
     )
 
 

@@ -1,4 +1,5 @@
-# 表示する指数・為替・海外指標。source: yfinance | yahoo_jp（TOPIXなどyfinanceで取得できないもの）
+# 表示する指数・為替・海外指標・金利。
+# source: yfinance | yahoo_jp（TOPIX）| mof_jgb（財務省 国債金利、ticker=年限の列名）| fred（米FRED、ticker=系列ID）
 # is_proxy: true の場合は画面に「ETF代用」と表示する
 quotes:
   - {key: nikkei225, name: 日経平均, ticker: "^N225", category: domestic, source: yfinance}
@@ -13,8 +14,16 @@ quotes:
   - {key: nasdaq, name: NASDAQ, ticker: "^IXIC", category: overseas, source: yfinance}
   - {key: dow, name: NYダウ, ticker: "^DJI", category: overseas, source: yfinance}
   - {key: sox, name: SOX指数, ticker: "^SOX", category: overseas, source: yfinance}
-  - {key: us10y, name: 米10年債利回り, ticker: "^TNX", category: overseas, source: yfinance, unit: "%"}
   - {key: vix, name: VIX, ticker: "^VIX", category: overseas, source: yfinance}
+  - {key: jgb1y, name: 日本 1年, ticker: "1年", category: rates, source: mof_jgb, unit: "%"}
+  - {key: jgb2y, name: 日本 2年, ticker: "2年", category: rates, source: mof_jgb, unit: "%"}
+  - {key: jgb5y, name: 日本 5年, ticker: "5年", category: rates, source: mof_jgb, unit: "%"}
+  - {key: jgb10y, name: 日本 10年, ticker: "10年", category: rates, source: mof_jgb, unit: "%"}
+  - {key: jgb30y, name: 日本 30年, ticker: "30年", category: rates, source: mof_jgb, unit: "%"}
+  - {key: ust3m, name: 米国 3ヶ月, ticker: "^IRX", category: rates, source: yfinance, unit: "%"}
+  - {key: ust2y, name: 米国 2年, ticker: "DGS2", category: rates, source: fred, unit: "%"}
+  - {key: us10y, name: 米国 10年, ticker: "^TNX", category: rates, source: yfinance, unit: "%"}
+  - {key: ust30y, name: 米国 30年, ticker: "^TYX", category: rates, source: yfinance, unit: "%"}
   - {key: wti, name: WTI原油, ticker: "CL=F", category: commodity, source: yfinance}
   - {key: gold, name: 金, ticker: "GC=F", category: commodity, source: yfinance}
 

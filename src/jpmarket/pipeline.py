@@ -16,6 +16,7 @@ from jpmarket.calendar import is_trading_day, prev_trading_day
 from jpmarket.config import QuoteSpec, Settings
 from jpmarket.models import DailySummary, NewsItem, Quote, QuoteCategory
 from jpmarket.news import rss
+from jpmarket.sources import rates
 from jpmarket.sources.base import MarketDataSource
 from jpmarket.sources.master import Master, load_master
 from jpmarket.sources.price_store import PriceStore
@@ -120,11 +121,21 @@ def build_summary(target: dt.date, settings: Settings, deps: Deps) -> DailySumma
     est = core.topix_estimate(master.constituents, rets)
     official = fetch_index_close(target, client=deps.http) if deps.topix is True else deps.topix
     assert official is None or isinstance(official, IndexClose)
+    jgb = (
+        rates.load_jgb_yields(settings.cache_dir, today=target, client=deps.http)
+        if any(s.source == "mof_jgb" for s in settings.quotes)
+        else pd.DataFrame()
+    )
+    missing_rates: list[str] = []
     for spec in settings.quotes:
         if spec.key == "topix":
             q, warn = topix_quote(spec, official, est, target, last_topix_close(settings.data_dir, target))
             if warn:
                 warnings.append(warn)
+        elif spec.source == "mof_jgb":
+            q = core.build_quote(spec, jgb[spec.ticker].astype(float), target) if spec.ticker in jgb else None
+        elif spec.source == "fred":
+            q = core.build_quote(spec, rates.load_fred(spec.ticker, client=deps.http), target)
         elif spec.ticker in all_closes.columns:
             q = core.build_quote(spec, all_closes[spec.ticker].astype(float), target)
         else:
@@ -133,6 +144,10 @@ def build_summary(target: dt.date, settings: Settings, deps: Deps) -> DailySumma
             quotes.append(q)
         elif spec.key != "topix":
             log.warning("no data for quote %s", spec.key)
+            if spec.category == QuoteCategory.RATES:
+                missing_rates.append(spec.name)
+    if missing_rates:
+        warnings.append(f"金利データを取得できませんでした（{'、'.join(missing_rates)}）。")
     etf_quotes = [
         q
         for e in settings.sector17_etfs

@@ -20,7 +20,7 @@ class QuoteSpec(BaseModel):
     name: str
     ticker: str
     category: QuoteCategory
-    source: Literal["yfinance", "yahoo_jp"] = "yfinance"
+    source: Literal["yfinance", "yahoo_jp", "mof_jgb", "fred"] = "yfinance"
     is_proxy: bool = False
     unit: str = ""
 

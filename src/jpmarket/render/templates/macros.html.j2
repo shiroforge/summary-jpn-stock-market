@@ -65,6 +65,11 @@
 <div class="rankcol">
   <h3>{{ title }}</h3>
   <table class="rtable">
+    <thead><tr><th colspan="2">銘柄</th>
+      {% if mode == "turnover" %}<th class="r">売買代金</th><th class="r">騰落率</th>
+      {% elif mode == "surge" %}<th class="r" data-tip="当日の出来高÷直近20営業日の平均出来高">平均比</th><th class="r">出来高</th><th class="r">騰落率</th>
+      {% else %}<th class="r">騰落率</th><th class="r">出来高</th>{% endif %}
+    </tr></thead>
     <tbody>
     {% for r in rows %}
       <tr>
@@ -73,9 +78,42 @@
         {% if mode == "turnover" %}
         <td class="r mono">{{ r.turnover | oku }}</td>
         <td class="r mono {{ r.change_pct | tone }}">{{ r.change_pct | pct(1) }}</td>
+        {% elif mode == "surge" %}
+        <td class="r mono"><b>{{ "%.1f" % r.volume_ratio }}倍</b></td>
+        <td class="r mono muted">{{ r.volume | shares }}</td>
+        <td class="r mono {{ r.change_pct | tone }}">{{ r.change_pct | pct(1) }}</td>
         {% else %}
         <td class="r mono {{ r.change_pct | tone }}">{{ r.change_pct | pct }}</td>
+        <td class="r mono muted">{{ r.volume | shares }}</td>
         {% endif %}
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endmacro %}
+
+{% macro quotetable(quotes, value_label) %}
+<div class="tablewrap">
+  <table class="qtable">
+    <thead><tr><th>銘柄</th><th class="r">{{ value_label }}</th><th class="r">前日比</th><th class="r">5日</th><th class="r">20日</th><th class="r hide-sm">推移</th><th class="r hide-sm">基準日</th></tr></thead>
+    <tbody>
+    {% for q in quotes %}
+      <tr>
+        <th scope="row">{{ q.name }}{% if q.is_proxy %} <span class="proxy">ETF代用</span>{% endif %}</th>
+        {% if q.unit == "%" %}
+        <td class="r mono">{{ "%.3f" % q.close }}%</td>
+        <td class="r mono {{ q.change | tone(0.00005) }}">{{ q.change | bp }}</td>
+        <td class="r mono {{ q.change_5d | tone(0.00005) }}">{{ q.change_5d | bp }}</td>
+        <td class="r mono {{ q.change_20d | tone(0.00005) }}">{{ q.change_20d | bp }}</td>
+        {% else %}
+        <td class="r mono">{{ q.close | num }}</td>
+        <td class="r mono {{ q.change_pct | tone }}">{{ q.change_pct | pct }}</td>
+        <td class="r mono {{ q.change_5d_pct | tone }}">{{ q.change_5d_pct | pct(1) }}</td>
+        <td class="r mono {{ q.change_20d_pct | tone }}">{{ q.change_20d_pct | pct(1) }}</td>
+        {% endif %}
+        <td class="r hide-sm">{{ spark(q.spark, (q.change_20d if q.unit == "%" else q.change_20d_pct) | tone(0.00005), 84, 22) }}</td>
+        <td class="r mono muted hide-sm">{{ q.as_of.strftime("%m/%d") }}</td>
       </tr>
     {% endfor %}
     </tbody>

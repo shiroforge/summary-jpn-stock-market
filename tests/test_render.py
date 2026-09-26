@@ -36,3 +36,16 @@ def test_render_fragment(sample: DailySummary) -> None:
     html = render_daily(sample, standalone=False)
     assert "<html" not in html and "<body" not in html
     assert "<title>" in html
+
+
+def test_bp_and_shares() -> None:
+    from jpmarket.render.builder import bp, shares
+
+    assert bp(0.021) == "+2.1bp" and bp(-0.1) == "-10.0bp" and bp(0.0) == "0.0bp" and bp(None) == "—"
+    assert shares(12_345_678) == "1,235万株" and shares(250_000_000) == "2.50億株"
+
+
+def test_render_rates_and_surge(sample: DailySummary) -> None:
+    html = render_daily(sample)
+    assert 'id="rates"' in html and "bp</td>" in html
+    assert "出来高急増" in html and "万株" in html

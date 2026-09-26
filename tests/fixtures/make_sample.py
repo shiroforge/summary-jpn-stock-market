@@ -125,6 +125,8 @@ def quote(
         change_pct=round((close / prev - 1) * 100, 2),
         change_5d_pct=round((close / s[-6] - 1) * 100, 2),
         change_20d_pct=round((close / s[0] - 1) * 100, 2),
+        change_5d=round(close - s[-6], 4),
+        change_20d=round(close - s[0], 4),
         spark=s[1:],
         as_of=as_of,
         is_proxy=proxy,
@@ -140,6 +142,8 @@ def move(rng: random.Random, code: str, name: str, sector: str, pct: float | Non
         close=round(rng.uniform(300, 30000), 0),
         change_pct=round(pct if pct is not None else rng.gauss(0.5, 2.5), 2),
         turnover=round(rng.uniform(2e10, 4e11), -8),
+        volume=round(rng.uniform(5e5, 8e7), -3),
+        volume_ratio=round(rng.uniform(0.5, 4.5), 2),
     )
 
 
@@ -159,20 +163,15 @@ def main() -> None:
         quote(rng, "nasdaq", "NASDAQ", "^IXIC", QuoteCategory.OVERSEAS, 26900, 0.011, as_of=us_date),
         quote(rng, "dow", "NYダウ", "^DJI", QuoteCategory.OVERSEAS, 51600, 0.007, as_of=us_date),
         quote(rng, "sox", "SOX指数", "^SOX", QuoteCategory.OVERSEAS, 12500, 0.018, as_of=us_date),
-        quote(
-            rng,
-            "us10y",
-            "米10年債利回り",
-            "^TNX",
-            QuoteCategory.OVERSEAS,
-            5.15,
-            0.01,
-            unit="%",
-            as_of=us_date,
-        ),
         quote(rng, "vix", "VIX", "^VIX", QuoteCategory.OVERSEAS, 15.2, 0.05, as_of=us_date),
         quote(rng, "wti", "WTI原油", "CL=F", QuoteCategory.COMMODITY, 91.5, 0.015, as_of=us_date),
         quote(rng, "gold", "金", "GC=F", QuoteCategory.COMMODITY, 4300, 0.008, as_of=us_date),
+        quote(rng, "jgb1y", "日本 1年", "1年", QuoteCategory.RATES, 1.62, 0.004, unit="%", as_of=us_date),
+        quote(rng, "jgb2y", "日本 2年", "2年", QuoteCategory.RATES, 1.91, 0.004, unit="%", as_of=us_date),
+        quote(rng, "jgb10y", "日本 10年", "10年", QuoteCategory.RATES, 3.07, 0.004, unit="%", as_of=us_date),
+        quote(rng, "jgb30y", "日本 30年", "30年", QuoteCategory.RATES, 4.11, 0.004, unit="%", as_of=us_date),
+        quote(rng, "ust2y", "米国 2年", "DGS2", QuoteCategory.RATES, 4.87, 0.006, unit="%", as_of=us_date),
+        quote(rng, "us10y", "米国 10年", "^TNX", QuoteCategory.RATES, 5.18, 0.006, unit="%", as_of=us_date),
     ]
 
     by_sector = {s: [st for st in STOCKS if st[2] == s] for s, _ in SECTORS33}
@@ -238,6 +237,7 @@ def main() -> None:
         gainers=sorted(movers, key=lambda m: m.change_pct, reverse=True)[:10],
         losers=sorted(movers, key=lambda m: m.change_pct)[:10],
         turnover=sorted(movers, key=lambda m: m.turnover or 0, reverse=True)[:10],
+        volume_surge=sorted(movers, key=lambda m: m.volume_ratio or 0, reverse=True)[:10],
     )
 
     news = [

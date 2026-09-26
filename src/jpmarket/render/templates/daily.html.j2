@@ -130,39 +130,30 @@
   </section>
 
   <section class="block" id="rankings" aria-labelledby="h-rank">
-    <div class="block-head"><h2 id="h-rank">個別銘柄ランキング <span class="sub">TOPIX構成銘柄</span></h2></div>
+    <div class="block-head"><h2 id="h-rank">個別銘柄ランキング <span class="sub">TOPIX構成銘柄・値上がり/値下がり率と出来高急増は売買代金10億円以上</span></h2></div>
     <div class="rankgrid">
       {{ m.ranktable("値上がり率", s.rankings.gainers, "pct") }}
       {{ m.ranktable("値下がり率", s.rankings.losers, "pct") }}
       {{ m.ranktable("売買代金", s.rankings.turnover, "turnover") }}
+      {% if s.rankings.volume_surge %}{{ m.ranktable("出来高急増", s.rankings.volume_surge, "surge") }}{% endif %}
     </div>
   </section>
 
   <section class="block" id="global" aria-labelledby="h-global">
     <div class="block-head"><h2 id="h-global">海外・為替・商品</h2></div>
-    <div class="tablewrap">
-      <table class="qtable">
-        <thead><tr><th>銘柄</th><th class="r">終値</th><th class="r">前日比</th><th class="r">5日</th><th class="r">20日</th><th class="r hide-sm">推移</th><th class="r hide-sm">基準日</th></tr></thead>
-        <tbody>
-        {% for q in s.quotes if q.category != QuoteCategory.DOMESTIC %}
-          <tr>
-            <th scope="row">{{ q.name }}</th>
-            <td class="r mono">{{ q.close | num }}{{ q.unit if q.unit == "%" else "" }}</td>
-            {% if q.unit == "%" %}
-            <td class="r mono {{ q.change | tone }}">{{ "%+.1f" % (q.change * 100) }}bp</td>
-            {% else %}
-            <td class="r mono {{ q.change_pct | tone }}">{{ q.change_pct | pct }}</td>
-            {% endif %}
-            <td class="r mono {{ q.change_5d_pct | tone }}">{{ q.change_5d_pct | pct(1) }}</td>
-            <td class="r mono {{ q.change_20d_pct | tone }}">{{ q.change_20d_pct | pct(1) }}</td>
-            <td class="r hide-sm">{{ m.spark(q.spark, q.change_20d_pct | tone, 84, 22) }}</td>
-            <td class="r mono muted hide-sm">{{ q.as_of.strftime("%m/%d") }}</td>
-          </tr>
-        {% endfor %}
-        </tbody>
-      </table>
-    </div>
+    {{ m.quotetable(s.quotes | selectattr("category", "in", [QuoteCategory.FUTURES_VOL, QuoteCategory.FX, QuoteCategory.OVERSEAS, QuoteCategory.COMMODITY]) | list, "終値") }}
   </section>
+
+  {% set rate_quotes = s.quotes | selectattr("category", "equalto", QuoteCategory.RATES) | list %}
+  {% if rate_quotes %}
+  <section class="block" id="rates" aria-labelledby="h-rates">
+    <div class="block-head">
+      <h2 id="h-rates">金利 <span class="sub">国債利回り・変化幅はbp（0.01%）</span></h2>
+      <span class="badge" data-tip="日本国債は財務省、米国2年はFRED（米セントルイス連銀）の公表値で、1営業日遅れになることがあります。基準日の列を確認してください。">基準日に注意</span>
+    </div>
+    {{ m.quotetable(rate_quotes, "利回り") }}
+  </section>
+  {% endif %}
 
   <section class="block" id="news" aria-labelledby="h-news">
     <div class="block-head"><h2 id="h-news">ニュース <span class="sub">見出しのみ・各社サイトへリンク</span></h2></div>

@@ -141,3 +141,29 @@ def test_sector_history() -> None:
     h = sector_history(MASTER, rets, T)
     assert h.dates == DATES
     assert h.series["銀行業"] == [None, 5.0]
+
+
+def test_volume_ratio_and_surge() -> None:
+    idx = [D(2026, 9, 1) + dt.timedelta(days=i) for i in range(21)]
+    closes = pd.DataFrame({"x": [100.0] * 20 + [110.0], "y": [100.0] * 21}, index=idx)
+    vols = pd.DataFrame({"x": [1e6] * 20 + [3e7], "y": [2e7] * 21}, index=idx)
+    rets = returns_pct(closes)
+    mx = stock_move("x", "X", None, closes, rets, vols, idx[-1])
+    my = stock_move("y", "Y", None, closes, rets, vols, idx[-1])
+    assert mx is not None and mx.volume == 3e7 and mx.volume_ratio == 30.0
+    assert my is not None and my.volume_ratio == 1.0
+    rk = rankings([my, mx], min_turnover=1e9)
+    assert [m.code for m in rk.volume_surge] == ["x", "y"]
+
+
+def test_quote_absolute_changes_for_yields() -> None:
+    idx = [D(2026, 9, 1) + dt.timedelta(days=i) for i in range(21)]
+    s = pd.Series([1.0 + 0.01 * i for i in range(21)], index=idx)
+    spec = QuoteSpec(key="jgb10y", name="10年", ticker="10年", category=QuoteCategory.RATES, unit="%")
+    q = build_quote(spec, s, idx[-1])
+    assert q is not None
+    assert (
+        q.change == pytest.approx(0.01)
+        and q.change_5d == pytest.approx(0.05)
+        and q.change_20d == pytest.approx(0.2)
+    )

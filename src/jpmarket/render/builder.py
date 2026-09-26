@@ -49,6 +49,23 @@ def oku(v: float | None) -> str:
     return f"{v / 1e8:,.0f}億円"
 
 
+def bp(v: float | None) -> str:
+    """Yield change in %pt -> basis points."""
+    if v is None:
+        return "—"
+    x = round(v * 100, 1)
+    return f"{x:+.1f}bp" if x else "0.0bp"
+
+
+def shares(v: float | None) -> str:
+    """Share volume -> 万株 / 億株."""
+    if v is None:
+        return "—"
+    if v >= 1e8:
+        return f"{v / 1e8:,.2f}億株"
+    return f"{v / 1e4:,.0f}万株"
+
+
 def jdate(d: dt.date) -> str:
     return f"{d.year}年{d.month}月{d.day}日({WEEKDAYS_JA[d.weekday()]})"
 
@@ -101,7 +118,16 @@ def make_env() -> Environment:
         lstrip_blocks=True,
     )
     env.filters.update(
-        tone=tone, pct=pct, num=num, signed=signed, oku=oku, jdate=jdate, heat=heat_level, jst=jst
+        tone=tone,
+        pct=pct,
+        num=num,
+        signed=signed,
+        oku=oku,
+        jdate=jdate,
+        heat=heat_level,
+        jst=jst,
+        bp=bp,
+        shares=shares,
     )
     env.globals.update(spark_path=spark_path, nice_max=nice_max, pct=pct, QuoteCategory=QuoteCategory)
     return env
