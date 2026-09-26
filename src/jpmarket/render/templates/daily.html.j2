@@ -36,7 +36,7 @@
   </div>
 </header>
 
-<main class="wrap">
+<main class="wrap" data-charts-url="{{ charts_url }}">
   <section class="hero" aria-labelledby="h-date">
     <p class="eyebrow">東証 大引け ・ 15:30 確定値</p>
     <h1 id="h-date">{{ s.date | jdate }}</h1>
@@ -62,7 +62,7 @@
       <div class="axis" aria-hidden="true"><span>{{ pct(-smax, 0) }}</span><span>0</span><span>{{ pct(smax, 0) }}</span></div>
       {% for sec in s.sectors %}
         {% set tipt %}{{ sec.name }}｜加重 {{ sec.change_pct | pct }}・中央値 {{ sec.median_pct | pct }}｜上昇 {{ sec.advancers }} / 下落 {{ sec.decliners }}（{{ sec.count }}銘柄）｜TOPIX比率 {{ '%.1f' % sec.topix_weight_pct }}%{% if sec.leaders %}｜牽引: {% for l in sec.leaders %}{{ l.name }} {{ l.change_pct | pct }}{% if not loop.last %}、{% endif %}{% endfor %}{% endif %}{% endset %}
-        <div class="drow" data-tip="{{ tipt }}" tabindex="0">
+        <div class="drow" data-tip="{{ tipt }}" data-chart="s:{{ sec.name }}" role="button" tabindex="0" aria-label="{{ sec.name }}のチャートを開く">
           <span class="dlabel">{{ sec.name }}</span>
           <span class="dtrack"><span class="dbar {{ sec.change_pct | tone }}" style="--v: {{ sec.change_pct }}"></span></span>
           <span class="dval {{ sec.change_pct | tone }}">{{ sec.change_pct | pct }}</span>
@@ -75,7 +75,7 @@
       <summary>TOPIX-17業種ETF（NEXT FUNDS）</summary>
       <div class="etfgrid">
         {% for q in s.sector17_etfs | sort(attribute="change_pct", reverse=True) %}
-          <div class="etf"><span class="n">{{ q.name }}</span><span class="c mono">{{ q.ticker | replace(".T", "") }}</span><span class="v {{ q.change_pct | tone }}">{{ q.change_pct | pct }}</span></div>
+          <div class="etf" data-chart="{{ q.ticker | replace(".T", "") }}" role="button" tabindex="0"><span class="n">{{ q.name }}</span><span class="c mono">{{ q.ticker | replace(".T", "") }}</span><span class="v {{ q.change_pct | tone }}">{{ q.change_pct | pct }}</span></div>
         {% endfor %}
       </div>
     </details>
@@ -99,8 +99,9 @@
             <span class="ratio" title="上昇銘柄の比率">上昇 {{ (t.advancers_ratio * t.count) | round | int }}/{{ t.count }}</span>
           </summary>
           <ul class="chips">
+            <li><button type="button" class="chartbtn" data-chart="t:{{ t.key }}">テーマ指数のチャート</button></li>
             {% for mv in t.members %}
-            <li class="chip"><span class="mono">{{ mv.code }}</span> {{ mv.name }} <b class="{{ mv.change_pct | tone }}">{{ mv.change_pct | pct(1) }}</b></li>
+            <li><button type="button" class="chip" data-chart="{{ mv.code }}"><span class="mono">{{ mv.code }}</span> {{ mv.name }} <b class="{{ mv.change_pct | tone }}">{{ mv.change_pct | pct(1) }}</b></button></li>
             {% endfor %}
           </ul>
         </details>
@@ -117,10 +118,10 @@
         <button type="button" role="tab" id="tab-ht" aria-selected="false" data-panel="heat-thm">テーマ</button>
       </div>
     </div>
-    <div id="heat-sec" role="tabpanel">{{ m.heatmap(s.sector_history, s.sectors | map(attribute="name") | list, {}) }}</div>
+    <div id="heat-sec" role="tabpanel">{{ m.heatmap(s.sector_history, s.sectors | map(attribute="name") | list, {}, "s:") }}</div>
     <div id="heat-thm" role="tabpanel" hidden>
       {% set tnames = {} %}{% for t in s.themes %}{% set _ = tnames.update({t.key: t.name}) %}{% endfor %}
-      {{ m.heatmap(s.theme_history, s.themes | map(attribute="key") | list, tnames) }}
+      {{ m.heatmap(s.theme_history, s.themes | map(attribute="key") | list, tnames, "t:") }}
     </div>
     <div class="legend" aria-hidden="true">
       <span>下落</span>
@@ -180,6 +181,30 @@
   </div>
 </footer>
 <div id="tip" class="tip" role="tooltip" hidden></div>
+<dialog id="chartdlg" class="chartdlg" aria-labelledby="cd-title">
+  <div class="cd-head">
+    <div class="cd-titles">
+      <h2 id="cd-title">チャート</h2>
+      <p id="cd-legend" class="cd-legend mono" aria-live="polite"></p>
+    </div>
+    <button type="button" class="cd-close" id="cd-close" aria-label="閉じる">×</button>
+  </div>
+  <div class="cd-tools">
+    <div class="tabs" role="group" aria-label="期間">
+      <button type="button" data-range="21">1ヶ月</button>
+      <button type="button" data-range="63" aria-selected="true">3ヶ月</button>
+      <button type="button" data-range="126">6ヶ月</button>
+      <button type="button" data-range="0">全期間</button>
+    </div>
+    <p class="cd-ma" id="cd-ma" hidden><i class="ma5"></i>5日 <i class="ma25"></i>25日 <i class="ma75"></i>75日移動平均</p>
+  </div>
+  <div id="cd-chart" class="cd-chart"></div>
+  <p id="cd-msg" class="cd-msg" hidden></p>
+  <div class="cd-foot">
+    <p id="cd-note" class="cd-note"></p>
+    <p id="cd-links" class="cd-links"></p>
+  </div>
+</dialog>
 <script>
 {{ js | safe }}
 </script>

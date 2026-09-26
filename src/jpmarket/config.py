@@ -23,6 +23,7 @@ class QuoteSpec(BaseModel):
     source: Literal["yfinance", "yahoo_jp", "mof_jgb", "fred"] = "yfinance"
     is_proxy: bool = False
     unit: str = ""
+    links: dict[str, str] = Field(default_factory=dict)  # external chart links (label -> URL)
 
 
 class EtfSpec(BaseModel):

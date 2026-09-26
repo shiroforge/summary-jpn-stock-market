@@ -64,7 +64,7 @@ def load_jgb_yields(cache_dir: Path, *, today: dt.date, client: httpx.Client) ->
     frames = []
     if hist_path.exists():
         hist = parse_mof_csv(hist_path.read_bytes())
-        frames.append(hist[hist.index >= today - dt.timedelta(days=120)])
+        frames.append(hist[hist.index >= today - dt.timedelta(days=400)])
     try:
         r = client.get(MOF_CURRENT)
         r.raise_for_status()

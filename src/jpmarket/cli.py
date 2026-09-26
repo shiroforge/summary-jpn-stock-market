@@ -13,7 +13,7 @@ import typer
 from jpmarket.calendar import is_trading_day, latest_trading_day
 from jpmarket.config import Settings
 from jpmarket.models import DailySummary
-from jpmarket.pipeline import Deps, StaleDataError, build_summary, save_summary, summary_path
+from jpmarket.pipeline import Deps, StaleDataError, build, save_charts, save_summary, summary_path
 from jpmarket.render.builder import render_daily
 from jpmarket.render.site import build_site, load_all
 from jpmarket.sources.yfinance_src import YFinanceSource
@@ -50,6 +50,7 @@ def run(
         typer.echo(f"{target} is not a trading day; nothing to do")
         raise typer.Exit(EXIT_NOT_TRADING_DAY)
     path = summary_path(settings.data_dir, target)
+    charts = None
     if path.exists() and not force:
         typer.echo(f"{path} exists; skipping collection (use --force to rebuild)")
     else:
@@ -64,7 +65,7 @@ def run(
                 now=dt.datetime.now(dt.UTC),
             )
             try:
-                summary = build_summary(target, settings, deps)
+                summary, charts = build(target, settings, deps)
             except StaleDataError as e:
                 typer.echo(f"data not ready: {e}", err=True)
                 raise typer.Exit(EXIT_STALE) from e
@@ -73,11 +74,13 @@ def run(
         for w in summary.warnings:
             typer.echo(f"warning: {w}", err=True)
     written = build_site(load_all(settings.data_dir), settings.site_dir)
+    if charts is not None:
+        written.append(save_charts(charts, settings.site_dir))
     typer.echo(f"site: {len(written)} files under {settings.site_dir}")
 
 
-@app.command()
-def build() -> None:
+@app.command("build")
+def build_cmd() -> None:
     """Rebuild the whole site from data/daily/*.json."""
     settings = Settings()
     written = build_site(load_all(settings.data_dir), settings.site_dir)
@@ -89,9 +92,12 @@ def render(
     summary: Annotated[Path, typer.Argument(exists=True, help="DailySummary JSON")],
     out: Annotated[Path, typer.Option(help="Output HTML path")] = Path("site/index.html"),
     fragment: Annotated[bool, typer.Option(help="Omit <html>/<head>/<body> (for Artifact previews)")] = False,
+    charts_url: Annotated[
+        str | None, typer.Option(help="URL of charts.json (default: ../data/charts.json)")
+    ] = None,
 ) -> None:
     """Render one DailySummary JSON into a self-contained HTML page."""
     s = DailySummary.model_validate_json(summary.read_text(encoding="utf-8"))
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(render_daily(s, standalone=not fragment), encoding="utf-8")
+    out.write_text(render_daily(s, standalone=not fragment, charts_url=charts_url), encoding="utf-8")
     typer.echo(f"wrote {out}")

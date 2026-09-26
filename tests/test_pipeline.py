@@ -150,3 +150,22 @@ def test_histories_skip_jp_holidays(tmp_path: Path) -> None:
     assert all(is_trading_day(d) for d in s.sector_history.dates)
     assert all(is_trading_day(d) for d in s.theme_history.dates)
     assert all(v is not None for series in s.sector_history.series.values() for v in series[1:])
+
+
+def test_chart_payload(tmp_path: Path) -> None:
+    from jpmarket.pipeline import build
+
+    summary, charts = build(T, settings(tmp_path), deps(FakeSource(), IndexClose(T, 4128.59, 4075.30)))
+    s = charts["series"]
+    assert charts["asof"] == "2026-09-25"
+    code = summary.rankings.turnover[0].code
+    assert s[code]["kind"] == "ohlc" and len(s[code]["dt"]) + 1 == len(s[code]["c"]) == len(s[code]["v"])
+    assert s[code]["t0"] < "2026-09-25" and all(d >= 1 for d in s[code]["dt"])
+    assert "株探" in s[code]["links"]
+    assert s["q:nikkei225"]["kind"] == "ohlc" and "TradingView" in s["q:nikkei225"]["links"]
+    assert s["q:topix"]["kind"] == "line" and s["q:topix"]["c"][-1] == 4128.59
+    assert s["q:us10y"]["kind"] == "line" and s["q:us10y"]["unit"] == "%"
+    for sid, ser in s.items():  # every series uses the compact date encoding, aligned with values
+        assert "t" not in ser and len(ser["dt"]) + 1 == len(ser["c"]), sid
+    assert s["s:" + summary.sectors[0].name]["c"][0] == 100
+    assert "t:banks" in s

@@ -2,8 +2,18 @@
 # source: yfinance | yahoo_jp（TOPIX）| mof_jgb（財務省 国債金利、ticker=年限の列名）| fred（米FRED、ticker=系列ID）
 # is_proxy: true の場合は画面に「ETF代用」と表示する
 quotes:
-  - {key: nikkei225, name: 日経平均, ticker: "^N225", category: domestic, source: yfinance}
-  - {key: topix, name: TOPIX, ticker: "998405.T", category: domestic, source: yahoo_jp}
+  - key: nikkei225
+    name: 日経平均
+    ticker: "^N225"
+    category: domestic
+    source: yfinance
+    links: {"Yahoo!ファイナンス": "https://finance.yahoo.co.jp/quote/998407.O/chart", "株探": "https://kabutan.jp/stock/chart?code=0000", "TradingView": "https://www.tradingview.com/chart/?symbol=TVC%3ANI225"}
+  - key: topix
+    name: TOPIX
+    ticker: "998405.T"
+    category: domestic
+    source: yahoo_jp
+    links: {"Yahoo!ファイナンス": "https://finance.yahoo.co.jp/quote/998405.T/chart", "株探": "https://kabutan.jp/stock/chart?code=0010", "TradingView": "https://www.tradingview.com/chart/?symbol=TVC%3ATOPIX"}
   - {key: growth250, name: グロース250, ticker: "2516.T", category: domestic, source: yfinance, is_proxy: true}
   - {key: jpx400, name: JPX日経400, ticker: "1591.T", category: domestic, source: yfinance, is_proxy: true}
   - {key: nk_futures, name: 日経平均先物(CME), ticker: "NIY=F", category: futures_vol, source: yfinance}

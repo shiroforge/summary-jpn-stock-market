@@ -3,14 +3,17 @@
 from __future__ import annotations
 
 import datetime as dt
+import json
 import logging
 from dataclasses import dataclass, field
 from pathlib import Path
+from typing import Any
 
 import httpx
 import pandas as pd
 
 from jpmarket.analytics import core
+from jpmarket.analytics.charts import build_chart_payload
 from jpmarket.analytics.comment import market_comment
 from jpmarket.calendar import is_trading_day, prev_trading_day
 from jpmarket.config import QuoteSpec, Settings
@@ -90,6 +93,11 @@ def topix_quote(
 
 
 def build_summary(target: dt.date, settings: Settings, deps: Deps) -> DailySummary:
+    return build(target, settings, deps)[0]
+
+
+def build(target: dt.date, settings: Settings, deps: Deps) -> tuple[DailySummary, dict[str, Any]]:
+    """The day's summary plus the chart payload for site/data/charts.json."""
     warnings: list[str] = []
     master = deps.master or load_master(settings.cache_dir, today=target, client=deps.http)
     codes = [c.code for c in master.constituents]
@@ -127,6 +135,7 @@ def build_summary(target: dt.date, settings: Settings, deps: Deps) -> DailySumma
         else pd.DataFrame()
     )
     missing_rates: list[str] = []
+    fred: dict[str, pd.Series[float]] = {}
     for spec in settings.quotes:
         if spec.key == "topix":
             q, warn = topix_quote(spec, official, est, target, last_topix_close(settings.data_dir, target))
@@ -135,7 +144,8 @@ def build_summary(target: dt.date, settings: Settings, deps: Deps) -> DailySumma
         elif spec.source == "mof_jgb":
             q = core.build_quote(spec, jgb[spec.ticker].astype(float), target) if spec.ticker in jgb else None
         elif spec.source == "fred":
-            q = core.build_quote(spec, rates.load_fred(spec.ticker, client=deps.http), target)
+            fred[spec.ticker] = rates.load_fred(spec.ticker, client=deps.http)
+            q = core.build_quote(spec, fred[spec.ticker], target)
         elif spec.ticker in all_closes.columns:
             q = core.build_quote(spec, all_closes[spec.ticker].astype(float), target)
         else:
@@ -196,7 +206,7 @@ def build_summary(target: dt.date, settings: Settings, deps: Deps) -> DailySumma
     themes = [t.model_copy(update={"news_count": counts.get(t.key, 0)}) for t in themes]
 
     by_key = {q.key: q for q in quotes}
-    return DailySummary(
+    summary = DailySummary(
         date=target,
         generated_at=deps.now,
         sources=[
@@ -218,6 +228,25 @@ def build_summary(target: dt.date, settings: Settings, deps: Deps) -> DailySumma
         sector_history=core.sector_history(master.constituents, rets, target),
         theme_history=core.theme_history(settings.themes, rets, target),
     )
+    tq = by_key.get("topix")
+    charts = build_chart_payload(
+        summary,
+        settings,
+        bars=store.bars,
+        master=master.constituents,
+        rets=rets,
+        jgb=jgb,
+        fred=fred,
+        topix_close=tq.close if tq else None,
+    )
+    return summary, charts
+
+
+def save_charts(charts: dict[str, Any], site_dir: Path) -> Path:
+    p = site_dir / "data" / "charts.json"
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(json.dumps(charts, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    return p
 
 
 def save_summary(summary: DailySummary, data_dir: Path) -> Path:

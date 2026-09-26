@@ -140,6 +140,7 @@ def render_daily(
     base_url: str = "..",
     prev_date: dt.date | None = None,
     next_date: dt.date | None = None,
+    charts_url: str | None = None,
 ) -> str:
     """Render the daily page.
 
@@ -154,6 +155,7 @@ def render_daily(
         base_url=base_url,
         prev_date=prev_date,
         next_date=next_date,
+        charts_url=charts_url if charts_url is not None else f"{base_url}/data/charts.json",
         css=(STATIC_DIR / "style.css").read_text(encoding="utf-8"),
         js=(STATIC_DIR / "app.js").read_text(encoding="utf-8"),
     )

@@ -8,7 +8,7 @@
 {% endmacro %}
 
 {% macro tile(q) %}
-<article class="tile {{ q.change_pct | tone }}">
+<article class="tile {{ q.change_pct | tone }}" data-chart="q:{{ q.key }}" role="button" tabindex="0" aria-label="{{ q.name }}のチャートを開く">
   <header>
     <h3>{{ q.name }}</h3>
     {% if q.is_proxy %}<span class="proxy" data-tip="指数値を無料で取得できないため、連動ETF（{{ q.ticker }}）の値で代用しています">ETF代用</span>{% endif %}
@@ -41,7 +41,7 @@
 </div>
 {% endmacro %}
 
-{% macro heatmap(hist, order, labels) %}
+{% macro heatmap(hist, order, labels, prefix) %}
 <div class="tablewrap">
   <table class="heat">
     <thead>
@@ -50,7 +50,7 @@
     <tbody>
       {% for key in order if key in hist.series %}
       <tr>
-        <th scope="row">{{ labels.get(key, key) }}</th>
+        <th scope="row" data-chart="{{ prefix }}{{ key }}" role="button" tabindex="0">{{ labels.get(key, key) }}</th>
         {% for v in hist.series[key] %}
         <td class="hc {{ v | heat }}" data-tip="{{ labels.get(key, key) }}｜{{ hist.dates[loop.index0].strftime('%m/%d') }} {{ v | pct }}"><span class="sr">{{ v | pct }}</span></td>
         {% endfor %}
@@ -72,7 +72,7 @@
     </tr></thead>
     <tbody>
     {% for r in rows %}
-      <tr>
+      <tr data-chart="{{ r.code }}" role="button" tabindex="0" aria-label="{{ r.name }}のチャートを開く">
         <td class="mono muted">{{ r.code }}</td>
         <th scope="row"><span class="rname">{{ r.name }}</span>{% if r.sector33 %}<span class="rsec">{{ r.sector33 }}</span>{% endif %}</th>
         {% if mode == "turnover" %}
@@ -99,7 +99,7 @@
     <thead><tr><th>銘柄</th><th class="r">{{ value_label }}</th><th class="r">前日比</th><th class="r">5日</th><th class="r">20日</th><th class="r hide-sm">推移</th><th class="r hide-sm">基準日</th></tr></thead>
     <tbody>
     {% for q in quotes %}
-      <tr>
+      <tr data-chart="q:{{ q.key }}" role="button" tabindex="0" aria-label="{{ q.name }}のチャートを開く">
         <th scope="row">{{ q.name }}{% if q.is_proxy %} <span class="proxy">ETF代用</span>{% endif %}</th>
         {% if q.unit == "%" %}
         <td class="r mono">{{ "%.3f" % q.close }}%</td>

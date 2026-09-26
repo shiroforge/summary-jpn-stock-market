@@ -175,23 +175,33 @@ def sector_perf(
     return sorted(out, key=lambda s: s.change_pct, reverse=True)
 
 
-def sector_history(master: Sequence[Constituent], rets: pd.DataFrame, target: dt.date) -> SeriesHistory:
-    dates = [d for d in rets.index if d <= target][-HISTORY_LEN:]
+def weighted_returns(rets: pd.DataFrame, weights: pd.Series[float]) -> pd.Series[float]:
+    """Vectorized weighted_return for every date; NaN where no member has data."""
+    r = rets.reindex(columns=weights.index)
+    den = r.notna().mul(weights, axis=1).sum(axis=1)
+    num = r.fillna(0.0).mul(weights, axis=1).sum(axis=1)
+    return (num / den.where(den > 0)).astype(float)
+
+
+def sector_daily_returns(master: Sequence[Constituent], rets: pd.DataFrame) -> dict[str, pd.Series[float]]:
     weights: dict[str, dict[str, float]] = {}
     for c in master:
         weights.setdefault(c.sector33, {})[c.code] = c.topix_weight_pct
-    series: dict[str, list[float | None]] = {}
-    for name, wd in weights.items():
-        w = pd.Series(wd, dtype=float)
-        vals = [weighted_return(row(rets, d).reindex(w.index), w) for d in dates]
-        series[name] = [None if v is None else _r2(v) for v in vals]
+    return {name: weighted_returns(rets, pd.Series(wd, dtype=float)) for name, wd in weights.items()}
+
+
+def sector_history(master: Sequence[Constituent], rets: pd.DataFrame, target: dt.date) -> SeriesHistory:
+    dates = [d for d in rets.index if d <= target][-HISTORY_LEN:]
+    series: dict[str, list[float | None]] = {
+        name: [None if pd.isna(v) else _r2(v) for v in daily.reindex(dates)]
+        for name, daily in sector_daily_returns(master, rets).items()
+    }
     return SeriesHistory(dates=dates, series=series)
 
 
-def topix_estimate(master: Sequence[Constituent], rets: pd.DataFrame) -> pd.Series:
+def topix_estimate(master: Sequence[Constituent], rets: pd.DataFrame) -> pd.Series[float]:
     """Estimated TOPIX daily % change per date (weighted by current TOPIX weights)."""
-    w = pd.Series({c.code: c.topix_weight_pct for c in master}, dtype=float)
-    return pd.Series({d: weighted_return(row(rets, d).reindex(w.index), w) for d in rets.index}, dtype=float)
+    return weighted_returns(rets, pd.Series({c.code: c.topix_weight_pct for c in master}, dtype=float))
 
 
 def chain_levels(last_close: float, daily_pct: pd.Series[float]) -> pd.Series[float]:
