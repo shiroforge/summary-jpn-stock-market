@@ -1,7 +1,7 @@
 {
  "schema_version": 2,
  "date": "2026-09-25",
- "generated_at": "2026-09-26T17:04:53.654817Z",
+ "generated_at": "2026-09-26T17:17:32.083746Z",
  "sources": [
   "yfinance",
   "JPX TOPIX構成銘柄ウエイト（2026-07-31時点）",
@@ -9,7 +9,7 @@
   "RSS（NHK経済、Yahoo!ニュース経済、Yahoo!ニュース国際、日経速報、Google News 株式、Google News ビジネス、東洋経済）"
  ],
  "warnings": [],
- "comment": "日経平均は+1.30%、TOPIXは+1.31%。銀行業・証券、商品先物取引業が上昇を主導し、情報・通信業・建設業が軟調。テーマでは「銀行・金利上昇」(+4.06%)が強い。「建設・国土強靭化」(-1.26%)は売られた。",
+ "comment": "日経平均は+1.30%、TOPIXは+1.31%。銀行業・証券、商品先物取引業が上昇を主導し、情報・通信業・建設業が軟調。テーマでは「地銀」(+4.88%)が強い。「建設・国土強靭化」(-1.26%)は売られた。",
  "quotes": [
   {
    "key": "nikkei225",
@@ -3712,12 +3712,32 @@
  ],
  "themes": [
   {
-   "key": "banks",
-   "name": "銀行・金利上昇",
-   "change_pct": 4.06,
+   "key": "regional_banks",
+   "name": "地銀",
+   "change_pct": 4.88,
    "advancers_ratio": 1.0,
-   "count": 18,
+   "count": 27,
    "members": [
+    {
+     "code": "7322",
+     "name": "三十三FG",
+     "sector33": "銀行業",
+     "close": 2238.0,
+     "change_pct": 8.8,
+     "turnover": 1702000000.0,
+     "volume": 760400.0,
+     "volume_ratio": 1.71
+    },
+    {
+     "code": "8388",
+     "name": "阿波銀",
+     "sector33": "銀行業",
+     "close": 11040.0,
+     "change_pct": 7.92,
+     "turnover": 2279000000.0,
+     "volume": 206400.0,
+     "volume_ratio": 1.35
+    },
     {
      "code": "8334",
      "name": "群馬銀",
@@ -3727,6 +3747,56 @@
      "turnover": 7319000000.0,
      "volume": 2281600.0,
      "volume_ratio": 1.85
+    },
+    {
+     "code": "7180",
+     "name": "九州FG",
+     "sector33": "銀行業",
+     "close": 1745.0,
+     "change_pct": 6.08,
+     "turnover": 3785000000.0,
+     "volume": 2169300.0,
+     "volume_ratio": 1.93
+    },
+    {
+     "code": "8544",
+     "name": "京葉銀",
+     "sector33": "銀行業",
+     "close": 3010.0,
+     "change_pct": 6.06,
+     "turnover": 1414000000.0,
+     "volume": 469700.0,
+     "volume_ratio": 1.76
+    },
+    {
+     "code": "7327",
+     "name": "第四北越FG",
+     "sector33": "銀行業",
+     "close": 2855.0,
+     "change_pct": 6.05,
+     "turnover": 5458000000.0,
+     "volume": 1911900.0,
+     "volume_ratio": 2.28
+    },
+    {
+     "code": "8368",
+     "name": "百五銀",
+     "sector33": "銀行業",
+     "close": 2606.0,
+     "change_pct": 5.98,
+     "turnover": 2837000000.0,
+     "volume": 1088500.0,
+     "volume_ratio": 1.41
+    },
+    {
+     "code": "8366",
+     "name": "滋賀銀",
+     "sector33": "銀行業",
+     "close": 3020.0,
+     "change_pct": 5.48,
+     "turnover": 2265000000.0,
+     "volume": 750100.0,
+     "volume_ratio": 1.24
     },
     {
      "code": "8377",
@@ -3739,16 +3809,6 @@
      "volume_ratio": 1.76
     },
     {
-     "code": "8308",
-     "name": "りそなHD",
-     "sector33": "銀行業",
-     "close": 2540.0,
-     "change_pct": 5.0,
-     "turnover": 22533000000.0,
-     "volume": 8871400.0,
-     "volume_ratio": 0.96
-    },
-    {
      "code": "5831",
      "name": "しずおかFG",
      "sector33": "銀行業",
@@ -3759,14 +3819,24 @@
      "volume_ratio": 1.08
     },
     {
-     "code": "7182",
-     "name": "ゆうちょ銀",
+     "code": "7189",
+     "name": "西日本FH",
      "sector33": "銀行業",
-     "close": 3349.0,
-     "change_pct": 4.66,
-     "turnover": 26511000000.0,
-     "volume": 7916000.0,
-     "volume_ratio": 1.44
+     "close": 5146.0,
+     "change_pct": 4.74,
+     "turnover": 3966000000.0,
+     "volume": 770700.0,
+     "volume_ratio": 1.77
+    },
+    {
+     "code": "5830",
+     "name": "いよぎんHD",
+     "sector33": "銀行業",
+     "close": 3917.0,
+     "change_pct": 4.7,
+     "turnover": 5534000000.0,
+     "volume": 1412900.0,
+     "volume_ratio": 1.53
     },
     {
      "code": "8354",
@@ -3779,6 +3849,36 @@
      "volume_ratio": 1.38
     },
     {
+     "code": "8386",
+     "name": "百十四銀",
+     "sector33": "銀行業",
+     "close": 3245.0,
+     "change_pct": 4.51,
+     "turnover": 1014000000.0,
+     "volume": 312600.0,
+     "volume_ratio": 1.16
+    },
+    {
+     "code": "8360",
+     "name": "山梨中央銀",
+     "sector33": "銀行業",
+     "close": 7620.0,
+     "change_pct": 4.38,
+     "turnover": 1461000000.0,
+     "volume": 191700.0,
+     "volume_ratio": 1.37
+    },
+    {
+     "code": "8524",
+     "name": "北洋銀",
+     "sector33": "銀行業",
+     "close": 1375.0,
+     "change_pct": 4.32,
+     "turnover": 2142000000.0,
+     "volume": 1558100.0,
+     "volume_ratio": 1.06
+    },
+    {
      "code": "8359",
      "name": "八十二長野銀",
      "sector33": "銀行業",
@@ -3789,14 +3889,14 @@
      "volume_ratio": 1.35
     },
     {
-     "code": "8411",
-     "name": "みずほFG",
+     "code": "8367",
+     "name": "南都銀",
      "sector33": "銀行業",
-     "close": 8626.0,
-     "change_pct": 4.18,
-     "turnover": 91179000000.0,
-     "volume": 10570300.0,
-     "volume_ratio": 1.24
+     "close": 2088.0,
+     "change_pct": 4.14,
+     "turnover": 1015000000.0,
+     "volume": 486100.0,
+     "volume_ratio": 1.12
     },
     {
      "code": "7167",
@@ -3819,14 +3919,14 @@
      "volume_ratio": 1.19
     },
     {
-     "code": "8306",
-     "name": "三菱UFJ",
+     "code": "5832",
+     "name": "ちゅうぎんFG",
      "sector33": "銀行業",
-     "close": 3714.0,
-     "change_pct": 3.95,
-     "turnover": 176071000000.0,
-     "volume": 47407500.0,
-     "volume_ratio": 1.22
+     "close": 3794.0,
+     "change_pct": 3.89,
+     "turnover": 2400000000.0,
+     "volume": 632600.0,
+     "volume_ratio": 1.73
     },
     {
      "code": "8331",
@@ -3849,14 +3949,14 @@
      "volume_ratio": 1.31
     },
     {
-     "code": "8316",
-     "name": "三井住友FG",
+     "code": "8341",
+     "name": "七十七銀",
      "sector33": "銀行業",
-     "close": 6919.0,
-     "change_pct": 3.59,
-     "turnover": 102578000000.0,
-     "volume": 14825600.0,
-     "volume_ratio": 1.25
+     "close": 4197.0,
+     "change_pct": 3.55,
+     "turnover": 4233000000.0,
+     "volume": 1008600.0,
+     "volume_ratio": 1.42
     },
     {
      "code": "8418",
@@ -3869,6 +3969,16 @@
      "volume_ratio": 1.16
     },
     {
+     "code": "7381",
+     "name": "CCIグループ",
+     "sector33": "銀行業",
+     "close": 1370.0,
+     "change_pct": 3.47,
+     "turnover": 766000000.0,
+     "volume": 558900.0,
+     "volume_ratio": 1.39
+    },
+    {
      "code": "5844",
      "name": "京都FG",
      "sector33": "銀行業",
@@ -3877,6 +3987,96 @@
      "turnover": 5353000000.0,
      "volume": 1099400.0,
      "volume_ratio": 1.33
+    }
+   ],
+   "news_count": 0
+  },
+  {
+   "key": "banks",
+   "name": "銀行",
+   "change_pct": 3.68,
+   "advancers_ratio": 1.0,
+   "count": 10,
+   "members": [
+    {
+     "code": "8308",
+     "name": "りそなHD",
+     "sector33": "銀行業",
+     "close": 2540.0,
+     "change_pct": 5.0,
+     "turnover": 22533000000.0,
+     "volume": 8871400.0,
+     "volume_ratio": 0.96
+    },
+    {
+     "code": "5838",
+     "name": "楽天銀行",
+     "sector33": "銀行業",
+     "close": 6394.0,
+     "change_pct": 4.85,
+     "turnover": 9800000000.0,
+     "volume": 1532700.0,
+     "volume_ratio": 1.5
+    },
+    {
+     "code": "7182",
+     "name": "ゆうちょ銀",
+     "sector33": "銀行業",
+     "close": 3349.0,
+     "change_pct": 4.66,
+     "turnover": 26511000000.0,
+     "volume": 7916000.0,
+     "volume_ratio": 1.44
+    },
+    {
+     "code": "8411",
+     "name": "みずほFG",
+     "sector33": "銀行業",
+     "close": 8626.0,
+     "change_pct": 4.18,
+     "turnover": 91179000000.0,
+     "volume": 10570300.0,
+     "volume_ratio": 1.24
+    },
+    {
+     "code": "8306",
+     "name": "三菱UFJ",
+     "sector33": "銀行業",
+     "close": 3714.0,
+     "change_pct": 3.95,
+     "turnover": 176071000000.0,
+     "volume": 47407500.0,
+     "volume_ratio": 1.22
+    },
+    {
+     "code": "8304",
+     "name": "あおぞら銀",
+     "sector33": "銀行業",
+     "close": 3526.0,
+     "change_pct": 3.61,
+     "turnover": 4190000000.0,
+     "volume": 1188200.0,
+     "volume_ratio": 0.89
+    },
+    {
+     "code": "8316",
+     "name": "三井住友FG",
+     "sector33": "銀行業",
+     "close": 6919.0,
+     "change_pct": 3.59,
+     "turnover": 102578000000.0,
+     "volume": 14825600.0,
+     "volume_ratio": 1.25
+    },
+    {
+     "code": "8303",
+     "name": "SBI新生銀",
+     "sector33": "銀行業",
+     "close": 1619.0,
+     "change_pct": 2.92,
+     "turnover": 5497000000.0,
+     "volume": 3395100.0,
+     "volume_ratio": 1.14
     },
     {
      "code": "8309",
@@ -3899,7 +4099,7 @@
      "volume_ratio": 1.24
     }
    ],
-   "news_count": 9
+   "news_count": 7
   },
   {
    "key": "semi_equipment",
@@ -4359,7 +4559,7 @@
      "volume_ratio": 0.9
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "insurance",
@@ -4449,7 +4649,7 @@
      "volume_ratio": 1.23
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "shipping",
@@ -4539,7 +4739,7 @@
      "volume_ratio": 0.8
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "electronic_parts",
@@ -4649,7 +4849,7 @@
      "volume_ratio": 0.98
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "trading_houses",
@@ -5769,7 +5969,7 @@
      "volume_ratio": 0.72
     }
    ],
-   "news_count": 0
+   "news_count": 1
   },
   {
    "key": "real_estate",
@@ -5899,7 +6099,7 @@
      "volume_ratio": 0.71
     }
    ],
-   "news_count": 2
+   "news_count": 1
   },
   {
    "key": "biotech",
@@ -6209,7 +6409,7 @@
      "volume_ratio": 0.92
     }
    ],
-   "news_count": 4
+   "news_count": 3
   },
   {
    "key": "mlcc",
@@ -6589,7 +6789,7 @@
      "volume_ratio": 1.01
     }
    ],
-   "news_count": 7
+   "news_count": 8
   },
   {
    "key": "space",
@@ -6869,7 +7069,7 @@
      "volume_ratio": 0.47
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "defense",
@@ -7893,16 +8093,6 @@
    ]
   },
   {
-   "title": "米住宅ローン金利7％超え 30年固定、政権に痛手（共同通信）",
-   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9CTnBFc0FlTWtlNFp1Y2haZUxIcWxScGIzLWRDRVFHOHo2TUFoTmgtRVdPQ0VyTlVjQ0JCT1g3Ri1VYS16MlN4T2pZTlZhbEE0WjJiS3hUYUg4M2U4WkVEakkyUG5MWVBFNW82Y3AzWW02dElmazdoSVBLY2paZHc?oc=5",
-   "source": "Yahoo!ニュース",
-   "published_at": "2026-09-24T20:51:01Z",
-   "tags": [
-    "banks",
-    "real_estate"
-   ]
-  },
-  {
    "title": "【今週読まれた記事】AI・半導体調整一巡で“復活近し”！？ 外部環境を確認",
    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8zMzNyLTJSWE5ucExRekpPeG1rbDY4ckRldjJfUE9UaDJ6WWtteTdTQ29vaTE1aEY2SlJRWGdxam1lZnpBOUF4Y0gxVnVfdUxWM2x1QzM4Wkx1cHlZaU9reQ?oc=5",
    "source": "株探",
@@ -7910,26 +8100,6 @@
    "tags": [
     "semiconductor",
     "ai_datacenter"
-   ]
-  },
-  {
-   "title": "パチンコのダイナムがクレーンゲームに参入 160台の店で分かった「意外な客層」（ITmedia ビジネスオンライン）",
-   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1CT2tRNlBjRWdNbnFOYlB4ZWdMbUhkdkxRdVItZWl5T1RnazlUcHdrdVRVcWFGMFdwUVhuTTJVODFBbS00OVdINmtTZlI2aTBBSVhySUk5TTJnR215SGxyS1BzeWFYNjd4VkpVRlVtNU9Wd2pPZ0VzUU1tZ3ViS00?oc=5",
-   "source": "Yahoo!ニュース",
-   "published_at": "2026-09-25T21:10:08Z",
-   "tags": [
-    "game_ent",
-    "construction_machinery"
-   ]
-  },
-  {
-   "title": "金融庁が米データセンター融資の管理体制を注視､3メガや生保‐関係者",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1wb25wVzRrLUpFcnBaVW9MX2lpeTdTSFEzNzlrNjMzYmlXd2pTWjdMUTJUNGFSLXJGbDdWSDBVamJtb1VjS1JncXM1U1B1RVp4NnZ4YlhCeVJZdmEwSVZyWUZ2ZV9ubGVpQ1p6cENueHpJanpnS0tB?oc=5",
-   "source": "Bloomberg.com",
-   "published_at": "2026-09-25T07:44:54Z",
-   "tags": [
-    "ai_datacenter",
-    "insurance"
    ]
   },
   {
@@ -7977,6 +8147,15 @@
    "tags": []
   },
   {
+   "title": "【米国市況】30年債利回りが一段と上昇、原油安で株は堅調－円急伸",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5SblZmbFJCTGFBWjdZN3NCcm1fMWEtZkY1N1ZFY1pfbFNfM216dTlzaWxxSnA5SVZteFJJMWg0U01hZHRISEExN19QSEd3LURwWEdUdmRsZjhiQk05UkRMSU9RbmlZbFNkZmZQQkRqRmtwcjBJV2Vj?oc=5",
+   "source": "Bloomberg.com",
+   "published_at": "2026-09-25T20:59:03Z",
+   "tags": [
+    "resources"
+   ]
+  },
+  {
    "title": "シカゴ日本株先物概況・25日 日経平均先物は780円高の6万6455円",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE81cnVYaExvaGQxOFBHSmw5UDAtanZLSGZVVXE2eDd1OHA2Y3V2VVB6VUQ4c3VSdlVJSDRRb0NHV19uMXJuWmwwaXhMNkc2aWNvdkV4anh5N0FqYUQwWHgzVTUxejhMN2VMWmxzRQ?oc=5",
    "source": "日本経済新聞",
@@ -7988,15 +8167,6 @@
    "url": "https://news.web.nhk/newsweb/na/nd-20260925de52314",
    "source": "NHK経済",
    "published_at": "2026-09-25T01:48:00Z",
-   "tags": [
-    "banks"
-   ]
-  },
-  {
-   "title": "ナスダック最高値更新でも手放しで喜べない理由 市場のゆがみと金利リスクを点検（土信田雅之） - media.rakuten-sec.net",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9Hb0NGb0RNUGp2N20ydlB5TTVmSVZDZ2ptSzU3QmlaazV5eHFwWWsxREJXaFg0d0NGMmltYjItVllRcGhBYVl5SnhaeE9LLW9SUFIzMnBFbXFKdw?oc=5",
-   "source": "Google News ビジネス",
-   "published_at": "2026-09-24T23:00:00Z",
    "tags": [
     "banks"
    ]
@@ -8047,12 +8217,12 @@
    ]
   },
   {
-   "title": "ホルムズ海峡「闇タンカー」急増、供給6割に回復 位置情報隠す",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAxVVdVRE5odENwYVFBTWw1S3ZaVURiVW53ajFHVm9GOXZDSUdsU2Q2UWpqdGJaN3hZcUJ0NW02SWlvMEpVYXVqRE1xWTlySXV4YTRjdEdhT0ZKakZmam5OdjNGYldGUDlSdzQ3Zg?oc=5",
-   "source": "日本経済新聞",
-   "published_at": "2026-09-25T18:50:18Z",
+   "title": "ハイパースケーラーAI投資、来年は5割増の1.2兆ドルに－ゴールドマン",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBDTnNzN2tmdy05bVRSRm4wN1hLSXdSeUI4RWY5bkhUU2FRR1NBd19xZlhwZzlYRlh0QmRoOHMyRzlpOGN3V2dDTWg2b3lrVVlaRm9oXzgzandxbDFEdzMwMGloNWo5TkZ3bG80NjROYzRLcEZENEo4?oc=5",
+   "source": "Bloomberg.com",
+   "published_at": "2026-09-25T14:38:48Z",
    "tags": [
-    "shipping"
+    "ai_datacenter"
    ]
   },
   {
@@ -8083,28 +8253,17 @@
    ]
   },
   {
+   "title": "今後１年の日経平均、高値は７万円にとどまる！？ キオクシアなどＡＩ・米中間選挙の動向が焦点 ★★みんなの株価予想",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1fZ0tjUW1FV2NqMmw5bmM2bVNmTlVpVUpWcEhmSXNKcnlzZzNYVV9wSkxHZXJOT1Y1NkItSFhNM1h5MER3MW92Ry1mc2NZd1lBQkpJZ3NR?oc=5",
+   "source": "moneyworld.jp",
+   "published_at": "2026-09-25T09:00:00Z",
+   "tags": []
+  },
+  {
    "title": "【速報】大阪・関西万博で活用もトラブル続出の「EVバス」問題受け 大阪メトロが再発防止策を公表 一方で当時の会社トップや責任者などへの追及はこれ以上行わず",
    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE40d0ZsUkpmQjhTd0VJeE1nNFNzdjFfU1ZxWjZFUkZuMFFuUTh1R1laZ3dFMmxac0FPWmFDY2VsVVEzdGZPNVdua05uNnZ3NzdYZ2wxZg?oc=5",
    "source": "Google News ビジネス",
    "published_at": "2026-09-25T08:45:38Z",
-   "tags": [
-    "autos"
-   ]
-  },
-  {
-   "title": "パナソニックが市販カーナビ生産終了へ 30年以上の歴史に幕、スマホナビの普及など受け",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9GLWswQUZ2NDc5aGtsRE1nTEFDdTlkUDYwdURIUDFacVQtdzNGNlhsV0hSYXZfMzZ6Z0M4UHFsTDJIdGpIdWM5dW9xYlA4c2pzOGxkbTNEVWh4aS01RzRRaHRXRWIzWllNZ3c?oc=5",
-   "source": "ITmedia",
-   "published_at": "2026-09-25T08:11:22Z",
-   "tags": [
-    "electronic_parts"
-   ]
-  },
-  {
-   "title": "フェラーリ、7623万円のEVを国内披露 CEO「日本市場に期待」",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBYaWJMZnhLbzhZc05hUHBNcmFLYmhocmZRdmNuNWYxZ2pHWVl6ejFFRUFyc0cyZ0FmWldicnFnMnVCX1htazg0dldSNGV6dWRpLXdLVUllem5qNHVwY3MyVmhqLUhHd0p4dXJIWQ?oc=5",
-   "source": "日本経済新聞",
-   "published_at": "2026-09-25T08:00:00Z",
    "tags": [
     "autos"
    ]
@@ -8128,6 +8287,15 @@
    ]
   },
   {
+   "title": "孫正義氏のAI大勝負、膨らむ借金重圧に－OpenAI巨額投資で貸し手警戒",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiZmd2X2xpYlh2aUE1WTZwS3o1VWNwbS01aWdiZGFfRmZBLXktYldUSXd6QXBLamJramNGZFNGZXVQUTJfeEZsd3gyQ1pzN05DMkxHMjF6TEQzNnQwSFI2U3B0VjFWNjNSY2hMb0UwSlF4bklSbGlv?oc=5",
+   "source": "Bloomberg.com",
+   "published_at": "2026-09-25T03:57:49Z",
+   "tags": [
+    "ai_datacenter"
+   ]
+  },
+  {
    "title": "AI議事録の「誰の発言か分からん」を解決。0.1B「Nemotron 3 Diarization」無償公開",
    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9DTmtwSEtSa3RXT0FFVVk3Y2RZWC1pUnM0dC1SUHcwR0lKLTExUDNaNEk3Z3BtX1JUTVkyMnBHTE1DaGNxeENpX0w5cEZVTTZ3TkNzNUwyVHQ1a3JhdjZLOUpHdw?oc=5",
    "source": "PC Watch",
@@ -8144,6 +8312,27 @@
    "tags": [
     "ai_datacenter"
    ]
+  },
+  {
+   "title": "米国株式市場＝主要3指数上昇、マイクロソフトなどＡＩ関連株がけん引",
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOZVp4cmhDbzlQYUkyUk9KQVA1MGdWLXMzT1JhQllvcUc2RVAzUGFjWk9YRUw3V19wSUlTVmJESWlIUmh4SW9NRFpFeEU3RFlvWXNlT1BoUGpqZDZmVGV3aTZDNjFKaHBVUTBLclBLVmZ3OWtGMEt1cE5teDE5emFXTUZKYTZyUQ?oc=5",
+   "source": "Reuters",
+   "published_at": "2026-09-25T20:45:55Z",
+   "tags": []
+  },
+  {
+   "title": "日本株ADR25日、全面高 みずほFGなど金融高い",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4tMGhUbkMybHphVHRMaEVUSlRBalZScllrakdONWJQXzI1UF9OVXppYm9JQ3UyaGp2QjJtZl82ZzJGdkxqRlFqQlNCT2prNWxyWFhRMXRtRzlGSG9QVVdRbFFLOGkwTjVhVTBCaA?oc=5",
+   "source": "日本経済新聞",
+   "published_at": "2026-09-25T20:17:16Z",
+   "tags": []
+  },
+  {
+   "title": "円相場1ドル＝156円台に上昇 1日で2円余円高に 介入警戒強まる",
+   "url": "https://news.web.nhk/newsweb/na/nd-20260926de52516",
+   "source": "NHK経済",
+   "published_at": "2026-09-25T19:50:14Z",
+   "tags": []
   }
  ],
  "sector_history": {
@@ -9231,26 +9420,48 @@
     0.45
    ],
    "banks": [
-    1.21,
-    0.26,
-    1.39,
-    0.75,
-    0.56,
-    -1.09,
-    1.08,
-    0.02,
-    -0.65,
+    0.9,
+    0.62,
+    1.31,
+    0.36,
+    0.7,
+    -0.99,
+    1.19,
+    0.27,
+    -0.75,
+    -1.27,
+    -1.82,
+    2.38,
+    -0.07,
+    1.87,
     -1.75,
-    -2.03,
-    2.31,
-    0.23,
-    1.37,
-    -1.63,
-    0.0,
-    0.67,
-    0.14,
-    -1.16,
-    4.06
+    -0.51,
+    0.59,
+    -0.59,
+    -1.78,
+    3.68
+   ],
+   "regional_banks": [
+    1.71,
+    0.61,
+    1.57,
+    0.72,
+    0.02,
+    -1.07,
+    1.2,
+    -0.34,
+    -0.02,
+    -2.5,
+    -1.72,
+    3.05,
+    -0.04,
+    1.6,
+    -1.48,
+    0.65,
+    0.66,
+    0.66,
+    -1.0,
+    4.88
    ],
    "insurance": [
     0.97,
