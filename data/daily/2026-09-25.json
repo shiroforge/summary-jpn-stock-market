@@ -1,7 +1,7 @@
 {
  "schema_version": 4,
  "date": "2026-09-25",
- "generated_at": "2026-09-27T08:46:09.583051Z",
+ "generated_at": "2026-09-27T08:51:08.726651Z",
  "sources": [
   "yfinance",
   "JPX TOPIX構成銘柄ウエイト（2026-07-31時点）",
@@ -6517,7 +6517,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "real_estate",
@@ -7430,7 +7430,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 3
+   "news_count": 2
   },
   {
    "key": "space",
@@ -9123,15 +9123,6 @@
    ]
   },
   {
-   "title": "原油がついにピークアウト､日本株は底入れの前倒しで強気に",
-   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE94eGJiRnlwNGJiY0ZXWFdLcEtPQU00R04zSXF6QzRZVDhRdmNlYnBzeFNPaGRYc1JBWlJJNUZXRnpiN2hVUkxrUklNWVl1Q1NySXM1WVNucw?oc=5",
-   "source": "四季報オンライン",
-   "published_at": "2026-09-25T09:00:00Z",
-   "tags": [
-    "resources"
-   ]
-  },
-  {
    "title": "長期金利3.115％に上昇 1996年8月以来 約30年ぶりの高水準",
    "url": "https://news.web.nhk/newsweb/na/nd-20260925de52314",
    "source": "NHK経済",
@@ -9150,18 +9141,9 @@
    ]
   },
   {
-   "title": "マイクロソフト、個人用AIチャットボット競争から撤退－Copilot刷新",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE12d2N0R2p0QkpYbEpHUTRzTXJ1T0RKMEFsWGE0cG1OYUdYUmFfMktIblQ4SndYbzNrdWlIcGtRYXZfT2YzdGJoLWJrbEFJWlZZZmxBUDFBSlJWV21PQTZGNFNsMmhwVkRaLThoVFByR29mRmdLeG1r?oc=5",
-   "source": "Bloomberg.com",
-   "published_at": "2026-09-25T21:27:01Z",
-   "tags": [
-    "ai_datacenter"
-   ]
-  },
-  {
    "title": "ソニー半導体社員8000人、原則出社に回帰 1人個室やランチ代補助新設",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE92N2l4TWhZSDFtSUwxWmtTQ1BKVDNOUVRleF9hMmxoSTZ5cTdLT3UwZVc5aGRHS2hlcklVeE9KTktRRFlxdDBhWVpudzAwOVBYMGJVT0plaEUtWG9sWjNWOTBvZ3VfUUVCdjRobA?oc=5",
-   "source": "日本経済新聞",
+   "source": "nikkei.com",
    "published_at": "2026-09-25T20:00:00Z",
    "tags": [
     "semiconductor"
@@ -9170,7 +9152,7 @@
   {
    "title": "ホルムズ海峡「闇タンカー」急増、供給6割に回復 位置情報隠す",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAxVVdVRE5odENwYVFBTWw1S3ZaVURiVW53ajFHVm9GOXZDSUdsU2Q2UWpqdGJaN3hZcUJ0NW02SWlvMEpVYXVqRE1xWTlySXV4YTRjdEdhT0ZKakZmam5OdjNGYldGUDlSdzQ3Zg?oc=5",
-   "source": "日本経済新聞",
+   "source": "nikkei.com",
    "published_at": "2026-09-25T18:50:18Z",
    "tags": [
     "shipping"
@@ -9229,7 +9211,7 @@
   {
    "title": "キオクシア株、本格反転はいつ？ 担当記者とロンドン×東京で語る",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBMR1JoS2NuazlKNHIxNEtwb3B6b1NCV3NNTjRzOEhFZ2FIRE4yMUVGRVVQRHBtUUd1VE45WWZ4clNWX1VOTnd3ODQ5Zjd4Mm1hYlhkZnpRS2FxaXc0SUNhSEt4clE5bjZKUjJHSg?oc=5",
-   "source": "日本経済新聞",
+   "source": "nikkei.com",
    "published_at": "2026-09-25T10:51:03Z",
    "tags": []
   },
@@ -9245,6 +9227,13 @@
    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1TM1l3WnlMYXl2eG8yM1pCM0l0QWJwOG9zTkVCVGlFMklmWTl2SXFKQzQ5cmxCSkZYaE1GS29zakVWc0ZwaUJ0R0h4THBoUmczcmhvX3pzWFJUaG82dGNFdA?oc=5",
    "source": "株探",
    "published_at": "2026-09-25T23:00:00Z",
+   "tags": []
+  },
+  {
+   "title": "Microsoft、「Copilot」を刷新 「仕事のための新しいOS」とナデラCEO",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5rT0lJeGwtUjNmZUJyT1dSeVFLaWZfLTNIYmw3Q08zWHhWT2g5VkRURkczVFdPQlR6Wjk5aVMtTnJaaTBwVXhvQkcwVWhob0lhNUJBWUNSQld2LWtralZ5OWV1eGd0aUJWZlE?oc=5",
+   "source": "ITmedia",
+   "published_at": "2026-09-25T22:48:32Z",
    "tags": []
   },
   {
@@ -9322,6 +9311,13 @@
    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5xMDhFX1JtR0Z5Z19MUXd2bkFsaUY5ZzRYcjFVYWEyM2M0QS15a19sUHEyUWRzZ1AwNnpnY2JVM0RNMG41Y1RGVTY2OV9acERxSnc?oc=5",
    "source": "CNN.co.jp",
    "published_at": "2026-09-25T10:00:00Z",
+   "tags": []
+  },
+  {
+   "title": "全日空機の緊急脱出 国の運輸安全委が現地で機体を調査",
+   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ENlpHaDF5aUVEZ2xqM3htcWF5QnFMTThtWUthWF9za2dJS3VscTA5Z2ZxcFN0eHVwNWVld3lFTnYyWUZYM2tQeVQ2SzdYZGgtMXkxc0Q2d0pqQnZoeGNr?oc=5",
+   "source": "news.web.nhk",
+   "published_at": "2026-09-25T09:19:35Z",
    "tags": []
   }
  ],
@@ -9936,10 +9932,10 @@
     "業績修正"
    ],
    "tone": "neutral",
-   "move_pct": 3.18,
-   "move_basis": "pts",
-   "pts_price": 1151.0,
-   "pts_time": "2026-09-25T23:59:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -9952,10 +9948,10 @@
     "決算"
    ],
    "tone": "neutral",
-   "move_pct": 0.0,
-   "move_basis": "pts",
-   "pts_price": 3920.0,
-   "pts_time": "2026-09-25T22:15:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -9968,10 +9964,10 @@
     "業績修正"
    ],
    "tone": "neutral",
-   "move_pct": -1.88,
-   "move_basis": "pts",
-   "pts_price": 787.9,
-   "pts_time": "2026-09-25T19:52:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -9985,10 +9981,10 @@
     "株主優待"
    ],
    "tone": "pos",
-   "move_pct": 24.43,
-   "move_basis": "pts",
-   "pts_price": 1528.0,
-   "pts_time": "2026-09-25T22:52:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -10001,10 +9997,10 @@
     "TOB・MBO"
    ],
    "tone": "pos",
-   "move_pct": 0.05,
-   "move_basis": "pts",
-   "pts_price": 793.4,
-   "pts_time": "2026-09-25T17:30:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -10017,10 +10013,10 @@
     "業績修正"
    ],
    "tone": "neutral",
-   "move_pct": 13.31,
-   "move_basis": "pts",
-   "pts_price": 298.0,
-   "pts_time": "2026-09-25T23:58:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -10034,7 +10030,7 @@
    ],
    "tone": "neg",
    "move_pct": null,
-   "move_basis": "pts",
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10049,10 +10045,10 @@
     "増資・希薄化"
    ],
    "tone": "neg",
-   "move_pct": -13.61,
-   "move_basis": "pts",
-   "pts_price": 52.7,
-   "pts_time": "2026-09-25T23:59:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -10066,7 +10062,7 @@
    ],
    "tone": "pos",
    "move_pct": null,
-   "move_basis": "pts",
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10082,7 +10078,7 @@
    ],
    "tone": "pos",
    "move_pct": null,
-   "move_basis": "pts",
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10099,7 +10095,7 @@
    ],
    "tone": "pos",
    "move_pct": null,
-   "move_basis": "pts",
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10115,7 +10111,7 @@
    ],
    "tone": "neg",
    "move_pct": null,
-   "move_basis": "pts",
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10130,10 +10126,10 @@
     "業績修正"
    ],
    "tone": "neutral",
-   "move_pct": 11.2,
-   "move_basis": "pts",
-   "pts_price": 120.1,
-   "pts_time": "2026-09-25T23:57:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -10147,7 +10143,7 @@
    ],
    "tone": "neutral",
    "move_pct": null,
-   "move_basis": "pts",
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10162,10 +10158,10 @@
     "増資・希薄化"
    ],
    "tone": "neg",
-   "move_pct": 2.54,
-   "move_basis": "pts",
-   "pts_price": 1050.0,
-   "pts_time": "2026-09-25T22:31:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -10178,10 +10174,10 @@
     "業績修正"
    ],
    "tone": "neutral",
-   "move_pct": 3.43,
-   "move_basis": "pts",
-   "pts_price": 141.7,
-   "pts_time": "2026-09-25T23:56:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -10196,7 +10192,7 @@
    ],
    "tone": "neg",
    "move_pct": null,
-   "move_basis": "pts",
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10211,10 +10207,10 @@
     "増資・希薄化"
    ],
    "tone": "neg",
-   "move_pct": 0.15,
-   "move_basis": "pts",
-   "pts_price": 2678.0,
-   "pts_time": "2026-09-25T17:17:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -10229,7 +10225,7 @@
    ],
    "tone": "neg",
    "move_pct": null,
-   "move_basis": "pts",
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10244,10 +10240,10 @@
     "決算"
    ],
    "tone": "neutral",
-   "move_pct": -4.88,
-   "move_basis": "pts",
-   "pts_price": 115.1,
-   "pts_time": "2026-09-25T21:40:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -10260,10 +10256,10 @@
     "TOB・MBO"
    ],
    "tone": "pos",
-   "move_pct": 16.68,
-   "move_basis": "pts",
-   "pts_price": 125080.0,
-   "pts_time": "2026-09-25T23:49:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -10276,10 +10272,10 @@
     "TOB・MBO"
    ],
    "tone": "pos",
-   "move_pct": 16.68,
-   "move_basis": "pts",
-   "pts_price": 125080.0,
-   "pts_time": "2026-09-25T23:49:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -10293,7 +10289,7 @@
    ],
    "tone": "neg",
    "move_pct": null,
-   "move_basis": "pts",
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10309,7 +10305,7 @@
    ],
    "tone": "neg",
    "move_pct": null,
-   "move_basis": "pts",
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10324,10 +10320,10 @@
     "業績修正"
    ],
    "tone": "neutral",
-   "move_pct": 6.61,
-   "move_basis": "pts",
-   "pts_price": 1725.0,
-   "pts_time": "2026-09-25T23:58:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -10340,10 +10336,10 @@
     "増資・希薄化"
    ],
    "tone": "neg",
-   "move_pct": 0.89,
-   "move_basis": "pts",
-   "pts_price": 1139.0,
-   "pts_time": "2026-09-25T22:49:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -10356,10 +10352,10 @@
     "決算"
    ],
    "tone": "neutral",
-   "move_pct": -1.79,
-   "move_basis": "pts",
-   "pts_price": 2303.1,
-   "pts_time": "2026-09-25T23:56:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -10373,7 +10369,7 @@
    ],
    "tone": "pos",
    "move_pct": null,
-   "move_basis": "pts",
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10389,7 +10385,7 @@
    ],
    "tone": "neg",
    "move_pct": null,
-   "move_basis": "pts",
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
