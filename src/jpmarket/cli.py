@@ -42,6 +42,10 @@ def run(
         str | None, typer.Option(help="Trading date YYYY-MM-DD (default: latest closed session)")
     ] = None,
     force: Annotated[bool, typer.Option(help="Rebuild even if the day's JSON exists")] = False,
+    final: Annotated[
+        bool,
+        typer.Option("--final/--early", help="--early: exit 75 on incomplete data so a later run retries"),
+    ] = True,
 ) -> None:
     """Collect data for one day, save data/daily/<date>.json, and rebuild the site."""
     settings = Settings()
@@ -62,6 +66,7 @@ def run(
                 ),
                 http=http,
                 now=dt.datetime.now(dt.UTC),
+                final=final,
             )
             try:
                 result = build(target, settings, deps)

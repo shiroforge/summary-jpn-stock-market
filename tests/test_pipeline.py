@@ -171,3 +171,31 @@ def test_chart_payload(tmp_path: Path) -> None:
         assert "t" not in ser and len(ser["dt"]) + 1 == len(ser["c"]), sid
     assert s["s:" + summary.sectors[0].name]["c"][0] == 100
     assert "t:banks" in s
+
+
+def test_early_attempt_waits_for_complete_data(tmp_path: Path) -> None:
+    st = settings(tmp_path)
+    early = deps(FakeSource(), None)
+    early.final = False
+    with pytest.raises(StaleDataError, match="TOPIX"):
+        build_summary(T, st, early)  # official TOPIX not out yet -> retry later
+    final = deps(FakeSource(), None)
+    assert build_summary(T, st, final).quote("topix") is None  # last attempt builds with a warning
+
+
+class PartialSource(FakeSource):
+    """Only half of the constituents have today's bar."""
+
+    def daily_bars(self, symbols: list[str], start: dt.date, end: dt.date) -> pd.DataFrame:
+        df = super().daily_bars(symbols, start, end)
+        late = set(symbols[::2]) - {"^N225"}
+        return df[~((df["date"] == T) & df["symbol"].isin(late))]
+
+
+def test_early_attempt_waits_for_coverage(tmp_path: Path) -> None:
+    early = deps(PartialSource(), IndexClose(T, 4128.59, 4075.30))
+    early.final = False
+    with pytest.raises(StaleDataError, match="TOPIX weight"):
+        build_summary(T, settings(tmp_path), early)
+    s = build_summary(T, settings(tmp_path / "b"), deps(PartialSource(), IndexClose(T, 4128.59, 4075.30)))
+    assert any("TOPIXウエイト" in w for w in s.warnings)

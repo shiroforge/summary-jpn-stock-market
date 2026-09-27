@@ -1,9 +1,12 @@
 name: daily
-# 平日 16:30 JST に実行し、データが未確定（終了コード75）なら 17:30 JST の回で再試行する。
+# 平日 15:50 JST に1回目を実行（Actions の開始遅れ込みで 16:00 前後に配信）。
+# データが未確定・不完全なら終了コード75で見送り、16:30 / 17:30 JST の回で再試行する。
+# 17:30 が最終回で、そこでは欠けがあっても警告付きで生成する（DECISIONS D-22）。
 on:
   schedule:
-    - cron: "30 7 * * 1-5"  # 16:30 JST
-    - cron: "30 8 * * 1-5"  # 17:30 JST (retry)
+    - cron: "50 6 * * 1-5"  # 15:50 JST (early)
+    - cron: "30 7 * * 1-5"  # 16:30 JST (early retry)
+    - cron: "30 8 * * 1-5"  # 17:30 JST (final)
   workflow_dispatch:
     inputs:
       date:
@@ -67,8 +70,13 @@ jobs:
         name: Collect and build
         if: steps.plan.outputs.trading == 'true' && (steps.plan.outputs.exists != 'true' || inputs.force == true)
         run: |
+          # scheduled runs before 17:30 JST wait for complete data; the last run and manual runs build regardless
+          mode=--final
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "${{ github.event.schedule }}" != "30 8 * * 1-5" ]; then
+            mode=--early
+          fi
           set +e
-          uv run jpmarket -v run --date ${{ steps.plan.outputs.date }} --force
+          uv run jpmarket -v run --date ${{ steps.plan.outputs.date }} --force $mode
           code=$?
           set -e
           if [ $code -eq 0 ]; then

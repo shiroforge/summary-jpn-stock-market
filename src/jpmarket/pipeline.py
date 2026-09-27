@@ -44,6 +44,7 @@ class Deps:
     now: dt.datetime
     master: Master | None = None  # None -> load from JPX / cache
     topix: IndexClose | bool | None = True  # True -> fetch from Yahoo JP; None -> unavailable
+    final: bool = True  # False on early attempts: incomplete data raises StaleDataError to retry later
     news: list[NewsItem] | None = None  # None -> fetch RSS
     failed_feeds: list[str] = field(default_factory=list)
 
@@ -128,6 +129,8 @@ def build(target: dt.date, settings: Settings, deps: Deps) -> BuildResult:
     weights = pd.Series({c.code: c.topix_weight_pct for c in master.constituents}, dtype=float)
     cov = core.coverage_pct(core.row(rets, target), weights)
     if cov < settings.coverage_warn_pct:
+        if not deps.final:
+            raise StaleDataError(f"only {cov:.1f}% of TOPIX weight has a close for {target}")
         warnings.append(
             f"当日の株価を取得できた銘柄がTOPIXウエイトの{cov:.1f}%にとどまります（推計値の誤差が大きくなります）。"
         )
@@ -137,6 +140,8 @@ def build(target: dt.date, settings: Settings, deps: Deps) -> BuildResult:
     est = core.topix_estimate(master.constituents, rets)
     official = fetch_index_close(target, client=deps.http) if deps.topix is True else deps.topix
     assert official is None or isinstance(official, IndexClose)
+    if official is None and not deps.final:
+        raise StaleDataError(f"official TOPIX close for {target} not published yet")
     jgb = (
         rates.load_jgb_yields(settings.cache_dir, today=target, client=deps.http)
         if any(s.source == "mof_jgb" for s in settings.quotes)
