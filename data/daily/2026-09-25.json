@@ -1,7 +1,7 @@
 {
  "schema_version": 4,
  "date": "2026-09-25",
- "generated_at": "2026-09-27T10:05:46.848235Z",
+ "generated_at": "2026-09-27T10:09:46.308714Z",
  "sources": [
   "yfinance",
   "JPX TOPIX構成銘柄ウエイト（2026-07-31時点）",
@@ -5157,7 +5157,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 0
+   "news_count": 1
   },
   {
    "key": "electronic_parts",
@@ -10050,6 +10050,15 @@
    ]
   },
   {
+   "title": "ホルムズ海峡「闇タンカー」急増、供給6割に回復 位置情報隠す",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAxVVdVRE5odENwYVFBTWw1S3ZaVURiVW53ajFHVm9GOXZDSUdsU2Q2UWpqdGJaN3hZcUJ0NW02SWlvMEpVYXVqRE1xWTlySXV4YTRjdEdhT0ZKakZmam5OdjNGYldGUDlSdzQ3Zg?oc=5",
+   "source": "日本経済新聞",
+   "published_at": "2026-09-25T18:50:18Z",
+   "tags": [
+    "shipping"
+   ]
+  },
+  {
    "title": "「オンチェーン金融」の環境整備へ 銀行などが団体設立",
    "url": "https://news.web.nhk/newsweb/na/nd-20260925de52459",
    "source": "NHK経済",
@@ -10116,15 +10125,8 @@
   {
    "title": "「濃い緑」のシャインマスカットは酸っぱい？ 甘い「ブドウ」見分ける3つのポイントとは【生産者に聞く】",
    "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9rX1JHdFlkRHNUQUkzdDNnTXMtaEpXWXhIclcxbV81SndramVKT0ZyV0pibEw4d2U4Q2tXYXdLM3FCc251WTRrY1FB?oc=5",
-   "source": "オトナンサー",
+   "source": "otonanswer.jp",
    "published_at": "2026-09-25T23:01:03Z",
-   "tags": []
-  },
-  {
-   "title": "【村瀬智一が斬る！深層マーケット】10月相場はリバウンド機運が高まるか",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1TM1l3WnlMYXl2eG8yM1pCM0l0QWJwOG9zTkVCVGlFMklmWTl2SXFKQzQ5cmxCSkZYaE1GS29zakVWc0ZwaUJ0R0h4THBoUmczcmhvX3pzWFJUaG82dGNFdA?oc=5",
-   "source": "株探",
-   "published_at": "2026-09-25T23:00:00Z",
    "tags": []
   },
   {
@@ -10142,9 +10144,9 @@
    "tags": []
   },
   {
-   "title": "マツダ新型SUV「CX-30」と「CX-5」どっちが良い？ パワフルな「\"2500cc\"新エンジン」搭載！ スポーティで楽しい\"走り\"と「豪華内装」も魅力的！ 価格差「約30万円」の\"超・お買得\"モデルに乗って比較！",
+   "title": "マツダ新型SUV「CX-30」と「CX-5」どっちが良い？ パワフルな「\"2500cc\"新エンジン」搭載！ スポーティで楽しい\"走り\"と「豪華内装」も魅力的！ 価格差「約30万円」の\"超・お買得\"モデルに乗って比較！ - kuruma-news.jp",
    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE14TkxEejA4NFBEMkZwY05jUElVQ0hmdjdqbFkwZHFlN1dvT2lxVUJPSm5BYjdTcWU2NUN4LVVKekpVb3I1S2I3LVVuZw?oc=5",
-   "source": "くるまのニュース",
+   "source": "Google News ビジネス",
    "published_at": "2026-09-25T14:10:00Z",
    "tags": []
   },
