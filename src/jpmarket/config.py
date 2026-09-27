@@ -35,7 +35,10 @@ class ThemeSpec(BaseModel):
     key: str
     name: str
     keywords: list[str] = Field(default_factory=list)
-    members: dict[str, str]
+    members: dict[str, str] = Field(default_factory=dict)
+    # dynamic themes get their members at run time: "ipo" = listed within `window_days` (JPX new listings)
+    dynamic: Literal["ipo"] | None = None
+    window_days: int = 365
 
     @field_validator("members", mode="before")
     @classmethod

@@ -1,7 +1,7 @@
 {
  "schema_version": 4,
  "date": "2026-09-25",
- "generated_at": "2026-09-27T09:06:12.040054Z",
+ "generated_at": "2026-09-27T10:05:46.848235Z",
  "sources": [
   "yfinance",
   "JPX TOPIX構成銘柄ウエイト（2026-07-31時点）",
@@ -4874,7 +4874,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 3
+   "news_count": 2
   },
   {
    "key": "construction_machinery",
@@ -5157,7 +5157,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "electronic_parts",
@@ -6099,6 +6099,203 @@
      "turnover": 193000000.0,
      "volume": 60400.0,
      "volume_ratio": 1.35,
+     "disclosures": []
+    }
+   ],
+   "news_count": 0
+  },
+  {
+   "key": "next_gen_battery",
+   "name": "次世代バッテリー",
+   "change_pct": 0.6,
+   "advancers_ratio": 0.76,
+   "count": 17,
+   "members": [
+    {
+     "code": "6810",
+     "name": "マクセル",
+     "sector33": "電気機器",
+     "close": 2632.0,
+     "change_pct": 2.81,
+     "turnover": 636000000.0,
+     "volume": 241600.0,
+     "volume_ratio": 0.89,
+     "disclosures": []
+    },
+    {
+     "code": "6981",
+     "name": "村田製作所",
+     "sector33": "電気機器",
+     "close": 8022.0,
+     "change_pct": 2.54,
+     "turnover": 180612000000.0,
+     "volume": 22514600.0,
+     "volume_ratio": 1.09,
+     "disclosures": []
+    },
+    {
+     "code": "3407",
+     "name": "旭化成",
+     "sector33": "化学",
+     "close": 1645.5,
+     "change_pct": 2.43,
+     "turnover": 9721000000.0,
+     "volume": 5907600.0,
+     "volume_ratio": 1.29,
+     "disclosures": []
+    },
+    {
+     "code": "4471",
+     "name": "三洋化成工業",
+     "sector33": "化学",
+     "close": 6540.0,
+     "change_pct": 2.35,
+     "turnover": 869000000.0,
+     "volume": 132900.0,
+     "volume_ratio": 1.08,
+     "disclosures": []
+    },
+    {
+     "code": "6752",
+     "name": "パナソニックHD",
+     "sector33": "電気機器",
+     "close": 4588.0,
+     "change_pct": 1.77,
+     "turnover": 41192000000.0,
+     "volume": 8978100.0,
+     "volume_ratio": 1.13,
+     "disclosures": []
+    },
+    {
+     "code": "5333",
+     "name": "NGK",
+     "sector33": "ガラス・土石製品",
+     "close": 5415.0,
+     "change_pct": 0.91,
+     "turnover": 6261000000.0,
+     "volume": 1156200.0,
+     "volume_ratio": 0.79,
+     "disclosures": []
+    },
+    {
+     "code": "6762",
+     "name": "TDK",
+     "sector33": "電気機器",
+     "close": 2978.0,
+     "change_pct": 0.8,
+     "turnover": 28639000000.0,
+     "volume": 9616900.0,
+     "volume_ratio": 1.09,
+     "disclosures": []
+    },
+    {
+     "code": "7203",
+     "name": "トヨタ",
+     "sector33": "輸送用機器",
+     "close": 2989.5,
+     "change_pct": 0.69,
+     "turnover": 63031000000.0,
+     "volume": 21084000.0,
+     "volume_ratio": 0.86,
+     "disclosures": []
+    },
+    {
+     "code": "4004",
+     "name": "レゾナック",
+     "sector33": "化学",
+     "close": 14960.0,
+     "change_pct": 0.67,
+     "turnover": 28668000000.0,
+     "volume": 1916300.0,
+     "volume_ratio": 1.0,
+     "disclosures": []
+    },
+    {
+     "code": "5713",
+     "name": "住友金属鉱山",
+     "sector33": "非鉄金属",
+     "close": 9587.0,
+     "change_pct": 0.51,
+     "turnover": 14822000000.0,
+     "volume": 1546000.0,
+     "volume_ratio": 0.56,
+     "disclosures": []
+    },
+    {
+     "code": "4109",
+     "name": "ステラケミファ",
+     "sector33": "化学",
+     "close": 5420.0,
+     "change_pct": 0.37,
+     "turnover": 144000000.0,
+     "volume": 26500.0,
+     "volume_ratio": 0.56,
+     "disclosures": []
+    },
+    {
+     "code": "5214",
+     "name": "日本電気硝子",
+     "sector33": "ガラス・土石製品",
+     "close": 4875.0,
+     "change_pct": 0.35,
+     "turnover": 2335000000.0,
+     "volume": 479000.0,
+     "volume_ratio": 0.72,
+     "disclosures": []
+    },
+    {
+     "code": "3402",
+     "name": "東レ",
+     "sector33": "繊維製品",
+     "close": 1253.0,
+     "change_pct": 0.16,
+     "turnover": 4857000000.0,
+     "volume": 3876500.0,
+     "volume_ratio": 0.97,
+     "disclosures": []
+    },
+    {
+     "code": "4043",
+     "name": "トクヤマ",
+     "sector33": "化学",
+     "close": 4223.0,
+     "change_pct": -0.35,
+     "turnover": 2016000000.0,
+     "volume": 477400.0,
+     "volume_ratio": 0.98,
+     "disclosures": []
+    },
+    {
+     "code": "4082",
+     "name": "第一稀元素化学工業",
+     "sector33": "化学",
+     "close": 2311.0,
+     "change_pct": -0.47,
+     "turnover": 470000000.0,
+     "volume": 203200.0,
+     "volume_ratio": 0.12,
+     "disclosures": []
+    },
+    {
+     "code": "6674",
+     "name": "GSユアサ",
+     "sector33": "電気機器",
+     "close": 5398.0,
+     "change_pct": -1.5,
+     "turnover": 4064000000.0,
+     "volume": 752900.0,
+     "volume_ratio": 1.03,
+     "disclosures": []
+    },
+    {
+     "code": "6619",
+     "name": "ダブル・スコープ",
+     "sector33": "電気機器",
+     "close": 149.0,
+     "change_pct": -3.87,
+     "turnover": 317000000.0,
+     "volume": 2126100.0,
+     "volume_ratio": 0.96,
      "disclosures": []
     }
    ],
@@ -7430,7 +7627,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 2
+   "news_count": 3
   },
   {
    "key": "space",
@@ -7733,6 +7930,709 @@
      "turnover": 412000000.0,
      "volume": 165500.0,
      "volume_ratio": 0.47,
+     "disclosures": []
+    }
+   ],
+   "news_count": 0
+  },
+  {
+   "key": "ipo",
+   "name": "IPO（上場1年以内）",
+   "change_pct": -0.17,
+   "advancers_ratio": 0.38,
+   "count": 60,
+   "members": [
+    {
+     "code": "627A",
+     "name": "akippa",
+     "sector33": null,
+     "close": 1637.0,
+     "change_pct": 22.44,
+     "turnover": 44993000000.0,
+     "volume": 27485000.0,
+     "volume_ratio": null,
+     "disclosures": []
+    },
+    {
+     "code": "410A",
+     "name": "GMOコマース",
+     "sector33": null,
+     "close": 1280.0,
+     "change_pct": 13.48,
+     "turnover": 300000000.0,
+     "volume": 234500.0,
+     "volume_ratio": 27.54,
+     "disclosures": [
+      {
+       "code": "410A",
+       "name": "Ｇ－ＧＭＯコマース",
+       "time": "2026-09-24T16:01:00+09:00",
+       "title": "AI時代のマーケティングプラットフォーム構築に向けた GMO NIKKO・GMOインサイトの株式取得（子会社化）に関するお知らせ",
+       "url": "https://www.release.tdnet.info/inbs/140120260918538304.pdf",
+       "tags": [
+        "提携・買収"
+       ],
+       "tone": "neutral",
+       "move_pct": null,
+       "move_basis": null,
+       "pts_price": null,
+       "pts_time": null,
+       "limit": null
+      },
+      {
+       "code": "410A",
+       "name": "Ｇ－ＧＭＯコマース",
+       "time": "2026-09-24T16:01:00+09:00",
+       "title": "2026年12月期通期連結業績予想の修正に関するお知らせ",
+       "url": "https://www.release.tdnet.info/inbs/140120260918538307.pdf",
+       "tags": [
+        "業績修正"
+       ],
+       "tone": "neutral",
+       "move_pct": null,
+       "move_basis": null,
+       "pts_price": null,
+       "pts_time": null,
+       "limit": null
+      }
+     ]
+    },
+    {
+     "code": "556A",
+     "name": "犬猫生活",
+     "sector33": null,
+     "close": 2900.0,
+     "change_pct": 9.43,
+     "turnover": 317000000.0,
+     "volume": 109400.0,
+     "volume_ratio": 2.72,
+     "disclosures": []
+    },
+    {
+     "code": "542A",
+     "name": "ビタブリッドジャパン",
+     "sector33": null,
+     "close": 1123.0,
+     "change_pct": 4.95,
+     "turnover": 32000000.0,
+     "volume": 28100.0,
+     "volume_ratio": 3.07,
+     "disclosures": []
+    },
+    {
+     "code": "8303",
+     "name": "SBI新生銀行（※）",
+     "sector33": "銀行業",
+     "close": 1619.0,
+     "change_pct": 2.92,
+     "turnover": 5497000000.0,
+     "volume": 3395100.0,
+     "volume_ratio": 1.14,
+     "disclosures": []
+    },
+    {
+     "code": "604A",
+     "name": "ビーエイブル",
+     "sector33": null,
+     "close": 1502.0,
+     "change_pct": 2.88,
+     "turnover": 1831000000.0,
+     "volume": 1219100.0,
+     "volume_ratio": 0.74,
+     "disclosures": []
+    },
+    {
+     "code": "462A",
+     "name": "ＦＵＮＤＩＮＮＯ",
+     "sector33": null,
+     "close": 255.0,
+     "change_pct": 2.82,
+     "turnover": 51000000.0,
+     "volume": 201800.0,
+     "volume_ratio": 0.12,
+     "disclosures": []
+    },
+    {
+     "code": "8729",
+     "name": "ソニーフィナンシャルグループ",
+     "sector33": "保険業",
+     "close": 162.3,
+     "change_pct": 2.14,
+     "turnover": 9712000000.0,
+     "volume": 59839600.0,
+     "volume_ratio": 1.0,
+     "disclosures": []
+    },
+    {
+     "code": "584A",
+     "name": "LiNKX",
+     "sector33": null,
+     "close": 2492.0,
+     "change_pct": 1.92,
+     "turnover": 100000000.0,
+     "volume": 40200.0,
+     "volume_ratio": 0.3,
+     "disclosures": []
+    },
+    {
+     "code": "441A",
+     "name": "ＮＥ",
+     "sector33": "情報・通信業",
+     "close": 275.0,
+     "change_pct": 1.48,
+     "turnover": 14000000.0,
+     "volume": 51900.0,
+     "volume_ratio": 1.09,
+     "disclosures": []
+    },
+    {
+     "code": "429A",
+     "name": "テクセンドフォトマスク",
+     "sector33": "その他製品",
+     "close": 3880.0,
+     "change_pct": 1.17,
+     "turnover": 1285000000.0,
+     "volume": 331100.0,
+     "volume_ratio": 0.54,
+     "disclosures": []
+    },
+    {
+     "code": "504A",
+     "name": "イノバセル",
+     "sector33": null,
+     "close": 579.0,
+     "change_pct": 1.05,
+     "turnover": 86000000.0,
+     "volume": 148200.0,
+     "volume_ratio": 1.34,
+     "disclosures": []
+    },
+    {
+     "code": "559A",
+     "name": "梅乃宿酒造",
+     "sector33": null,
+     "close": 1179.0,
+     "change_pct": 0.94,
+     "turnover": 8000000.0,
+     "volume": 6400.0,
+     "volume_ratio": 0.48,
+     "disclosures": []
+    },
+    {
+     "code": "423A",
+     "name": "ライオン事務器",
+     "sector33": null,
+     "close": 326.0,
+     "change_pct": 0.93,
+     "turnover": 6000000.0,
+     "volume": 19800.0,
+     "volume_ratio": 0.71,
+     "disclosures": []
+    },
+    {
+     "code": "625A",
+     "name": "Skyfall",
+     "sector33": null,
+     "close": 1627.0,
+     "change_pct": 0.87,
+     "turnover": 8161000000.0,
+     "volume": 5015800.0,
+     "volume_ratio": null,
+     "disclosures": []
+    },
+    {
+     "code": "622A",
+     "name": "テクノクラフト",
+     "sector33": null,
+     "close": 582.0,
+     "change_pct": 0.69,
+     "turnover": 51000000.0,
+     "volume": 87600.0,
+     "volume_ratio": null,
+     "disclosures": []
+    },
+    {
+     "code": "500A",
+     "name": "ＴＯブックス",
+     "sector33": null,
+     "close": 3635.0,
+     "change_pct": 0.69,
+     "turnover": 17000000.0,
+     "volume": 4800.0,
+     "volume_ratio": 0.48,
+     "disclosures": []
+    },
+    {
+     "code": "438A",
+     "name": "インフキュリオン",
+     "sector33": null,
+     "close": 1044.0,
+     "change_pct": 0.68,
+     "turnover": 61000000.0,
+     "volume": 58100.0,
+     "volume_ratio": 0.69,
+     "disclosures": []
+    },
+    {
+     "code": "523A",
+     "name": "セイワホールディングス",
+     "sector33": null,
+     "close": 1824.0,
+     "change_pct": 0.44,
+     "turnover": 212000000.0,
+     "volume": 116000.0,
+     "volume_ratio": 0.81,
+     "disclosures": []
+    },
+    {
+     "code": "550A",
+     "name": "ソフトテックス",
+     "sector33": null,
+     "close": 2171.0,
+     "change_pct": 0.28,
+     "turnover": 9000000.0,
+     "volume": 4300.0,
+     "volume_ratio": 1.62,
+     "disclosures": []
+    },
+    {
+     "code": "471A",
+     "name": "NSグループ",
+     "sector33": "その他金融業",
+     "close": 1547.0,
+     "change_pct": 0.26,
+     "turnover": 289000000.0,
+     "volume": 186600.0,
+     "volume_ratio": 0.9,
+     "disclosures": []
+    },
+    {
+     "code": "407A",
+     "name": "UNICONホールディングス",
+     "sector33": null,
+     "close": 924.0,
+     "change_pct": 0.11,
+     "turnover": 5000000.0,
+     "volume": 5800.0,
+     "volume_ratio": 0.38,
+     "disclosures": []
+    },
+    {
+     "code": "460A",
+     "name": "ＢＲＡＮＵ",
+     "sector33": null,
+     "close": 1300.0,
+     "change_pct": 0.08,
+     "turnover": 38000000.0,
+     "volume": 29400.0,
+     "volume_ratio": 0.71,
+     "disclosures": []
+    },
+    {
+     "code": "483A",
+     "name": "テラテクノロジー",
+     "sector33": null,
+     "close": 2156.0,
+     "change_pct": -0.19,
+     "turnover": 2000000.0,
+     "volume": 900.0,
+     "volume_ratio": 0.52,
+     "disclosures": []
+    },
+    {
+     "code": "548A",
+     "name": "システムエグゼ",
+     "sector33": null,
+     "close": 957.0,
+     "change_pct": -0.21,
+     "turnover": 11000000.0,
+     "volume": 11800.0,
+     "volume_ratio": 0.57,
+     "disclosures": []
+    },
+    {
+     "code": "549A",
+     "name": "ヒトトヒトホールディングス",
+     "sector33": null,
+     "close": 487.0,
+     "change_pct": -0.41,
+     "turnover": 10000000.0,
+     "volume": 20400.0,
+     "volume_ratio": 0.35,
+     "disclosures": []
+    },
+    {
+     "code": "519A",
+     "name": "ベーシック",
+     "sector33": null,
+     "close": 481.0,
+     "change_pct": -0.41,
+     "turnover": 7000000.0,
+     "volume": 15100.0,
+     "volume_ratio": 1.84,
+     "disclosures": []
+    },
+    {
+     "code": "409A",
+     "name": "オリオンビール",
+     "sector33": "食料品",
+     "close": 1160.0,
+     "change_pct": -0.43,
+     "turnover": 147000000.0,
+     "volume": 126700.0,
+     "volume_ratio": 0.74,
+     "disclosures": []
+    },
+    {
+     "code": "436A",
+     "name": "サイバーソリューションズ",
+     "sector33": null,
+     "close": 1295.0,
+     "change_pct": -0.61,
+     "turnover": 57000000.0,
+     "volume": 44400.0,
+     "volume_ratio": 0.61,
+     "disclosures": []
+    },
+    {
+     "code": "476A",
+     "name": "辻・本郷ＩＴコンサルティング",
+     "sector33": null,
+     "close": 1688.0,
+     "change_pct": -0.65,
+     "turnover": 12000000.0,
+     "volume": 7100.0,
+     "volume_ratio": 3.2,
+     "disclosures": []
+    },
+    {
+     "code": "456A",
+     "name": "HUMAN MADE",
+     "sector33": null,
+     "close": 1763.0,
+     "change_pct": -0.68,
+     "turnover": 1235000000.0,
+     "volume": 700700.0,
+     "volume_ratio": 1.04,
+     "disclosures": []
+    },
+    {
+     "code": "558A",
+     "name": "SQUEEZE",
+     "sector33": null,
+     "close": 6150.0,
+     "change_pct": -0.81,
+     "turnover": 97000000.0,
+     "volume": 15800.0,
+     "volume_ratio": 0.56,
+     "disclosures": []
+    },
+    {
+     "code": "478A",
+     "name": "フツパー",
+     "sector33": null,
+     "close": 735.0,
+     "change_pct": -0.81,
+     "turnover": 42000000.0,
+     "volume": 57100.0,
+     "volume_ratio": 0.76,
+     "disclosures": []
+    },
+    {
+     "code": "469A",
+     "name": "フィットクルー",
+     "sector33": null,
+     "close": 1620.0,
+     "change_pct": -0.92,
+     "turnover": 4000000.0,
+     "volume": 2300.0,
+     "volume_ratio": 0.52,
+     "disclosures": []
+    },
+    {
+     "code": "505A",
+     "name": "ギークリー",
+     "sector33": null,
+     "close": 1377.0,
+     "change_pct": -1.01,
+     "turnover": 27000000.0,
+     "volume": 19900.0,
+     "volume_ratio": 0.71,
+     "disclosures": []
+    },
+    {
+     "code": "414A",
+     "name": "オーバーラップホールディングス",
+     "sector33": null,
+     "close": 874.0,
+     "change_pct": -1.02,
+     "turnover": 50000000.0,
+     "volume": 56900.0,
+     "volume_ratio": 0.51,
+     "disclosures": []
+    },
+    {
+     "code": "589A",
+     "name": "ネイス",
+     "sector33": null,
+     "close": 1365.0,
+     "change_pct": -1.09,
+     "turnover": 26000000.0,
+     "volume": 19100.0,
+     "volume_ratio": 0.4,
+     "disclosures": []
+    },
+    {
+     "code": "479A",
+     "name": "PRONI",
+     "sector33": null,
+     "close": 2163.0,
+     "change_pct": -1.14,
+     "turnover": 142000000.0,
+     "volume": 65600.0,
+     "volume_ratio": 0.99,
+     "disclosures": []
+    },
+    {
+     "code": "472A",
+     "name": "ミラティブ",
+     "sector33": null,
+     "close": 564.0,
+     "change_pct": -1.23,
+     "turnover": 47000000.0,
+     "volume": 82700.0,
+     "volume_ratio": 0.5,
+     "disclosures": []
+    },
+    {
+     "code": "619A",
+     "name": "オリバー",
+     "sector33": null,
+     "close": 308.0,
+     "change_pct": -1.28,
+     "turnover": 638000000.0,
+     "volume": 2071300.0,
+     "volume_ratio": null,
+     "disclosures": []
+    },
+    {
+     "code": "421A",
+     "name": "ムービン・ストラテジック・キャリア",
+     "sector33": null,
+     "close": 3925.0,
+     "change_pct": -1.51,
+     "turnover": 164000000.0,
+     "volume": 41900.0,
+     "volume_ratio": 0.61,
+     "disclosures": []
+    },
+    {
+     "code": "477A",
+     "name": "スタートライン",
+     "sector33": null,
+     "close": 836.0,
+     "change_pct": -1.53,
+     "turnover": 20000000.0,
+     "volume": 24400.0,
+     "volume_ratio": 0.63,
+     "disclosures": []
+    },
+    {
+     "code": "480A",
+     "name": "リブ・コンサルティング",
+     "sector33": null,
+     "close": 970.0,
+     "change_pct": -1.72,
+     "turnover": 14000000.0,
+     "volume": 14100.0,
+     "volume_ratio": 0.61,
+     "disclosures": []
+    },
+    {
+     "code": "554A",
+     "name": "バトンズ",
+     "sector33": null,
+     "close": 1418.0,
+     "change_pct": -1.73,
+     "turnover": 18000000.0,
+     "volume": 12500.0,
+     "volume_ratio": 0.82,
+     "disclosures": []
+    },
+    {
+     "code": "607A",
+     "name": "エブリー",
+     "sector33": null,
+     "close": 281.0,
+     "change_pct": -1.75,
+     "turnover": 123000000.0,
+     "volume": 438700.0,
+     "volume_ratio": 0.18,
+     "disclosures": []
+    },
+    {
+     "code": "598A",
+     "name": "チャットプラス",
+     "sector33": null,
+     "close": 1415.0,
+     "change_pct": -1.87,
+     "turnover": 48000000.0,
+     "volume": 34000.0,
+     "volume_ratio": 0.15,
+     "disclosures": []
+    },
+    {
+     "code": "442A",
+     "name": "クラシコ",
+     "sector33": null,
+     "close": 754.0,
+     "change_pct": -2.2,
+     "turnover": 7000000.0,
+     "volume": 8900.0,
+     "volume_ratio": 1.77,
+     "disclosures": []
+    },
+    {
+     "code": "431A",
+     "name": "ユーソナー",
+     "sector33": null,
+     "close": 2682.0,
+     "change_pct": -2.65,
+     "turnover": 90000000.0,
+     "volume": 33500.0,
+     "volume_ratio": 0.81,
+     "disclosures": []
+    },
+    {
+     "code": "623A",
+     "name": "ベルテックス",
+     "sector33": null,
+     "close": 592.0,
+     "change_pct": -2.79,
+     "turnover": 792000000.0,
+     "volume": 1338300.0,
+     "volume_ratio": null,
+     "disclosures": []
+    },
+    {
+     "code": "446A",
+     "name": "ノースサンド",
+     "sector33": null,
+     "close": 2313.0,
+     "change_pct": -2.98,
+     "turnover": 2218000000.0,
+     "volume": 959000.0,
+     "volume_ratio": 1.28,
+     "disclosures": []
+    },
+    {
+     "code": "581A",
+     "name": "GO",
+     "sector33": null,
+     "close": 3220.0,
+     "change_pct": -3.16,
+     "turnover": 8838000000.0,
+     "volume": 2744600.0,
+     "volume_ratio": 0.76,
+     "disclosures": []
+    },
+    {
+     "code": "5537",
+     "name": "AlbaLink",
+     "sector33": null,
+     "close": 3785.0,
+     "change_pct": -3.32,
+     "turnover": 238000000.0,
+     "volume": 63000.0,
+     "volume_ratio": 0.77,
+     "disclosures": []
+    },
+    {
+     "code": "603A",
+     "name": "アイ・グリッド・ソリューションズ",
+     "sector33": null,
+     "close": 868.0,
+     "change_pct": -3.45,
+     "turnover": 973000000.0,
+     "volume": 1120400.0,
+     "volume_ratio": 0.51,
+     "disclosures": []
+    },
+    {
+     "code": "475A",
+     "name": "ギミック",
+     "sector33": null,
+     "close": 689.0,
+     "change_pct": -3.77,
+     "turnover": 15000000.0,
+     "volume": 22300.0,
+     "volume_ratio": 1.33,
+     "disclosures": []
+    },
+    {
+     "code": "520A",
+     "name": "ジェイファーマ",
+     "sector33": null,
+     "close": 389.0,
+     "change_pct": -4.42,
+     "turnover": 207000000.0,
+     "volume": 533400.0,
+     "volume_ratio": 0.67,
+     "disclosures": []
+    },
+    {
+     "code": "618A",
+     "name": "KOMPEITO",
+     "sector33": null,
+     "close": 1757.0,
+     "change_pct": -5.54,
+     "turnover": 757000000.0,
+     "volume": 430700.0,
+     "volume_ratio": null,
+     "disclosures": []
+    },
+    {
+     "code": "485A",
+     "name": "パワーエックス",
+     "sector33": null,
+     "close": 2118.0,
+     "change_pct": -5.74,
+     "turnover": 20333000000.0,
+     "volume": 9599900.0,
+     "volume_ratio": 1.0,
+     "disclosures": []
+    },
+    {
+     "code": "428A",
+     "name": "サイプレス・ホールディングス",
+     "sector33": null,
+     "close": 1618.0,
+     "change_pct": -6.2,
+     "turnover": 74000000.0,
+     "volume": 45900.0,
+     "volume_ratio": 1.55,
+     "disclosures": []
+    },
+    {
+     "code": "621A",
+     "name": "オーディオストック",
+     "sector33": null,
+     "close": 1454.0,
+     "change_pct": -6.44,
+     "turnover": 4509000000.0,
+     "volume": 3100900.0,
+     "volume_ratio": null,
+     "disclosures": []
+    },
+    {
+     "code": "593A",
+     "name": "ティアフォー",
+     "sector33": null,
+     "close": 1962.0,
+     "change_pct": -7.45,
+     "turnover": 19410000000.0,
+     "volume": 9893000.0,
+     "volume_ratio": 0.34,
      "disclosures": []
     }
    ],
@@ -9141,21 +10041,12 @@
    ]
   },
   {
-   "title": "ソニー半導体社員8000人、原則出社に回帰 1人個室やランチ代補助新設",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE92N2l4TWhZSDFtSUwxWmtTQ1BKVDNOUVRleF9hMmxoSTZ5cTdLT3UwZVc5aGRHS2hlcklVeE9KTktRRFlxdDBhWVpudzAwOVBYMGJVT0plaEUtWG9sWjNWOTBvZ3VfUUVCdjRobA?oc=5",
-   "source": "nikkei.com",
-   "published_at": "2026-09-25T20:00:00Z",
+   "title": "HDD、AI用データ爆増で復権 生きる日本の「すり合わせ」",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE41bTY0SDBUMk1MWDZ1WEM4TkZUdHFEOGlEMjNRVEdmdkxJb1JIdTA4MnpJN0VFUTlYZGpBc3hiOVFJblFvNXhLVGtDdUkwYnd2aDBnajk3aFREN25GZVpsM0pwbHhlWnJPd2VqMA?oc=5",
+   "source": "日本経済新聞",
+   "published_at": "2026-09-25T19:00:00Z",
    "tags": [
-    "semiconductor"
-   ]
-  },
-  {
-   "title": "ホルムズ海峡「闇タンカー」急増、供給6割に回復 位置情報隠す",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAxVVdVRE5odENwYVFBTWw1S3ZaVURiVW53ajFHVm9GOXZDSUdsU2Q2UWpqdGJaN3hZcUJ0NW02SWlvMEpVYXVqRE1xWTlySXV4YTRjdEdhT0ZKakZmam5OdjNGYldGUDlSdzQ3Zg?oc=5",
-   "source": "nikkei.com",
-   "published_at": "2026-09-25T18:50:18Z",
-   "tags": [
-    "shipping"
+    "ai_datacenter"
    ]
   },
   {
@@ -9195,6 +10086,13 @@
    ]
   },
   {
+   "title": "米国株式市場＝主要3指数上昇、マイクロソフトなどＡＩ関連株がけん引",
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOZVp4cmhDbzlQYUkyUk9KQVA1MGdWLXMzT1JhQllvcUc2RVAzUGFjWk9YRUw3V19wSUlTVmJESWlIUmh4SW9NRFpFeEU3RFlvWXNlT1BoUGpqZDZmVGV3aTZDNjFKaHBVUTBLclBLVmZ3OWtGMEt1cE5teDE5emFXTUZKYTZyUQ?oc=5",
+   "source": "Reuters",
+   "published_at": "2026-09-25T20:45:55Z",
+   "tags": []
+  },
+  {
    "title": "円相場1ドル＝156円台に上昇 1日で2円余円高に 介入警戒強まる",
    "url": "https://news.web.nhk/newsweb/na/nd-20260926de52516",
    "source": "NHK経済",
@@ -9209,17 +10107,17 @@
    "tags": []
   },
   {
-   "title": "キオクシア株、本格反転はいつ？ 担当記者とロンドン×東京で語る",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBMR1JoS2NuazlKNHIxNEtwb3B6b1NCV3NNTjRzOEhFZ2FIRE4yMUVGRVVQRHBtUUd1VE45WWZ4clNWX1VOTnd3ODQ5Zjd4Mm1hYlhkZnpRS2FxaXc0SUNhSEt4clE5bjZKUjJHSg?oc=5",
-   "source": "nikkei.com",
-   "published_at": "2026-09-25T10:51:03Z",
-   "tags": []
-  },
-  {
    "title": "ジャングリア沖縄 親会社で株主総会 新スポンサーを探す方針",
    "url": "https://news.web.nhk/newsweb/na/nd-20260925de52445",
    "source": "NHK経済",
    "published_at": "2026-09-25T09:29:29Z",
+   "tags": []
+  },
+  {
+   "title": "「濃い緑」のシャインマスカットは酸っぱい？ 甘い「ブドウ」見分ける3つのポイントとは【生産者に聞く】",
+   "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9rX1JHdFlkRHNUQUkzdDNnTXMtaEpXWXhIclcxbV81SndramVKT0ZyV0pibEw4d2U4Q2tXYXdLM3FCc251WTRrY1FB?oc=5",
+   "source": "オトナンサー",
+   "published_at": "2026-09-25T23:01:03Z",
    "tags": []
   },
   {
@@ -9234,13 +10132,6 @@
    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5rT0lJeGwtUjNmZUJyT1dSeVFLaWZfLTNIYmw3Q08zWHhWT2g5VkRURkczVFdPQlR6Wjk5aVMtTnJaaTBwVXhvQkcwVWhob0lhNUJBWUNSQld2LWtralZ5OWV1eGd0aUJWZlE?oc=5",
    "source": "ITmedia",
    "published_at": "2026-09-25T22:48:32Z",
-   "tags": []
-  },
-  {
-   "title": "大阪で「カプセルトイ展」開催中！廃盤から限定まで…約160台の“激レア”集結【10月12日まで】",
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1SRHVBRjVzX0hfdDR4VS1RZVcxczYzVFd5MmZLaU5HVzI1cFdiRWUzMWZzTmlDNTlXYU1Gd21rUURTQVVHLXhoVU16Vk9Eb3h2YkhDRQ?oc=5",
-   "source": "Lmaga.jp",
-   "published_at": "2026-09-25T22:30:00Z",
    "tags": []
   },
   {
@@ -9300,13 +10191,6 @@
    "tags": []
   },
   {
-   "title": "ロンドンに広がるスマートグラスへの反感、プライバシー懸念で(1/3)",
-   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5xMDhFX1JtR0Z5Z19MUXd2bkFsaUY5ZzRYcjFVYWEyM2M0QS15a19sUHEyUWRzZ1AwNnpnY2JVM0RNMG41Y1RGVTY2OV9acERxSnc?oc=5",
-   "source": "CNN.co.jp",
-   "published_at": "2026-09-25T10:00:00Z",
-   "tags": []
-  },
-  {
    "title": "ふるさと納税「越前がに」に水ガニ カニ関連は返礼品から除外",
    "url": "https://news.web.nhk/newsweb/na/nd-20260925de52378",
    "source": "NHK経済",
@@ -9318,6 +10202,20 @@
    "url": "https://news.web.nhk/newsweb/na/nd-20260925de52342",
    "source": "NHK経済",
    "published_at": "2026-09-25T05:32:00Z",
+   "tags": []
+  },
+  {
+   "title": "きょうのおはBiz 9月25日(金) 簗農相 コメ価格下落に危機感",
+   "url": "https://news.web.nhk/newsweb/na/nd-20260925de52305",
+   "source": "NHK経済",
+   "published_at": "2026-09-25T02:32:27Z",
+   "tags": []
+  },
+  {
+   "title": "全東信破綻で未回収の売上金 10月中にも飲食店などに支払いへ",
+   "url": "https://news.web.nhk/newsweb/na/nd-20260925de52300",
+   "source": "NHK経済",
+   "published_at": "2026-09-25T00:56:00Z",
    "tags": []
   }
  ],
@@ -11369,6 +12267,50 @@
     2.5,
     0.39,
     0.13
+   ],
+   "next_gen_battery": [
+    1.68,
+    1.58,
+    -0.38,
+    0.02,
+    1.06,
+    -4.67,
+    0.02,
+    0.46,
+    2.23,
+    -4.43,
+    2.11,
+    0.12,
+    -2.31,
+    -0.77,
+    0.52,
+    2.33,
+    -0.41,
+    0.91,
+    1.08,
+    0.6
+   ],
+   "ipo": [
+    -0.88,
+    1.99,
+    2.5,
+    1.49,
+    -0.58,
+    -1.97,
+    0.95,
+    3.12,
+    -1.51,
+    -0.65,
+    -0.92,
+    0.27,
+    -1.51,
+    2.12,
+    0.47,
+    -0.54,
+    0.19,
+    0.81,
+    1.8,
+    -0.17
    ],
    "electronic_parts": [
     0.01,

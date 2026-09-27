@@ -18,11 +18,12 @@ from jpmarket.analytics.charts import build_chart_payload
 from jpmarket.analytics.comment import market_comment
 from jpmarket.analytics.trends import build_trends
 from jpmarket.calendar import is_trading_day, prev_trading_day
-from jpmarket.config import QuoteSpec, Settings
+from jpmarket.config import QuoteSpec, Settings, ThemeSpec
 from jpmarket.models import DailySummary, Disclosure, NewsItem, Quote, QuoteCategory, StockMove
 from jpmarket.news import rss, tdnet
 from jpmarket.sources import rates
 from jpmarket.sources.base import MarketDataSource
+from jpmarket.sources.ipo import Listing, load_recent_ipos
 from jpmarket.sources.master import Master, load_master
 from jpmarket.sources.price_store import PriceStore
 from jpmarket.sources.yahoo_jp import IndexClose, StockQuote, YahooStockClient, fetch_index_close
@@ -49,7 +50,31 @@ class Deps:
     news: list[NewsItem] | None = None  # None -> fetch RSS
     disclosures: list[Disclosure] | None = None  # None -> fetch TDnet
     pts_lookup: Callable[[str], StockQuote | None] | None = None  # None -> Yahoo!ファイナンス stock pages
+    ipos: list[Listing] | None = None  # None -> JPX new-listing pages
     failed_feeds: list[str] = field(default_factory=list)
+
+
+def resolve_themes(
+    themes: Sequence[ThemeSpec], target: dt.date, settings: Settings, deps: Deps, warnings: list[str]
+) -> list[ThemeSpec]:
+    """Fill dynamic themes (e.g. recent IPOs) with today's members."""
+    out = []
+    for t in themes:
+        if t.dynamic == "ipo":
+            listings = (
+                deps.ipos
+                if deps.ipos is not None
+                else load_recent_ipos(
+                    settings.cache_dir, today=target, client=deps.http, window_days=t.window_days
+                )
+            )
+            if listings is None:
+                warnings.append("新規上場の一覧（JPX）を取得できなかったため、IPOテーマを省きました。")
+                continue
+            t = t.model_copy(update={"members": {x.code: x.name for x in listings}})
+        if t.members:
+            out.append(t)
+    return out
 
 
 def with_day_moves(
@@ -178,7 +203,8 @@ def build(target: dt.date, settings: Settings, deps: Deps) -> BuildResult:
     warnings: list[str] = []
     master = deps.master or load_master(settings.cache_dir, today=target, client=deps.http)
     codes = [c.code for c in master.constituents]
-    theme_codes = [c for t in settings.themes for c in t.members]
+    theme_specs = resolve_themes(settings.themes, target, settings, deps, warnings)
+    theme_codes = [c for t in theme_specs for c in t.members]
     etf_codes = [e.code for e in settings.sector17_etfs]
     quote_tickers = [q.ticker for q in settings.quotes if q.source == "yfinance"]
 
@@ -266,7 +292,7 @@ def build(target: dt.date, settings: Settings, deps: Deps) -> BuildResult:
         for c in master.constituents
         if (m := core.stock_move(c.code, c.name, c.sector33, closes, rets, vols, target)) is not None
     ]
-    themes = core.theme_perf(settings.themes, closes, rets, vols, target, sector_of)
+    themes = core.theme_perf(theme_specs, closes, rets, vols, target, sector_of)
     breadth = core.breadth(codes, closes, rets, target)
 
     # news: from the previous close (15:30 JST) until now
@@ -276,7 +302,7 @@ def build(target: dt.date, settings: Settings, deps: Deps) -> BuildResult:
         raw, failed = rss.fetch_feeds(settings.feeds, client=deps.http)
     else:
         raw, failed = deps.news, deps.failed_feeds
-    window = rss.select(rss.tag(raw, settings.themes), since=since, until=until, max_items=len(raw))
+    window = rss.select(rss.tag(raw, theme_specs), since=since, until=until, max_items=len(raw))
     news = rss.rank(window)[: settings.news_max_items]
     if failed:
         warnings.append(f"一部のニュースを取得できませんでした（{'、'.join(failed)}）。")
@@ -352,12 +378,13 @@ def build(target: dt.date, settings: Settings, deps: Deps) -> BuildResult:
             "pts_unavailable": int(bool(disc_after) and all(d.move_basis is None for d in disc_after)),
         },
         sector_history=core.sector_history(master.constituents, rets, target),
-        theme_history=core.theme_history(settings.themes, rets, target),
+        theme_history=core.theme_history(theme_specs, rets, target),
     )
     tq = by_key.get("topix")
     charts = build_chart_payload(
         summary,
         settings,
+        themes=theme_specs,
         bars=store.bars,
         master=master.constituents,
         rets=rets,
@@ -365,7 +392,7 @@ def build(target: dt.date, settings: Settings, deps: Deps) -> BuildResult:
         fred=fred,
         topix_close=tq.close if tq else None,
     )
-    trends = build_trends(master.constituents, settings.themes, rets, target)
+    trends = build_trends(master.constituents, theme_specs, rets, target)
     return BuildResult(summary=summary, charts=charts, trends=trends)
 
 

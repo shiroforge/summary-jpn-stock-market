@@ -7,7 +7,7 @@ Written only to the built site (not data/): it contains raw OHLC, see DECISIONS 
 from __future__ import annotations
 
 import datetime as dt
-from collections.abc import Iterable, Mapping
+from collections.abc import Iterable, Mapping, Sequence
 from itertools import pairwise
 from typing import Any
 from urllib.parse import quote
@@ -15,7 +15,7 @@ from urllib.parse import quote
 import pandas as pd
 
 from jpmarket.analytics import core
-from jpmarket.config import QuoteSpec, Settings
+from jpmarket.config import QuoteSpec, Settings, ThemeSpec
 from jpmarket.models import DailySummary, QuoteCategory
 from jpmarket.sources.master import Constituent
 
@@ -114,6 +114,7 @@ def build_chart_payload(
     summary: DailySummary,
     settings: Settings,
     *,
+    themes: Sequence[ThemeSpec],
     bars: pd.DataFrame,
     master: list[Constituent],
     rets: pd.DataFrame,
@@ -125,7 +126,7 @@ def build_chart_payload(
     series: dict[str, dict[str, Any]] = {}
     by_symbol = {sym: g for sym, g in bars.groupby("symbol")}
     names = {c.code: c.name for c in master}
-    for t in settings.themes:
+    for t in themes:
         for code, n in t.members.items():
             names.setdefault(code, n)
     for e in settings.sector17_etfs:
@@ -190,7 +191,7 @@ def build_chart_payload(
         )
         if s:
             series[f"s:{name}"] = s
-    for t in settings.themes:
+    for t in themes:
         cols = rets.columns.intersection(list(t.members))
         if cols.empty:
             continue

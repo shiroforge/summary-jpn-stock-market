@@ -12,6 +12,7 @@ from jpmarket.models import Disclosure, NewsItem
 from jpmarket.pipeline import Deps, StaleDataError, build_summary, save_summary
 from jpmarket.render.builder import render_daily
 from jpmarket.render.site import build_site, load_all
+from jpmarket.sources.ipo import Listing
 from jpmarket.sources.master import parse_topixweight
 from jpmarket.sources.yahoo_jp import IndexClose, StockQuote
 
@@ -114,6 +115,11 @@ def deps(source: FakeSource, topix: IndexClose | None) -> Deps:
         news=news,
         disclosures=DISCLOSURES,
         pts_lookup=lambda code: PTS.get(code),
+        ipos=[
+            Listing(
+                date=dt.date(2026, 3, 2), code="0001", name="新規上場A", market="グロース", technical=False
+            )
+        ],
     )
 
 
@@ -126,6 +132,8 @@ def test_build_with_official_topix(tmp_path: Path) -> None:
     assert s.quote("nikkei225") is not None and s.quote("usdjpy") is not None
     assert s.sectors and len(s.sector17_etfs) == 17
     assert s.themes and all(t.count > 0 for t in s.themes)
+    ipo = next(t for t in s.themes if t.key == "ipo")  # dynamic theme filled from the injected listings
+    assert [m.code for m in ipo.members] == ["0001"] and ipo.members[0].name == "新規上場A"
     assert s.breadth is not None and s.breadth.total > 0
     assert s.news and s.news[0].tags == ["banks"]
     assert next(t for t in s.themes if t.key == "banks").news_count == 1
