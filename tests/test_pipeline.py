@@ -12,9 +12,8 @@ from jpmarket.models import Disclosure, NewsItem
 from jpmarket.pipeline import Deps, StaleDataError, build_summary, save_summary
 from jpmarket.render.builder import render_daily
 from jpmarket.render.site import build_site, load_all
-from jpmarket.sources.kabutan import KabutanQuote
 from jpmarket.sources.master import parse_topixweight
-from jpmarket.sources.yahoo_jp import IndexClose
+from jpmarket.sources.yahoo_jp import IndexClose, StockQuote
 
 FIX = Path(__file__).parent / "fixtures"
 D = dt.date
@@ -83,7 +82,7 @@ DISCLOSURES = [
 
 
 PTS = {
-    "8306": KabutanQuote(
+    "8306": StockQuote(
         close=None,
         change_pct=None,
         limit="S高",
@@ -114,7 +113,7 @@ def deps(source: FakeSource, topix: IndexClose | None) -> Deps:
         topix=topix,
         news=news,
         disclosures=DISCLOSURES,
-        kabutan=lambda code: PTS.get(code),
+        pts_lookup=lambda code: PTS.get(code),
     )
 
 
@@ -155,7 +154,7 @@ def test_disclosures_attached(tmp_path: Path) -> None:
 def test_pts_before_close_is_ignored(tmp_path: Path) -> None:
     d = deps(FakeSource(), IndexClose(T, 4128.59, 4075.30))
     d.now = dt.datetime(2026, 9, 25, 16, 30, tzinfo=JST)
-    d.kabutan = lambda code: KabutanQuote(
+    d.pts_lookup = lambda code: StockQuote(
         close=1000.0,
         change_pct=1.0,
         limit=None,
@@ -169,11 +168,11 @@ def test_pts_before_close_is_ignored(tmp_path: Path) -> None:
 def test_pts_unavailable_flag(tmp_path: Path) -> None:
     d = deps(FakeSource(), IndexClose(T, 4128.59, 4075.30))
     d.now = dt.datetime(2026, 9, 25, 16, 30, tzinfo=JST)
-    d.kabutan = lambda code: None  # e.g. blocked from the CI network
+    d.pts_lookup = lambda code: None  # e.g. blocked from the CI network
     s = build_summary(T, settings(tmp_path), d)
     assert s.disclosure_counts["pts_unavailable"] == 1
     html = render_daily(s)
-    assert "今回はPTSの価格を取得できませんでした" in html and "kabutan.jp/stock/?code=8306" in html
+    assert "今回はPTSの価格を取得できませんでした" in html and "finance.yahoo.co.jp/quote/8306.T" in html
 
 
 def test_topix_fallback_uses_previous_close(tmp_path: Path) -> None:

@@ -23,10 +23,9 @@ from jpmarket.models import DailySummary, Disclosure, NewsItem, Quote, QuoteCate
 from jpmarket.news import rss, tdnet
 from jpmarket.sources import rates
 from jpmarket.sources.base import MarketDataSource
-from jpmarket.sources.kabutan import KabutanClient, KabutanQuote
 from jpmarket.sources.master import Master, load_master
 from jpmarket.sources.price_store import PriceStore
-from jpmarket.sources.yahoo_jp import IndexClose, fetch_index_close
+from jpmarket.sources.yahoo_jp import IndexClose, StockQuote, YahooStockClient, fetch_index_close
 
 log = logging.getLogger(__name__)
 JST = dt.timezone(dt.timedelta(hours=9))
@@ -49,7 +48,7 @@ class Deps:
     final: bool = True  # False on early attempts: incomplete data raises StaleDataError to retry later
     news: list[NewsItem] | None = None  # None -> fetch RSS
     disclosures: list[Disclosure] | None = None  # None -> fetch TDnet
-    kabutan: Callable[[str], KabutanQuote | None] | None = None  # None -> fetch from kabutan.jp
+    pts_lookup: Callable[[str], StockQuote | None] | None = None  # None -> Yahoo!ファイナンス stock pages
     failed_feeds: list[str] = field(default_factory=list)
 
 
@@ -85,15 +84,15 @@ def with_pts_moves(
     """Attach the PTS reaction: last PTS price after 15:30 vs. the session close."""
     if not items:
         return []
-    lookup = deps.kabutan
+    lookup = deps.pts_lookup
     if lookup is None:
-        kc = KabutanClient(deps.http)
+        yc = YahooStockClient(deps.http)
 
-        def lookup(code: str) -> KabutanQuote | None:
-            return kc.quote(code, year=target.year)
+        def lookup(code: str) -> StockQuote | None:
+            return yc.quote(code, year=target.year)
 
     close_time = dt.datetime.combine(target, dt.time(15, 30), JST)
-    quotes: dict[str, KabutanQuote | None] = {}
+    quotes: dict[str, StockQuote | None] = {}
     out = []
     for d in items:
         if d.code not in quotes:
@@ -349,7 +348,7 @@ def build(target: dt.date, settings: Settings, deps: Deps) -> BuildResult:
         disclosure_counts={
             "session": len(session),
             "after": len(after),
-            # 1 when no after-close item could be priced at all (e.g. kabutan blocks the CI network)
+            # 1 when no after-close item could be priced at all (e.g. the quote site is unreachable)
             "pts_unavailable": int(bool(disc_after) and all(d.move_basis is None for d in disc_after)),
         },
         sector_history=core.sector_history(master.constituents, rets, target),

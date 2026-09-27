@@ -194,7 +194,7 @@
 {% elif d.move_basis == "day" and d.move_pct is not none %}
   <span class="mono {{ d.move_pct | tone }}"><b>{{ d.move_pct | pct }}</b></span><span class="dbasis">当日</span>
 {% elif d.time.hour * 60 + d.time.minute >= 930 %}
-  <a class="dbasis" href="https://kabutan.jp/stock/?code={{ d.code }}" target="_blank" rel="noopener" title="株探でPTSの価格を見る">PTS ↗</a>
+  <a class="dbasis" href="https://finance.yahoo.co.jp/quote/{{ d.code }}.T" target="_blank" rel="noopener" title="Yahoo!ファイナンスで夜間PTSの価格を見る">PTS ↗</a>
 {% else %}<span class="muted">—</span>{% endif %}
 {% if d.limit %}<span class="dlimit {{ 'up' if d.limit == 'S高' else 'down' }}">{{ d.limit }}</span>{% endif %}
 {% endmacro %}

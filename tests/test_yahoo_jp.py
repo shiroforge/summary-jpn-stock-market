@@ -29,3 +29,40 @@ def test_fetch_checks_date() -> None:
 def test_fetch_failures_return_none() -> None:
     assert fetch_index_close(dt.date(2026, 9, 25), client=_client("", 503)) is None
     assert fetch_index_close(dt.date(2026, 9, 25), client=_client("<html>changed</html>")) is None
+
+
+STOCK = (Path(__file__).parent / "fixtures" / "yahoo_jp_stock_sample.html").read_text(encoding="utf-8")
+
+
+def test_parse_stock_page_with_pts() -> None:
+    from jpmarket.sources.yahoo_jp import JST, parse_stock_page
+
+    q = parse_stock_page(STOCK, year=2026)
+    assert q is not None
+    assert q.close == 6885 and q.change_pct == 16.99 and q.limit == "S高"
+    assert q.pts_price == 6870 and q.pts_time == dt.datetime(2026, 9, 25, 23, 58, tzinfo=JST)
+
+
+def test_parse_stock_page_without_pts() -> None:
+    from jpmarket.sources.yahoo_jp import parse_stock_page
+
+    html = STOCK.replace('ptsPrice\\":\\"6,870', 'ptsPrice\\":\\"$undefined').replace(
+        "ストップ高", "$undefined"
+    )
+    q = parse_stock_page(html, year=2026)
+    assert q is not None and q.pts_price is None and q.pts_time is None and q.limit is None
+    assert parse_stock_page("<html>changed</html>", year=2026) is None
+
+
+def test_stock_client_stops_when_blocked() -> None:
+    from jpmarket.sources.yahoo_jp import YahooStockClient
+
+    calls: list[str] = []
+
+    def handler(req: httpx.Request) -> httpx.Response:
+        calls.append(str(req.url))
+        return httpx.Response(403)
+
+    yc = YahooStockClient(httpx.Client(transport=httpx.MockTransport(handler)), sleep=lambda s: None)
+    assert yc.quote("4967", year=2026) is None and yc.quote("7203", year=2026) is None
+    assert yc.blocked and len(calls) == 1
