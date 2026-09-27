@@ -66,3 +66,34 @@ def test_stock_client_stops_when_blocked() -> None:
     yc = YahooStockClient(httpx.Client(transport=httpx.MockTransport(handler)), sleep=lambda s: None)
     assert yc.quote("4967", year=2026) is None and yc.quote("7203", year=2026) is None
     assert yc.blocked and len(calls) == 1
+
+
+HIST = (Path(__file__).parent / "fixtures" / "yahoo_jp_topix_history.html").read_text(encoding="utf-8")
+
+
+def test_parse_history_and_quote_ohlc() -> None:
+    from jpmarket.sources.yahoo_jp import parse_history
+
+    rows = parse_history(HIST)
+    assert len(rows) == 20
+    assert rows[0] == (dt.date(2026, 9, 25), 4092.19, 4132.11, 4089.19, 4128.59)
+    q = parse_index_page(HTML, year=2026)
+    assert q is not None and (q.open, q.high, q.low) == (4092.19, 4132.11, 4089.19)
+
+
+def test_fetch_history_stops_at_since() -> None:
+    from jpmarket.sources.yahoo_jp import fetch_index_history
+
+    pages: list[str] = []
+
+    def handler(req: httpx.Request) -> httpx.Response:
+        pages.append(str(req.url))
+        return httpx.Response(200, text=HIST)
+
+    client = httpx.Client(transport=httpx.MockTransport(handler))
+    rows = fetch_index_history("998405.T", since=dt.date(2026, 9, 1), client=client, sleep=lambda s: None)
+    assert len(pages) == 1 and len(rows) == 20  # page 1 already reaches back past `since`
+    rows = fetch_index_history(
+        "998405.T", since=dt.date(2026, 1, 1), client=client, max_pages=3, sleep=lambda s: None
+    )
+    assert len(pages) == 4

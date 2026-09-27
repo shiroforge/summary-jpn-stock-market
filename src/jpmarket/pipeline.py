@@ -26,11 +26,18 @@ from jpmarket.sources.base import MarketDataSource
 from jpmarket.sources.ipo import Listing, load_recent_ipos
 from jpmarket.sources.master import Master, load_master
 from jpmarket.sources.price_store import PriceStore
-from jpmarket.sources.yahoo_jp import IndexClose, StockQuote, YahooStockClient, fetch_index_close
+from jpmarket.sources.yahoo_jp import (
+    IndexClose,
+    StockQuote,
+    YahooStockClient,
+    fetch_index_close,
+    fetch_index_history,
+)
 
 log = logging.getLogger(__name__)
 JST = dt.timezone(dt.timedelta(hours=9))
 FRESHNESS_SYMBOL = "^N225"
+TOPIX_SYMBOL = "998405.T"  # stored alongside yfinance bars; OHLC from Yahoo!ファイナンス (D-26)
 
 
 class StaleDataError(RuntimeError):
@@ -51,6 +58,9 @@ class Deps:
     disclosures: list[Disclosure] | None = None  # None -> fetch TDnet
     pts_lookup: Callable[[str], StockQuote | None] | None = None  # None -> Yahoo!ファイナンス stock pages
     ipos: list[Listing] | None = None  # None -> JPX new-listing pages
+    topix_history: list[tuple[dt.date, float, float, float, float]] | None = (
+        None  # None -> Yahoo history pages
+    )
     failed_feeds: list[str] = field(default_factory=list)
 
 
@@ -158,14 +168,55 @@ def last_topix_close(data_dir: Path, before: dt.date) -> float | None:
     return None
 
 
+def update_topix_history(store: PriceStore, target: dt.date, official: IndexClose | None, deps: Deps) -> None:
+    """Keep daily TOPIX OHLC in the price store: backfill once (~13 pages), then just the latest page."""
+    since = min(target - dt.timedelta(days=90), dt.date(target.year, 1, 1) - dt.timedelta(days=10))
+    have = store.bars.loc[store.bars["symbol"] == TOPIX_SYMBOL, "date"]
+    backfill = have.empty or min(have) > since + dt.timedelta(days=10)
+    rows = deps.topix_history
+    if rows is None:
+        rows = fetch_index_history(
+            TOPIX_SYMBOL,
+            since=since if backfill else target,
+            client=deps.http,
+            max_pages=15 if backfill else 1,
+        )
+    if (
+        official is not None
+        and official.date == target
+        and None not in (official.open, official.high, official.low)
+    ):
+        rows = [*rows, (target, official.open, official.high, official.low, official.close)]  # type: ignore[list-item]
+    if not rows:
+        return
+    bars = pd.DataFrame(
+        [
+            {"symbol": TOPIX_SYMBOL, "date": d, "open": o, "high": h, "low": lo, "close": c, "volume": 0.0}
+            for d, o, h, lo, c in rows
+            if d <= target
+        ]
+    )
+    store.upsert(bars, today=target)
+    store.save()
+
+
 def topix_quote(
     spec: QuoteSpec,
     official: IndexClose | None,
     est: pd.Series[float],
     target: dt.date,
     fallback_base: float | None,
+    history: pd.Series[float] | None = None,
 ) -> tuple[Quote | None, str | None]:
-    """TOPIX from the official close, or chained from the constituent estimate. Returns (quote, warning)."""
+    """TOPIX from real daily closes when available, else chained from the constituent estimate."""
+    if history is not None and target in history.index and not pd.isna(history.get(target)):
+        q = core.build_quote(spec, history.astype(float), target)
+        if q is not None:
+            if official is not None and official.date == target:
+                q = q.model_copy(
+                    update={"change": round(official.change, 2), "change_pct": round(official.change_pct, 2)}
+                )
+            return q, None
     est = est[est.index <= target].dropna()
     if est.empty or est.index[-1] != target:
         return None, "TOPIXの推計に必要な構成銘柄データが不足しています。"
@@ -236,6 +287,9 @@ def build(target: dt.date, settings: Settings, deps: Deps) -> BuildResult:
     assert official is None or isinstance(official, IndexClose)
     if official is None and not deps.final:
         raise StaleDataError(f"official TOPIX close for {target} not published yet")
+    update_topix_history(store, target, official, deps)
+    topix_closes = store.closes([TOPIX_SYMBOL], end=target)
+    topix_hist = topix_closes[TOPIX_SYMBOL].astype(float) if TOPIX_SYMBOL in topix_closes else None
     jgb = (
         rates.load_jgb_yields(settings.cache_dir, today=target, client=deps.http)
         if any(s.source == "mof_jgb" for s in settings.quotes)
@@ -245,7 +299,9 @@ def build(target: dt.date, settings: Settings, deps: Deps) -> BuildResult:
     fred: dict[str, pd.Series[float]] = {}
     for spec in settings.quotes:
         if spec.key == "topix":
-            q, warn = topix_quote(spec, official, est, target, last_topix_close(settings.data_dir, target))
+            q, warn = topix_quote(
+                spec, official, est, target, last_topix_close(settings.data_dir, target), history=topix_hist
+            )
             if warn:
                 warnings.append(warn)
         elif spec.source == "mof_jgb":

@@ -95,7 +95,13 @@
 
   const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
   const fmt = (v, d) => v == null ? "—" : v.toLocaleString("ja-JP", { minimumFractionDigits: d, maximumFractionDigits: d });
-  const digits = (s) => s.unit === "%" ? 3 : (Math.abs(s.c[s.c.length - 1]) >= 1000 ? 0 : 2);
+  // decimals: the series' own precision (s.d), but none when every value is a whole number (e.g. stock prices)
+  const digits = (s) => {
+    if (s._digits != null) return s._digits;
+    const d = typeof s.d === "number" ? s.d : (s.unit === "%" ? 3 : 2);
+    s._digits = s.c.every((v) => v == null || Number.isInteger(v)) ? 0 : d;
+    return s._digits;
+  };
   const vol = (v) => v >= 1e8 ? fmt(v / 1e8, 2) + "億株" : fmt(v / 1e4, 0) + "万株";
   const sma = (c, t, n) => {
     const out = []; let sum = 0;

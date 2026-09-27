@@ -26,6 +26,9 @@ class IndexClose:
     date: dt.date
     close: float
     prev_close: float
+    open: float | None = None
+    high: float | None = None
+    low: float | None = None
 
     @property
     def change(self) -> float:
@@ -57,7 +60,14 @@ def parse_index_page(html: str, *, year: int) -> IndexClose | None:
     if close is None or prev is None or not day or not re.fullmatch(r"\d{2}/\d{2}", day):
         return None
     month, dom = map(int, day.split("/"))
-    return IndexClose(date=dt.date(year, month, dom), close=close, prev_close=prev)
+    return IndexClose(
+        date=dt.date(year, month, dom),
+        close=close,
+        prev_close=prev,
+        open=_num(_field(html, "openPrice")),
+        high=_num(_field(html, "highPrice")),
+        low=_num(_field(html, "lowPrice")),
+    )
 
 
 def fetch_index_close(
@@ -167,3 +177,52 @@ class YahooStockClient:
         if r.status_code != 200:
             return None
         return parse_stock_page(r.text, year=year)
+
+
+# --- index daily OHLC history (e.g. TOPIX, which yfinance does not carry) ----------------------------
+
+HISTORY_URL = "https://finance.yahoo.co.jp/quote/{code}/history?page={page}"
+HISTORY_ROW = re.compile(
+    r'"date":"(\d{4})/(\d{1,2})/(\d{1,2})","openPrice":"([\d,.]+)","highPrice":"([\d,.]+)",'
+    r'"lowPrice":"([\d,.]+)","closePrice":"([\d,.]+)"'
+)
+
+
+def parse_history(html: str) -> list[tuple[dt.date, float, float, float, float]]:
+    """(date, open, high, low, close) rows, newest first as on the page."""
+    text = html.replace('\\"', '"')
+    out = []
+    for m in HISTORY_ROW.finditer(text):
+        y, mo, d = (int(m.group(i)) for i in (1, 2, 3))
+        o, h, lo, c = (float(m.group(i).replace(",", "")) for i in (4, 5, 6, 7))
+        out.append((dt.date(y, mo, d), o, h, lo, c))
+    return out
+
+
+def fetch_index_history(
+    code: str,
+    *,
+    since: dt.date,
+    client: httpx.Client,
+    max_pages: int = 15,
+    pause: float = 1.0,
+    sleep: Callable[[float], None] = time.sleep,
+) -> list[tuple[dt.date, float, float, float, float]]:
+    """Daily OHLC back to `since` (20 rows per page; stops early once `since` is reached)."""
+    rows: list[tuple[dt.date, float, float, float, float]] = []
+    for page in range(1, max_pages + 1):
+        if page > 1:
+            sleep(pause)
+        try:
+            r = client.get(HISTORY_URL.format(code=code, page=page), headers={"User-Agent": USER_AGENT})
+            r.raise_for_status()
+        except httpx.HTTPError as e:
+            log.warning("yahoo_jp history %s page %d failed: %s", code, page, e)
+            break
+        got = parse_history(r.text)
+        if not got:
+            break
+        rows.extend(got)
+        if min(d for d, *_ in got) <= since:
+            break
+    return rows

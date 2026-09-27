@@ -1,7 +1,7 @@
 {
  "schema_version": 4,
  "date": "2026-09-25",
- "generated_at": "2026-09-27T10:09:46.308714Z",
+ "generated_at": "2026-09-27T10:25:52.568865Z",
  "sources": [
   "yfinance",
   "JPX TOPIX構成銘柄ウエイト（2026-07-31時点）",
@@ -57,30 +57,30 @@
    "close": 4128.59,
    "change": 53.29,
    "change_pct": 1.31,
-   "change_5d_pct": 2.4,
-   "change_20d_pct": 1.12,
-   "change_5d": 96.6339,
-   "change_20d": 45.8098,
+   "change_5d_pct": 2.26,
+   "change_20d_pct": 0.85,
+   "change_5d": 91.43,
+   "change_20d": 34.92,
    "spark": [
-    4099.6158,
-    4106.178,
-    4134.817,
-    4144.3097,
-    4170.8934,
-    4071.6734,
-    4091.8864,
-    4094.9957,
-    4118.4521,
-    4042.2347,
-    4038.5658,
-    4046.6473,
-    4022.0813,
-    4053.1005,
-    4031.9561,
-    4057.1709,
-    4088.7768,
-    4087.4054,
-    4075.3909,
+    4111.02,
+    4117.22,
+    4146.71,
+    4156.29,
+    4181.86,
+    4081.6,
+    4102.04,
+    4103.23,
+    4125.8,
+    4050.33,
+    4046.64,
+    4054.58,
+    4028.3,
+    4058.21,
+    4037.16,
+    4061.72,
+    4094.19,
+    4091.14,
+    4075.3,
     4128.59
    ],
    "as_of": "2026-09-25",
@@ -10125,8 +10125,15 @@
   {
    "title": "「濃い緑」のシャインマスカットは酸っぱい？ 甘い「ブドウ」見分ける3つのポイントとは【生産者に聞く】",
    "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9rX1JHdFlkRHNUQUkzdDNnTXMtaEpXWXhIclcxbV81SndramVKT0ZyV0pibEw4d2U4Q2tXYXdLM3FCc251WTRrY1FB?oc=5",
-   "source": "otonanswer.jp",
+   "source": "オトナンサー",
    "published_at": "2026-09-25T23:01:03Z",
+   "tags": []
+  },
+  {
+   "title": "【村瀬智一が斬る！深層マーケット】10月相場はリバウンド機運が高まるか",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1TM1l3WnlMYXl2eG8yM1pCM0l0QWJwOG9zTkVCVGlFMklmWTl2SXFKQzQ5cmxCSkZYaE1GS29zakVWc0ZwaUJ0R0h4THBoUmczcmhvX3pzWFJUaG82dGNFdA?oc=5",
+   "source": "株探",
+   "published_at": "2026-09-25T23:00:00Z",
    "tags": []
   },
   {
@@ -10144,9 +10151,9 @@
    "tags": []
   },
   {
-   "title": "マツダ新型SUV「CX-30」と「CX-5」どっちが良い？ パワフルな「\"2500cc\"新エンジン」搭載！ スポーティで楽しい\"走り\"と「豪華内装」も魅力的！ 価格差「約30万円」の\"超・お買得\"モデルに乗って比較！ - kuruma-news.jp",
+   "title": "マツダ新型SUV「CX-30」と「CX-5」どっちが良い？ パワフルな「\"2500cc\"新エンジン」搭載！ スポーティで楽しい\"走り\"と「豪華内装」も魅力的！ 価格差「約30万円」の\"超・お買得\"モデルに乗って比較！",
    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE14TkxEejA4NFBEMkZwY05jUElVQ0hmdjdqbFkwZHFlN1dvT2lxVUJPSm5BYjdTcWU2NUN4LVVKekpVb3I1S2I3LVVuZw?oc=5",
-   "source": "Google News ビジネス",
+   "source": "くるまのニュース",
    "published_at": "2026-09-25T14:10:00Z",
    "tags": []
   },
@@ -10211,13 +10218,6 @@
    "url": "https://news.web.nhk/newsweb/na/nd-20260925de52305",
    "source": "NHK経済",
    "published_at": "2026-09-25T02:32:27Z",
-   "tags": []
-  },
-  {
-   "title": "全東信破綻で未回収の売上金 10月中にも飲食店などに支払いへ",
-   "url": "https://news.web.nhk/newsweb/na/nd-20260925de52300",
-   "source": "NHK経済",
-   "published_at": "2026-09-25T00:56:00Z",
    "tags": []
   }
  ],

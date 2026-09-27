@@ -20,6 +20,7 @@ from jpmarket.models import DailySummary, QuoteCategory
 from jpmarket.sources.master import Constituent
 
 MAX_BARS = 250
+TOPIX_SYMBOL = "998405.T"  # same key as pipeline.TOPIX_SYMBOL
 
 
 def stock_links(code: str) -> dict[str, str]:
@@ -58,7 +59,13 @@ def _nums(values: Iterable[Any], digits: int) -> list[float | int | None]:
 
 
 def ohlc_series(
-    bars: pd.DataFrame, name: str, *, digits: int = 2, links: Mapping[str, str]
+    bars: pd.DataFrame,
+    name: str,
+    *,
+    digits: int = 2,
+    links: Mapping[str, str],
+    unit: str = "",
+    note: str = "",
 ) -> dict[str, Any] | None:
     """bars: long rows for one symbol (date, open, high, low, close, volume)."""
     b = bars.dropna(subset=["close"]).sort_values("date").tail(MAX_BARS)
@@ -73,6 +80,9 @@ def ohlc_series(
         "h": _nums(b["high"].fillna(b["close"]), digits),
         "l": _nums(b["low"].fillna(b["close"]), digits),
         "c": _nums(b["close"], digits),
+        "d": digits,  # display decimals
+        "unit": unit,
+        "note": note,
         "links": dict(links),
     }
     if float(vol.sum()) > 0:
@@ -156,7 +166,11 @@ def build_chart_payload(
     for spec in settings.quotes:
         sid = f"q:{spec.key}"
         links = quote_links(spec)
-        if spec.key == "topix":
+        if spec.key == "topix" and (g := by_symbol.get(TOPIX_SYMBOL)) is not None and len(g) >= 20:
+            series[sid] = (
+                ohlc_series(g, spec.name, digits=2, links=links) or {}
+            )  # real OHLC (Yahoo!ファイナンス)
+        elif spec.key == "topix":
             if topix_close is not None and not est.dropna().empty:
                 lv = core.chain_levels(topix_close, est.dropna())
                 series[sid] = (
@@ -173,9 +187,8 @@ def build_chart_payload(
         elif spec.source == "fred" and spec.ticker in fred:
             series[sid] = line_series(fred[spec.ticker], spec.name, digits=3, unit="%", links=links) or {}
         elif (g := by_symbol.get(spec.ticker)) is not None:
-            if spec.category == QuoteCategory.RATES:
-                closes: pd.Series[float] = g.set_index("date")["close"].astype(float)
-                series[sid] = line_series(closes, spec.name, digits=3, unit="%", links=links) or {}
+            if spec.category == QuoteCategory.RATES:  # yfinance yields have OHLC -> candles
+                series[sid] = ohlc_series(g, spec.name, digits=3, unit="%", links=links) or {}
             else:
                 series[sid] = (
                     ohlc_series(

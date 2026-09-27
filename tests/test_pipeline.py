@@ -183,6 +183,28 @@ def test_pts_unavailable_flag(tmp_path: Path) -> None:
     assert "今回はPTSの価格を取得できませんでした" in html and "finance.yahoo.co.jp/quote/8306.T" in html
 
 
+def test_topix_from_real_daily_history(tmp_path: Path) -> None:
+    from jpmarket.pipeline import build
+
+    d = deps(FakeSource(), IndexClose(T, 4128.59, 4075.30, open=4092.19, high=4132.11, low=4089.19))
+    days = [x for x in (T - dt.timedelta(days=i) for i in range(60)) if is_trading_day(x) and x < T]
+    d.topix_history = [
+        (x, 4000.0 + i, 4010.0 + i, 3990.0 + i, 4000.0 + i) for i, x in enumerate(sorted(days))
+    ]
+    res = build(T, settings(tmp_path), d)
+    tp = res.summary.quote("topix")
+    assert tp is not None and not tp.is_proxy and tp.close == 4128.59 and tp.change_pct == 1.31
+    prev20 = sorted(days)[-20]
+    assert tp.change_20d_pct == round((4128.59 / (4000.0 + sorted(days).index(prev20)) - 1) * 100, 2)
+    ch = res.charts["series"]["q:topix"]
+    assert (
+        ch["kind"] == "ohlc" and ch["c"][-1] == 4128.59 and ch["h"][-1] == 4132.11
+    )  # today's bar from the quote
+    assert (
+        res.charts["series"]["q:us10y"]["kind"] == "ohlc" and res.charts["series"]["q:us10y"]["unit"] == "%"
+    )
+
+
 def test_topix_fallback_uses_previous_close(tmp_path: Path) -> None:
     st = settings(tmp_path)
     prev = build_summary(
@@ -258,8 +280,8 @@ def test_chart_payload(tmp_path: Path) -> None:
     assert s[code]["t0"] < "2026-09-25" and all(d >= 1 for d in s[code]["dt"])
     assert "株探" in s[code]["links"]
     assert s["q:nikkei225"]["kind"] == "ohlc" and "TradingView" in s["q:nikkei225"]["links"]
-    assert s["q:topix"]["kind"] == "line" and s["q:topix"]["c"][-1] == 4128.59
-    assert s["q:us10y"]["kind"] == "line" and s["q:us10y"]["unit"] == "%"
+    assert s["q:topix"]["kind"] == "line" and s["q:topix"]["c"][-1] == 4128.59  # no history -> estimate line
+    assert s["q:us10y"]["kind"] == "ohlc" and s["q:us10y"]["unit"] == "%"
     for sid, ser in s.items():  # every series uses the compact date encoding, aligned with values
         assert "t" not in ser and len(ser["dt"]) + 1 == len(ser["c"]), sid
     assert s["s:" + summary.sectors[0].name]["c"][0] == 100
