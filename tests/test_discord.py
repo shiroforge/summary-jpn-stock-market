@@ -43,3 +43,9 @@ def test_send_and_dry_run(sample: DailySummary) -> None:
     n.send_error("boom", run_url="https://github.com/run/1")
     assert len(sent) == 2
     assert "run/1" in error_payload("boom", "https://github.com/run/1")["embeds"][0]["description"]
+
+
+def test_disclosure_moves_in_payload(sample: DailySummary) -> None:
+    e = build_payload(sample, URL)["embeds"][0]
+    field = next(f for f in e["fields"] if f["name"].startswith("📄"))
+    assert "（PTS +3.2%）" in field["value"] and "（PTS -12.5% S高）" in field["value"]

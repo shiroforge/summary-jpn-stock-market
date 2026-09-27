@@ -1,5 +1,5 @@
 {
- "schema_version": 3,
+ "schema_version": 4,
  "date": "2026-09-25",
  "generated_at": "2026-09-25T07:42:00Z",
  "sources": [
@@ -2134,7 +2134,12 @@
         "上方修正",
         "業績修正"
        ],
-       "tone": "pos"
+       "tone": "pos",
+       "move_pct": 8.4,
+       "move_basis": "day",
+       "pts_price": null,
+       "pts_time": null,
+       "limit": null
       }
      ]
     },
@@ -6455,7 +6460,12 @@
        "上方修正",
        "業績修正"
       ],
-      "tone": "pos"
+      "tone": "pos",
+      "move_pct": 8.4,
+      "move_basis": "day",
+      "pts_price": null,
+      "pts_time": null,
+      "limit": null
      }
     ]
    },
@@ -6612,7 +6622,12 @@
       "tags": [
        "報道への回答"
       ],
-      "tone": "neutral"
+      "tone": "neutral",
+      "move_pct": 16.99,
+      "move_basis": "day",
+      "pts_price": null,
+      "pts_time": null,
+      "limit": null
      }
     ]
    },
@@ -6703,7 +6718,12 @@
       "tags": [
        "報道への回答"
       ],
-      "tone": "neutral"
+      "tone": "neutral",
+      "move_pct": 16.99,
+      "move_basis": "day",
+      "pts_price": null,
+      "pts_time": null,
+      "limit": null
      }
     ]
    },
@@ -6804,7 +6824,12 @@
        "上方修正",
        "業績修正"
       ],
-      "tone": "pos"
+      "tone": "pos",
+      "move_pct": 8.4,
+      "move_basis": "day",
+      "pts_price": null,
+      "pts_time": null,
+      "limit": null
      }
     ]
    },
@@ -6928,7 +6953,12 @@
       "tags": [
        "報道への回答"
       ],
-      "tone": "neutral"
+      "tone": "neutral",
+      "move_pct": 16.99,
+      "move_basis": "day",
+      "pts_price": null,
+      "pts_time": null,
+      "limit": null
      }
     ]
    },
@@ -7011,7 +7041,12 @@
     "上方修正",
     "業績修正"
    ],
-   "tone": "pos"
+   "tone": "pos",
+   "move_pct": 8.4,
+   "move_basis": "day",
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
   },
   {
    "code": "8316",
@@ -7022,7 +7057,12 @@
    "tags": [
     "報道への回答"
    ],
-   "tone": "neutral"
+   "tone": "neutral",
+   "move_pct": 16.99,
+   "move_basis": "day",
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
   }
  ],
  "disclosures_after": [
@@ -7035,7 +7075,12 @@
    "tags": [
     "自社株買い"
    ],
-   "tone": "pos"
+   "tone": "pos",
+   "move_pct": 3.2,
+   "move_basis": "pts",
+   "pts_price": 1520.0,
+   "pts_time": "2026-09-25T21:03:00+09:00",
+   "limit": null
   },
   {
    "code": "8035",
@@ -7046,7 +7091,12 @@
    "tags": [
     "増資・希薄化"
    ],
-   "tone": "neg"
+   "tone": "neg",
+   "move_pct": -12.5,
+   "move_basis": "pts",
+   "pts_price": 700.0,
+   "pts_time": "2026-09-25T17:45:00+09:00",
+   "limit": "S高"
   },
   {
    "code": "6857",
@@ -7057,7 +7107,12 @@
    "tags": [
     "増配"
    ],
-   "tone": "pos"
+   "tone": "pos",
+   "move_pct": null,
+   "move_basis": "pts",
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
   }
  ],
  "disclosure_counts": {

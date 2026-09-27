@@ -287,6 +287,31 @@ def main() -> None:
             movers[4].code, movers[4].name, "15:45", "剰余金の配当（増配）に関するお知らせ", ["増配"], "pos"
         ),
     ]
+    # price reactions: session -> that day's change; after-close -> PTS vs. the close
+    session_discs = [
+        session_discs[0].model_copy(update={"move_pct": 8.4, "move_basis": "day"}),
+        session_discs[1].model_copy(update={"move_pct": 16.99, "move_basis": "day"}),
+    ]
+    after_discs = [
+        after_discs[0].model_copy(
+            update={
+                "move_pct": 3.2,
+                "move_basis": "pts",
+                "pts_price": 1520.0,
+                "pts_time": dt.datetime(2026, 9, 25, 21, 3, tzinfo=jst),
+            }
+        ),
+        after_discs[1].model_copy(
+            update={
+                "move_pct": -12.5,
+                "move_basis": "pts",
+                "pts_price": 700.0,
+                "pts_time": dt.datetime(2026, 9, 25, 17, 45, tzinfo=jst),
+                "limit": "S高",
+            }
+        ),
+        after_discs[2].model_copy(update={"move_basis": "pts"}),
+    ]
     movers[0] = movers[0].model_copy(update={"disclosures": [session_discs[0]]})
     movers[1] = movers[1].model_copy(update={"disclosures": [session_discs[1]]})
     themes[0] = themes[0].model_copy(

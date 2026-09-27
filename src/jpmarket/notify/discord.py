@@ -7,7 +7,7 @@ from typing import Any
 
 import httpx
 
-from jpmarket.models import DailySummary, Quote
+from jpmarket.models import DailySummary, Disclosure, Quote
 from jpmarket.news.rss import highlight
 from jpmarket.render.builder import WEEKDAYS_JA
 
@@ -40,6 +40,13 @@ def _quote_line(q: Quote | None) -> str | None:
     if q.unit == "%":
         return f"{q.name} {q.close:.3f}% ({q.change * 100:+.1f}bp)"
     return f"{q.name} {_level(q.close)} ({_pct(q.change_pct)})"
+
+
+def _disc_move(d: Disclosure) -> str:
+    if d.move_pct is None:
+        return ""
+    basis = "PTS" if d.move_basis == "pts" else "当日"
+    return f"（{basis} {d.move_pct:+.1f}%{' ' + d.limit if d.limit else ''}）"
 
 
 def _clip(text: str, limit: int = FIELD_MAX) -> str:
@@ -125,7 +132,8 @@ def build_payload(summary: DailySummary, page_url: str) -> dict[str, Any]:
                 "name": label,
                 "value": _clip(
                     "\n".join(
-                        f"・{x.name}（{x.code}） {'・'.join(x.tags[:2])}：[{x.title[:40]}]({x.url})"
+                        f"・{x.name}（{x.code}） {'・'.join(x.tags[:2])}{_disc_move(x)}"
+                        f"：[{x.title[:40]}]({x.url})"
                         for x in discs
                     )
                 ),

@@ -11,6 +11,7 @@ from jpmarket.config import Settings
 from jpmarket.models import Disclosure, NewsItem
 from jpmarket.pipeline import Deps, StaleDataError, build_summary, save_summary
 from jpmarket.render.site import build_site, load_all
+from jpmarket.sources.kabutan import KabutanQuote
 from jpmarket.sources.master import parse_topixweight
 from jpmarket.sources.yahoo_jp import IndexClose
 
@@ -80,6 +81,17 @@ DISCLOSURES = [
 ]
 
 
+PTS = {
+    "8306": KabutanQuote(
+        close=None,
+        change_pct=None,
+        limit="S高",
+        pts_price=2000.0,
+        pts_time=dt.datetime(2026, 9, 25, 21, 0, tzinfo=JST),
+    )
+}
+
+
 def settings(tmp: Path) -> Settings:
     return Settings(data_dir=tmp / "data", cache_dir=tmp / "cache", site_dir=tmp / "site")
 
@@ -101,6 +113,7 @@ def deps(source: FakeSource, topix: IndexClose | None) -> Deps:
         topix=topix,
         news=news,
         disclosures=DISCLOSURES,
+        kabutan=lambda code: PTS.get(code),
     )
 
 
@@ -131,6 +144,25 @@ def test_disclosures_attached(tmp_path: Path) -> None:
     banks = next(t for t in s.themes if t.key == "banks")
     mufg = next(m for m in banks.members if m.code == "8306")
     assert [x.tags for x in mufg.disclosures] == [["上方修正"]]
+    # price reaction: session disclosure -> that day's change; after-close -> PTS vs. the session close
+    sess, aft = s.disclosures_session[0], s.disclosures_after[0]
+    assert sess.move_basis == "day" and sess.move_pct == mufg.change_pct
+    assert aft.move_basis == "pts" and aft.limit == "S高" and aft.pts_price == 2000.0
+    assert aft.move_pct == pytest.approx((2000.0 / mufg.close - 1) * 100, abs=0.01)
+
+
+def test_pts_before_close_is_ignored(tmp_path: Path) -> None:
+    d = deps(FakeSource(), IndexClose(T, 4128.59, 4075.30))
+    d.now = dt.datetime(2026, 9, 25, 16, 30, tzinfo=JST)
+    d.kabutan = lambda code: KabutanQuote(
+        close=1000.0,
+        change_pct=1.0,
+        limit=None,
+        pts_price=1010.0,
+        pts_time=dt.datetime(2026, 9, 25, 15, 10, tzinfo=JST),
+    )
+    aft = build_summary(T, settings(tmp_path), d).disclosures_after[0]
+    assert aft.move_basis == "pts" and aft.move_pct is None and aft.pts_price is None
 
 
 def test_topix_fallback_uses_previous_close(tmp_path: Path) -> None:

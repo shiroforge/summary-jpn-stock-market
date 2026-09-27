@@ -10,7 +10,9 @@ from enum import StrEnum
 
 from pydantic import BaseModel, Field
 
-SCHEMA_VERSION = 3  # v3: TDnet disclosures (v2: rates, absolute 5d/20d changes, volume)
+SCHEMA_VERSION = (
+    4  # v4: disclosure price reaction (v3: TDnet disclosures ; v2: rates, absolute 5d/20d changes, volume)
+)
 
 
 class QuoteCategory(StrEnum):
@@ -52,6 +54,12 @@ class Disclosure(BaseModel):
     url: str
     tags: list[str] = Field(default_factory=list)  # categories, e.g. ["上方修正", "増配"]
     tone: str = "neutral"  # "pos" | "neg" | "neutral" (keyword-based, not investment advice)
+    # price reaction: "day" = that session's close-to-close change; "pts" = PTS price vs. the session close
+    move_pct: float | None = None
+    move_basis: str | None = None  # "day" | "pts"
+    pts_price: float | None = None
+    pts_time: dt.datetime | None = None
+    limit: str | None = None  # "S高" / "S安" when the session closed at the daily price limit
 
 
 class StockMove(BaseModel):

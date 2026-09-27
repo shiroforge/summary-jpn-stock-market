@@ -178,6 +178,7 @@
       <tr>
         <td class="mono muted dtime">{{ d.time | jst('%m/%d %H:%M') }}</td>
         <th scope="row" data-chart="{{ d.code }}" role="button" tabindex="0"><span class="rname">{{ d.name }}</span><span class="rsec mono">{{ d.code }}</span></th>
+        <td class="r dmove">{{ disc_move(d) }}</td>
         <td class="dtags"><div class="dtagwrap">{% for t in d.tags %}<span class="dtag {{ d.tone if loop.first else 'neutral' }}">{{ t }}</span>{% endfor %}</div></td>
         <td class="dtitle"><a href="{{ d.url }}" target="_blank" rel="noopener">{{ d.title }}</a></td>
       </tr>
@@ -185,4 +186,13 @@
     </tbody>
   </table>
 </div>
+{% endmacro %}
+
+{% macro disc_move(d) %}
+{% if d.move_basis == "pts" %}
+  {% if d.move_pct is not none %}<span class="mono {{ d.move_pct | tone }}"><b>{{ d.move_pct | pct }}</b></span><span class="dbasis" title="PTS {{ '{:,.0f}'.format(d.pts_price) }}円（{{ d.pts_time | jst('%m/%d %H:%M') }}）と当日終値の比較">PTS {{ d.pts_time | jst('%H:%M') }}</span>{% else %}<span class="dbasis">PTS 取引なし</span>{% endif %}
+{% elif d.move_basis == "day" and d.move_pct is not none %}
+  <span class="mono {{ d.move_pct | tone }}"><b>{{ d.move_pct | pct }}</b></span><span class="dbasis">当日</span>
+{% else %}<span class="muted">—</span>{% endif %}
+{% if d.limit %}<span class="dlimit {{ 'up' if d.limit == 'S高' else 'down' }}">{{ d.limit }}</span>{% endif %}
 {% endmacro %}

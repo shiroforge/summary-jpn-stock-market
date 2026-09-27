@@ -152,11 +152,11 @@
     </div>
     <div id="disc-after" role="tabpanel"{% if not s.disclosures_after %} hidden{% endif %}>
       {% if s.disclosures_after %}{{ m.disc_table(s.disclosures_after) }}{% else %}<p class="muted">生成時点では、引け後の注目開示はまだありません。</p>{% endif %}
-      <p class="note">15:30以降、このページを作った時点（{{ s.generated_at | jst("%H:%M") }}）までの開示です。夕方以降に出る開示は含みません。全{{ s.disclosure_counts.get("after", 0) }}件。</p>
+      <p class="note">15:30以降、このページの更新時点（{{ s.generated_at | jst("%m/%d %H:%M") }}）までの開示です（全{{ s.disclosure_counts.get("after", 0) }}件）。平日22時にも更新し、夕方以降の開示と夜間PTSの反応を反映します。「反応」は株探に表示されるPTSの直近の価格と当日終値の比較で、15:30以降にPTSで売買が成立していない場合は「取引なし」になります。</p>
     </div>
     <div id="disc-session" role="tabpanel"{% if s.disclosures_after %} hidden{% endif %}>
       {% if s.disclosures_session %}{{ m.disc_table(s.disclosures_session) }}{% else %}<p class="muted">該当する開示はありません。</p>{% endif %}
-      <p class="note">前営業日15:30〜当日15:30の開示で、当日の値動きの材料になったものです。全{{ s.disclosure_counts.get("session", 0) }}件。</p>
+      <p class="note">前営業日15:30〜当日15:30の開示で、当日の値動きの材料になったものです（全{{ s.disclosure_counts.get("session", 0) }}件）。「反応」は当日の終値ベースの騰落率で、場中の開示の場合は開示前の値動きも含みます。</p>
     </div>
     <p class="note">分類は見出しの言葉から機械的に付けたもので、内容の良し悪しを判断したものではありません。原文は <a href="https://www.release.tdnet.info/inbs/I_main_00.html" target="_blank" rel="noopener">TDnet</a> でご確認ください。</p>
   </section>

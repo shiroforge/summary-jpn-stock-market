@@ -79,3 +79,9 @@ def test_render_disclosures(sample: DailySummary) -> None:
     assert 'id="disclosures"' in html and "引け後（3）" in html
     assert 'class="disc pos"' in html and "📄 上方修正" in html  # badge on a ranking row
     assert "https://example.com/tdnet/" in html
+
+
+def test_render_disclosure_moves(sample: DailySummary) -> None:
+    html = render_daily(sample)
+    assert "PTS 21:03" in html and "PTS 取引なし" in html and ">当日<" in html
+    assert 'class="dlimit up">S高' in html

@@ -5,6 +5,7 @@ from __future__ import annotations
 import datetime as dt
 import json
 import logging
+from collections.abc import Callable, Sequence
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
@@ -22,6 +23,7 @@ from jpmarket.models import DailySummary, Disclosure, NewsItem, Quote, QuoteCate
 from jpmarket.news import rss, tdnet
 from jpmarket.sources import rates
 from jpmarket.sources.base import MarketDataSource
+from jpmarket.sources.kabutan import KabutanClient, KabutanQuote
 from jpmarket.sources.master import Master, load_master
 from jpmarket.sources.price_store import PriceStore
 from jpmarket.sources.yahoo_jp import IndexClose, fetch_index_close
@@ -47,7 +49,73 @@ class Deps:
     final: bool = True  # False on early attempts: incomplete data raises StaleDataError to retry later
     news: list[NewsItem] | None = None  # None -> fetch RSS
     disclosures: list[Disclosure] | None = None  # None -> fetch TDnet
+    kabutan: Callable[[str], KabutanQuote | None] | None = None  # None -> fetch from kabutan.jp
     failed_feeds: list[str] = field(default_factory=list)
+
+
+def with_day_moves(
+    items: Sequence[Disclosure], rets: pd.DataFrame, target: dt.date, deps: Deps
+) -> list[Disclosure]:
+    """Attach the session's close-to-close change (fetching bars for stocks we don't track)."""
+    moves: dict[str, float] = {}
+    if target in rets.index:
+        today = core.row(rets, target)
+        moves = {
+            c: float(today[c]) for c in {d.code for d in items} if c in today.index and not pd.isna(today[c])
+        }
+    missing = sorted({d.code for d in items} - set(moves))
+    if missing:
+        bars = deps.source.daily_bars(missing, target - dt.timedelta(days=14), target)
+        if not bars.empty:
+            extra = core.returns_pct(bars.pivot(index="date", columns="symbol", values="close").sort_index())
+            if target in extra.index:
+                row = core.row(extra, target)
+                moves.update({c: float(row[c]) for c in row.index if not pd.isna(row[c])})
+    return [
+        d.model_copy(update={"move_pct": round(moves[d.code], 2), "move_basis": "day"})
+        if d.code in moves
+        else d
+        for d in items
+    ]
+
+
+def with_pts_moves(
+    items: Sequence[Disclosure], closes: pd.DataFrame, target: dt.date, deps: Deps
+) -> list[Disclosure]:
+    """Attach the PTS reaction: last PTS price after 15:30 vs. the session close."""
+    if not items:
+        return []
+    lookup = deps.kabutan
+    if lookup is None:
+        kc = KabutanClient(deps.http)
+
+        def lookup(code: str) -> KabutanQuote | None:
+            return kc.quote(code, year=target.year)
+
+    close_time = dt.datetime.combine(target, dt.time(15, 30), JST)
+    quotes: dict[str, KabutanQuote | None] = {}
+    out = []
+    for d in items:
+        if d.code not in quotes:
+            quotes[d.code] = lookup(d.code)
+        q = quotes[d.code]
+        if q is None:
+            out.append(d)
+            continue
+        ref = q.close
+        if d.code in closes.columns and target in closes.index:
+            own = core.row(closes, target).get(d.code)
+            if own is not None and not pd.isna(own):
+                ref = float(own)
+        update: dict[str, object] = {"move_basis": "pts", "limit": q.limit}
+        if q.pts_price and q.pts_time and q.pts_time > close_time and ref:
+            update |= {
+                "move_pct": round((q.pts_price / ref - 1) * 100, 2),
+                "pts_price": q.pts_price,
+                "pts_time": q.pts_time,
+            }
+        out.append(d.model_copy(update=update))
+    return out
 
 
 def summary_path(data_dir: Path, d: dt.date) -> Path:
@@ -274,8 +342,8 @@ def build(target: dt.date, settings: Settings, deps: Deps) -> BuildResult:
         breadth=breadth,
         rankings=rankings,
         news=news,
-        disclosures_session=tdnet.notable(session, weight_by_code),
-        disclosures_after=tdnet.notable(after, weight_by_code),
+        disclosures_session=with_day_moves(tdnet.notable(session, weight_by_code), rets, target, deps),
+        disclosures_after=with_pts_moves(tdnet.notable(after, weight_by_code), closes, target, deps),
         disclosure_counts={"session": len(session), "after": len(after)},
         sector_history=core.sector_history(master.constituents, rets, target),
         theme_history=core.theme_history(settings.themes, rets, target),
