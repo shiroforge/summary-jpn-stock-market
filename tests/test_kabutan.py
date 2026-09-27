@@ -34,3 +34,15 @@ def test_client_pauses_between_calls_and_handles_errors() -> None:
     assert kc.quote("4967", year=2026) is not None
     assert kc.quote("1234", year=2026) is None
     assert sleeps == [1.5] and len(calls) == 2
+
+
+def test_client_stops_after_block() -> None:
+    calls: list[str] = []
+
+    def handler(req: httpx.Request) -> httpx.Response:
+        calls.append(str(req.url))
+        return httpx.Response(405)
+
+    kc = KabutanClient(httpx.Client(transport=httpx.MockTransport(handler)), sleep=lambda s: None)
+    assert kc.quote("1111", year=2026) is None and kc.quote("2222", year=2026) is None
+    assert kc.blocked and len(calls) == 1

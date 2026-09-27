@@ -10,6 +10,7 @@ from jpmarket.calendar import is_trading_day
 from jpmarket.config import Settings
 from jpmarket.models import Disclosure, NewsItem
 from jpmarket.pipeline import Deps, StaleDataError, build_summary, save_summary
+from jpmarket.render.builder import render_daily
 from jpmarket.render.site import build_site, load_all
 from jpmarket.sources.kabutan import KabutanQuote
 from jpmarket.sources.master import parse_topixweight
@@ -140,7 +141,7 @@ def test_disclosures_attached(tmp_path: Path) -> None:
     s = build_summary(T, settings(tmp_path), d)
     assert [x.url for x in s.disclosures_session] == ["https://x/1.pdf"]
     assert [x.url for x in s.disclosures_after] == ["https://x/2.pdf"]  # 15:30 counts as after the close
-    assert s.disclosure_counts == {"session": 1, "after": 2}
+    assert s.disclosure_counts == {"session": 1, "after": 2, "pts_unavailable": 0}
     banks = next(t for t in s.themes if t.key == "banks")
     mufg = next(m for m in banks.members if m.code == "8306")
     assert [x.tags for x in mufg.disclosures] == [["上方修正"]]
@@ -163,6 +164,16 @@ def test_pts_before_close_is_ignored(tmp_path: Path) -> None:
     )
     aft = build_summary(T, settings(tmp_path), d).disclosures_after[0]
     assert aft.move_basis == "pts" and aft.move_pct is None and aft.pts_price is None
+
+
+def test_pts_unavailable_flag(tmp_path: Path) -> None:
+    d = deps(FakeSource(), IndexClose(T, 4128.59, 4075.30))
+    d.now = dt.datetime(2026, 9, 25, 16, 30, tzinfo=JST)
+    d.kabutan = lambda code: None  # e.g. blocked from the CI network
+    s = build_summary(T, settings(tmp_path), d)
+    assert s.disclosure_counts["pts_unavailable"] == 1
+    html = render_daily(s)
+    assert "今回はPTSの価格を取得できませんでした" in html and "kabutan.jp/stock/?code=8306" in html
 
 
 def test_topix_fallback_uses_previous_close(tmp_path: Path) -> None:

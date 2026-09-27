@@ -343,8 +343,15 @@ def build(target: dt.date, settings: Settings, deps: Deps) -> BuildResult:
         rankings=rankings,
         news=news,
         disclosures_session=with_day_moves(tdnet.notable(session, weight_by_code), rets, target, deps),
-        disclosures_after=with_pts_moves(tdnet.notable(after, weight_by_code), closes, target, deps),
-        disclosure_counts={"session": len(session), "after": len(after)},
+        disclosures_after=(
+            disc_after := with_pts_moves(tdnet.notable(after, weight_by_code), closes, target, deps)
+        ),
+        disclosure_counts={
+            "session": len(session),
+            "after": len(after),
+            # 1 when no after-close item could be priced at all (e.g. kabutan blocks the CI network)
+            "pts_unavailable": int(bool(disc_after) and all(d.move_basis is None for d in disc_after)),
+        },
         sector_history=core.sector_history(master.constituents, rets, target),
         theme_history=core.theme_history(settings.themes, rets, target),
     )

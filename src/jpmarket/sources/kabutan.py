@@ -73,13 +73,20 @@ class KabutanClient:
         self._pause = pause
         self._sleep = sleep
         self._calls = 0
+        self.blocked = False  # kabutan refuses cloud/datacenter IPs (HTTP 403/405); stop asking once it does
 
     def quote(self, code: str, *, year: int) -> KabutanQuote | None:
+        if self.blocked:
+            return None
         if self._calls:
             self._sleep(self._pause)
         self._calls += 1
         try:
             r = self._client.get(URL.format(code=code), headers={"User-Agent": USER_AGENT})
+            if r.status_code in (403, 405, 429):
+                self.blocked = True
+                log.warning("kabutan refused access (HTTP %d); skipping remaining PTS lookups", r.status_code)
+                return None
             r.raise_for_status()
         except httpx.HTTPError as e:
             log.warning("kabutan %s failed: %s", code, e)
