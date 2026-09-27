@@ -72,3 +72,10 @@ def test_render_trends() -> None:
     assert html.index("銀行業") < html.index("鉱業")  # sorted by 20日, missing last
     assert 'data-chart="s:銀行業"' in html and 'id="trends-data"' in html
     assert "X<\\/script>" in html  # embedded JSON cannot close the script tag
+
+
+def test_render_disclosures(sample: DailySummary) -> None:
+    html = render_daily(sample)
+    assert 'id="disclosures"' in html and "引け後（3）" in html
+    assert 'class="disc pos"' in html and "📄 上方修正" in html  # badge on a ranking row
+    assert "https://example.com/tdnet/" in html

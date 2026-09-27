@@ -74,7 +74,7 @@
     {% for r in rows %}
       <tr data-chart="{{ r.code }}" role="button" tabindex="0" aria-label="{{ r.name }}のチャートを開く">
         <td class="mono muted">{{ r.code }}</td>
-        <th scope="row"><span class="rname">{{ r.name }}</span>{% if r.sector33 %}<span class="rsec">{{ r.sector33 }}</span>{% endif %}</th>
+        <th scope="row"><span class="rname">{{ r.name }}</span>{% if r.sector33 %}<span class="rsec">{{ r.sector33 }}</span>{% endif %}{{ disc_badges(r.disclosures) }}</th>
         {% if mode == "turnover" %}
         <td class="r mono">{{ r.turnover | oku }}</td>
         <td class="r mono {{ r.change_pct | tone }}">{{ r.change_pct | pct(1) }}</td>
@@ -164,4 +164,25 @@
     </div>
   </div>
 </header>
+{% endmacro %}
+
+{% macro disc_badges(items) %}
+{% if items %}<span class="discs">{% for d in items %}<a class="disc {{ d.tone }}" href="{{ d.url }}" target="_blank" rel="noopener" title="{{ d.time | jst('%m/%d %H:%M') }} {{ d.title }}">📄 {{ d.tags[0] if d.tags else "開示" }}</a>{% endfor %}</span>{% endif %}
+{% endmacro %}
+
+{% macro disc_table(items) %}
+<div class="tablewrap">
+  <table class="dtable">
+    <tbody>
+    {% for d in items %}
+      <tr>
+        <td class="mono muted dtime">{{ d.time | jst('%m/%d %H:%M') }}</td>
+        <th scope="row" data-chart="{{ d.code }}" role="button" tabindex="0"><span class="rname">{{ d.name }}</span><span class="rsec mono">{{ d.code }}</span></th>
+        <td class="dtags"><div class="dtagwrap">{% for t in d.tags %}<span class="dtag {{ d.tone if loop.first else 'neutral' }}">{{ t }}</span>{% endfor %}</div></td>
+        <td class="dtitle"><a href="{{ d.url }}" target="_blank" rel="noopener">{{ d.title }}</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
 {% endmacro %}

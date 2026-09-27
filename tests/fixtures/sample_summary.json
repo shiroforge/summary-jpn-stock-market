@@ -1,5 +1,5 @@
 {
- "schema_version": 2,
+ "schema_version": 3,
  "date": "2026-09-25",
  "generated_at": "2026-09-25T07:42:00Z",
  "sources": [
@@ -830,7 +830,8 @@
      "change_pct": 4.05,
      "turnover": 34900000000.0,
      "volume": 5617000.0,
-     "volume_ratio": 3.27
+     "volume_ratio": 3.27,
+     "disclosures": []
     },
     {
      "code": "8411",
@@ -840,7 +841,8 @@
      "change_pct": 4.03,
      "turnover": 350400000000.0,
      "volume": 28073000.0,
-     "volume_ratio": 3.73
+     "volume_ratio": 3.73,
+     "disclosures": []
     },
     {
      "code": "8306",
@@ -850,7 +852,8 @@
      "change_pct": 1.01,
      "turnover": 272100000000.0,
      "volume": 6249000.0,
-     "volume_ratio": 0.63
+     "volume_ratio": 0.63,
+     "disclosures": []
     }
    ],
    "laggards": []
@@ -905,7 +908,8 @@
      "change_pct": 3.08,
      "turnover": 245800000000.0,
      "volume": 24366000.0,
-     "volume_ratio": 4.14
+     "volume_ratio": 4.14,
+     "disclosures": []
     }
    ],
    "laggards": []
@@ -938,7 +942,8 @@
      "change_pct": 0.23,
      "turnover": 174600000000.0,
      "volume": 32982000.0,
-     "volume_ratio": 0.7
+     "volume_ratio": 0.7,
+     "disclosures": []
     }
    ],
    "laggards": []
@@ -960,7 +965,8 @@
      "change_pct": 0.55,
      "turnover": 167600000000.0,
      "volume": 44274000.0,
-     "volume_ratio": 1.51
+     "volume_ratio": 1.51,
+     "disclosures": []
     },
     {
      "code": "9984",
@@ -970,7 +976,8 @@
      "change_pct": 0.02,
      "turnover": 139800000000.0,
      "volume": 29134000.0,
-     "volume_ratio": 2.05
+     "volume_ratio": 2.05,
+     "disclosures": []
     },
     {
      "code": "9432",
@@ -980,7 +987,8 @@
      "change_pct": -1.04,
      "turnover": 300200000000.0,
      "volume": 63813000.0,
-     "volume_ratio": 2.49
+     "volume_ratio": 2.49,
+     "disclosures": []
     }
    ],
    "laggards": []
@@ -1013,7 +1021,8 @@
      "change_pct": 0.9,
      "turnover": 204800000000.0,
      "volume": 62243000.0,
-     "volume_ratio": 2.2
+     "volume_ratio": 2.2,
+     "disclosures": []
     }
    ],
    "laggards": []
@@ -1035,7 +1044,8 @@
      "change_pct": -0.6,
      "turnover": 204600000000.0,
      "volume": 32211000.0,
-     "volume_ratio": 4.14
+     "volume_ratio": 4.14,
+     "disclosures": []
     }
    ],
    "laggards": []
@@ -1068,7 +1078,8 @@
      "change_pct": 0.97,
      "turnover": 214900000000.0,
      "volume": 77644000.0,
-     "volume_ratio": 3.14
+     "volume_ratio": 3.14,
+     "disclosures": []
     }
    ],
    "laggards": []
@@ -1101,7 +1112,8 @@
      "change_pct": 0.58,
      "turnover": 319100000000.0,
      "volume": 6714000.0,
-     "volume_ratio": 2.42
+     "volume_ratio": 2.42,
+     "disclosures": []
     },
     {
      "code": "7011",
@@ -1111,7 +1123,8 @@
      "change_pct": -1.63,
      "turnover": 299900000000.0,
      "volume": 68533000.0,
-     "volume_ratio": 3.27
+     "volume_ratio": 3.27,
+     "disclosures": []
     }
    ],
    "laggards": []
@@ -1155,7 +1168,8 @@
      "change_pct": -0.39,
      "turnover": 49600000000.0,
      "volume": 71552000.0,
-     "volume_ratio": 0.87
+     "volume_ratio": 0.87,
+     "disclosures": []
     }
    ],
    "laggards": []
@@ -1188,7 +1202,8 @@
      "change_pct": 0.62,
      "turnover": 94000000000.0,
      "volume": 6364000.0,
-     "volume_ratio": 3.92
+     "volume_ratio": 3.92,
+     "disclosures": []
     }
    ],
    "laggards": []
@@ -1221,7 +1236,8 @@
      "change_pct": 1.45,
      "turnover": 54500000000.0,
      "volume": 10501000.0,
-     "volume_ratio": 2.6
+     "volume_ratio": 2.6,
+     "disclosures": []
     }
    ],
    "laggards": []
@@ -1265,7 +1281,8 @@
      "change_pct": 1.46,
      "turnover": 131500000000.0,
      "volume": 46758000.0,
-     "volume_ratio": 2.09
+     "volume_ratio": 2.09,
+     "disclosures": []
     },
     {
      "code": "6501",
@@ -1275,7 +1292,8 @@
      "change_pct": 0.74,
      "turnover": 158600000000.0,
      "volume": 17516000.0,
-     "volume_ratio": 2.55
+     "volume_ratio": 2.55,
+     "disclosures": []
     },
     {
      "code": "6857",
@@ -1285,7 +1303,8 @@
      "change_pct": -0.7,
      "turnover": 237800000000.0,
      "volume": 36941000.0,
-     "volume_ratio": 3.56
+     "volume_ratio": 3.56,
+     "disclosures": []
     }
    ],
    "laggards": [
@@ -1297,7 +1316,8 @@
      "change_pct": -2.22,
      "turnover": 352200000000.0,
      "volume": 18160000.0,
-     "volume_ratio": 0.88
+     "volume_ratio": 0.88,
+     "disclosures": []
     },
     {
      "code": "6920",
@@ -1307,7 +1327,8 @@
      "change_pct": -1.27,
      "turnover": 384700000000.0,
      "volume": 72755000.0,
-     "volume_ratio": 4.25
+     "volume_ratio": 4.25,
+     "disclosures": []
     }
    ]
   },
@@ -1339,7 +1360,8 @@
      "change_pct": -1.51,
      "turnover": 387500000000.0,
      "volume": 54142000.0,
-     "volume_ratio": 2.51
+     "volume_ratio": 2.51,
+     "disclosures": []
     }
    ],
    "laggards": []
@@ -1361,7 +1383,8 @@
      "change_pct": -0.56,
      "turnover": 58800000000.0,
      "volume": 11249000.0,
-     "volume_ratio": 1.78
+     "volume_ratio": 1.78,
+     "disclosures": []
     }
    ],
    "laggards": []
@@ -1427,7 +1450,8 @@
      "change_pct": -2.2,
      "turnover": 271500000000.0,
      "volume": 65594000.0,
-     "volume_ratio": 2.56
+     "volume_ratio": 2.56,
+     "disclosures": []
     }
    ],
    "laggards": []
@@ -2098,7 +2122,21 @@
      "change_pct": 8.26,
      "turnover": 149000000000.0,
      "volume": 3591000.0,
-     "volume_ratio": 2.51
+     "volume_ratio": 2.51,
+     "disclosures": [
+      {
+       "code": "8306",
+       "name": "三菱UFJ",
+       "time": "2026-09-25T12:00:00+09:00",
+       "title": "2027年3月期 通期業績予想の上方修正に関するお知らせ",
+       "url": "https://example.com/tdnet/8306.pdf",
+       "tags": [
+        "上方修正",
+        "業績修正"
+       ],
+       "tone": "pos"
+      }
+     ]
     },
     {
      "code": "6723",
@@ -2108,7 +2146,8 @@
      "change_pct": 7.89,
      "turnover": 367300000000.0,
      "volume": 55507000.0,
-     "volume_ratio": 2.45
+     "volume_ratio": 2.45,
+     "disclosures": []
     },
     {
      "code": "7751",
@@ -2118,7 +2157,8 @@
      "change_pct": 7.81,
      "turnover": 281400000000.0,
      "volume": 47627000.0,
-     "volume_ratio": 1.53
+     "volume_ratio": 1.53,
+     "disclosures": []
     },
     {
      "code": "6526",
@@ -2128,7 +2168,8 @@
      "change_pct": 6.82,
      "turnover": 352700000000.0,
      "volume": 67923000.0,
-     "volume_ratio": 3.52
+     "volume_ratio": 3.52,
+     "disclosures": []
     },
     {
      "code": "6504",
@@ -2138,7 +2179,8 @@
      "change_pct": 6.39,
      "turnover": 276900000000.0,
      "volume": 15485000.0,
-     "volume_ratio": 1.08
+     "volume_ratio": 1.08,
+     "disclosures": []
     },
     {
      "code": "6707",
@@ -2148,7 +2190,8 @@
      "change_pct": 6.37,
      "turnover": 87800000000.0,
      "volume": 26838000.0,
-     "volume_ratio": 2.22
+     "volume_ratio": 2.22,
+     "disclosures": []
     },
     {
      "code": "6503",
@@ -2158,7 +2201,8 @@
      "change_pct": 6.06,
      "turnover": 387900000000.0,
      "volume": 19830000.0,
-     "volume_ratio": 4.3
+     "volume_ratio": 4.3,
+     "disclosures": []
     },
     {
      "code": "6890",
@@ -2168,7 +2212,8 @@
      "change_pct": 4.22,
      "turnover": 48900000000.0,
      "volume": 58263000.0,
-     "volume_ratio": 0.75
+     "volume_ratio": 0.75,
+     "disclosures": []
     }
    ],
    "news_count": 3
@@ -2188,7 +2233,8 @@
      "change_pct": 8.6,
      "turnover": 345900000000.0,
      "volume": 55787000.0,
-     "volume_ratio": 3.47
+     "volume_ratio": 3.47,
+     "disclosures": []
     },
     {
      "code": "8410",
@@ -2198,7 +2244,8 @@
      "change_pct": 7.32,
      "turnover": 357600000000.0,
      "volume": 25306000.0,
-     "volume_ratio": 2.01
+     "volume_ratio": 2.01,
+     "disclosures": []
     },
     {
      "code": "5838",
@@ -2208,7 +2255,8 @@
      "change_pct": 4.96,
      "turnover": 22100000000.0,
      "volume": 69928000.0,
-     "volume_ratio": 3.07
+     "volume_ratio": 3.07,
+     "disclosures": []
     },
     {
      "code": "8308",
@@ -2218,7 +2266,8 @@
      "change_pct": 4.64,
      "turnover": 199700000000.0,
      "volume": 68463000.0,
-     "volume_ratio": 3.79
+     "volume_ratio": 3.79,
+     "disclosures": []
     },
     {
      "code": "8309",
@@ -2228,7 +2277,8 @@
      "change_pct": 4.07,
      "turnover": 392100000000.0,
      "volume": 28740000.0,
-     "volume_ratio": 2.94
+     "volume_ratio": 2.94,
+     "disclosures": []
     },
     {
      "code": "7182",
@@ -2238,7 +2288,8 @@
      "change_pct": 3.59,
      "turnover": 222200000000.0,
      "volume": 14318000.0,
-     "volume_ratio": 2.22
+     "volume_ratio": 2.22,
+     "disclosures": []
     },
     {
      "code": "8304",
@@ -2248,7 +2299,8 @@
      "change_pct": 2.94,
      "turnover": 260200000000.0,
      "volume": 17072000.0,
-     "volume_ratio": 4.45
+     "volume_ratio": 4.45,
+     "disclosures": []
     },
     {
      "code": "8316",
@@ -2258,7 +2310,8 @@
      "change_pct": 2.88,
      "turnover": 397800000000.0,
      "volume": 20884000.0,
-     "volume_ratio": 3.4
+     "volume_ratio": 3.4,
+     "disclosures": []
     },
     {
      "code": "8303",
@@ -2268,7 +2321,8 @@
      "change_pct": 2.52,
      "turnover": 198100000000.0,
      "volume": 2542000.0,
-     "volume_ratio": 2.36
+     "volume_ratio": 2.36,
+     "disclosures": []
     },
     {
      "code": "8411",
@@ -2278,7 +2332,8 @@
      "change_pct": 1.62,
      "turnover": 86100000000.0,
      "volume": 66388000.0,
-     "volume_ratio": 3.21
+     "volume_ratio": 3.21,
+     "disclosures": []
     }
    ],
    "news_count": 4
@@ -2298,7 +2353,8 @@
      "change_pct": 5.96,
      "turnover": 84000000000.0,
      "volume": 55604000.0,
-     "volume_ratio": 1.56
+     "volume_ratio": 1.56,
+     "disclosures": []
     },
     {
      "code": "4523",
@@ -2308,7 +2364,8 @@
      "change_pct": 5.49,
      "turnover": 237800000000.0,
      "volume": 72315000.0,
-     "volume_ratio": 1.69
+     "volume_ratio": 1.69,
+     "disclosures": []
     },
     {
      "code": "4521",
@@ -2318,7 +2375,8 @@
      "change_pct": 5.21,
      "turnover": 357600000000.0,
      "volume": 69611000.0,
-     "volume_ratio": 0.9
+     "volume_ratio": 0.9,
+     "disclosures": []
     },
     {
      "code": "4540",
@@ -2328,7 +2386,8 @@
      "change_pct": 4.93,
      "turnover": 342200000000.0,
      "volume": 42273000.0,
-     "volume_ratio": 1.51
+     "volume_ratio": 1.51,
+     "disclosures": []
     },
     {
      "code": "4568",
@@ -2338,7 +2397,8 @@
      "change_pct": 4.86,
      "turnover": 234300000000.0,
      "volume": 51377000.0,
-     "volume_ratio": 4.41
+     "volume_ratio": 4.41,
+     "disclosures": []
     },
     {
      "code": "4519",
@@ -2348,7 +2408,8 @@
      "change_pct": 4.57,
      "turnover": 248700000000.0,
      "volume": 48203000.0,
-     "volume_ratio": 3.96
+     "volume_ratio": 3.96,
+     "disclosures": []
     },
     {
      "code": "4506",
@@ -2358,7 +2419,8 @@
      "change_pct": 4.21,
      "turnover": 175700000000.0,
      "volume": 54342000.0,
-     "volume_ratio": 2.68
+     "volume_ratio": 2.68,
+     "disclosures": []
     },
     {
      "code": "4516",
@@ -2368,7 +2430,8 @@
      "change_pct": 4.14,
      "turnover": 372000000000.0,
      "volume": 21135000.0,
-     "volume_ratio": 4.27
+     "volume_ratio": 4.27,
+     "disclosures": []
     },
     {
      "code": "4502",
@@ -2378,7 +2441,8 @@
      "change_pct": 4.04,
      "turnover": 306000000000.0,
      "volume": 78236000.0,
-     "volume_ratio": 4.41
+     "volume_ratio": 4.41,
+     "disclosures": []
     },
     {
      "code": "4507",
@@ -2388,7 +2452,8 @@
      "change_pct": 3.82,
      "turnover": 155200000000.0,
      "volume": 17504000.0,
-     "volume_ratio": 3.72
+     "volume_ratio": 3.72,
+     "disclosures": []
     },
     {
      "code": "4151",
@@ -2398,7 +2463,8 @@
      "change_pct": 3.57,
      "turnover": 385800000000.0,
      "volume": 64497000.0,
-     "volume_ratio": 2.06
+     "volume_ratio": 2.06,
+     "disclosures": []
     },
     {
      "code": "4536",
@@ -2408,7 +2474,8 @@
      "change_pct": 3.44,
      "turnover": 362200000000.0,
      "volume": 59327000.0,
-     "volume_ratio": 2.12
+     "volume_ratio": 2.12,
+     "disclosures": []
     },
     {
      "code": "4578",
@@ -2418,7 +2485,8 @@
      "change_pct": 2.74,
      "turnover": 357100000000.0,
      "volume": 25745000.0,
-     "volume_ratio": 0.94
+     "volume_ratio": 0.94,
+     "disclosures": []
     },
     {
      "code": "4528",
@@ -2428,7 +2496,8 @@
      "change_pct": 2.03,
      "turnover": 392400000000.0,
      "volume": 16769000.0,
-     "volume_ratio": 2.12
+     "volume_ratio": 2.12,
+     "disclosures": []
     }
    ],
    "news_count": 0
@@ -2448,7 +2517,8 @@
      "change_pct": 5.37,
      "turnover": 283000000000.0,
      "volume": 39513000.0,
-     "volume_ratio": 2.83
+     "volume_ratio": 2.83,
+     "disclosures": []
     },
     {
      "code": "6617",
@@ -2458,7 +2528,8 @@
      "change_pct": 4.74,
      "turnover": 151800000000.0,
      "volume": 21841000.0,
-     "volume_ratio": 2.48
+     "volume_ratio": 2.48,
+     "disclosures": []
     },
     {
      "code": "6501",
@@ -2468,7 +2539,8 @@
      "change_pct": 4.53,
      "turnover": 171600000000.0,
      "volume": 26259000.0,
-     "volume_ratio": 1.8
+     "volume_ratio": 1.8,
+     "disclosures": []
     },
     {
      "code": "6517",
@@ -2478,7 +2550,8 @@
      "change_pct": 4.22,
      "turnover": 294000000000.0,
      "volume": 78367000.0,
-     "volume_ratio": 1.88
+     "volume_ratio": 1.88,
+     "disclosures": []
     },
     {
      "code": "1417",
@@ -2488,7 +2561,8 @@
      "change_pct": 4.02,
      "turnover": 337200000000.0,
      "volume": 12899000.0,
-     "volume_ratio": 0.57
+     "volume_ratio": 0.57,
+     "disclosures": []
     },
     {
      "code": "1944",
@@ -2498,7 +2572,8 @@
      "change_pct": 3.2,
      "turnover": 24900000000.0,
      "volume": 78643000.0,
-     "volume_ratio": 2.4
+     "volume_ratio": 2.4,
+     "disclosures": []
     },
     {
      "code": "6508",
@@ -2508,7 +2583,8 @@
      "change_pct": 2.94,
      "turnover": 394600000000.0,
      "volume": 40102000.0,
-     "volume_ratio": 1.77
+     "volume_ratio": 1.77,
+     "disclosures": []
     },
     {
      "code": "6651",
@@ -2518,7 +2594,8 @@
      "change_pct": 2.04,
      "turnover": 341100000000.0,
      "volume": 43792000.0,
-     "volume_ratio": 4.13
+     "volume_ratio": 4.13,
+     "disclosures": []
     },
     {
      "code": "6504",
@@ -2528,7 +2605,8 @@
      "change_pct": 1.6,
      "turnover": 129100000000.0,
      "volume": 1386000.0,
-     "volume_ratio": 1.83
+     "volume_ratio": 1.83,
+     "disclosures": []
     },
     {
      "code": "1942",
@@ -2538,7 +2616,8 @@
      "change_pct": 1.18,
      "turnover": 214600000000.0,
      "volume": 4549000.0,
-     "volume_ratio": 2.61
+     "volume_ratio": 2.61,
+     "disclosures": []
     }
    ],
    "news_count": 0
@@ -2558,7 +2637,8 @@
      "change_pct": 5.72,
      "turnover": 213100000000.0,
      "volume": 59139000.0,
-     "volume_ratio": 1.33
+     "volume_ratio": 1.33,
+     "disclosures": []
     },
     {
      "code": "3765",
@@ -2568,7 +2648,8 @@
      "change_pct": 4.84,
      "turnover": 352700000000.0,
      "volume": 10850000.0,
-     "volume_ratio": 2.99
+     "volume_ratio": 2.99,
+     "disclosures": []
     },
     {
      "code": "6460",
@@ -2578,7 +2659,8 @@
      "change_pct": 4.75,
      "turnover": 238200000000.0,
      "volume": 51194000.0,
-     "volume_ratio": 3.65
+     "volume_ratio": 3.65,
+     "disclosures": []
     },
     {
      "code": "9468",
@@ -2588,7 +2670,8 @@
      "change_pct": 4.55,
      "turnover": 224300000000.0,
      "volume": 8633000.0,
-     "volume_ratio": 1.87
+     "volume_ratio": 1.87,
+     "disclosures": []
     },
     {
      "code": "3668",
@@ -2598,7 +2681,8 @@
      "change_pct": 4.26,
      "turnover": 356300000000.0,
      "volume": 7594000.0,
-     "volume_ratio": 3.31
+     "volume_ratio": 3.31,
+     "disclosures": []
     },
     {
      "code": "3635",
@@ -2608,7 +2692,8 @@
      "change_pct": 4.0,
      "turnover": 100200000000.0,
      "volume": 32493000.0,
-     "volume_ratio": 1.71
+     "volume_ratio": 1.71,
+     "disclosures": []
     },
     {
      "code": "7974",
@@ -2618,7 +2703,8 @@
      "change_pct": 3.83,
      "turnover": 305300000000.0,
      "volume": 50425000.0,
-     "volume_ratio": 3.49
+     "volume_ratio": 3.49,
+     "disclosures": []
     },
     {
      "code": "9602",
@@ -2628,7 +2714,8 @@
      "change_pct": 3.47,
      "turnover": 374600000000.0,
      "volume": 77144000.0,
-     "volume_ratio": 1.76
+     "volume_ratio": 1.76,
+     "disclosures": []
     },
     {
      "code": "3659",
@@ -2638,7 +2725,8 @@
      "change_pct": 3.43,
      "turnover": 261600000000.0,
      "volume": 32599000.0,
-     "volume_ratio": 4.46
+     "volume_ratio": 4.46,
+     "disclosures": []
     },
     {
      "code": "4816",
@@ -2648,7 +2736,8 @@
      "change_pct": 2.92,
      "turnover": 74200000000.0,
      "volume": 34326000.0,
-     "volume_ratio": 3.8
+     "volume_ratio": 3.8,
+     "disclosures": []
     },
     {
      "code": "9605",
@@ -2658,7 +2747,8 @@
      "change_pct": 2.87,
      "turnover": 144800000000.0,
      "volume": 41028000.0,
-     "volume_ratio": 3.45
+     "volume_ratio": 3.45,
+     "disclosures": []
     },
     {
      "code": "2432",
@@ -2668,7 +2758,8 @@
      "change_pct": 2.67,
      "turnover": 233600000000.0,
      "volume": 64184000.0,
-     "volume_ratio": 0.59
+     "volume_ratio": 0.59,
+     "disclosures": []
     },
     {
      "code": "7832",
@@ -2678,7 +2769,8 @@
      "change_pct": 2.11,
      "turnover": 120000000000.0,
      "volume": 76724000.0,
-     "volume_ratio": 2.32
+     "volume_ratio": 2.32,
+     "disclosures": []
     },
     {
      "code": "9697",
@@ -2688,7 +2780,8 @@
      "change_pct": 1.63,
      "turnover": 298000000000.0,
      "volume": 61396000.0,
-     "volume_ratio": 3.39
+     "volume_ratio": 3.39,
+     "disclosures": []
     },
     {
      "code": "6758",
@@ -2698,7 +2791,8 @@
      "change_pct": 1.52,
      "turnover": 73300000000.0,
      "volume": 45044000.0,
-     "volume_ratio": 1.05
+     "volume_ratio": 1.05,
+     "disclosures": []
     },
     {
      "code": "4751",
@@ -2708,7 +2802,8 @@
      "change_pct": 0.91,
      "turnover": 130400000000.0,
      "volume": 4930000.0,
-     "volume_ratio": 3.43
+     "volume_ratio": 3.43,
+     "disclosures": []
     },
     {
      "code": "9684",
@@ -2718,7 +2813,8 @@
      "change_pct": 0.29,
      "turnover": 168600000000.0,
      "volume": 17712000.0,
-     "volume_ratio": 2.9
+     "volume_ratio": 2.9,
+     "disclosures": []
     }
    ],
    "news_count": 1
@@ -2738,7 +2834,8 @@
      "change_pct": 4.68,
      "turnover": 367400000000.0,
      "volume": 76943000.0,
-     "volume_ratio": 4.23
+     "volume_ratio": 4.23,
+     "disclosures": []
     },
     {
      "code": "9501",
@@ -2748,7 +2845,8 @@
      "change_pct": 3.84,
      "turnover": 239400000000.0,
      "volume": 28831000.0,
-     "volume_ratio": 1.18
+     "volume_ratio": 1.18,
+     "disclosures": []
     },
     {
      "code": "6366",
@@ -2758,7 +2856,8 @@
      "change_pct": 3.76,
      "turnover": 84900000000.0,
      "volume": 75752000.0,
-     "volume_ratio": 0.69
+     "volume_ratio": 0.69,
+     "disclosures": []
     },
     {
      "code": "7013",
@@ -2768,7 +2867,8 @@
      "change_pct": 3.45,
      "turnover": 388600000000.0,
      "volume": 22771000.0,
-     "volume_ratio": 2.95
+     "volume_ratio": 2.95,
+     "disclosures": []
     },
     {
      "code": "9508",
@@ -2778,7 +2878,8 @@
      "change_pct": 3.08,
      "turnover": 103700000000.0,
      "volume": 71073000.0,
-     "volume_ratio": 1.21
+     "volume_ratio": 1.21,
+     "disclosures": []
     },
     {
      "code": "7711",
@@ -2788,7 +2889,8 @@
      "change_pct": 2.96,
      "turnover": 390700000000.0,
      "volume": 69612000.0,
-     "volume_ratio": 1.62
+     "volume_ratio": 1.62,
+     "disclosures": []
     },
     {
      "code": "5631",
@@ -2798,7 +2900,8 @@
      "change_pct": 2.8,
      "turnover": 210200000000.0,
      "volume": 39709000.0,
-     "volume_ratio": 2.0
+     "volume_ratio": 2.0,
+     "disclosures": []
     },
     {
      "code": "1963",
@@ -2808,7 +2911,8 @@
      "change_pct": 2.64,
      "turnover": 53500000000.0,
      "volume": 54210000.0,
-     "volume_ratio": 2.4
+     "volume_ratio": 2.4,
+     "disclosures": []
     },
     {
      "code": "7011",
@@ -2818,7 +2922,8 @@
      "change_pct": 1.71,
      "turnover": 250100000000.0,
      "volume": 38349000.0,
-     "volume_ratio": 1.02
+     "volume_ratio": 1.02,
+     "disclosures": []
     },
     {
      "code": "9503",
@@ -2828,7 +2933,8 @@
      "change_pct": 1.48,
      "turnover": 279500000000.0,
      "volume": 49225000.0,
-     "volume_ratio": 0.65
+     "volume_ratio": 0.65,
+     "disclosures": []
     },
     {
      "code": "6378",
@@ -2838,7 +2944,8 @@
      "change_pct": 0.55,
      "turnover": 166500000000.0,
      "volume": 79128000.0,
-     "volume_ratio": 3.84
+     "volume_ratio": 3.84,
+     "disclosures": []
     },
     {
      "code": "6501",
@@ -2848,7 +2955,8 @@
      "change_pct": 0.53,
      "turnover": 196700000000.0,
      "volume": 24522000.0,
-     "volume_ratio": 1.26
+     "volume_ratio": 1.26,
+     "disclosures": []
     }
    ],
    "news_count": 3
@@ -2868,7 +2976,8 @@
      "change_pct": 5.73,
      "turnover": 265500000000.0,
      "volume": 26508000.0,
-     "volume_ratio": 1.3
+     "volume_ratio": 1.3,
+     "disclosures": []
     },
     {
      "code": "7261",
@@ -2878,7 +2987,8 @@
      "change_pct": 3.72,
      "turnover": 127900000000.0,
      "volume": 65170000.0,
-     "volume_ratio": 1.81
+     "volume_ratio": 1.81,
+     "disclosures": []
     },
     {
      "code": "5108",
@@ -2888,7 +2998,8 @@
      "change_pct": 3.63,
      "turnover": 259100000000.0,
      "volume": 70988000.0,
-     "volume_ratio": 3.84
+     "volume_ratio": 3.84,
+     "disclosures": []
     },
     {
      "code": "6923",
@@ -2898,7 +3009,8 @@
      "change_pct": 3.53,
      "turnover": 299100000000.0,
      "volume": 32543000.0,
-     "volume_ratio": 3.74
+     "volume_ratio": 3.74,
+     "disclosures": []
     },
     {
      "code": "7203",
@@ -2908,7 +3020,8 @@
      "change_pct": 3.37,
      "turnover": 82800000000.0,
      "volume": 10052000.0,
-     "volume_ratio": 2.64
+     "volume_ratio": 2.64,
+     "disclosures": []
     },
     {
      "code": "7282",
@@ -2918,7 +3031,8 @@
      "change_pct": 3.08,
      "turnover": 295400000000.0,
      "volume": 12925000.0,
-     "volume_ratio": 2.52
+     "volume_ratio": 2.52,
+     "disclosures": []
     },
     {
      "code": "7267",
@@ -2928,7 +3042,8 @@
      "change_pct": 3.02,
      "turnover": 62000000000.0,
      "volume": 19594000.0,
-     "volume_ratio": 4.18
+     "volume_ratio": 4.18,
+     "disclosures": []
     },
     {
      "code": "7270",
@@ -2938,7 +3053,8 @@
      "change_pct": 2.87,
      "turnover": 147800000000.0,
      "volume": 33945000.0,
-     "volume_ratio": 3.29
+     "volume_ratio": 3.29,
+     "disclosures": []
     },
     {
      "code": "7202",
@@ -2948,7 +3064,8 @@
      "change_pct": 2.68,
      "turnover": 148300000000.0,
      "volume": 2547000.0,
-     "volume_ratio": 3.15
+     "volume_ratio": 3.15,
+     "disclosures": []
     },
     {
      "code": "7269",
@@ -2958,7 +3075,8 @@
      "change_pct": 2.32,
      "turnover": 371400000000.0,
      "volume": 30923000.0,
-     "volume_ratio": 1.2
+     "volume_ratio": 1.2,
+     "disclosures": []
     },
     {
      "code": "7272",
@@ -2968,7 +3086,8 @@
      "change_pct": 1.61,
      "turnover": 71300000000.0,
      "volume": 16523000.0,
-     "volume_ratio": 1.06
+     "volume_ratio": 1.06,
+     "disclosures": []
     },
     {
      "code": "7211",
@@ -2978,7 +3097,8 @@
      "change_pct": 1.6,
      "turnover": 101200000000.0,
      "volume": 59021000.0,
-     "volume_ratio": 4.13
+     "volume_ratio": 4.13,
+     "disclosures": []
     },
     {
      "code": "7201",
@@ -2988,7 +3108,8 @@
      "change_pct": 1.58,
      "turnover": 183100000000.0,
      "volume": 42387000.0,
-     "volume_ratio": 4.36
+     "volume_ratio": 4.36,
+     "disclosures": []
     },
     {
      "code": "3116",
@@ -2998,7 +3119,8 @@
      "change_pct": 0.73,
      "turnover": 270900000000.0,
      "volume": 40825000.0,
-     "volume_ratio": 4.21
+     "volume_ratio": 4.21,
+     "disclosures": []
     },
     {
      "code": "7259",
@@ -3008,7 +3130,8 @@
      "change_pct": -0.24,
      "turnover": 226500000000.0,
      "volume": 27973000.0,
-     "volume_ratio": 3.57
+     "volume_ratio": 3.57,
+     "disclosures": []
     }
    ],
    "news_count": 3
@@ -3028,7 +3151,8 @@
      "change_pct": 3.78,
      "turnover": 208400000000.0,
      "volume": 67831000.0,
-     "volume_ratio": 4.38
+     "volume_ratio": 4.38,
+     "disclosures": []
     },
     {
      "code": "9127",
@@ -3038,7 +3162,8 @@
      "change_pct": 3.53,
      "turnover": 146800000000.0,
      "volume": 1913000.0,
-     "volume_ratio": 3.66
+     "volume_ratio": 3.66,
+     "disclosures": []
     },
     {
      "code": "9107",
@@ -3048,7 +3173,8 @@
      "change_pct": 3.17,
      "turnover": 91200000000.0,
      "volume": 27975000.0,
-     "volume_ratio": 2.06
+     "volume_ratio": 2.06,
+     "disclosures": []
     },
     {
      "code": "9119",
@@ -3058,7 +3184,8 @@
      "change_pct": 1.93,
      "turnover": 310400000000.0,
      "volume": 15345000.0,
-     "volume_ratio": 2.15
+     "volume_ratio": 2.15,
+     "disclosures": []
     },
     {
      "code": "9308",
@@ -3068,7 +3195,8 @@
      "change_pct": 1.76,
      "turnover": 121000000000.0,
      "volume": 10173000.0,
-     "volume_ratio": 2.0
+     "volume_ratio": 2.0,
+     "disclosures": []
     },
     {
      "code": "9101",
@@ -3078,7 +3206,8 @@
      "change_pct": 1.65,
      "turnover": 57100000000.0,
      "volume": 74939000.0,
-     "volume_ratio": 4.44
+     "volume_ratio": 4.44,
+     "disclosures": []
     },
     {
      "code": "9115",
@@ -3088,7 +3217,8 @@
      "change_pct": 1.15,
      "turnover": 165400000000.0,
      "volume": 43392000.0,
-     "volume_ratio": 0.68
+     "volume_ratio": 0.68,
+     "disclosures": []
     },
     {
      "code": "9104",
@@ -3098,7 +3228,8 @@
      "change_pct": 0.94,
      "turnover": 119100000000.0,
      "volume": 33537000.0,
-     "volume_ratio": 2.25
+     "volume_ratio": 2.25,
+     "disclosures": []
     }
    ],
    "news_count": 4
@@ -3118,7 +3249,8 @@
      "change_pct": 5.72,
      "turnover": 200000000000.0,
      "volume": 42047000.0,
-     "volume_ratio": 2.35
+     "volume_ratio": 2.35,
+     "disclosures": []
     },
     {
      "code": "8804",
@@ -3128,7 +3260,8 @@
      "change_pct": 3.12,
      "turnover": 235100000000.0,
      "volume": 1793000.0,
-     "volume_ratio": 1.85
+     "volume_ratio": 1.85,
+     "disclosures": []
     },
     {
      "code": "8801",
@@ -3138,7 +3271,8 @@
      "change_pct": 2.72,
      "turnover": 70800000000.0,
      "volume": 17401000.0,
-     "volume_ratio": 3.47
+     "volume_ratio": 3.47,
+     "disclosures": []
     },
     {
      "code": "3288",
@@ -3148,7 +3282,8 @@
      "change_pct": 2.43,
      "turnover": 183000000000.0,
      "volume": 63025000.0,
-     "volume_ratio": 4.09
+     "volume_ratio": 4.09,
+     "disclosures": []
     },
     {
      "code": "8830",
@@ -3158,7 +3293,8 @@
      "change_pct": 2.03,
      "turnover": 333700000000.0,
      "volume": 2186000.0,
-     "volume_ratio": 4.47
+     "volume_ratio": 4.47,
+     "disclosures": []
     },
     {
      "code": "3289",
@@ -3168,7 +3304,8 @@
      "change_pct": 1.76,
      "turnover": 142200000000.0,
      "volume": 62291000.0,
-     "volume_ratio": 2.83
+     "volume_ratio": 2.83,
+     "disclosures": []
     },
     {
      "code": "8802",
@@ -3178,7 +3315,8 @@
      "change_pct": 1.65,
      "turnover": 171500000000.0,
      "volume": 64154000.0,
-     "volume_ratio": 1.6
+     "volume_ratio": 1.6,
+     "disclosures": []
     },
     {
      "code": "1925",
@@ -3188,7 +3326,8 @@
      "change_pct": 1.32,
      "turnover": 191400000000.0,
      "volume": 6552000.0,
-     "volume_ratio": 1.55
+     "volume_ratio": 1.55,
+     "disclosures": []
     },
     {
      "code": "8897",
@@ -3198,7 +3337,8 @@
      "change_pct": 1.27,
      "turnover": 98400000000.0,
      "volume": 32646000.0,
-     "volume_ratio": 4.46
+     "volume_ratio": 4.46,
+     "disclosures": []
     },
     {
      "code": "8850",
@@ -3208,7 +3348,8 @@
      "change_pct": 0.64,
      "turnover": 235200000000.0,
      "volume": 22743000.0,
-     "volume_ratio": 2.2
+     "volume_ratio": 2.2,
+     "disclosures": []
     },
     {
      "code": "3231",
@@ -3218,7 +3359,8 @@
      "change_pct": 0.52,
      "turnover": 69500000000.0,
      "volume": 69075000.0,
-     "volume_ratio": 3.39
+     "volume_ratio": 3.39,
+     "disclosures": []
     },
     {
      "code": "1928",
@@ -3228,7 +3370,8 @@
      "change_pct": 0.13,
      "turnover": 393300000000.0,
      "volume": 33054000.0,
-     "volume_ratio": 1.12
+     "volume_ratio": 1.12,
+     "disclosures": []
     }
    ],
    "news_count": 0
@@ -3248,7 +3391,8 @@
      "change_pct": 4.65,
      "turnover": 165900000000.0,
      "volume": 40772000.0,
-     "volume_ratio": 1.47
+     "volume_ratio": 1.47,
+     "disclosures": []
     },
     {
      "code": "8388",
@@ -3258,7 +3402,8 @@
      "change_pct": 4.15,
      "turnover": 92700000000.0,
      "volume": 50983000.0,
-     "volume_ratio": 1.45
+     "volume_ratio": 1.45,
+     "disclosures": []
     },
     {
      "code": "8524",
@@ -3268,7 +3413,8 @@
      "change_pct": 4.13,
      "turnover": 274000000000.0,
      "volume": 52379000.0,
-     "volume_ratio": 1.36
+     "volume_ratio": 1.36,
+     "disclosures": []
     },
     {
      "code": "7180",
@@ -3278,7 +3424,8 @@
      "change_pct": 3.95,
      "turnover": 343400000000.0,
      "volume": 77267000.0,
-     "volume_ratio": 4.26
+     "volume_ratio": 4.26,
+     "disclosures": []
     },
     {
      "code": "8341",
@@ -3288,7 +3435,8 @@
      "change_pct": 2.95,
      "turnover": 363400000000.0,
      "volume": 22013000.0,
-     "volume_ratio": 3.28
+     "volume_ratio": 3.28,
+     "disclosures": []
     },
     {
      "code": "8334",
@@ -3298,7 +3446,8 @@
      "change_pct": 2.83,
      "turnover": 285800000000.0,
      "volume": 13555000.0,
-     "volume_ratio": 4.24
+     "volume_ratio": 4.24,
+     "disclosures": []
     },
     {
      "code": "8377",
@@ -3308,7 +3457,8 @@
      "change_pct": 2.79,
      "turnover": 174700000000.0,
      "volume": 19634000.0,
-     "volume_ratio": 1.02
+     "volume_ratio": 1.02,
+     "disclosures": []
     },
     {
      "code": "5844",
@@ -3318,7 +3468,8 @@
      "change_pct": 2.77,
      "turnover": 296400000000.0,
      "volume": 22600000.0,
-     "volume_ratio": 0.68
+     "volume_ratio": 0.68,
+     "disclosures": []
     },
     {
      "code": "8386",
@@ -3328,7 +3479,8 @@
      "change_pct": 2.75,
      "turnover": 235000000000.0,
      "volume": 40183000.0,
-     "volume_ratio": 1.39
+     "volume_ratio": 1.39,
+     "disclosures": []
     },
     {
      "code": "7186",
@@ -3338,7 +3490,8 @@
      "change_pct": 2.72,
      "turnover": 391600000000.0,
      "volume": 45172000.0,
-     "volume_ratio": 1.42
+     "volume_ratio": 1.42,
+     "disclosures": []
     },
     {
      "code": "8360",
@@ -3348,7 +3501,8 @@
      "change_pct": 2.59,
      "turnover": 197800000000.0,
      "volume": 16355000.0,
-     "volume_ratio": 4.14
+     "volume_ratio": 4.14,
+     "disclosures": []
     },
     {
      "code": "7189",
@@ -3358,7 +3512,8 @@
      "change_pct": 2.3,
      "turnover": 94100000000.0,
      "volume": 61453000.0,
-     "volume_ratio": 1.19
+     "volume_ratio": 1.19,
+     "disclosures": []
     },
     {
      "code": "7337",
@@ -3368,7 +3523,8 @@
      "change_pct": 2.29,
      "turnover": 118000000000.0,
      "volume": 33963000.0,
-     "volume_ratio": 1.7
+     "volume_ratio": 1.7,
+     "disclosures": []
     },
     {
      "code": "7322",
@@ -3378,7 +3534,8 @@
      "change_pct": 2.17,
      "turnover": 125700000000.0,
      "volume": 74639000.0,
-     "volume_ratio": 0.53
+     "volume_ratio": 0.53,
+     "disclosures": []
     },
     {
      "code": "5830",
@@ -3388,7 +3545,8 @@
      "change_pct": 2.14,
      "turnover": 170600000000.0,
      "volume": 76533000.0,
-     "volume_ratio": 1.78
+     "volume_ratio": 1.78,
+     "disclosures": []
     },
     {
      "code": "8367",
@@ -3398,7 +3556,8 @@
      "change_pct": 1.89,
      "turnover": 303600000000.0,
      "volume": 64958000.0,
-     "volume_ratio": 2.1
+     "volume_ratio": 2.1,
+     "disclosures": []
     },
     {
      "code": "5831",
@@ -3408,7 +3567,8 @@
      "change_pct": 1.71,
      "turnover": 78100000000.0,
      "volume": 49492000.0,
-     "volume_ratio": 3.83
+     "volume_ratio": 3.83,
+     "disclosures": []
     },
     {
      "code": "7381",
@@ -3418,7 +3578,8 @@
      "change_pct": 1.63,
      "turnover": 163400000000.0,
      "volume": 21344000.0,
-     "volume_ratio": 2.01
+     "volume_ratio": 2.01,
+     "disclosures": []
     },
     {
      "code": "8366",
@@ -3428,7 +3589,8 @@
      "change_pct": 1.5,
      "turnover": 83500000000.0,
      "volume": 7773000.0,
-     "volume_ratio": 3.52
+     "volume_ratio": 3.52,
+     "disclosures": []
     },
     {
      "code": "7327",
@@ -3438,7 +3600,8 @@
      "change_pct": 0.93,
      "turnover": 354200000000.0,
      "volume": 12025000.0,
-     "volume_ratio": 2.68
+     "volume_ratio": 2.68,
+     "disclosures": []
     },
     {
      "code": "8544",
@@ -3448,7 +3611,8 @@
      "change_pct": 0.88,
      "turnover": 238800000000.0,
      "volume": 31087000.0,
-     "volume_ratio": 0.98
+     "volume_ratio": 0.98,
+     "disclosures": []
     },
     {
      "code": "8354",
@@ -3458,7 +3622,8 @@
      "change_pct": 0.74,
      "turnover": 203000000000.0,
      "volume": 23000000.0,
-     "volume_ratio": 1.11
+     "volume_ratio": 1.11,
+     "disclosures": []
     },
     {
      "code": "8359",
@@ -3468,7 +3633,8 @@
      "change_pct": 0.34,
      "turnover": 198300000000.0,
      "volume": 32688000.0,
-     "volume_ratio": 3.42
+     "volume_ratio": 3.42,
+     "disclosures": []
     },
     {
      "code": "8331",
@@ -3478,7 +3644,8 @@
      "change_pct": 0.31,
      "turnover": 276500000000.0,
      "volume": 8100000.0,
-     "volume_ratio": 1.43
+     "volume_ratio": 1.43,
+     "disclosures": []
     },
     {
      "code": "8418",
@@ -3488,7 +3655,8 @@
      "change_pct": 0.06,
      "turnover": 379000000000.0,
      "volume": 57542000.0,
-     "volume_ratio": 1.42
+     "volume_ratio": 1.42,
+     "disclosures": []
     },
     {
      "code": "5832",
@@ -3498,7 +3666,8 @@
      "change_pct": -0.73,
      "turnover": 131300000000.0,
      "volume": 34857000.0,
-     "volume_ratio": 0.78
+     "volume_ratio": 0.78,
+     "disclosures": []
     },
     {
      "code": "8368",
@@ -3508,7 +3677,8 @@
      "change_pct": -2.86,
      "turnover": 296400000000.0,
      "volume": 4677000.0,
-     "volume_ratio": 1.55
+     "volume_ratio": 1.55,
+     "disclosures": []
     }
    ],
    "news_count": 2
@@ -3528,7 +3698,8 @@
      "change_pct": 4.21,
      "turnover": 143900000000.0,
      "volume": 2061000.0,
-     "volume_ratio": 4.08
+     "volume_ratio": 4.08,
+     "disclosures": []
     },
     {
      "code": "5344",
@@ -3538,7 +3709,8 @@
      "change_pct": 3.77,
      "turnover": 371000000000.0,
      "volume": 67088000.0,
-     "volume_ratio": 0.64
+     "volume_ratio": 0.64,
+     "disclosures": []
     },
     {
      "code": "6997",
@@ -3548,7 +3720,8 @@
      "change_pct": 1.72,
      "turnover": 182500000000.0,
      "volume": 73902000.0,
-     "volume_ratio": 2.11
+     "volume_ratio": 2.11,
+     "disclosures": []
     },
     {
      "code": "6996",
@@ -3558,7 +3731,8 @@
      "change_pct": 1.08,
      "turnover": 336500000000.0,
      "volume": 42445000.0,
-     "volume_ratio": 1.58
+     "volume_ratio": 1.58,
+     "disclosures": []
     },
     {
      "code": "6976",
@@ -3568,7 +3742,8 @@
      "change_pct": 1.0,
      "turnover": 243000000000.0,
      "volume": 45013000.0,
-     "volume_ratio": 3.82
+     "volume_ratio": 3.82,
+     "disclosures": []
     },
     {
      "code": "6981",
@@ -3578,7 +3753,8 @@
      "change_pct": -0.03,
      "turnover": 333100000000.0,
      "volume": 18193000.0,
-     "volume_ratio": 2.94
+     "volume_ratio": 2.94,
+     "disclosures": []
     },
     {
      "code": "6971",
@@ -3588,7 +3764,8 @@
      "change_pct": -0.14,
      "turnover": 376600000000.0,
      "volume": 8661000.0,
-     "volume_ratio": 1.05
+     "volume_ratio": 1.05,
+     "disclosures": []
     }
    ],
    "news_count": 3
@@ -3608,7 +3785,8 @@
      "change_pct": 4.76,
      "turnover": 327600000000.0,
      "volume": 64971000.0,
-     "volume_ratio": 4.43
+     "volume_ratio": 4.43,
+     "disclosures": []
     },
     {
      "code": "7532",
@@ -3618,7 +3796,8 @@
      "change_pct": 3.82,
      "turnover": 365500000000.0,
      "volume": 44439000.0,
-     "volume_ratio": 3.95
+     "volume_ratio": 3.95,
+     "disclosures": []
     },
     {
      "code": "3086",
@@ -3628,7 +3807,8 @@
      "change_pct": 3.42,
      "turnover": 250900000000.0,
      "volume": 17135000.0,
-     "volume_ratio": 4.28
+     "volume_ratio": 4.28,
+     "disclosures": []
     },
     {
      "code": "4911",
@@ -3638,7 +3818,8 @@
      "change_pct": 3.1,
      "turnover": 243800000000.0,
      "volume": 51765000.0,
-     "volume_ratio": 1.33
+     "volume_ratio": 1.33,
+     "disclosures": []
     },
     {
      "code": "9020",
@@ -3648,7 +3829,8 @@
      "change_pct": 2.9,
      "turnover": 94200000000.0,
      "volume": 4632000.0,
-     "volume_ratio": 1.63
+     "volume_ratio": 1.63,
+     "disclosures": []
     },
     {
      "code": "9603",
@@ -3658,7 +3840,8 @@
      "change_pct": 2.45,
      "turnover": 260300000000.0,
      "volume": 66242000.0,
-     "volume_ratio": 2.52
+     "volume_ratio": 2.52,
+     "disclosures": []
     },
     {
      "code": "9201",
@@ -3668,7 +3851,8 @@
      "change_pct": 2.22,
      "turnover": 128500000000.0,
      "volume": 35512000.0,
-     "volume_ratio": 2.01
+     "volume_ratio": 2.01,
+     "disclosures": []
     },
     {
      "code": "9022",
@@ -3678,7 +3862,8 @@
      "change_pct": 1.79,
      "turnover": 161000000000.0,
      "volume": 56056000.0,
-     "volume_ratio": 1.04
+     "volume_ratio": 1.04,
+     "disclosures": []
     },
     {
      "code": "7453",
@@ -3688,7 +3873,8 @@
      "change_pct": 1.39,
      "turnover": 197700000000.0,
      "volume": 2445000.0,
-     "volume_ratio": 2.17
+     "volume_ratio": 2.17,
+     "disclosures": []
     },
     {
      "code": "9722",
@@ -3698,7 +3884,8 @@
      "change_pct": 1.29,
      "turnover": 181700000000.0,
      "volume": 60734000.0,
-     "volume_ratio": 3.63
+     "volume_ratio": 3.63,
+     "disclosures": []
     },
     {
      "code": "9021",
@@ -3708,7 +3895,8 @@
      "change_pct": 0.87,
      "turnover": 348300000000.0,
      "volume": 1320000.0,
-     "volume_ratio": 3.96
+     "volume_ratio": 3.96,
+     "disclosures": []
     },
     {
      "code": "8233",
@@ -3718,7 +3906,8 @@
      "change_pct": 0.74,
      "turnover": 134100000000.0,
      "volume": 42636000.0,
-     "volume_ratio": 3.84
+     "volume_ratio": 3.84,
+     "disclosures": []
     },
     {
      "code": "4661",
@@ -3728,7 +3917,8 @@
      "change_pct": 0.2,
      "turnover": 81100000000.0,
      "volume": 56746000.0,
-     "volume_ratio": 1.32
+     "volume_ratio": 1.32,
+     "disclosures": []
     },
     {
      "code": "9202",
@@ -3738,7 +3928,8 @@
      "change_pct": -0.62,
      "turnover": 55300000000.0,
      "volume": 14738000.0,
-     "volume_ratio": 2.12
+     "volume_ratio": 2.12,
+     "disclosures": []
     },
     {
      "code": "3048",
@@ -3748,7 +3939,8 @@
      "change_pct": -0.64,
      "turnover": 169400000000.0,
      "volume": 25207000.0,
-     "volume_ratio": 3.47
+     "volume_ratio": 3.47,
+     "disclosures": []
     },
     {
      "code": "3099",
@@ -3758,7 +3950,8 @@
      "change_pct": -1.06,
      "turnover": 275700000000.0,
      "volume": 61556000.0,
-     "volume_ratio": 1.27
+     "volume_ratio": 1.27,
+     "disclosures": []
     },
     {
      "code": "9005",
@@ -3768,7 +3961,8 @@
      "change_pct": -1.52,
      "turnover": 41200000000.0,
      "volume": 4739000.0,
-     "volume_ratio": 1.14
+     "volume_ratio": 1.14,
+     "disclosures": []
     }
    ],
    "news_count": 0
@@ -3788,7 +3982,8 @@
      "change_pct": 2.97,
      "turnover": 58600000000.0,
      "volume": 56284000.0,
-     "volume_ratio": 1.55
+     "volume_ratio": 1.55,
+     "disclosures": []
     },
     {
      "code": "6770",
@@ -3798,7 +3993,8 @@
      "change_pct": 2.93,
      "turnover": 166800000000.0,
      "volume": 74225000.0,
-     "volume_ratio": 4.22
+     "volume_ratio": 4.22,
+     "disclosures": []
     },
     {
      "code": "6594",
@@ -3808,7 +4004,8 @@
      "change_pct": 2.56,
      "turnover": 97600000000.0,
      "volume": 64701000.0,
-     "volume_ratio": 2.56
+     "volume_ratio": 2.56,
+     "disclosures": []
     },
     {
      "code": "6762",
@@ -3818,7 +4015,8 @@
      "change_pct": 2.44,
      "turnover": 395100000000.0,
      "volume": 64852000.0,
-     "volume_ratio": 2.01
+     "volume_ratio": 2.01,
+     "disclosures": []
     },
     {
      "code": "6479",
@@ -3828,7 +4026,8 @@
      "change_pct": 1.31,
      "turnover": 384100000000.0,
      "volume": 9841000.0,
-     "volume_ratio": 2.85
+     "volume_ratio": 2.85,
+     "disclosures": []
     },
     {
      "code": "6988",
@@ -3838,7 +4037,8 @@
      "change_pct": 1.09,
      "turnover": 275500000000.0,
      "volume": 11134000.0,
-     "volume_ratio": 4.29
+     "volume_ratio": 4.29,
+     "disclosures": []
     },
     {
      "code": "6981",
@@ -3848,7 +4048,8 @@
      "change_pct": 0.71,
      "turnover": 95200000000.0,
      "volume": 28668000.0,
-     "volume_ratio": 3.79
+     "volume_ratio": 3.79,
+     "disclosures": []
     },
     {
      "code": "6963",
@@ -3858,7 +4059,8 @@
      "change_pct": 0.69,
      "turnover": 210100000000.0,
      "volume": 9021000.0,
-     "volume_ratio": 3.46
+     "volume_ratio": 3.46,
+     "disclosures": []
     },
     {
      "code": "6976",
@@ -3868,7 +4070,8 @@
      "change_pct": 0.03,
      "turnover": 357300000000.0,
      "volume": 39011000.0,
-     "volume_ratio": 3.1
+     "volume_ratio": 3.1,
+     "disclosures": []
     },
     {
      "code": "6971",
@@ -3878,7 +4081,8 @@
      "change_pct": -0.88,
      "turnover": 260400000000.0,
      "volume": 53482000.0,
-     "volume_ratio": 3.35
+     "volume_ratio": 3.35,
+     "disclosures": []
     }
    ],
    "news_count": 2
@@ -3898,7 +4102,8 @@
      "change_pct": 3.67,
      "turnover": 292500000000.0,
      "volume": 60637000.0,
-     "volume_ratio": 2.97
+     "volume_ratio": 2.97,
+     "disclosures": []
     },
     {
      "code": "1861",
@@ -3908,7 +4113,8 @@
      "change_pct": 2.45,
      "turnover": 339000000000.0,
      "volume": 72500000.0,
-     "volume_ratio": 1.25
+     "volume_ratio": 1.25,
+     "disclosures": []
     },
     {
      "code": "1860",
@@ -3918,7 +4124,8 @@
      "change_pct": 2.26,
      "turnover": 380700000000.0,
      "volume": 54899000.0,
-     "volume_ratio": 1.78
+     "volume_ratio": 1.78,
+     "disclosures": []
     },
     {
      "code": "5076",
@@ -3928,7 +4135,8 @@
      "change_pct": 2.13,
      "turnover": 41100000000.0,
      "volume": 76326000.0,
-     "volume_ratio": 0.87
+     "volume_ratio": 0.87,
+     "disclosures": []
     },
     {
      "code": "1719",
@@ -3938,7 +4146,8 @@
      "change_pct": 1.92,
      "turnover": 245000000000.0,
      "volume": 27583000.0,
-     "volume_ratio": 2.03
+     "volume_ratio": 2.03,
+     "disclosures": []
     },
     {
      "code": "1820",
@@ -3948,7 +4157,8 @@
      "change_pct": 1.76,
      "turnover": 149000000000.0,
      "volume": 76613000.0,
-     "volume_ratio": 4.47
+     "volume_ratio": 4.47,
+     "disclosures": []
     },
     {
      "code": "1812",
@@ -3958,7 +4168,8 @@
      "change_pct": 1.57,
      "turnover": 88000000000.0,
      "volume": 66135000.0,
-     "volume_ratio": 2.39
+     "volume_ratio": 2.39,
+     "disclosures": []
     },
     {
      "code": "1721",
@@ -3968,7 +4179,8 @@
      "change_pct": 0.68,
      "turnover": 236200000000.0,
      "volume": 30436000.0,
-     "volume_ratio": 2.74
+     "volume_ratio": 2.74,
+     "disclosures": []
     },
     {
      "code": "1803",
@@ -3978,7 +4190,8 @@
      "change_pct": 0.36,
      "turnover": 376800000000.0,
      "volume": 58277000.0,
-     "volume_ratio": 2.3
+     "volume_ratio": 2.3,
+     "disclosures": []
     },
     {
      "code": "1414",
@@ -3988,7 +4201,8 @@
      "change_pct": 0.32,
      "turnover": 325800000000.0,
      "volume": 11812000.0,
-     "volume_ratio": 1.96
+     "volume_ratio": 1.96,
+     "disclosures": []
     },
     {
      "code": "1893",
@@ -3998,7 +4212,8 @@
      "change_pct": -0.39,
      "turnover": 186800000000.0,
      "volume": 69631000.0,
-     "volume_ratio": 2.6
+     "volume_ratio": 2.6,
+     "disclosures": []
     },
     {
      "code": "1801",
@@ -4008,7 +4223,8 @@
      "change_pct": -0.77,
      "turnover": 240200000000.0,
      "volume": 7431000.0,
-     "volume_ratio": 3.5
+     "volume_ratio": 3.5,
+     "disclosures": []
     }
    ],
    "news_count": 3
@@ -4028,7 +4244,8 @@
      "change_pct": 2.74,
      "turnover": 210300000000.0,
      "volume": 8769000.0,
-     "volume_ratio": 3.15
+     "volume_ratio": 3.15,
+     "disclosures": []
     },
     {
      "code": "6254",
@@ -4038,7 +4255,8 @@
      "change_pct": 1.3,
      "turnover": 238200000000.0,
      "volume": 40824000.0,
-     "volume_ratio": 4.46
+     "volume_ratio": 4.46,
+     "disclosures": []
     },
     {
      "code": "7717",
@@ -4048,7 +4266,8 @@
      "change_pct": 1.17,
      "turnover": 125000000000.0,
      "volume": 2532000.0,
-     "volume_ratio": 3.96
+     "volume_ratio": 3.96,
+     "disclosures": []
     },
     {
      "code": "6871",
@@ -4058,7 +4277,8 @@
      "change_pct": 0.97,
      "turnover": 385500000000.0,
      "volume": 42341000.0,
-     "volume_ratio": 2.27
+     "volume_ratio": 2.27,
+     "disclosures": []
     },
     {
      "code": "8035",
@@ -4068,7 +4288,8 @@
      "change_pct": 0.93,
      "turnover": 142600000000.0,
      "volume": 18431000.0,
-     "volume_ratio": 4.33
+     "volume_ratio": 4.33,
+     "disclosures": []
     },
     {
      "code": "6920",
@@ -4078,7 +4299,8 @@
      "change_pct": 0.87,
      "turnover": 61200000000.0,
      "volume": 17721000.0,
-     "volume_ratio": 1.19
+     "volume_ratio": 1.19,
+     "disclosures": []
     },
     {
      "code": "7729",
@@ -4088,7 +4310,8 @@
      "change_pct": 0.63,
      "turnover": 174000000000.0,
      "volume": 39843000.0,
-     "volume_ratio": 1.82
+     "volume_ratio": 1.82,
+     "disclosures": []
     },
     {
      "code": "7735",
@@ -4098,7 +4321,8 @@
      "change_pct": 0.57,
      "turnover": 175300000000.0,
      "volume": 4349000.0,
-     "volume_ratio": 2.64
+     "volume_ratio": 2.64,
+     "disclosures": []
     },
     {
      "code": "6857",
@@ -4108,7 +4332,8 @@
      "change_pct": 0.51,
      "turnover": 132900000000.0,
      "volume": 22395000.0,
-     "volume_ratio": 1.16
+     "volume_ratio": 1.16,
+     "disclosures": []
     },
     {
      "code": "6323",
@@ -4118,7 +4343,8 @@
      "change_pct": 0.49,
      "turnover": 93000000000.0,
      "volume": 68031000.0,
-     "volume_ratio": 4.43
+     "volume_ratio": 4.43,
+     "disclosures": []
     },
     {
      "code": "6146",
@@ -4128,7 +4354,8 @@
      "change_pct": 0.14,
      "turnover": 396200000000.0,
      "volume": 38319000.0,
-     "volume_ratio": 0.65
+     "volume_ratio": 0.65,
+     "disclosures": []
     },
     {
      "code": "6590",
@@ -4138,7 +4365,8 @@
      "change_pct": -0.3,
      "turnover": 92100000000.0,
      "volume": 20393000.0,
-     "volume_ratio": 1.88
+     "volume_ratio": 1.88,
+     "disclosures": []
     },
     {
      "code": "6525",
@@ -4148,7 +4376,8 @@
      "change_pct": -0.53,
      "turnover": 69100000000.0,
      "volume": 30241000.0,
-     "volume_ratio": 3.5
+     "volume_ratio": 3.5,
+     "disclosures": []
     },
     {
      "code": "6315",
@@ -4158,7 +4387,8 @@
      "change_pct": -0.57,
      "turnover": 391100000000.0,
      "volume": 75756000.0,
-     "volume_ratio": 2.89
+     "volume_ratio": 2.89,
+     "disclosures": []
     }
    ],
    "news_count": 2
@@ -4178,7 +4408,8 @@
      "change_pct": 3.31,
      "turnover": 23600000000.0,
      "volume": 48917000.0,
-     "volume_ratio": 0.99
+     "volume_ratio": 0.99,
+     "disclosures": []
     },
     {
      "code": "8031",
@@ -4188,7 +4419,8 @@
      "change_pct": 1.74,
      "turnover": 350300000000.0,
      "volume": 17404000.0,
-     "volume_ratio": 0.82
+     "volume_ratio": 0.82,
+     "disclosures": []
     },
     {
      "code": "8053",
@@ -4198,7 +4430,8 @@
      "change_pct": 1.4,
      "turnover": 280100000000.0,
      "volume": 69406000.0,
-     "volume_ratio": 3.66
+     "volume_ratio": 3.66,
+     "disclosures": []
     },
     {
      "code": "8001",
@@ -4208,7 +4441,8 @@
      "change_pct": 0.69,
      "turnover": 185000000000.0,
      "volume": 21077000.0,
-     "volume_ratio": 2.16
+     "volume_ratio": 2.16,
+     "disclosures": []
     },
     {
      "code": "8133",
@@ -4218,7 +4452,8 @@
      "change_pct": 0.63,
      "turnover": 125300000000.0,
      "volume": 64841000.0,
-     "volume_ratio": 3.48
+     "volume_ratio": 3.48,
+     "disclosures": []
     },
     {
      "code": "8078",
@@ -4228,7 +4463,8 @@
      "change_pct": 0.42,
      "turnover": 101500000000.0,
      "volume": 53670000.0,
-     "volume_ratio": 0.99
+     "volume_ratio": 0.99,
+     "disclosures": []
     },
     {
      "code": "8002",
@@ -4238,7 +4474,8 @@
      "change_pct": 0.21,
      "turnover": 355800000000.0,
      "volume": 60420000.0,
-     "volume_ratio": 0.59
+     "volume_ratio": 0.59,
+     "disclosures": []
     },
     {
      "code": "8020",
@@ -4248,7 +4485,8 @@
      "change_pct": -0.47,
      "turnover": 263600000000.0,
      "volume": 15662000.0,
-     "volume_ratio": 2.08
+     "volume_ratio": 2.08,
+     "disclosures": []
     },
     {
      "code": "8058",
@@ -4258,7 +4496,8 @@
      "change_pct": -1.04,
      "turnover": 315000000000.0,
      "volume": 5082000.0,
-     "volume_ratio": 1.27
+     "volume_ratio": 1.27,
+     "disclosures": []
     },
     {
      "code": "8015",
@@ -4268,7 +4507,8 @@
      "change_pct": -1.36,
      "turnover": 270700000000.0,
      "volume": 21138000.0,
-     "volume_ratio": 4.08
+     "volume_ratio": 4.08,
+     "disclosures": []
     }
    ],
    "news_count": 5
@@ -4288,7 +4528,8 @@
      "change_pct": 1.97,
      "turnover": 258000000000.0,
      "volume": 55778000.0,
-     "volume_ratio": 3.15
+     "volume_ratio": 3.15,
+     "disclosures": []
     },
     {
      "code": "7012",
@@ -4298,7 +4539,8 @@
      "change_pct": 1.96,
      "turnover": 60800000000.0,
      "volume": 4841000.0,
-     "volume_ratio": 0.6
+     "volume_ratio": 0.6,
+     "disclosures": []
     },
     {
      "code": "186A",
@@ -4308,7 +4550,8 @@
      "change_pct": 1.04,
      "turnover": 201800000000.0,
      "volume": 63909000.0,
-     "volume_ratio": 4.31
+     "volume_ratio": 4.31,
+     "disclosures": []
     },
     {
      "code": "6503",
@@ -4318,7 +4561,8 @@
      "change_pct": 0.97,
      "turnover": 198200000000.0,
      "volume": 20030000.0,
-     "volume_ratio": 2.62
+     "volume_ratio": 2.62,
+     "disclosures": []
     },
     {
      "code": "9348",
@@ -4328,7 +4572,8 @@
      "change_pct": 0.73,
      "turnover": 297000000000.0,
      "volume": 20103000.0,
-     "volume_ratio": 3.88
+     "volume_ratio": 3.88,
+     "disclosures": []
     },
     {
      "code": "7013",
@@ -4338,7 +4583,8 @@
      "change_pct": -0.22,
      "turnover": 204100000000.0,
      "volume": 17937000.0,
-     "volume_ratio": 0.62
+     "volume_ratio": 0.62,
+     "disclosures": []
     },
     {
      "code": "9412",
@@ -4348,7 +4594,8 @@
      "change_pct": -0.29,
      "turnover": 107700000000.0,
      "volume": 61056000.0,
-     "volume_ratio": 1.06
+     "volume_ratio": 1.06,
+     "disclosures": []
     },
     {
      "code": "7011",
@@ -4358,7 +4605,8 @@
      "change_pct": -0.3,
      "turnover": 361900000000.0,
      "volume": 36654000.0,
-     "volume_ratio": 1.7
+     "volume_ratio": 1.7,
+     "disclosures": []
     },
     {
      "code": "290A",
@@ -4368,7 +4616,8 @@
      "change_pct": -1.4,
      "turnover": 98700000000.0,
      "volume": 51443000.0,
-     "volume_ratio": 2.81
+     "volume_ratio": 2.81,
+     "disclosures": []
     }
    ],
    "news_count": 1
@@ -4388,7 +4637,8 @@
      "change_pct": 2.36,
      "turnover": 177200000000.0,
      "volume": 44349000.0,
-     "volume_ratio": 1.48
+     "volume_ratio": 1.48,
+     "disclosures": []
     },
     {
      "code": "6857",
@@ -4398,7 +4648,8 @@
      "change_pct": 2.22,
      "turnover": 128100000000.0,
      "volume": 3678000.0,
-     "volume_ratio": 1.24
+     "volume_ratio": 1.24,
+     "disclosures": []
     },
     {
      "code": "3436",
@@ -4408,7 +4659,8 @@
      "change_pct": 2.14,
      "turnover": 75800000000.0,
      "volume": 44598000.0,
-     "volume_ratio": 3.67
+     "volume_ratio": 3.67,
+     "disclosures": []
     },
     {
      "code": "6146",
@@ -4418,7 +4670,8 @@
      "change_pct": 1.88,
      "turnover": 190400000000.0,
      "volume": 78088000.0,
-     "volume_ratio": 3.06
+     "volume_ratio": 3.06,
+     "disclosures": []
     },
     {
      "code": "8035",
@@ -4428,7 +4681,8 @@
      "change_pct": 0.64,
      "turnover": 384400000000.0,
      "volume": 25891000.0,
-     "volume_ratio": 2.58
+     "volume_ratio": 2.58,
+     "disclosures": []
     },
     {
      "code": "4062",
@@ -4438,7 +4692,8 @@
      "change_pct": 0.37,
      "turnover": 277400000000.0,
      "volume": 12671000.0,
-     "volume_ratio": 2.82
+     "volume_ratio": 2.82,
+     "disclosures": []
     },
     {
      "code": "4063",
@@ -4448,7 +4703,8 @@
      "change_pct": 0.21,
      "turnover": 47800000000.0,
      "volume": 73177000.0,
-     "volume_ratio": 4.34
+     "volume_ratio": 4.34,
+     "disclosures": []
     },
     {
      "code": "6723",
@@ -4458,7 +4714,8 @@
      "change_pct": -0.1,
      "turnover": 366800000000.0,
      "volume": 48203000.0,
-     "volume_ratio": 1.13
+     "volume_ratio": 1.13,
+     "disclosures": []
     },
     {
      "code": "285A",
@@ -4468,7 +4725,8 @@
      "change_pct": -0.61,
      "turnover": 176900000000.0,
      "volume": 41438000.0,
-     "volume_ratio": 2.65
+     "volume_ratio": 2.65,
+     "disclosures": []
     },
     {
      "code": "6963",
@@ -4478,7 +4736,8 @@
      "change_pct": -0.69,
      "turnover": 42500000000.0,
      "volume": 34691000.0,
-     "volume_ratio": 4.41
+     "volume_ratio": 4.41,
+     "disclosures": []
     },
     {
      "code": "6525",
@@ -4488,7 +4747,8 @@
      "change_pct": -1.03,
      "turnover": 62800000000.0,
      "volume": 36323000.0,
-     "volume_ratio": 2.18
+     "volume_ratio": 2.18,
+     "disclosures": []
     },
     {
      "code": "6920",
@@ -4498,7 +4758,8 @@
      "change_pct": -1.64,
      "turnover": 160800000000.0,
      "volume": 74850000.0,
-     "volume_ratio": 1.66
+     "volume_ratio": 1.66,
+     "disclosures": []
     },
     {
      "code": "6526",
@@ -4508,7 +4769,8 @@
      "change_pct": -2.14,
      "turnover": 101900000000.0,
      "volume": 30089000.0,
-     "volume_ratio": 3.46
+     "volume_ratio": 3.46,
+     "disclosures": []
     }
    ],
    "news_count": 1
@@ -4528,7 +4790,8 @@
      "change_pct": 2.36,
      "turnover": 33300000000.0,
      "volume": 34877000.0,
-     "volume_ratio": 1.06
+     "volume_ratio": 1.06,
+     "disclosures": []
     },
     {
      "code": "4493",
@@ -4538,7 +4801,8 @@
      "change_pct": 0.98,
      "turnover": 323400000000.0,
      "volume": 78513000.0,
-     "volume_ratio": 3.44
+     "volume_ratio": 3.44,
+     "disclosures": []
     },
     {
      "code": "4704",
@@ -4548,7 +4812,8 @@
      "change_pct": 0.3,
      "turnover": 383000000000.0,
      "volume": 66250000.0,
-     "volume_ratio": 1.35
+     "volume_ratio": 1.35,
+     "disclosures": []
     },
     {
      "code": "2326",
@@ -4558,7 +4823,8 @@
      "change_pct": -0.33,
      "turnover": 36600000000.0,
      "volume": 14159000.0,
-     "volume_ratio": 1.45
+     "volume_ratio": 1.45,
+     "disclosures": []
     },
     {
      "code": "3692",
@@ -4568,7 +4834,8 @@
      "change_pct": -0.33,
      "turnover": 382900000000.0,
      "volume": 21024000.0,
-     "volume_ratio": 3.69
+     "volume_ratio": 3.69,
+     "disclosures": []
     },
     {
      "code": "4417",
@@ -4578,7 +4845,8 @@
      "change_pct": -0.55,
      "turnover": 34400000000.0,
      "volume": 33660000.0,
-     "volume_ratio": 3.79
+     "volume_ratio": 3.79,
+     "disclosures": []
     },
     {
      "code": "4475",
@@ -4588,7 +4856,8 @@
      "change_pct": -0.71,
      "turnover": 159700000000.0,
      "volume": 32503000.0,
-     "volume_ratio": 3.75
+     "volume_ratio": 3.75,
+     "disclosures": []
     }
    ],
    "news_count": 3
@@ -4608,7 +4877,8 @@
      "change_pct": 2.52,
      "turnover": 61500000000.0,
      "volume": 66013000.0,
-     "volume_ratio": 4.39
+     "volume_ratio": 4.39,
+     "disclosures": []
     },
     {
      "code": "4592",
@@ -4618,7 +4888,8 @@
      "change_pct": 1.6,
      "turnover": 338100000000.0,
      "volume": 13767000.0,
-     "volume_ratio": 2.49
+     "volume_ratio": 2.49,
+     "disclosures": []
     },
     {
      "code": "4591",
@@ -4628,7 +4899,8 @@
      "change_pct": 1.57,
      "turnover": 304400000000.0,
      "volume": 65736000.0,
-     "volume_ratio": 3.11
+     "volume_ratio": 3.11,
+     "disclosures": []
     },
     {
      "code": "4593",
@@ -4638,7 +4910,8 @@
      "change_pct": 1.38,
      "turnover": 309300000000.0,
      "volume": 49441000.0,
-     "volume_ratio": 4.35
+     "volume_ratio": 4.35,
+     "disclosures": []
     },
     {
      "code": "4575",
@@ -4648,7 +4921,8 @@
      "change_pct": 1.1,
      "turnover": 335800000000.0,
      "volume": 20165000.0,
-     "volume_ratio": 4.17
+     "volume_ratio": 4.17,
+     "disclosures": []
     },
     {
      "code": "4552",
@@ -4658,7 +4932,8 @@
      "change_pct": 0.05,
      "turnover": 80800000000.0,
      "volume": 46785000.0,
-     "volume_ratio": 1.65
+     "volume_ratio": 1.65,
+     "disclosures": []
     },
     {
      "code": "4594",
@@ -4668,7 +4943,8 @@
      "change_pct": -0.25,
      "turnover": 398600000000.0,
      "volume": 77629000.0,
-     "volume_ratio": 1.61
+     "volume_ratio": 1.61,
+     "disclosures": []
     },
     {
      "code": "4588",
@@ -4678,7 +4954,8 @@
      "change_pct": -0.29,
      "turnover": 225400000000.0,
      "volume": 27103000.0,
-     "volume_ratio": 1.18
+     "volume_ratio": 1.18,
+     "disclosures": []
     },
     {
      "code": "4978",
@@ -4688,7 +4965,8 @@
      "change_pct": -0.8,
      "turnover": 240000000000.0,
      "volume": 38151000.0,
-     "volume_ratio": 3.82
+     "volume_ratio": 3.82,
+     "disclosures": []
     },
     {
      "code": "2160",
@@ -4698,7 +4976,8 @@
      "change_pct": -0.84,
      "turnover": 399300000000.0,
      "volume": 68665000.0,
-     "volume_ratio": 1.74
+     "volume_ratio": 1.74,
+     "disclosures": []
     },
     {
      "code": "4579",
@@ -4708,7 +4987,8 @@
      "change_pct": -0.87,
      "turnover": 203500000000.0,
      "volume": 22214000.0,
-     "volume_ratio": 2.12
+     "volume_ratio": 2.12,
+     "disclosures": []
     },
     {
      "code": "4587",
@@ -4718,7 +4998,8 @@
      "change_pct": -0.93,
      "turnover": 132800000000.0,
      "volume": 37937000.0,
-     "volume_ratio": 1.88
+     "volume_ratio": 1.88,
+     "disclosures": []
     },
     {
      "code": "4599",
@@ -4728,7 +5009,8 @@
      "change_pct": -1.0,
      "turnover": 183300000000.0,
      "volume": 11083000.0,
-     "volume_ratio": 2.15
+     "volume_ratio": 2.15,
+     "disclosures": []
     },
     {
      "code": "4565",
@@ -4738,7 +5020,8 @@
      "change_pct": -1.29,
      "turnover": 198000000000.0,
      "volume": 30614000.0,
-     "volume_ratio": 1.09
+     "volume_ratio": 1.09,
+     "disclosures": []
     }
    ],
    "news_count": 4
@@ -4758,7 +5041,8 @@
      "change_pct": 3.85,
      "turnover": 125400000000.0,
      "volume": 1266000.0,
-     "volume_ratio": 2.34
+     "volume_ratio": 2.34,
+     "disclosures": []
     },
     {
      "code": "6146",
@@ -4768,7 +5052,8 @@
      "change_pct": 1.45,
      "turnover": 237600000000.0,
      "volume": 15070000.0,
-     "volume_ratio": 2.09
+     "volume_ratio": 2.09,
+     "disclosures": []
     },
     {
      "code": "6525",
@@ -4778,7 +5063,8 @@
      "change_pct": 0.82,
      "turnover": 267600000000.0,
      "volume": 70410000.0,
-     "volume_ratio": 3.12
+     "volume_ratio": 3.12,
+     "disclosures": []
     },
     {
      "code": "6857",
@@ -4788,7 +5074,8 @@
      "change_pct": 0.2,
      "turnover": 30000000000.0,
      "volume": 28480000.0,
-     "volume_ratio": 0.76
+     "volume_ratio": 0.76,
+     "disclosures": []
     },
     {
      "code": "6871",
@@ -4798,7 +5085,8 @@
      "change_pct": -0.48,
      "turnover": 86400000000.0,
      "volume": 37456000.0,
-     "volume_ratio": 3.48
+     "volume_ratio": 3.48,
+     "disclosures": []
     },
     {
      "code": "6315",
@@ -4808,7 +5096,8 @@
      "change_pct": -1.08,
      "turnover": 86300000000.0,
      "volume": 78402000.0,
-     "volume_ratio": 2.02
+     "volume_ratio": 2.02,
+     "disclosures": []
     },
     {
      "code": "4062",
@@ -4818,7 +5107,8 @@
      "change_pct": -1.64,
      "turnover": 195500000000.0,
      "volume": 50135000.0,
-     "volume_ratio": 3.74
+     "volume_ratio": 3.74,
+     "disclosures": []
     },
     {
      "code": "285A",
@@ -4828,7 +5118,8 @@
      "change_pct": -2.54,
      "turnover": 330400000000.0,
      "volume": 73546000.0,
-     "volume_ratio": 3.28
+     "volume_ratio": 3.28,
+     "disclosures": []
     }
    ],
    "news_count": 4
@@ -4848,7 +5139,8 @@
      "change_pct": 1.29,
      "turnover": 110600000000.0,
      "volume": 10980000.0,
-     "volume_ratio": 2.29
+     "volume_ratio": 2.29,
+     "disclosures": []
     },
     {
      "code": "7013",
@@ -4858,7 +5150,8 @@
      "change_pct": 0.77,
      "turnover": 25900000000.0,
      "volume": 13809000.0,
-     "volume_ratio": 3.12
+     "volume_ratio": 3.12,
+     "disclosures": []
     },
     {
      "code": "6701",
@@ -4868,7 +5161,8 @@
      "change_pct": 0.69,
      "turnover": 30700000000.0,
      "volume": 14642000.0,
-     "volume_ratio": 2.49
+     "volume_ratio": 2.49,
+     "disclosures": []
     },
     {
      "code": "7980",
@@ -4878,7 +5172,8 @@
      "change_pct": 0.66,
      "turnover": 129800000000.0,
      "volume": 71000000.0,
-     "volume_ratio": 1.85
+     "volume_ratio": 1.85,
+     "disclosures": []
     },
     {
      "code": "7721",
@@ -4888,7 +5183,8 @@
      "change_pct": 0.63,
      "turnover": 22100000000.0,
      "volume": 27457000.0,
-     "volume_ratio": 3.9
+     "volume_ratio": 3.9,
+     "disclosures": []
     },
     {
      "code": "7012",
@@ -4898,7 +5194,8 @@
      "change_pct": 0.37,
      "turnover": 75400000000.0,
      "volume": 41616000.0,
-     "volume_ratio": 4.35
+     "volume_ratio": 4.35,
+     "disclosures": []
     },
     {
      "code": "4274",
@@ -4908,7 +5205,8 @@
      "change_pct": 0.32,
      "turnover": 379500000000.0,
      "volume": 54172000.0,
-     "volume_ratio": 3.01
+     "volume_ratio": 3.01,
+     "disclosures": []
     },
     {
      "code": "6503",
@@ -4918,7 +5216,8 @@
      "change_pct": 0.15,
      "turnover": 130800000000.0,
      "volume": 68312000.0,
-     "volume_ratio": 3.98
+     "volume_ratio": 3.98,
+     "disclosures": []
     },
     {
      "code": "7224",
@@ -4928,7 +5227,8 @@
      "change_pct": 0.1,
      "turnover": 266200000000.0,
      "volume": 43603000.0,
-     "volume_ratio": 1.63
+     "volume_ratio": 1.63,
+     "disclosures": []
     },
     {
      "code": "6946",
@@ -4938,7 +5238,8 @@
      "change_pct": -0.04,
      "turnover": 281900000000.0,
      "volume": 33200000.0,
-     "volume_ratio": 1.91
+     "volume_ratio": 1.91,
+     "disclosures": []
     },
     {
      "code": "6702",
@@ -4948,7 +5249,8 @@
      "change_pct": -0.87,
      "turnover": 326000000000.0,
      "volume": 33574000.0,
-     "volume_ratio": 2.5
+     "volume_ratio": 2.5,
+     "disclosures": []
     },
     {
      "code": "6203",
@@ -4958,7 +5260,8 @@
      "change_pct": -1.21,
      "turnover": 307800000000.0,
      "volume": 30181000.0,
-     "volume_ratio": 2.64
+     "volume_ratio": 2.64,
+     "disclosures": []
     },
     {
      "code": "7011",
@@ -4968,7 +5271,8 @@
      "change_pct": -2.63,
      "turnover": 192100000000.0,
      "volume": 71166000.0,
-     "volume_ratio": 1.49
+     "volume_ratio": 1.49,
+     "disclosures": []
     }
    ],
    "news_count": 1
@@ -4988,7 +5292,8 @@
      "change_pct": 2.35,
      "turnover": 385000000000.0,
      "volume": 29959000.0,
-     "volume_ratio": 2.59
+     "volume_ratio": 2.59,
+     "disclosures": []
     },
     {
      "code": "9501",
@@ -4998,7 +5303,8 @@
      "change_pct": 2.16,
      "turnover": 284600000000.0,
      "volume": 19417000.0,
-     "volume_ratio": 3.04
+     "volume_ratio": 3.04,
+     "disclosures": []
     },
     {
      "code": "9502",
@@ -5008,7 +5314,8 @@
      "change_pct": 1.03,
      "turnover": 212800000000.0,
      "volume": 76637000.0,
-     "volume_ratio": 4.39
+     "volume_ratio": 4.39,
+     "disclosures": []
     },
     {
      "code": "9517",
@@ -5018,7 +5325,8 @@
      "change_pct": 0.68,
      "turnover": 367700000000.0,
      "volume": 42848000.0,
-     "volume_ratio": 2.55
+     "volume_ratio": 2.55,
+     "disclosures": []
     },
     {
      "code": "9519",
@@ -5028,7 +5336,8 @@
      "change_pct": 0.33,
      "turnover": 367500000000.0,
      "volume": 38489000.0,
-     "volume_ratio": 2.96
+     "volume_ratio": 2.96,
+     "disclosures": []
     },
     {
      "code": "9505",
@@ -5038,7 +5347,8 @@
      "change_pct": 0.23,
      "turnover": 394000000000.0,
      "volume": 75305000.0,
-     "volume_ratio": 0.65
+     "volume_ratio": 0.65,
+     "disclosures": []
     },
     {
      "code": "9507",
@@ -5048,7 +5358,8 @@
      "change_pct": 0.1,
      "turnover": 205000000000.0,
      "volume": 4413000.0,
-     "volume_ratio": 4.18
+     "volume_ratio": 4.18,
+     "disclosures": []
     },
     {
      "code": "9511",
@@ -5058,7 +5369,8 @@
      "change_pct": -0.65,
      "turnover": 308800000000.0,
      "volume": 62219000.0,
-     "volume_ratio": 1.34
+     "volume_ratio": 1.34,
+     "disclosures": []
     },
     {
      "code": "9506",
@@ -5068,7 +5380,8 @@
      "change_pct": -0.75,
      "turnover": 286400000000.0,
      "volume": 73531000.0,
-     "volume_ratio": 1.27
+     "volume_ratio": 1.27,
+     "disclosures": []
     },
     {
      "code": "9503",
@@ -5078,7 +5391,8 @@
      "change_pct": -1.26,
      "turnover": 380700000000.0,
      "volume": 22234000.0,
-     "volume_ratio": 2.9
+     "volume_ratio": 2.9,
+     "disclosures": []
     },
     {
      "code": "9509",
@@ -5088,7 +5402,8 @@
      "change_pct": -1.31,
      "turnover": 266700000000.0,
      "volume": 52120000.0,
-     "volume_ratio": 2.86
+     "volume_ratio": 2.86,
+     "disclosures": []
     },
     {
      "code": "9513",
@@ -5098,7 +5413,8 @@
      "change_pct": -1.4,
      "turnover": 83600000000.0,
      "volume": 69963000.0,
-     "volume_ratio": 2.63
+     "volume_ratio": 2.63,
+     "disclosures": []
     },
     {
      "code": "9504",
@@ -5108,7 +5424,8 @@
      "change_pct": -2.77,
      "turnover": 155400000000.0,
      "volume": 76888000.0,
-     "volume_ratio": 2.56
+     "volume_ratio": 2.56,
+     "disclosures": []
     }
    ],
    "news_count": 5
@@ -5128,7 +5445,8 @@
      "change_pct": 3.22,
      "turnover": 56600000000.0,
      "volume": 26283000.0,
-     "volume_ratio": 3.27
+     "volume_ratio": 3.27,
+     "disclosures": []
     },
     {
      "code": "6754",
@@ -5138,7 +5456,8 @@
      "change_pct": 0.56,
      "turnover": 368000000000.0,
      "volume": 69773000.0,
-     "volume_ratio": 2.12
+     "volume_ratio": 2.12,
+     "disclosures": []
     },
     {
      "code": "6800",
@@ -5148,7 +5467,8 @@
      "change_pct": 0.55,
      "turnover": 142900000000.0,
      "volume": 22135000.0,
-     "volume_ratio": 4.42
+     "volume_ratio": 4.42,
+     "disclosures": []
     },
     {
      "code": "6703",
@@ -5158,7 +5478,8 @@
      "change_pct": -0.38,
      "turnover": 309200000000.0,
      "volume": 71093000.0,
-     "volume_ratio": 0.73
+     "volume_ratio": 0.73,
+     "disclosures": []
     },
     {
      "code": "5801",
@@ -5168,7 +5489,8 @@
      "change_pct": -0.51,
      "turnover": 273500000000.0,
      "volume": 47989000.0,
-     "volume_ratio": 4.38
+     "volume_ratio": 4.38,
+     "disclosures": []
     },
     {
      "code": "5803",
@@ -5178,7 +5500,8 @@
      "change_pct": -1.23,
      "turnover": 89200000000.0,
      "volume": 55320000.0,
-     "volume_ratio": 2.82
+     "volume_ratio": 2.82,
+     "disclosures": []
     },
     {
      "code": "5802",
@@ -5188,7 +5511,8 @@
      "change_pct": -2.14,
      "turnover": 106800000000.0,
      "volume": 54808000.0,
-     "volume_ratio": 3.94
+     "volume_ratio": 3.94,
+     "disclosures": []
     },
     {
      "code": "5821",
@@ -5198,7 +5522,8 @@
      "change_pct": -2.29,
      "turnover": 199900000000.0,
      "volume": 13534000.0,
-     "volume_ratio": 1.71
+     "volume_ratio": 1.71,
+     "disclosures": []
     }
    ],
    "news_count": 2
@@ -5218,7 +5543,8 @@
      "change_pct": 0.81,
      "turnover": 269400000000.0,
      "volume": 68832000.0,
-     "volume_ratio": 3.95
+     "volume_ratio": 3.95,
+     "disclosures": []
     },
     {
      "code": "6432",
@@ -5228,7 +5554,8 @@
      "change_pct": -0.52,
      "turnover": 292500000000.0,
      "volume": 59923000.0,
-     "volume_ratio": 2.75
+     "volume_ratio": 2.75,
+     "disclosures": []
     },
     {
      "code": "6305",
@@ -5238,7 +5565,8 @@
      "change_pct": -0.61,
      "turnover": 379300000000.0,
      "volume": 63149000.0,
-     "volume_ratio": 1.81
+     "volume_ratio": 1.81,
+     "disclosures": []
     },
     {
      "code": "6358",
@@ -5248,7 +5576,8 @@
      "change_pct": -0.9,
      "turnover": 100800000000.0,
      "volume": 10909000.0,
-     "volume_ratio": 4.23
+     "volume_ratio": 4.23,
+     "disclosures": []
     },
     {
      "code": "6395",
@@ -5258,7 +5587,8 @@
      "change_pct": -1.29,
      "turnover": 70800000000.0,
      "volume": 13788000.0,
-     "volume_ratio": 2.76
+     "volume_ratio": 2.76,
+     "disclosures": []
     },
     {
      "code": "6390",
@@ -5268,7 +5598,8 @@
      "change_pct": -1.38,
      "turnover": 226700000000.0,
      "volume": 59698000.0,
-     "volume_ratio": 1.11
+     "volume_ratio": 1.11,
+     "disclosures": []
     },
     {
      "code": "6326",
@@ -5278,7 +5609,8 @@
      "change_pct": -1.7,
      "turnover": 133400000000.0,
      "volume": 33845000.0,
-     "volume_ratio": 3.76
+     "volume_ratio": 3.76,
+     "disclosures": []
     }
    ],
    "news_count": 4
@@ -5298,7 +5630,8 @@
      "change_pct": 1.59,
      "turnover": 226300000000.0,
      "volume": 40939000.0,
-     "volume_ratio": 2.5
+     "volume_ratio": 2.5,
+     "disclosures": []
     },
     {
      "code": "3436",
@@ -5308,7 +5641,8 @@
      "change_pct": 0.53,
      "turnover": 384200000000.0,
      "volume": 26903000.0,
-     "volume_ratio": 2.86
+     "volume_ratio": 2.86,
+     "disclosures": []
     },
     {
      "code": "4966",
@@ -5318,7 +5652,8 @@
      "change_pct": 0.36,
      "turnover": 253000000000.0,
      "volume": 54942000.0,
-     "volume_ratio": 3.14
+     "volume_ratio": 3.14,
+     "disclosures": []
     },
     {
      "code": "4186",
@@ -5328,7 +5663,8 @@
      "change_pct": -0.08,
      "turnover": 399400000000.0,
      "volume": 73706000.0,
-     "volume_ratio": 3.52
+     "volume_ratio": 3.52,
+     "disclosures": []
     },
     {
      "code": "4369",
@@ -5338,7 +5674,8 @@
      "change_pct": -0.32,
      "turnover": 248800000000.0,
      "volume": 49704000.0,
-     "volume_ratio": 4.37
+     "volume_ratio": 4.37,
+     "disclosures": []
     },
     {
      "code": "3445",
@@ -5348,7 +5685,8 @@
      "change_pct": -0.43,
      "turnover": 157100000000.0,
      "volume": 28575000.0,
-     "volume_ratio": 1.86
+     "volume_ratio": 1.86,
+     "disclosures": []
     },
     {
      "code": "4368",
@@ -5358,7 +5696,8 @@
      "change_pct": -0.83,
      "turnover": 29500000000.0,
      "volume": 19500000.0,
-     "volume_ratio": 2.56
+     "volume_ratio": 2.56,
+     "disclosures": []
     },
     {
      "code": "4004",
@@ -5368,7 +5707,8 @@
      "change_pct": -0.89,
      "turnover": 141500000000.0,
      "volume": 36894000.0,
-     "volume_ratio": 3.73
+     "volume_ratio": 3.73,
+     "disclosures": []
     },
     {
      "code": "5384",
@@ -5378,7 +5718,8 @@
      "change_pct": -1.24,
      "turnover": 161900000000.0,
      "volume": 53663000.0,
-     "volume_ratio": 2.22
+     "volume_ratio": 2.22,
+     "disclosures": []
     },
     {
      "code": "4063",
@@ -5388,7 +5729,8 @@
      "change_pct": -2.02,
      "turnover": 350300000000.0,
      "volume": 12663000.0,
-     "volume_ratio": 1.37
+     "volume_ratio": 1.37,
+     "disclosures": []
     },
     {
      "code": "3110",
@@ -5398,7 +5740,8 @@
      "change_pct": -2.33,
      "turnover": 183800000000.0,
      "volume": 14617000.0,
-     "volume_ratio": 3.61
+     "volume_ratio": 3.61,
+     "disclosures": []
     },
     {
      "code": "4062",
@@ -5408,7 +5751,8 @@
      "change_pct": -2.9,
      "turnover": 57700000000.0,
      "volume": 5660000.0,
-     "volume_ratio": 3.14
+     "volume_ratio": 3.14,
+     "disclosures": []
     },
     {
      "code": "5344",
@@ -5418,7 +5762,8 @@
      "change_pct": -3.25,
      "turnover": 328100000000.0,
      "volume": 890000.0,
-     "volume_ratio": 0.74
+     "volume_ratio": 0.74,
+     "disclosures": []
     }
    ],
    "news_count": 5
@@ -5438,7 +5783,8 @@
      "change_pct": 0.73,
      "turnover": 121800000000.0,
      "volume": 18004000.0,
-     "volume_ratio": 1.66
+     "volume_ratio": 1.66,
+     "disclosures": []
     },
     {
      "code": "7013",
@@ -5448,7 +5794,8 @@
      "change_pct": -0.25,
      "turnover": 80800000000.0,
      "volume": 39720000.0,
-     "volume_ratio": 0.64
+     "volume_ratio": 0.64,
+     "disclosures": []
     },
     {
      "code": "6016",
@@ -5458,7 +5805,8 @@
      "change_pct": -0.26,
      "turnover": 398700000000.0,
      "volume": 62410000.0,
-     "volume_ratio": 1.27
+     "volume_ratio": 1.27,
+     "disclosures": []
     },
     {
      "code": "7003",
@@ -5468,7 +5816,8 @@
      "change_pct": -0.28,
      "turnover": 60600000000.0,
      "volume": 35296000.0,
-     "volume_ratio": 1.88
+     "volume_ratio": 1.88,
+     "disclosures": []
     },
     {
      "code": "7018",
@@ -5478,7 +5827,8 @@
      "change_pct": -0.72,
      "turnover": 247200000000.0,
      "volume": 55176000.0,
-     "volume_ratio": 2.53
+     "volume_ratio": 2.53,
+     "disclosures": []
     },
     {
      "code": "7011",
@@ -5488,7 +5838,8 @@
      "change_pct": -1.35,
      "turnover": 255100000000.0,
      "volume": 36966000.0,
-     "volume_ratio": 2.51
+     "volume_ratio": 2.51,
+     "disclosures": []
     },
     {
      "code": "6023",
@@ -5498,7 +5849,8 @@
      "change_pct": -1.7,
      "turnover": 398800000000.0,
      "volume": 72475000.0,
-     "volume_ratio": 2.48
+     "volume_ratio": 2.48,
+     "disclosures": []
     },
     {
      "code": "7012",
@@ -5508,7 +5860,8 @@
      "change_pct": -2.98,
      "turnover": 302200000000.0,
      "volume": 63018000.0,
-     "volume_ratio": 3.35
+     "volume_ratio": 3.35,
+     "disclosures": []
     },
     {
      "code": "7022",
@@ -5518,7 +5871,8 @@
      "change_pct": -4.02,
      "turnover": 101700000000.0,
      "volume": 56049000.0,
-     "volume_ratio": 2.46
+     "volume_ratio": 2.46,
+     "disclosures": []
     }
    ],
    "news_count": 5
@@ -5538,7 +5892,8 @@
      "change_pct": 0.17,
      "turnover": 352200000000.0,
      "volume": 60689000.0,
-     "volume_ratio": 2.9
+     "volume_ratio": 2.9,
+     "disclosures": []
     },
     {
      "code": "5706",
@@ -5548,7 +5903,8 @@
      "change_pct": -0.07,
      "turnover": 149800000000.0,
      "volume": 75069000.0,
-     "volume_ratio": 4.07
+     "volume_ratio": 4.07,
+     "disclosures": []
     },
     {
      "code": "5711",
@@ -5558,7 +5914,8 @@
      "change_pct": -0.24,
      "turnover": 132800000000.0,
      "volume": 23798000.0,
-     "volume_ratio": 1.72
+     "volume_ratio": 1.72,
+     "disclosures": []
     },
     {
      "code": "5020",
@@ -5568,7 +5925,8 @@
      "change_pct": -1.05,
      "turnover": 29200000000.0,
      "volume": 45706000.0,
-     "volume_ratio": 3.77
+     "volume_ratio": 3.77,
+     "disclosures": []
     },
     {
      "code": "8031",
@@ -5578,7 +5936,8 @@
      "change_pct": -1.14,
      "turnover": 268400000000.0,
      "volume": 23853000.0,
-     "volume_ratio": 2.78
+     "volume_ratio": 2.78,
+     "disclosures": []
     },
     {
      "code": "8058",
@@ -5588,7 +5947,8 @@
      "change_pct": -2.0,
      "turnover": 318700000000.0,
      "volume": 67872000.0,
-     "volume_ratio": 3.32
+     "volume_ratio": 3.32,
+     "disclosures": []
     },
     {
      "code": "5714",
@@ -5598,7 +5958,8 @@
      "change_pct": -2.44,
      "turnover": 147100000000.0,
      "volume": 40944000.0,
-     "volume_ratio": 2.66
+     "volume_ratio": 2.66,
+     "disclosures": []
     },
     {
      "code": "5713",
@@ -5608,7 +5969,8 @@
      "change_pct": -3.05,
      "turnover": 25900000000.0,
      "volume": 46869000.0,
-     "volume_ratio": 2.43
+     "volume_ratio": 2.43,
+     "disclosures": []
     },
     {
      "code": "1662",
@@ -5618,7 +5980,8 @@
      "change_pct": -3.4,
      "turnover": 399800000000.0,
      "volume": 29892000.0,
-     "volume_ratio": 0.6
+     "volume_ratio": 0.6,
+     "disclosures": []
     },
     {
      "code": "5019",
@@ -5628,7 +5991,8 @@
      "change_pct": -3.42,
      "turnover": 38400000000.0,
      "volume": 65014000.0,
-     "volume_ratio": 1.94
+     "volume_ratio": 1.94,
+     "disclosures": []
     }
    ],
    "news_count": 1
@@ -5648,7 +6012,8 @@
      "change_pct": 1.25,
      "turnover": 71300000000.0,
      "volume": 17198000.0,
-     "volume_ratio": 3.33
+     "volume_ratio": 3.33,
+     "disclosures": []
     },
     {
      "code": "9984",
@@ -5658,7 +6023,8 @@
      "change_pct": 0.68,
      "turnover": 238100000000.0,
      "volume": 42899000.0,
-     "volume_ratio": 1.53
+     "volume_ratio": 1.53,
+     "disclosures": []
     },
     {
      "code": "9432",
@@ -5668,7 +6034,8 @@
      "change_pct": 0.16,
      "turnover": 244800000000.0,
      "volume": 45124000.0,
-     "volume_ratio": 2.23
+     "volume_ratio": 2.23,
+     "disclosures": []
     },
     {
      "code": "3774",
@@ -5678,7 +6045,8 @@
      "change_pct": 0.14,
      "turnover": 136000000000.0,
      "volume": 17657000.0,
-     "volume_ratio": 1.24
+     "volume_ratio": 1.24,
+     "disclosures": []
     },
     {
      "code": "5803",
@@ -5688,7 +6056,8 @@
      "change_pct": 0.03,
      "turnover": 245200000000.0,
      "volume": 25066000.0,
-     "volume_ratio": 0.72
+     "volume_ratio": 0.72,
+     "disclosures": []
     },
     {
      "code": "5801",
@@ -5698,7 +6067,8 @@
      "change_pct": -0.38,
      "turnover": 49700000000.0,
      "volume": 73471000.0,
-     "volume_ratio": 1.41
+     "volume_ratio": 1.41,
+     "disclosures": []
     },
     {
      "code": "9433",
@@ -5708,7 +6078,8 @@
      "change_pct": -1.47,
      "turnover": 36500000000.0,
      "volume": 6434000.0,
-     "volume_ratio": 3.58
+     "volume_ratio": 3.58,
+     "disclosures": []
     },
     {
      "code": "4180",
@@ -5718,7 +6089,8 @@
      "change_pct": -1.5,
      "turnover": 58200000000.0,
      "volume": 16414000.0,
-     "volume_ratio": 3.26
+     "volume_ratio": 3.26,
+     "disclosures": []
     },
     {
      "code": "9434",
@@ -5728,7 +6100,8 @@
      "change_pct": -2.01,
      "turnover": 45700000000.0,
      "volume": 14680000.0,
-     "volume_ratio": 2.21
+     "volume_ratio": 2.21,
+     "disclosures": []
     },
     {
      "code": "3993",
@@ -5738,7 +6111,8 @@
      "change_pct": -2.38,
      "turnover": 90200000000.0,
      "volume": 29889000.0,
-     "volume_ratio": 1.4
+     "volume_ratio": 1.4,
+     "disclosures": []
     },
     {
      "code": "4307",
@@ -5748,7 +6122,8 @@
      "change_pct": -2.48,
      "turnover": 398000000000.0,
      "volume": 44998000.0,
-     "volume_ratio": 4.16
+     "volume_ratio": 4.16,
+     "disclosures": []
     },
     {
      "code": "3778",
@@ -5758,7 +6133,8 @@
      "change_pct": -3.11,
      "turnover": 123000000000.0,
      "volume": 7787000.0,
-     "volume_ratio": 2.91
+     "volume_ratio": 2.91,
+     "disclosures": []
     },
     {
      "code": "6501",
@@ -5768,7 +6144,8 @@
      "change_pct": -3.77,
      "turnover": 385000000000.0,
      "volume": 67506000.0,
-     "volume_ratio": 1.01
+     "volume_ratio": 1.01,
+     "disclosures": []
     },
     {
      "code": "6701",
@@ -5778,7 +6155,8 @@
      "change_pct": -4.97,
      "turnover": 305100000000.0,
      "volume": 63133000.0,
-     "volume_ratio": 3.58
+     "volume_ratio": 3.58,
+     "disclosures": []
     },
     {
      "code": "5802",
@@ -5788,7 +6166,8 @@
      "change_pct": -5.44,
      "turnover": 355500000000.0,
      "volume": 41593000.0,
-     "volume_ratio": 2.33
+     "volume_ratio": 2.33,
+     "disclosures": []
     }
    ],
    "news_count": 3
@@ -5808,7 +6187,8 @@
      "change_pct": 1.12,
      "turnover": 379500000000.0,
      "volume": 21999000.0,
-     "volume_ratio": 3.16
+     "volume_ratio": 3.16,
+     "disclosures": []
     },
     {
      "code": "8750",
@@ -5818,7 +6198,8 @@
      "change_pct": -1.19,
      "turnover": 175100000000.0,
      "volume": 28418000.0,
-     "volume_ratio": 2.53
+     "volume_ratio": 2.53,
+     "disclosures": []
     },
     {
      "code": "8725",
@@ -5828,7 +6209,8 @@
      "change_pct": -2.02,
      "turnover": 87300000000.0,
      "volume": 63374000.0,
-     "volume_ratio": 2.83
+     "volume_ratio": 2.83,
+     "disclosures": []
     },
     {
      "code": "8795",
@@ -5838,7 +6220,8 @@
      "change_pct": -2.57,
      "turnover": 40200000000.0,
      "volume": 74054000.0,
-     "volume_ratio": 3.76
+     "volume_ratio": 3.76,
+     "disclosures": []
     },
     {
      "code": "7157",
@@ -5848,7 +6231,8 @@
      "change_pct": -2.64,
      "turnover": 161400000000.0,
      "volume": 16320000.0,
-     "volume_ratio": 1.57
+     "volume_ratio": 1.57,
+     "disclosures": []
     },
     {
      "code": "8630",
@@ -5858,7 +6242,8 @@
      "change_pct": -2.72,
      "turnover": 90100000000.0,
      "volume": 57409000.0,
-     "volume_ratio": 1.37
+     "volume_ratio": 1.37,
+     "disclosures": []
     },
     {
      "code": "8766",
@@ -5868,7 +6253,8 @@
      "change_pct": -2.93,
      "turnover": 213000000000.0,
      "volume": 60115000.0,
-     "volume_ratio": 0.89
+     "volume_ratio": 0.89,
+     "disclosures": []
     },
     {
      "code": "7181",
@@ -5878,7 +6264,8 @@
      "change_pct": -3.0,
      "turnover": 112900000000.0,
      "volume": 14249000.0,
-     "volume_ratio": 2.04
+     "volume_ratio": 2.04,
+     "disclosures": []
     }
    ],
    "news_count": 3
@@ -5898,7 +6285,8 @@
      "change_pct": 1.35,
      "turnover": 39500000000.0,
      "volume": 53494000.0,
-     "volume_ratio": 4.0
+     "volume_ratio": 4.0,
+     "disclosures": []
     },
     {
      "code": "6861",
@@ -5908,7 +6296,8 @@
      "change_pct": -0.03,
      "turnover": 319200000000.0,
      "volume": 69334000.0,
-     "volume_ratio": 2.75
+     "volume_ratio": 2.75,
+     "disclosures": []
     },
     {
      "code": "6134",
@@ -5918,7 +6307,8 @@
      "change_pct": -1.08,
      "turnover": 217800000000.0,
      "volume": 36628000.0,
-     "volume_ratio": 3.32
+     "volume_ratio": 3.32,
+     "disclosures": []
     },
     {
      "code": "6481",
@@ -5928,7 +6318,8 @@
      "change_pct": -1.92,
      "turnover": 301100000000.0,
      "volume": 57889000.0,
-     "volume_ratio": 3.94
+     "volume_ratio": 3.94,
+     "disclosures": []
     },
     {
      "code": "6645",
@@ -5938,7 +6329,8 @@
      "change_pct": -2.27,
      "turnover": 67700000000.0,
      "volume": 48788000.0,
-     "volume_ratio": 3.07
+     "volume_ratio": 3.07,
+     "disclosures": []
     },
     {
      "code": "6383",
@@ -5948,7 +6340,8 @@
      "change_pct": -2.27,
      "turnover": 345800000000.0,
      "volume": 78873000.0,
-     "volume_ratio": 2.14
+     "volume_ratio": 2.14,
+     "disclosures": []
     },
     {
      "code": "6506",
@@ -5958,7 +6351,8 @@
      "change_pct": -2.28,
      "turnover": 100200000000.0,
      "volume": 44563000.0,
-     "volume_ratio": 1.49
+     "volume_ratio": 1.49,
+     "disclosures": []
     },
     {
      "code": "6103",
@@ -5968,7 +6362,8 @@
      "change_pct": -2.41,
      "turnover": 197600000000.0,
      "volume": 38163000.0,
-     "volume_ratio": 3.1
+     "volume_ratio": 3.1,
+     "disclosures": []
     },
     {
      "code": "6268",
@@ -5978,7 +6373,8 @@
      "change_pct": -2.69,
      "turnover": 117200000000.0,
      "volume": 43528000.0,
-     "volume_ratio": 3.67
+     "volume_ratio": 3.67,
+     "disclosures": []
     },
     {
      "code": "6954",
@@ -5988,7 +6384,8 @@
      "change_pct": -2.73,
      "turnover": 215800000000.0,
      "volume": 57440000.0,
-     "volume_ratio": 2.87
+     "volume_ratio": 2.87,
+     "disclosures": []
     },
     {
      "code": "6594",
@@ -5998,7 +6395,8 @@
      "change_pct": -3.02,
      "turnover": 154000000000.0,
      "volume": 20499000.0,
-     "volume_ratio": 3.29
+     "volume_ratio": 3.29,
+     "disclosures": []
     },
     {
      "code": "6141",
@@ -6008,7 +6406,8 @@
      "change_pct": -3.15,
      "turnover": 355400000000.0,
      "volume": 66910000.0,
-     "volume_ratio": 1.14
+     "volume_ratio": 1.14,
+     "disclosures": []
     },
     {
      "code": "6273",
@@ -6018,7 +6417,8 @@
      "change_pct": -5.02,
      "turnover": 349100000000.0,
      "volume": 46316000.0,
-     "volume_ratio": 3.26
+     "volume_ratio": 3.26,
+     "disclosures": []
     }
    ],
    "news_count": 5
@@ -6043,7 +6443,21 @@
     "change_pct": 4.92,
     "turnover": 255300000000.0,
     "volume": 62236000.0,
-    "volume_ratio": 0.79
+    "volume_ratio": 0.79,
+    "disclosures": [
+     {
+      "code": "8306",
+      "name": "三菱UFJ",
+      "time": "2026-09-25T12:00:00+09:00",
+      "title": "2027年3月期 通期業績予想の上方修正に関するお知らせ",
+      "url": "https://example.com/tdnet/8306.pdf",
+      "tags": [
+       "上方修正",
+       "業績修正"
+      ],
+      "tone": "pos"
+     }
+    ]
    },
    {
     "code": "8058",
@@ -6053,7 +6467,8 @@
     "change_pct": 3.48,
     "turnover": 251200000000.0,
     "volume": 29192000.0,
-    "volume_ratio": 1.33
+    "volume_ratio": 1.33,
+    "disclosures": []
    },
    {
     "code": "9501",
@@ -6063,7 +6478,8 @@
     "change_pct": 3.23,
     "turnover": 57600000000.0,
     "volume": 24823000.0,
-    "volume_ratio": 2.44
+    "volume_ratio": 2.44,
+    "disclosures": []
    },
    {
     "code": "4063",
@@ -6073,7 +6489,8 @@
     "change_pct": 3.2,
     "turnover": 51000000000.0,
     "volume": 30594000.0,
-    "volume_ratio": 2.53
+    "volume_ratio": 2.53,
+    "disclosures": []
    },
    {
     "code": "8411",
@@ -6083,7 +6500,8 @@
     "change_pct": 2.86,
     "turnover": 147400000000.0,
     "volume": 32647000.0,
-    "volume_ratio": 4.42
+    "volume_ratio": 4.42,
+    "disclosures": []
    },
    {
     "code": "6920",
@@ -6093,7 +6511,8 @@
     "change_pct": 2.83,
     "turnover": 242300000000.0,
     "volume": 36106000.0,
-    "volume_ratio": 2.86
+    "volume_ratio": 2.86,
+    "disclosures": []
    },
    {
     "code": "7203",
@@ -6103,7 +6522,8 @@
     "change_pct": 1.7,
     "turnover": 133900000000.0,
     "volume": 47924000.0,
-    "volume_ratio": 4.08
+    "volume_ratio": 4.08,
+    "disclosures": []
    },
    {
     "code": "5401",
@@ -6113,7 +6533,8 @@
     "change_pct": 1.69,
     "turnover": 216400000000.0,
     "volume": 71617000.0,
-    "volume_ratio": 1.02
+    "volume_ratio": 1.02,
+    "disclosures": []
    },
    {
     "code": "9101",
@@ -6123,7 +6544,8 @@
     "change_pct": 1.46,
     "turnover": 87700000000.0,
     "volume": 13592000.0,
-    "volume_ratio": 3.97
+    "volume_ratio": 3.97,
+    "disclosures": []
    },
    {
     "code": "8766",
@@ -6133,7 +6555,8 @@
     "change_pct": 1.12,
     "turnover": 255500000000.0,
     "volume": 23271000.0,
-    "volume_ratio": 2.88
+    "volume_ratio": 2.88,
+    "disclosures": []
    }
   ],
   "losers": [
@@ -6145,7 +6568,8 @@
     "change_pct": -3.6,
     "turnover": 121500000000.0,
     "volume": 14751000.0,
-    "volume_ratio": 2.17
+    "volume_ratio": 2.17,
+    "disclosures": []
    },
    {
     "code": "7974",
@@ -6155,7 +6579,8 @@
     "change_pct": -1.85,
     "turnover": 174600000000.0,
     "volume": 56639000.0,
-    "volume_ratio": 3.39
+    "volume_ratio": 3.39,
+    "disclosures": []
    },
    {
     "code": "5803",
@@ -6165,7 +6590,8 @@
     "change_pct": -1.66,
     "turnover": 272100000000.0,
     "volume": 35825000.0,
-    "volume_ratio": 1.11
+    "volume_ratio": 1.11,
+    "disclosures": []
    },
    {
     "code": "8316",
@@ -6175,7 +6601,20 @@
     "change_pct": -1.02,
     "turnover": 389200000000.0,
     "volume": 44772000.0,
-    "volume_ratio": 3.2
+    "volume_ratio": 3.2,
+    "disclosures": [
+     {
+      "code": "8316",
+      "name": "三井住友FG",
+      "time": "2026-09-25T08:30:00+09:00",
+      "title": "当社に関する一部報道について",
+      "url": "https://example.com/tdnet/8316.pdf",
+      "tags": [
+       "報道への回答"
+      ],
+      "tone": "neutral"
+     }
+    ]
    },
    {
     "code": "8801",
@@ -6185,7 +6624,8 @@
     "change_pct": -1.0,
     "turnover": 241800000000.0,
     "volume": 32587000.0,
-    "volume_ratio": 3.65
+    "volume_ratio": 3.65,
+    "disclosures": []
    },
    {
     "code": "6501",
@@ -6195,7 +6635,8 @@
     "change_pct": -0.55,
     "turnover": 161300000000.0,
     "volume": 46047000.0,
-    "volume_ratio": 1.28
+    "volume_ratio": 1.28,
+    "disclosures": []
    },
    {
     "code": "6146",
@@ -6205,7 +6646,8 @@
     "change_pct": -0.4,
     "turnover": 262700000000.0,
     "volume": 35332000.0,
-    "volume_ratio": 1.25
+    "volume_ratio": 1.25,
+    "disclosures": []
    },
    {
     "code": "9432",
@@ -6215,7 +6657,8 @@
     "change_pct": -0.02,
     "turnover": 230000000000.0,
     "volume": 74352000.0,
-    "volume_ratio": 3.59
+    "volume_ratio": 3.59,
+    "disclosures": []
    },
    {
     "code": "4568",
@@ -6225,7 +6668,8 @@
     "change_pct": 0.37,
     "turnover": 138500000000.0,
     "volume": 31097000.0,
-    "volume_ratio": 4.04
+    "volume_ratio": 4.04,
+    "disclosures": []
    },
    {
     "code": "6857",
@@ -6235,7 +6679,8 @@
     "change_pct": 0.44,
     "turnover": 289300000000.0,
     "volume": 47578000.0,
-    "volume_ratio": 2.48
+    "volume_ratio": 2.48,
+    "disclosures": []
    }
   ],
   "turnover": [
@@ -6247,7 +6692,20 @@
     "change_pct": -1.02,
     "turnover": 389200000000.0,
     "volume": 44772000.0,
-    "volume_ratio": 3.2
+    "volume_ratio": 3.2,
+    "disclosures": [
+     {
+      "code": "8316",
+      "name": "三井住友FG",
+      "time": "2026-09-25T08:30:00+09:00",
+      "title": "当社に関する一部報道について",
+      "url": "https://example.com/tdnet/8316.pdf",
+      "tags": [
+       "報道への回答"
+      ],
+      "tone": "neutral"
+     }
+    ]
    },
    {
     "code": "7011",
@@ -6257,7 +6715,8 @@
     "change_pct": 0.73,
     "turnover": 359800000000.0,
     "volume": 56370000.0,
-    "volume_ratio": 1.53
+    "volume_ratio": 1.53,
+    "disclosures": []
    },
    {
     "code": "6758",
@@ -6267,7 +6726,8 @@
     "change_pct": 1.07,
     "turnover": 337800000000.0,
     "volume": 22977000.0,
-    "volume_ratio": 3.28
+    "volume_ratio": 3.28,
+    "disclosures": []
    },
    {
     "code": "8035",
@@ -6277,7 +6737,8 @@
     "change_pct": 0.9,
     "turnover": 289700000000.0,
     "volume": 60417000.0,
-    "volume_ratio": 1.84
+    "volume_ratio": 1.84,
+    "disclosures": []
    },
    {
     "code": "6857",
@@ -6287,7 +6748,8 @@
     "change_pct": 0.44,
     "turnover": 289300000000.0,
     "volume": 47578000.0,
-    "volume_ratio": 2.48
+    "volume_ratio": 2.48,
+    "disclosures": []
    },
    {
     "code": "5803",
@@ -6297,7 +6759,8 @@
     "change_pct": -1.66,
     "turnover": 272100000000.0,
     "volume": 35825000.0,
-    "volume_ratio": 1.11
+    "volume_ratio": 1.11,
+    "disclosures": []
    },
    {
     "code": "6146",
@@ -6307,7 +6770,8 @@
     "change_pct": -0.4,
     "turnover": 262700000000.0,
     "volume": 35332000.0,
-    "volume_ratio": 1.25
+    "volume_ratio": 1.25,
+    "disclosures": []
    },
    {
     "code": "8766",
@@ -6317,7 +6781,8 @@
     "change_pct": 1.12,
     "turnover": 255500000000.0,
     "volume": 23271000.0,
-    "volume_ratio": 2.88
+    "volume_ratio": 2.88,
+    "disclosures": []
    },
    {
     "code": "8306",
@@ -6327,7 +6792,21 @@
     "change_pct": 4.92,
     "turnover": 255300000000.0,
     "volume": 62236000.0,
-    "volume_ratio": 0.79
+    "volume_ratio": 0.79,
+    "disclosures": [
+     {
+      "code": "8306",
+      "name": "三菱UFJ",
+      "time": "2026-09-25T12:00:00+09:00",
+      "title": "2027年3月期 通期業績予想の上方修正に関するお知らせ",
+      "url": "https://example.com/tdnet/8306.pdf",
+      "tags": [
+       "上方修正",
+       "業績修正"
+      ],
+      "tone": "pos"
+     }
+    ]
    },
    {
     "code": "8058",
@@ -6337,7 +6816,8 @@
     "change_pct": 3.48,
     "turnover": 251200000000.0,
     "volume": 29192000.0,
-    "volume_ratio": 1.33
+    "volume_ratio": 1.33,
+    "disclosures": []
    }
   ],
   "volume_surge": [
@@ -6349,7 +6829,8 @@
     "change_pct": 2.86,
     "turnover": 147400000000.0,
     "volume": 32647000.0,
-    "volume_ratio": 4.42
+    "volume_ratio": 4.42,
+    "disclosures": []
    },
    {
     "code": "7203",
@@ -6359,7 +6840,8 @@
     "change_pct": 1.7,
     "turnover": 133900000000.0,
     "volume": 47924000.0,
-    "volume_ratio": 4.08
+    "volume_ratio": 4.08,
+    "disclosures": []
    },
    {
     "code": "4568",
@@ -6369,7 +6851,8 @@
     "change_pct": 0.37,
     "turnover": 138500000000.0,
     "volume": 31097000.0,
-    "volume_ratio": 4.04
+    "volume_ratio": 4.04,
+    "disclosures": []
    },
    {
     "code": "9101",
@@ -6379,7 +6862,8 @@
     "change_pct": 1.46,
     "turnover": 87700000000.0,
     "volume": 13592000.0,
-    "volume_ratio": 3.97
+    "volume_ratio": 3.97,
+    "disclosures": []
    },
    {
     "code": "8801",
@@ -6389,7 +6873,8 @@
     "change_pct": -1.0,
     "turnover": 241800000000.0,
     "volume": 32587000.0,
-    "volume_ratio": 3.65
+    "volume_ratio": 3.65,
+    "disclosures": []
    },
    {
     "code": "9432",
@@ -6399,7 +6884,8 @@
     "change_pct": -0.02,
     "turnover": 230000000000.0,
     "volume": 74352000.0,
-    "volume_ratio": 3.59
+    "volume_ratio": 3.59,
+    "disclosures": []
    },
    {
     "code": "7974",
@@ -6409,7 +6895,8 @@
     "change_pct": -1.85,
     "turnover": 174600000000.0,
     "volume": 56639000.0,
-    "volume_ratio": 3.39
+    "volume_ratio": 3.39,
+    "disclosures": []
    },
    {
     "code": "6758",
@@ -6419,7 +6906,8 @@
     "change_pct": 1.07,
     "turnover": 337800000000.0,
     "volume": 22977000.0,
-    "volume_ratio": 3.28
+    "volume_ratio": 3.28,
+    "disclosures": []
    },
    {
     "code": "8316",
@@ -6429,7 +6917,20 @@
     "change_pct": -1.02,
     "turnover": 389200000000.0,
     "volume": 44772000.0,
-    "volume_ratio": 3.2
+    "volume_ratio": 3.2,
+    "disclosures": [
+     {
+      "code": "8316",
+      "name": "三井住友FG",
+      "time": "2026-09-25T08:30:00+09:00",
+      "title": "当社に関する一部報道について",
+      "url": "https://example.com/tdnet/8316.pdf",
+      "tags": [
+       "報道への回答"
+      ],
+      "tone": "neutral"
+     }
+    ]
    },
    {
     "code": "8766",
@@ -6439,7 +6940,8 @@
     "change_pct": 1.12,
     "turnover": 255500000000.0,
     "volume": 23271000.0,
-    "volume_ratio": 2.88
+    "volume_ratio": 2.88,
+    "disclosures": []
    }
   ]
  },
@@ -6498,6 +7000,70 @@
    ]
   }
  ],
+ "disclosures_session": [
+  {
+   "code": "8306",
+   "name": "三菱UFJ",
+   "time": "2026-09-25T12:00:00+09:00",
+   "title": "2027年3月期 通期業績予想の上方修正に関するお知らせ",
+   "url": "https://example.com/tdnet/8306.pdf",
+   "tags": [
+    "上方修正",
+    "業績修正"
+   ],
+   "tone": "pos"
+  },
+  {
+   "code": "8316",
+   "name": "三井住友FG",
+   "time": "2026-09-25T08:30:00+09:00",
+   "title": "当社に関する一部報道について",
+   "url": "https://example.com/tdnet/8316.pdf",
+   "tags": [
+    "報道への回答"
+   ],
+   "tone": "neutral"
+  }
+ ],
+ "disclosures_after": [
+  {
+   "code": "8411",
+   "name": "みずほFG",
+   "time": "2026-09-25T15:30:00+09:00",
+   "title": "自己株式取得に係る事項の決定に関するお知らせ",
+   "url": "https://example.com/tdnet/8411.pdf",
+   "tags": [
+    "自社株買い"
+   ],
+   "tone": "pos"
+  },
+  {
+   "code": "8035",
+   "name": "東京エレクトロン",
+   "time": "2026-09-25T15:30:00+09:00",
+   "title": "第三者割当による新株式発行に関するお知らせ",
+   "url": "https://example.com/tdnet/8035.pdf",
+   "tags": [
+    "増資・希薄化"
+   ],
+   "tone": "neg"
+  },
+  {
+   "code": "6857",
+   "name": "アドバンテスト",
+   "time": "2026-09-25T15:45:00+09:00",
+   "title": "剰余金の配当（増配）に関するお知らせ",
+   "url": "https://example.com/tdnet/6857.pdf",
+   "tags": [
+    "増配"
+   ],
+   "tone": "pos"
+  }
+ ],
+ "disclosure_counts": {
+  "session": 212,
+  "after": 57
+ },
  "sector_history": {
   "dates": [
    "2026-08-31",

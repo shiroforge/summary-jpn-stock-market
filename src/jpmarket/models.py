@@ -10,7 +10,7 @@ from enum import StrEnum
 
 from pydantic import BaseModel, Field
 
-SCHEMA_VERSION = 2  # v2: rates category, absolute 5d/20d changes, volume fields
+SCHEMA_VERSION = 3  # v3: TDnet disclosures (v2: rates, absolute 5d/20d changes, volume)
 
 
 class QuoteCategory(StrEnum):
@@ -42,6 +42,18 @@ class Quote(BaseModel):
     unit: str = ""  # e.g. "%" for yields, "円" for FX
 
 
+class Disclosure(BaseModel):
+    """A TDnet timely disclosure (title + PDF link only; the document itself is never stored)."""
+
+    code: str  # 4-char TSE code
+    name: str
+    time: dt.datetime  # tz-aware (JST)
+    title: str
+    url: str
+    tags: list[str] = Field(default_factory=list)  # categories, e.g. ["上方修正", "増配"]
+    tone: str = "neutral"  # "pos" | "neg" | "neutral" (keyword-based, not investment advice)
+
+
 class StockMove(BaseModel):
     code: str  # 4-digit (or 4-char alnum) TSE code, e.g. "7203"
     name: str
@@ -51,6 +63,9 @@ class StockMove(BaseModel):
     turnover: float | None = None  # 売買代金 (JPY), close * volume approximation
     volume: float | None = None  # 出来高 (shares)
     volume_ratio: float | None = None  # today's volume / average of the previous 20 sessions
+    disclosures: list[Disclosure] = Field(
+        default_factory=list
+    )  # since the previous close (explains the move)
 
 
 class SectorPerf(BaseModel):
@@ -126,6 +141,9 @@ class DailySummary(BaseModel):
     breadth: Breadth | None = None
     rankings: Rankings = Field(default_factory=Rankings)
     news: list[NewsItem] = Field(default_factory=list)
+    disclosures_session: list[Disclosure] = Field(default_factory=list)  # notable, prev close .. 15:30
+    disclosures_after: list[Disclosure] = Field(default_factory=list)  # notable, 15:30 .. generation time
+    disclosure_counts: dict[str, int] = Field(default_factory=dict)  # {"session": n, "after": n} (all titles)
 
     sector_history: SeriesHistory = Field(default_factory=SeriesHistory)
     theme_history: SeriesHistory = Field(default_factory=SeriesHistory)

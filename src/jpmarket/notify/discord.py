@@ -117,6 +117,21 @@ def build_payload(summary: DailySummary, page_url: str) -> dict[str, Any]:
                 "inline": False,
             }
         )
+    discs = (summary.disclosures_after or summary.disclosures_session)[:3]
+    if discs:
+        label = "📄 引け後の注目開示" if summary.disclosures_after else "📄 注目の開示（〜大引け）"
+        fields.append(
+            {
+                "name": label,
+                "value": _clip(
+                    "\n".join(
+                        f"・{x.name}（{x.code}） {'・'.join(x.tags[:2])}：[{x.title[:40]}]({x.url})"
+                        for x in discs
+                    )
+                ),
+                "inline": False,
+            }
+        )
     if summary.warnings:
         fields.append({"name": "⚠️ 注意", "value": _clip("\n".join(summary.warnings)), "inline": False})
 

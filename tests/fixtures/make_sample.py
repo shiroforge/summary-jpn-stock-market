@@ -15,6 +15,7 @@ import yaml
 from jpmarket.models import (
     Breadth,
     DailySummary,
+    Disclosure,
     NewsItem,
     Quote,
     QuoteCategory,
@@ -233,6 +234,70 @@ def main() -> None:
     themes.sort(key=lambda t: t.change_pct, reverse=True)
 
     movers = [move(rng, c, n, s) for c, n, s in STOCKS]
+    jst = dt.timezone(dt.timedelta(hours=9))
+
+    def disc(code: str, name: str, hhmm: str, title: str, tags: list[str], tone: str) -> Disclosure:
+        h, mnt = map(int, hhmm.split(":"))
+        return Disclosure(
+            code=code,
+            name=name,
+            time=dt.datetime(2026, 9, 25, h, mnt, tzinfo=jst),
+            title=title,
+            url=f"https://example.com/tdnet/{code}.pdf",
+            tags=tags,
+            tone=tone,
+        )
+
+    session_discs = [
+        disc(
+            movers[0].code,
+            movers[0].name,
+            "12:00",
+            "2027年3月期 通期業績予想の上方修正に関するお知らせ",
+            ["上方修正", "業績修正"],
+            "pos",
+        ),
+        disc(
+            movers[1].code,
+            movers[1].name,
+            "08:30",
+            "当社に関する一部報道について",
+            ["報道への回答"],
+            "neutral",
+        ),
+    ]
+    after_discs = [
+        disc(
+            movers[2].code,
+            movers[2].name,
+            "15:30",
+            "自己株式取得に係る事項の決定に関するお知らせ",
+            ["自社株買い"],
+            "pos",
+        ),
+        disc(
+            movers[3].code,
+            movers[3].name,
+            "15:30",
+            "第三者割当による新株式発行に関するお知らせ",
+            ["増資・希薄化"],
+            "neg",
+        ),
+        disc(
+            movers[4].code, movers[4].name, "15:45", "剰余金の配当（増配）に関するお知らせ", ["増配"], "pos"
+        ),
+    ]
+    movers[0] = movers[0].model_copy(update={"disclosures": [session_discs[0]]})
+    movers[1] = movers[1].model_copy(update={"disclosures": [session_discs[1]]})
+    themes[0] = themes[0].model_copy(
+        update={
+            "members": [
+                m.model_copy(update={"disclosures": [session_discs[0]]}) if i == 0 else m
+                for i, m in enumerate(themes[0].members)
+            ]
+        }
+    )
+
     rankings = Rankings(
         gainers=sorted(movers, key=lambda m: m.change_pct, reverse=True)[:10],
         losers=sorted(movers, key=lambda m: m.change_pct)[:10],
@@ -331,6 +396,9 @@ def main() -> None:
         ),
         rankings=rankings,
         news=news,
+        disclosures_session=session_discs,
+        disclosures_after=after_discs,
+        disclosure_counts={"session": 212, "after": 57},
         sector_history=sector_hist,
         theme_history=theme_hist,
     )

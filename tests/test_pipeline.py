@@ -8,7 +8,7 @@ import pytest
 
 from jpmarket.calendar import is_trading_day
 from jpmarket.config import Settings
-from jpmarket.models import NewsItem
+from jpmarket.models import Disclosure, NewsItem
 from jpmarket.pipeline import Deps, StaleDataError, build_summary, save_summary
 from jpmarket.render.site import build_site, load_all
 from jpmarket.sources.master import parse_topixweight
@@ -50,6 +50,36 @@ class FakeSource:
         return pd.DataFrame(rows)
 
 
+JST = dt.timezone(dt.timedelta(hours=9))
+DISCLOSURES = [
+    Disclosure(
+        code="8306",
+        name="三菱ＵＦＪ",
+        time=dt.datetime(2026, 9, 25, 12, 0, tzinfo=JST),
+        title="業績予想の上方修正に関するお知らせ",
+        url="https://x/1.pdf",
+        tags=["上方修正"],
+        tone="pos",
+    ),
+    Disclosure(
+        code="8306",
+        name="三菱ＵＦＪ",
+        time=dt.datetime(2026, 9, 25, 15, 30, tzinfo=JST),
+        title="自己株式取得に係る事項の決定に関するお知らせ",
+        url="https://x/2.pdf",
+        tags=["自社株買い"],
+    ),
+    Disclosure(
+        code="9999",
+        name="X",
+        time=dt.datetime(2026, 9, 25, 16, 10, tzinfo=JST),
+        title="株主総会の招集",
+        url="https://x/3.pdf",
+        tags=[],
+    ),
+]
+
+
 def settings(tmp: Path) -> Settings:
     return Settings(data_dir=tmp / "data", cache_dir=tmp / "cache", site_dir=tmp / "site")
 
@@ -70,6 +100,7 @@ def deps(source: FakeSource, topix: IndexClose | None) -> Deps:
         master=parse_topixweight((FIX / "topixweight_sample.csv").read_bytes()),
         topix=topix,
         news=news,
+        disclosures=DISCLOSURES,
     )
 
 
@@ -88,6 +119,18 @@ def test_build_with_official_topix(tmp_path: Path) -> None:
     assert s.comment.startswith("日経平均は")
     assert len(s.sector_history.dates) == 20
     assert any("Yahoo" in src for src in s.sources)
+
+
+def test_disclosures_attached(tmp_path: Path) -> None:
+    d = deps(FakeSource(), IndexClose(T, 4128.59, 4075.30))
+    d.now = dt.datetime(2026, 9, 25, 16, 30, tzinfo=JST)
+    s = build_summary(T, settings(tmp_path), d)
+    assert [x.url for x in s.disclosures_session] == ["https://x/1.pdf"]
+    assert [x.url for x in s.disclosures_after] == ["https://x/2.pdf"]  # 15:30 counts as after the close
+    assert s.disclosure_counts == {"session": 1, "after": 2}
+    banks = next(t for t in s.themes if t.key == "banks")
+    mufg = next(m for m in banks.members if m.code == "8306")
+    assert [x.tags for x in mufg.disclosures] == [["上方修正"]]
 
 
 def test_topix_fallback_uses_previous_close(tmp_path: Path) -> None:

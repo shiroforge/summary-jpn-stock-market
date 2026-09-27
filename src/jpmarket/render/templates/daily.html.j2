@@ -102,7 +102,7 @@
           <ul class="chips">
             <li><button type="button" class="chartbtn" data-chart="t:{{ t.key }}">テーマ指数のチャート</button></li>
             {% for mv in t.members %}
-            <li><button type="button" class="chip" data-chart="{{ mv.code }}"><span class="mono">{{ mv.code }}</span> {{ mv.name }} <b class="{{ mv.change_pct | tone }}">{{ mv.change_pct | pct(1) }}</b></button></li>
+            <li><button type="button" class="chip" data-chart="{{ mv.code }}"{% if mv.disclosures %} title="{% for d in mv.disclosures %}📄 {{ d.title }}{% if not loop.last %} / {% endif %}{% endfor %}"{% endif %}><span class="mono">{{ mv.code }}</span> {{ mv.name }} <b class="{{ mv.change_pct | tone }}">{{ mv.change_pct | pct(1) }}</b>{% if mv.disclosures %} <span class="disc-mark {{ mv.disclosures[0].tone }}">📄{{ mv.disclosures[0].tags[0] if mv.disclosures[0].tags else "" }}</span>{% endif %}</button></li>
             {% endfor %}
           </ul>
         </details>
@@ -140,6 +140,27 @@
       {% if s.rankings.volume_surge %}{{ m.ranktable("出来高急増", s.rankings.volume_surge, "surge") }}{% endif %}
     </div>
   </section>
+
+  {% if s.disclosures_session or s.disclosures_after %}
+  <section class="block" id="disclosures" aria-labelledby="h-disc">
+    <div class="block-head">
+      <h2 id="h-disc">適時開示 <span class="sub">TDnet・注目の分類のみ・TOPIX比重の大きい順</span></h2>
+      <div class="tabs" role="tablist">
+        <button type="button" role="tab" id="tab-da" aria-selected="{{ 'true' if s.disclosures_after else 'false' }}" data-panel="disc-after">引け後（{{ s.disclosures_after | length }}）</button>
+        <button type="button" role="tab" id="tab-ds" aria-selected="{{ 'false' if s.disclosures_after else 'true' }}" data-panel="disc-session">前日引け後〜大引け（{{ s.disclosures_session | length }}）</button>
+      </div>
+    </div>
+    <div id="disc-after" role="tabpanel"{% if not s.disclosures_after %} hidden{% endif %}>
+      {% if s.disclosures_after %}{{ m.disc_table(s.disclosures_after) }}{% else %}<p class="muted">生成時点では、引け後の注目開示はまだありません。</p>{% endif %}
+      <p class="note">15:30以降、このページを作った時点（{{ s.generated_at | jst("%H:%M") }}）までの開示です。夕方以降に出る開示は含みません。全{{ s.disclosure_counts.get("after", 0) }}件。</p>
+    </div>
+    <div id="disc-session" role="tabpanel"{% if s.disclosures_after %} hidden{% endif %}>
+      {% if s.disclosures_session %}{{ m.disc_table(s.disclosures_session) }}{% else %}<p class="muted">該当する開示はありません。</p>{% endif %}
+      <p class="note">前営業日15:30〜当日15:30の開示で、当日の値動きの材料になったものです。全{{ s.disclosure_counts.get("session", 0) }}件。</p>
+    </div>
+    <p class="note">分類は見出しの言葉から機械的に付けたもので、内容の良し悪しを判断したものではありません。原文は <a href="https://www.release.tdnet.info/inbs/I_main_00.html" target="_blank" rel="noopener">TDnet</a> でご確認ください。</p>
+  </section>
+  {% endif %}
 
   <section class="block" id="global" aria-labelledby="h-global">
     <div class="block-head"><h2 id="h-global">海外・為替・商品</h2></div>

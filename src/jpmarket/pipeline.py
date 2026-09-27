@@ -18,8 +18,8 @@ from jpmarket.analytics.comment import market_comment
 from jpmarket.analytics.trends import build_trends
 from jpmarket.calendar import is_trading_day, prev_trading_day
 from jpmarket.config import QuoteSpec, Settings
-from jpmarket.models import DailySummary, NewsItem, Quote, QuoteCategory
-from jpmarket.news import rss
+from jpmarket.models import DailySummary, Disclosure, NewsItem, Quote, QuoteCategory, StockMove
+from jpmarket.news import rss, tdnet
 from jpmarket.sources import rates
 from jpmarket.sources.base import MarketDataSource
 from jpmarket.sources.master import Master, load_master
@@ -46,6 +46,7 @@ class Deps:
     topix: IndexClose | bool | None = True  # True -> fetch from Yahoo JP; None -> unavailable
     final: bool = True  # False on early attempts: incomplete data raises StaleDataError to retry later
     news: list[NewsItem] | None = None  # None -> fetch RSS
+    disclosures: list[Disclosure] | None = None  # None -> fetch TDnet
     failed_feeds: list[str] = field(default_factory=list)
 
 
@@ -218,6 +219,41 @@ def build(target: dt.date, settings: Settings, deps: Deps) -> BuildResult:
             counts[t] = counts.get(t, 0) + 1
     themes = [t.model_copy(update={"news_count": counts.get(t.key, 0)}) for t in themes]
 
+    # TDnet: since the previous close -> explains today's moves; after 15:30 -> tomorrow's material
+    prev_close = dt.datetime.combine(prev_trading_day(target), dt.time(15, 30), JST)
+    close = dt.datetime.combine(target, dt.time(15, 30), JST)
+    if deps.disclosures is None:
+        fetched: list[Disclosure] = []
+        day, ok = prev_close.date(), True
+        while day <= target:
+            got = tdnet.fetch_day(day, client=deps.http)
+            ok = ok and got is not None
+            fetched.extend(got or [])
+            day += dt.timedelta(days=1)
+        if not ok:
+            warnings.append("適時開示（TDnet）の一部を取得できませんでした。")
+    else:
+        fetched = deps.disclosures
+    weight_by_code = {c.code: c.topix_weight_pct for c in master.constituents}
+    session = tdnet.window(fetched, prev_close, close)
+    after = tdnet.window(fetched, close, max(deps.now, close))
+    by_code: dict[str, list[Disclosure]] = {}
+    for d in sorted(session, key=lambda d: (not tdnet.NOTABLE.intersection(d.tags), -d.time.timestamp())):
+        if d.tags and len(by_code.get(d.code, [])) < 2:
+            by_code.setdefault(d.code, []).append(d)
+
+    def attach(ms: list[StockMove]) -> list[StockMove]:
+        return [m.model_copy(update={"disclosures": by_code[m.code]}) if m.code in by_code else m for m in ms]
+
+    rankings = core.rankings(moves, settings.min_turnover_for_ranking)
+    rankings = rankings.model_copy(
+        update={k: attach(getattr(rankings, k)) for k in ("gainers", "losers", "turnover", "volume_surge")}
+    )
+    themes = [t.model_copy(update={"members": attach(t.members)}) for t in themes]
+    sectors = [
+        s.model_copy(update={"leaders": attach(s.leaders), "laggards": attach(s.laggards)}) for s in sectors
+    ]
+
     by_key = {q.key: q for q in quotes}
     summary = DailySummary(
         date=target,
@@ -236,8 +272,11 @@ def build(target: dt.date, settings: Settings, deps: Deps) -> BuildResult:
         sector17_etfs=etf_quotes,
         themes=themes,
         breadth=breadth,
-        rankings=core.rankings(moves, settings.min_turnover_for_ranking),
+        rankings=rankings,
         news=news,
+        disclosures_session=tdnet.notable(session, weight_by_code),
+        disclosures_after=tdnet.notable(after, weight_by_code),
+        disclosure_counts={"session": len(session), "after": len(after)},
         sector_history=core.sector_history(master.constituents, rets, target),
         theme_history=core.theme_history(settings.themes, rets, target),
     )
