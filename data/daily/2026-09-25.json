@@ -1,14 +1,16 @@
 {
  "schema_version": 3,
  "date": "2026-09-25",
- "generated_at": "2026-09-27T08:07:11.205581Z",
+ "generated_at": "2026-09-27T08:10:23.905941Z",
  "sources": [
   "yfinance",
   "JPX TOPIX構成銘柄ウエイト（2026-07-31時点）",
   "Yahoo!ファイナンス（TOPIX）",
-  "RSS（NHK経済、Yahoo!ニュース経済、Yahoo!ニュース国際、日経速報、Google News 株式、Google News ビジネス、東洋経済）"
+  "RSS（NHK経済、Yahoo!ニュース経済、Yahoo!ニュース国際、日経速報、東洋経済）"
  ],
- "warnings": [],
+ "warnings": [
+  "一部のニュースを取得できませんでした（Google News 株式、Google News ビジネス）。"
+ ],
  "comment": "日経平均は+1.30%、TOPIXは+1.31%。銀行業・証券、商品先物取引業が上昇を主導し、情報・通信業・建設業が軟調。テーマでは「地銀」(+4.88%)が強い。「建設・国土強靭化」(-1.26%)は売られた。",
  "quotes": [
   {
@@ -4829,7 +4831,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 2
+   "news_count": 1
   },
   {
    "key": "construction_machinery",
@@ -6467,7 +6469,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "real_estate",
@@ -7375,7 +7377,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 3
+   "news_count": 0
   },
   {
    "key": "space",
@@ -8965,40 +8967,12 @@
    ]
   },
   {
-   "title": "【今週読まれた記事】AI・半導体調整一巡で“復活近し”！？ 外部環境を確認",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8zMzNyLTJSWE5ucExRekpPeG1rbDY4ckRldjJfUE9UaDJ6WWtteTdTQ29vaTE1aEY2SlJRWGdxam1lZnpBOUF4Y0gxVnVfdUxWM2x1QzM4Wkx1cHlZaU9reQ?oc=5",
-   "source": "株探",
-   "published_at": "2026-09-25T21:30:00Z",
-   "tags": [
-    "semiconductor",
-    "ai_datacenter"
-   ]
-  },
-  {
    "title": "株価 値上がり 金利上昇で銀行銘柄など上昇",
    "url": "https://news.web.nhk/newsweb/na/nd-20260925de52326",
    "source": "NHK経済",
    "published_at": "2026-09-25T07:17:38Z",
    "tags": [
     "banks"
-   ]
-  },
-  {
-   "title": "AI投資の採算懸念でメタ株反落、ザッカーバーグの資産は1日で1.4兆円減少",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBYZzM4SmRQd1RJV1h3YWtZdHNULURTV2cwRVVEd19TSTJnZGdlMnhReDRYRTFfNVo4djdWeHVGZy1GZjFRNXFETlhWcEFOZVBELTJkU2c2X3N3dw?oc=5",
-   "source": "Forbes JAPAN",
-   "published_at": "2026-09-25T23:00:00Z",
-   "tags": [
-    "ai_datacenter"
-   ]
-  },
-  {
-   "title": "原油がついにピークアウト､日本株は底入れの前倒しで強気に",
-   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE94eGJiRnlwNGJiY0ZXWFdLcEtPQU00R04zSXF6QzRZVDhRdmNlYnBzeFNPaGRYc1JBWlJJNUZXRnpiN2hVUkxrUklNWVl1Q1NySXM1WVNucw?oc=5",
-   "source": "四季報オンライン",
-   "published_at": "2026-09-25T09:00:00Z",
-   "tags": [
-    "resources"
    ]
   },
   {
@@ -9017,15 +8991,6 @@
    "published_at": "2026-09-24T07:01:45Z",
    "tags": [
     "semiconductor"
-   ]
-  },
-  {
-   "title": "マイクロソフト、個人用AIチャットボット競争から撤退－Copilot刷新",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE12d2N0R2p0QkpYbEpHUTRzTXJ1T0RKMEFsWGE0cG1OYUdYUmFfMktIblQ4SndYbzNrdWlIcGtRYXZfT2YzdGJoLWJrbEFJWlZZZmxBUDFBSlJWV21PQTZGNFNsMmhwVkRaLThoVFByR29mRmdLeG1r?oc=5",
-   "source": "Bloomberg",
-   "published_at": "2026-09-25T21:27:01Z",
-   "tags": [
-    "ai_datacenter"
    ]
   },
   {
@@ -9065,13 +9030,6 @@
    ]
   },
   {
-   "title": "米国株式市場＝主要3指数上昇、マイクロソフトなどＡＩ関連株がけん引",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOZVp4cmhDbzlQYUkyUk9KQVA1MGdWLXMzT1JhQllvcUc2RVAzUGFjWk9YRUw3V19wSUlTVmJESWlIUmh4SW9NRFpFeEU3RFlvWXNlT1BoUGpqZDZmVGV3aTZDNjFKaHBVUTBLclBLVmZ3OWtGMEt1cE5teDE5emFXTUZKYTZyUQ?oc=5",
-   "source": "Reuters",
-   "published_at": "2026-09-25T20:45:55Z",
-   "tags": []
-  },
-  {
    "title": "円相場1ドル＝156円台に上昇 1日で2円余円高に 介入警戒強まる",
    "url": "https://news.web.nhk/newsweb/na/nd-20260926de52516",
    "source": "NHK経済",
@@ -9086,13 +9044,6 @@
    "tags": []
   },
   {
-   "title": "キオクシア株、本格反転はいつ？ 担当記者とロンドン×東京で語る",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBMR1JoS2NuazlKNHIxNEtwb3B6b1NCV3NNTjRzOEhFZ2FIRE4yMUVGRVVQRHBtUUd1VE45WWZ4clNWX1VOTnd3ODQ5Zjd4Mm1hYlhkZnpRS2FxaXc0SUNhSEt4clE5bjZKUjJHSg?oc=5",
-   "source": "nikkei.com",
-   "published_at": "2026-09-25T10:51:03Z",
-   "tags": []
-  },
-  {
    "title": "ジャングリア沖縄 親会社で株主総会 新スポンサーを探す方針",
    "url": "https://news.web.nhk/newsweb/na/nd-20260925de52445",
    "source": "NHK経済",
@@ -9100,38 +9051,10 @@
    "tags": []
   },
   {
-   "title": "【村瀬智一が斬る！深層マーケット】10月相場はリバウンド機運が高まるか",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1TM1l3WnlMYXl2eG8yM1pCM0l0QWJwOG9zTkVCVGlFMklmWTl2SXFKQzQ5cmxCSkZYaE1GS29zakVWc0ZwaUJ0R0h4THBoUmczcmhvX3pzWFJUaG82dGNFdA?oc=5",
-   "source": "株探",
-   "published_at": "2026-09-25T23:00:00Z",
-   "tags": []
-  },
-  {
-   "title": "【個人向け国債】9月30日まで、固定5年は年「2.24％」。普通預金0.306％と比べてどれだけ違う？",
-   "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9Jc3picFBSeFR0TDZNNVZkZGdnLW16Yk54SUQ3MjhmNkVCR1Y0MnVzTkFXcVFoZHRNZWo0M01ZZkpOR2ttX241akFJd00?oc=5",
-   "source": "LIMO",
-   "published_at": "2026-09-25T22:21:00Z",
-   "tags": []
-  },
-  {
-   "title": "中国の若者が「寝そべり」を経て始めた習近平への「静かな反逆」とネット戦術",
-   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5UT3VKT2dhZkFDQ3VzbDZpVGpXNUtMcTdsWkxCOVF3OEI4bHpYb0xGTXZzRm5BWG1YYkpORlVQbGl0eENmTzlsY3NqdjU0VDY2ZGpj?oc=5",
-   "source": "クーリエ・ジャポン",
-   "published_at": "2026-09-25T21:40:12Z",
-   "tags": []
-  },
-  {
    "title": "片山財務相がベッセント長官と電話会談 日米協力強化を確認",
    "url": "https://news.web.nhk/newsweb/na/nd-20260925de52509",
    "source": "NHK経済",
    "published_at": "2026-09-25T14:51:00Z",
-   "tags": []
-  },
-  {
-   "title": "マツダ新型SUV「CX-30」と「CX-5」どっちが良い？ パワフルな「\"2500cc\"新エンジン」搭載！ スポーティで楽しい\"走り\"と「豪華内装」も魅力的！ 価格差「約30万円」の\"超・お買得\"モデルに乗って比較！",
-   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE14TkxEejA4NFBEMkZwY05jUElVQ0hmdjdqbFkwZHFlN1dvT2lxVUJPSm5BYjdTcWU2NUN4LVVKekpVb3I1S2I3LVVuZw?oc=5",
-   "source": "くるまのニュース",
-   "published_at": "2026-09-25T14:10:00Z",
    "tags": []
   },
   {
@@ -9177,17 +9100,73 @@
    "tags": []
   },
   {
-   "title": "ロンドンに広がるスマートグラスへの反感、プライバシー懸念で(1/3)",
-   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5xMDhFX1JtR0Z5Z19MUXd2bkFsaUY5ZzRYcjFVYWEyM2M0QS15a19sUHEyUWRzZ1AwNnpnY2JVM0RNMG41Y1RGVTY2OV9acERxSnc?oc=5",
-   "source": "CNN.co.jp",
-   "published_at": "2026-09-25T10:00:00Z",
+   "title": "ふるさと納税「越前がに」に水ガニ カニ関連は返礼品から除外",
+   "url": "https://news.web.nhk/newsweb/na/nd-20260925de52378",
+   "source": "NHK経済",
+   "published_at": "2026-09-25T06:47:00Z",
    "tags": []
   },
   {
-   "title": "全日空機の緊急脱出 国の運輸安全委が現地で機体を調査",
-   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ENlpHaDF5aUVEZ2xqM3htcWF5QnFMTThtWUthWF9za2dJS3VscTA5Z2ZxcFN0eHVwNWVld3lFTnYyWUZYM2tQeVQ2SzdYZGgtMXkxc0Q2d0pqQnZoeGNr?oc=5",
-   "source": "NHKニュース",
-   "published_at": "2026-09-25T09:19:35Z",
+   "title": "JFE 豪雨と台風で製鉄所の設備被害 生産影響長期化の見通し",
+   "url": "https://news.web.nhk/newsweb/na/nd-20260925de52342",
+   "source": "NHK経済",
+   "published_at": "2026-09-25T05:32:00Z",
+   "tags": []
+  },
+  {
+   "title": "きょうのおはBiz 9月25日(金) 簗農相 コメ価格下落に危機感",
+   "url": "https://news.web.nhk/newsweb/na/nd-20260925de52305",
+   "source": "NHK経済",
+   "published_at": "2026-09-25T02:32:27Z",
+   "tags": []
+  },
+  {
+   "title": "全東信破綻で未回収の売上金 10月中にも飲食店などに支払いへ",
+   "url": "https://news.web.nhk/newsweb/na/nd-20260925de52300",
+   "source": "NHK経済",
+   "published_at": "2026-09-25T00:56:00Z",
+   "tags": []
+  },
+  {
+   "title": "円相場1ドル＝159円台に下落 米30年債利回り22年ぶり高水準",
+   "url": "https://news.web.nhk/newsweb/na/nd-20260925de52281",
+   "source": "NHK経済",
+   "published_at": "2026-09-24T20:55:07Z",
+   "tags": []
+  },
+  {
+   "title": "災害時の支援物資管理など デジタル技術活用の動き",
+   "url": "https://news.web.nhk/newsweb/na/nd-20260925de52275",
+   "source": "NHK経済",
+   "published_at": "2026-09-24T20:27:24Z",
+   "tags": []
+  },
+  {
+   "title": "日中の経済交流正常化に向け 岩屋前外相率いる代表団が訪中へ",
+   "url": "https://news.web.nhk/newsweb/na/nd-20260924de52261",
+   "source": "NHK経済",
+   "published_at": "2026-09-24T13:02:16Z",
+   "tags": []
+  },
+  {
+   "title": "コメの「需要に応じた生産」徹底を 自民が緊急決議文を提出",
+   "url": "https://news.web.nhk/newsweb/na/nd-20260924de52215",
+   "source": "NHK経済",
+   "published_at": "2026-09-24T09:48:00Z",
+   "tags": []
+  },
+  {
+   "title": "円相場 値下がり 1ドル＝158円台に",
+   "url": "https://news.web.nhk/newsweb/na/nd-20260924de52121",
+   "source": "NHK経済",
+   "published_at": "2026-09-24T09:26:23Z",
+   "tags": []
+  },
+  {
+   "title": "JCOM ネット障害 最大約408万世帯に影響 外部から大量アクセス",
+   "url": "https://news.web.nhk/newsweb/na/nd-20260924de52196",
+   "source": "NHK経済",
+   "published_at": "2026-09-24T08:26:00Z",
    "tags": []
   }
  ],
