@@ -1,13 +1,14 @@
 name: daily
-# 平日 15:50 JST に1回目を実行（Actions の開始遅れ込みで 16:00 前後に配信）。
-# データが未確定・不完全なら終了コード75で見送り、16:30 / 17:30 JST の回で再試行する。
-# 17:30 が最終回で、そこでは欠けがあっても警告付きで生成する（DECISIONS D-22）。
+# 平日 15:47 JST に1回目を実行（Actions の開始遅れ込みで 16:00 前後に配信）。
+# データが未確定・不完全なら終了コード75で見送り、16:33 / 17:33 JST の回で再試行する。
+# 17:33 が最終回で、そこでは欠けがあっても警告付きで生成する（DECISIONS D-22）。
+# 毎時0分・30分は Actions の定時実行が混み、何時間も遅れるため、半端な分にずらしている（D-27）。
 on:
   schedule:
-    - cron: "50 6 * * 1-5"  # 15:50 JST (early)
-    - cron: "30 7 * * 1-5"  # 16:30 JST (early retry)
-    - cron: "30 8 * * 1-5"  # 17:30 JST (final)
-    - cron: "0 13 * * 1-5"  # 22:00 JST evening refresh: late disclosures + PTS reactions, page only (D-24)
+    - cron: "47 6 * * 1-5"  # 15:47 JST (early)
+    - cron: "33 7 * * 1-5"  # 16:33 JST (early retry)
+    - cron: "33 8 * * 1-5"  # 17:33 JST (final)
+    - cron: "7 13 * * 1-5"  # 22:07 JST evening refresh: late disclosures + PTS reactions, page only (D-24)
   workflow_dispatch:
     inputs:
       date:
@@ -32,7 +33,7 @@ permissions:
   id-token: write
 
 env:
-  EVENING: ${{ github.event.schedule == '0 13 * * 1-5' }}
+  EVENING: ${{ github.event.schedule == '7 13 * * 1-5' }}
   SITE_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
   DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
   RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
@@ -72,9 +73,9 @@ jobs:
         name: Collect and build
         if: steps.plan.outputs.trading == 'true' && (steps.plan.outputs.exists != 'true' || inputs.force == true || env.EVENING == 'true')
         run: |
-          # scheduled runs before 17:30 JST wait for complete data; the last run and manual runs build regardless
+          # scheduled runs before 17:33 JST wait for complete data; the last run and manual runs build regardless
           mode=--final
-          if [ "${{ github.event_name }}" = "schedule" ] && [ "${{ github.event.schedule }}" != "30 8 * * 1-5" ] && [ "$EVENING" != "true" ]; then
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "${{ github.event.schedule }}" != "33 8 * * 1-5" ] && [ "$EVENING" != "true" ]; then
             mode=--early
           fi
           set +e
@@ -86,9 +87,9 @@ jobs:
           elif [ $code -eq 75 ]; then
             echo "built=false" >> "$GITHUB_OUTPUT"
             echo "::warning::data for ${{ steps.plan.outputs.date }} not ready yet"
-            # the 17:30 JST run is the last attempt of the day
-            if [ "${{ github.event.schedule }}" = "30 8 * * 1-5" ]; then
-              uv run jpmarket notify-error "${{ steps.plan.outputs.date }} のデータが17:30時点でも未確定のため、生成を見送りました。" --run-url "$RUN_URL"
+            # the 17:33 JST run is the last attempt of the day
+            if [ "${{ github.event.schedule }}" = "33 8 * * 1-5" ]; then
+              uv run jpmarket notify-error "${{ steps.plan.outputs.date }} のデータが17:33時点でも未確定のため、生成を見送りました。" --run-url "$RUN_URL"
             fi
           else
             exit $code
@@ -132,7 +133,7 @@ jobs:
 
   notify:
     needs: [build, deploy]
-    if: needs.build.outputs.built == 'true' && ((github.event_name == 'schedule' && github.event.schedule != '0 13 * * 1-5') || inputs.notify == true)
+    if: needs.build.outputs.built == 'true' && ((github.event_name == 'schedule' && github.event.schedule != '7 13 * * 1-5') || inputs.notify == true)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
