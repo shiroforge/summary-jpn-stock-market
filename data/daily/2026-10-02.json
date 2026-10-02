@@ -1,10 +1,11 @@
 {
  "schema_version": 4,
  "date": "2026-10-02",
- "generated_at": "2026-10-02T14:55:46.126781Z",
+ "generated_at": "2026-10-02T18:22:40.196821Z",
  "sources": [
   "yfinance",
   "JPX TOPIX構成銘柄ウエイト（2026-07-31時点）",
+  "Yahoo!ファイナンス（TOPIX）",
   "RSS（NHK経済、Yahoo!ニュース経済、Yahoo!ニュース国際、日経速報、Google News 株式、Google News ビジネス、東洋経済）"
  ],
  "warnings": [],
@@ -167,13 +168,13 @@
    "name": "日経平均先物(CME)",
    "ticker": "NIY=F",
    "category": "futures_vol",
-   "close": 70065.0,
-   "change": 1795.0,
-   "change_pct": 2.63,
-   "change_5d_pct": 5.21,
-   "change_20d_pct": 8.53,
-   "change_5d": 3470.0,
-   "change_20d": 5505.0,
+   "close": 69780.0,
+   "change": 1510.0,
+   "change_pct": 2.21,
+   "change_5d_pct": 4.78,
+   "change_20d_pct": 8.09,
+   "change_5d": 3185.0,
+   "change_20d": 5220.0,
    "spark": [
     65830.0,
     65145.0,
@@ -194,7 +195,7 @@
     66230.0,
     66810.0,
     68270.0,
-    70065.0
+    69780.0
    ],
    "as_of": "2026-10-02",
    "is_proxy": false,
@@ -243,13 +244,13 @@
    "name": "ドル円",
    "ticker": "USDJPY=X",
    "category": "fx",
-   "close": 157.67,
-   "change": 0.115,
-   "change_pct": 0.07,
-   "change_5d_pct": -0.72,
-   "change_20d_pct": 1.29,
-   "change_5d": -1.138,
-   "change_20d": 2.013,
+   "close": 157.82,
+   "change": 0.265,
+   "change_pct": 0.17,
+   "change_5d_pct": -0.62,
+   "change_20d_pct": 1.39,
+   "change_5d": -0.988,
+   "change_20d": 2.163,
    "spark": [
     156.197,
     153.855,
@@ -270,7 +271,7 @@
     157.361,
     157.404,
     157.558,
-    157.673
+    157.823
    ],
    "as_of": "2026-10-02",
    "is_proxy": false,
@@ -281,13 +282,13 @@
    "name": "ユーロ円",
    "ticker": "EURJPY=X",
    "category": "fx",
-   "close": 177.83,
-   "change": -0.637,
-   "change_pct": -0.36,
-   "change_5d_pct": -1.56,
-   "change_20d_pct": -1.76,
-   "change_5d": -2.81,
-   "change_20d": -3.178,
+   "close": 177.56,
+   "change": -0.901,
+   "change_pct": -0.5,
+   "change_5d_pct": -1.7,
+   "change_20d_pct": -1.9,
+   "change_5d": -3.074,
+   "change_20d": -3.442,
    "spark": [
     181.403,
     178.897,
@@ -308,7 +309,7 @@
     178.921,
     178.51,
     178.464,
-    177.827
+    177.563
    ],
    "as_of": "2026-10-02",
    "is_proxy": false,
@@ -319,13 +320,13 @@
    "name": "S&P500",
    "ticker": "^GSPC",
    "category": "overseas",
-   "close": 7743.56,
-   "change": 77.1099,
-   "change_pct": 1.01,
-   "change_5d_pct": 0.0,
-   "change_20d_pct": -0.05,
-   "change_5d": 0.1499,
-   "change_20d": -4.1499,
+   "close": 7716.02,
+   "change": 49.5698,
+   "change_pct": 0.65,
+   "change_5d_pct": -0.35,
+   "change_20d_pct": -0.41,
+   "change_5d": -27.3901,
+   "change_20d": -31.6899,
    "spark": [
     7718.6001,
     7673.52,
@@ -346,7 +347,7 @@
     7670.8398,
     7651.54,
     7666.4502,
-    7743.5601
+    7716.02
    ],
    "as_of": "2026-10-02",
    "is_proxy": false,
@@ -357,13 +358,13 @@
    "name": "NASDAQ",
    "ticker": "^IXIC",
    "category": "overseas",
-   "close": 27288.74,
-   "change": 417.1406,
-   "change_pct": 1.55,
-   "change_5d_pct": 0.81,
-   "change_20d_pct": 2.65,
-   "change_5d": 220.0195,
-   "change_20d": 704.6797,
+   "close": 27165.18,
+   "change": 293.5801,
+   "change_pct": 1.09,
+   "change_5d_pct": 0.36,
+   "change_20d_pct": 2.19,
+   "change_5d": 96.459,
+   "change_20d": 581.1191,
    "spark": [
     26506.9902,
     26421.4102,
@@ -384,7 +385,7 @@
     26797.5391,
     26861.0605,
     26871.5996,
-    27288.7402
+    27165.1797
    ],
    "as_of": "2026-10-02",
    "is_proxy": false,
@@ -395,13 +396,13 @@
    "name": "NYダウ",
    "ticker": "^DJI",
    "category": "overseas",
-   "close": 51227.23,
-   "change": 300.6719,
-   "change_pct": 0.59,
-   "change_5d_pct": -1.16,
-   "change_20d_pct": -4.58,
-   "change_5d": -601.3906,
-   "change_20d": -2458.8789,
+   "close": 51109.89,
+   "change": 183.332,
+   "change_pct": 0.36,
+   "change_5d_pct": -1.39,
+   "change_20d_pct": -4.8,
+   "change_5d": -718.7305,
+   "change_20d": -2576.2188,
    "spark": [
     53414.25,
     52786.0703,
@@ -422,7 +423,7 @@
     51349.9219,
     50906.0508,
     50926.5586,
-    51227.2305
+    51109.8906
    ],
    "as_of": "2026-10-02",
    "is_proxy": false,
@@ -433,13 +434,13 @@
    "name": "SOX指数",
    "ticker": "^SOX",
    "category": "overseas",
-   "close": 13235.22,
-   "change": 406.2217,
-   "change_pct": 3.17,
-   "change_5d_pct": 4.47,
-   "change_20d_pct": 16.59,
-   "change_5d": 566.292,
-   "change_20d": 1883.0918,
+   "close": 13130.52,
+   "change": 301.5156,
+   "change_pct": 2.35,
+   "change_5d_pct": 3.64,
+   "change_20d_pct": 15.67,
+   "change_5d": 461.5859,
+   "change_20d": 1778.3857,
    "spark": [
     11735.2598,
     11887.8701,
@@ -460,7 +461,7 @@
     12629.1602,
     12628.6201,
     12829.0,
-    13235.2217
+    13130.5156
    ],
    "as_of": "2026-10-02",
    "is_proxy": false,
@@ -471,13 +472,13 @@
    "name": "VIX",
    "ticker": "^VIX",
    "category": "overseas",
-   "close": 15.44,
-   "change": -0.95,
-   "change_pct": -5.8,
-   "change_5d_pct": 3.83,
-   "change_20d_pct": 6.26,
-   "change_5d": 0.57,
-   "change_20d": 0.91,
+   "close": 15.61,
+   "change": -0.78,
+   "change_pct": -4.76,
+   "change_5d_pct": 4.98,
+   "change_20d_pct": 7.43,
+   "change_5d": 0.74,
+   "change_20d": 1.08,
    "spark": [
     15.3,
     15.72,
@@ -498,7 +499,7 @@
     16.04,
     16.34,
     16.39,
-    15.44
+    15.61
    ],
    "as_of": "2026-10-02",
    "is_proxy": false,
@@ -699,13 +700,13 @@
    "name": "米国 3ヶ月",
    "ticker": "^IRX",
    "category": "rates",
-   "close": 3.982,
-   "change": -0.0,
-   "change_pct": -0.0,
-   "change_5d_pct": -2.16,
-   "change_20d_pct": 6.47,
-   "change_5d": -0.088,
-   "change_20d": 0.242,
+   "close": 3.995,
+   "change": 0.013,
+   "change_pct": 0.33,
+   "change_5d_pct": -1.84,
+   "change_20d_pct": 6.82,
+   "change_5d": -0.075,
+   "change_20d": 0.255,
    "spark": [
     3.757,
     3.775,
@@ -726,7 +727,7 @@
     4.065,
     4.03,
     3.982,
-    3.982
+    3.995
    ],
    "as_of": "2026-10-02",
    "is_proxy": false,
@@ -775,13 +776,13 @@
    "name": "米国 10年",
    "ticker": "^TNX",
    "category": "rates",
-   "close": 5.209,
-   "change": -0.028,
-   "change_pct": -0.53,
-   "change_5d_pct": 0.48,
-   "change_20d_pct": 9.39,
-   "change_5d": 0.025,
-   "change_20d": 0.447,
+   "close": 5.279,
+   "change": 0.042,
+   "change_pct": 0.8,
+   "change_5d_pct": 1.83,
+   "change_20d_pct": 10.86,
+   "change_5d": 0.095,
+   "change_20d": 0.517,
    "spark": [
     4.784,
     4.806,
@@ -802,7 +803,7 @@
     5.255,
     5.293,
     5.237,
-    5.209
+    5.279
    ],
    "as_of": "2026-10-02",
    "is_proxy": false,
@@ -813,13 +814,13 @@
    "name": "米国 30年",
    "ticker": "^TYX",
    "category": "rates",
-   "close": 5.566,
-   "change": -0.037,
-   "change_pct": -0.66,
-   "change_5d_pct": 1.13,
-   "change_20d_pct": 6.16,
-   "change_5d": 0.062,
-   "change_20d": 0.323,
+   "close": 5.631,
+   "change": 0.028,
+   "change_pct": 0.5,
+   "change_5d_pct": 2.31,
+   "change_20d_pct": 7.4,
+   "change_5d": 0.127,
+   "change_20d": 0.388,
    "spark": [
     5.246,
     5.264,
@@ -840,7 +841,7 @@
     5.594,
     5.638,
     5.603,
-    5.566
+    5.631
    ],
    "as_of": "2026-10-02",
    "is_proxy": false,
@@ -851,13 +852,13 @@
    "name": "WTI原油",
    "ticker": "CL=F",
    "category": "commodity",
-   "close": 89.21,
-   "change": -3.66,
-   "change_pct": -3.94,
-   "change_5d_pct": -3.46,
-   "change_20d_pct": -2.29,
-   "change_5d": -3.2,
-   "change_20d": -2.09,
+   "close": 91.69,
+   "change": -1.18,
+   "change_pct": -1.27,
+   "change_5d_pct": -0.78,
+   "change_20d_pct": 0.43,
+   "change_5d": -0.72,
+   "change_20d": 0.39,
    "spark": [
     91.48,
     93.03,
@@ -878,7 +879,7 @@
     89.38,
     90.42,
     92.87,
-    89.21
+    91.69
    ],
    "as_of": "2026-10-02",
    "is_proxy": false,
@@ -889,13 +890,13 @@
    "name": "金",
    "ticker": "GC=F",
    "category": "commodity",
-   "close": 4205.8,
-   "change": 3.5,
-   "change_pct": 0.08,
-   "change_5d_pct": -2.67,
-   "change_20d_pct": -7.36,
-   "change_5d": -115.4004,
-   "change_20d": -334.1001,
+   "close": 4168.2,
+   "change": -34.0996,
+   "change_pct": -0.81,
+   "change_5d_pct": -3.54,
+   "change_20d_pct": -8.19,
+   "change_5d": -153.0,
+   "change_20d": -371.6997,
    "spark": [
     4476.6001,
     4439.0,
@@ -916,7 +917,7 @@
     4179.7002,
     4186.7002,
     4202.2998,
-    4205.7998
+    4168.2002
    ],
    "as_of": "2026-10-02",
    "is_proxy": false,
@@ -4437,7 +4438,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 9
+   "news_count": 8
   },
   {
    "key": "ipo",
@@ -5942,7 +5943,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 0
+   "news_count": 1
   },
   {
    "key": "next_gen_battery",
@@ -7669,7 +7670,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 1
+   "news_count": 2
   },
   {
    "key": "mlcc",
@@ -8106,7 +8107,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 12
+   "news_count": 10
   },
   {
    "key": "inbound",
@@ -9802,16 +9803,6 @@
    ]
   },
   {
-   "title": "世界で金利が複合上昇 AI投資で景気拡大、フランス起点の国債売り",
-   "url": "https://www.nikkei.com/article/DGXZQOUB018B70R01C26A0000000/",
-   "source": "日経速報",
-   "published_at": "2026-10-02T13:38:17Z",
-   "tags": [
-    "ai_datacenter",
-    "banks"
-   ]
-  },
-  {
    "title": "東北地銀再編、クスリのアオキ好決算、ワークマン月次で大幅安/日経平均反落【今日の注目株＆日本株市場見通し】「デイリーZAi」10月2日号（ダイヤモンド・ザイ）",
    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1lTkZnLVRzLWdmSk1RRk5Xc3ZacS1tbGEwclZYVkVIczF5dWwwdE5NNUswQ0RjZXFwWUd4Nm1qUTM5X3d5S1d2cmxWeFg0RGgxbE5NcW1sZXFYSW90Y1Q4akllZXlPTXg4X21yVUdlOGFjY0pZRzlXRmhtN2YxUVU?oc=5",
    "source": "Yahoo!ニュース",
@@ -9833,7 +9824,7 @@
   {
    "title": "日経平均終値647円安、投資家「リスクオン」なりきれず 金利高が重荷",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBCdlVzVzJlNHFHVHpDcEpTMDhfODE3aGtPVEFpc0NIbjVJeDlaQTV4NDZ2ODR4SlBXdURCcW5oNVN2S052Qlo3c3o2N0kyNmt2Q216Y3RIQXJ2ZHp5WjRmajhhR2FhS3FfUHd0VA?oc=5",
-   "source": "日本経済新聞",
+   "source": "nikkei.com",
    "published_at": "2026-10-02T02:58:38Z",
    "tags": [
     "banks"
@@ -9881,10 +9872,20 @@
   {
    "title": "〈日経平均〉電線株が下支え",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE91cnA3V1FsRTdpWGpTUmZmUTlXVk14RHVkYUg5cFYyU0FFZ1V3YVdQM2dTSmlWbGQwSEhPeWoxVVRWQTNoblNjU0xkTnoxOVUxeGRoVi16SUdpSE92ZkdJMjhhWmJ0d3NXQ0VCWA?oc=5",
-   "source": "日本経済新聞",
+   "source": "nikkei.com",
    "published_at": "2026-10-02T05:30:00Z",
    "tags": [
     "optical_cable"
+   ]
+  },
+  {
+   "title": "【速報】清水建設、和歌山にロケット試験場整備へ",
+   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1KODVkX0FXcF9vTXNqT3hYZEhMVjNLWVFZTVVlZDNFTTUyc3Z0dXRzaUVpcnhvQ2ZCck9fN3NFTmtZeFZZcGlHV1NRQQ?oc=5",
+   "source": "47NEWS",
+   "published_at": "2026-10-02T05:27:34Z",
+   "tags": [
+    "construction",
+    "space"
    ]
   },
   {
@@ -9909,7 +9910,7 @@
   {
    "title": "OpenAIはテストの監視が不十分であるという社内警告を繰り返し無視して追加のセキュリティ対策をせず迅速なリリースを優先していた",
    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5jLVhBYTlYMVNNZkJNQXRoSDNWTW9vbVlCZ3Z2Rm9nUDJUSVJKaG1rcGtpUlJOSXZfUExvS0xybm9MWnNNeW5hTG9RbFVGMHNfcnlFWW1YUTZmUndzcDBRUlpVQU14MHRrNG4w?oc=5",
-   "source": "gigazine.net",
+   "source": "GIGAZINE",
    "published_at": "2026-10-01T14:00:00Z",
    "tags": [
     "ai_datacenter",
@@ -9937,10 +9938,19 @@
    ]
   },
   {
-   "title": "【市場反応】米9月雇用統計はネガティブサプライズで10月追加利上げ観測後退、ドル売り｜FX・為替ニュース",
-   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBLV0dNTHNYOXkxLXlVanhxQkNRRFFuNUlOLUgxcllXZEFoY2xyUEg1OWFiSlB2NGoyak1PSHo1Vi16T1R3WkJPZnBYNENTOFRISkE?oc=5",
-   "source": "ザイFX！",
-   "published_at": "2026-10-02T13:15:00Z",
+   "title": "米長期金利の振れ幅大きく 5.2%台で推移、雇用下振れも上昇やまず",
+   "url": "https://www.nikkei.com/article/DGXZQOGN02BW50S6A001C2000000/",
+   "source": "日経速報",
+   "published_at": "2026-10-02T16:38:31Z",
+   "tags": [
+    "banks"
+   ]
+  },
+  {
+   "title": "アメリカ就業者数 市場予想大幅に下回る FRB利上げ観測が後退",
+   "url": "https://news.web.nhk/newsweb/na/nd-20261003de53999",
+   "source": "NHK経済",
+   "published_at": "2026-10-02T16:19:01Z",
    "tags": [
     "banks"
    ]
@@ -9949,7 +9959,7 @@
    "title": "GX 半導体関連-日本株式【2644】：株価・株式情報（夜間PTS含む）",
    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9QdDNtZ2U2X3c4VW9lMVBvRlg2UkljLWl6UER4cWVGYTU5S1piOWhTNEVwakp6bHlLZlZQQjhkZjEyUHNPQjVLX3dWNUtfdmhQTUE?oc=5",
    "source": "Yahoo!ファイナンス",
-   "published_at": "2026-10-02T12:46:08Z",
+   "published_at": "2026-10-02T15:50:44Z",
    "tags": [
     "semiconductor"
    ]
@@ -9965,7 +9975,7 @@
   },
   {
    "title": "日経平均は3日ぶり反落、利益確定売り 原油高も重し",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE0wc25YYWFfXzBLZ0pFQWM3RFV1d2ZpRGp0VTkwaEVuRkdheDduZWp4U2NqTVpOZWdSSHFENUtxOTZfbmt4b0VibHhCQk5GaXBzNHFTVG90WTdXQQ?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE94R0pNdDNHaGRXXzZ5b1RKZE9IeFhPTEpSTlhzc1JHM3dIWjU1Wi1MNW83cUI1QWZYUnhHZkE1U1E3SDNkY0RWWmlGd1MwQVFhYnFzVUpSekh0MmZQMElyQ3lmQVhXUVE?oc=5",
    "source": "ニューズウィーク日本版",
    "published_at": "2026-10-02T07:26:00Z",
    "tags": [
@@ -9973,25 +9983,39 @@
    ]
   },
   {
-   "title": "東証14時 日経平均は600円安 米雇用統計控え様子見強まる",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1PREhfZzB0alhKM3lRd3h1TWdiZEZsc0hrbWFmZWNTbFJ3a1hrVmh0TlBwYlVhaVBhYW9rWjJKOEwzX0xLOWw1SzU3aFFDbkM4T25CUWJxMkdaVUJoNkU0X2VwSnVNSzFBWnpOZw?oc=5",
-   "source": "日本経済新聞",
-   "published_at": "2026-10-02T05:15:41Z",
-   "tags": []
-  },
-  {
-   "title": "［動画］日経平均急伸で始まった10月相場とAI相場の賞味期限 バブル崩壊の目安「25％ルール」から探る持続性",
+   "title": "［動画］日経平均急伸で始まった10月相場とAI相場の賞味期限 バブル崩壊の目安「25％ルール」から探る持続性 - media.rakuten-sec.net",
    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE55cHZXQThUUDdRODN3bmVjOTlZU05NY2xkQ20zZGUzRnZNT3czS3ZBQVVFZkl5blY0WTJJLTBmZWtkY0I2M0g5eU5MT1MxUGxPa1FuTlMzcGZVdw?oc=5",
-   "source": "トウシル",
+   "source": "Google News 株式",
    "published_at": "2026-10-02T05:15:00Z",
    "tags": [
     "ai_datacenter"
    ]
   },
   {
+   "title": "14時の日経平均は633円安の6万8323円、ＳＢＧが325.24円押し下げ(株探ニュース)",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNSERzSERkc1BFV1g2anBiel9YdFhIbTZoWXpZYlEzX0ROeXBEYnN6QlRrRzZySWhmcXJKVmRZV2FmeUVOLWFKVnBxYUZuSGJTaDUyS0xGZ0t5bmtvRmYyR19ueTF5ekxLOGFQR0FIRXJOVVA3S1RobzlhQkU0ekFHNWN5U2x0aUk?oc=5",
+   "source": "Yahoo!ファイナンス",
+   "published_at": "2026-10-02T05:01:38Z",
+   "tags": []
+  },
+  {
+   "title": "13時の日経平均は666円安の6万8290円、ＳＢＧが270.22円押し下げ(株探ニュース)",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQUV9QWjRrX2wtQm56dHJGRFZzUmhvX2tOQnpyVEpPUHdxc0x4LU11bUhVTHhqYjNTU3hnQmxoblNJLTN5cEpNbHp0M2hHcWs3SFhCTUpWRS1rakFxWS1ucWEyX1Z0VFd5M29ORHBtX0ktVHNLZ0tKeklFazR4SzRFU1dkRFdxUk0?oc=5",
+   "source": "Yahoo!ファイナンス",
+   "published_at": "2026-10-02T04:01:40Z",
+   "tags": []
+  },
+  {
+   "title": "11時の日経平均は557円安の6万8399円、ＳＢＧが315.53円押し下げ(株探ニュース)",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQbUdvMGU3OXhVcmVvR09OeXZlRkx2dGxPV0c0WV9DbV9rbUhBOEYxOWptOWJSOWVhUTBJWEluM0pHcjNqNjFfWGYta1Q2Y1ljdEdSOUs0elMwcEVaQUctYTBRb3NDOEFkUjdoTzdxb0hHS3prT3ktUDItSUFsWm5NTzdVaUV3bzg?oc=5",
+   "source": "Yahoo!ファイナンス",
+   "published_at": "2026-10-02T02:01:43Z",
+   "tags": []
+  },
+  {
    "title": "ソフトバンクG、株価一時4%安 OpenAIへの追加出資で材料出尽くし",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBNNGRuVi11TmlPVTNUNVdPb0FZRGVhMEgybjl6WXd2VjJxbi1XeXpRc2h2S0hLa2lTS25GZGhsa3Nfb0xWelhWREJmX1VtN3BvUTZPcWRRVEk4MXEwM3k1bTJjd0pzQTY4Q3FuTA?oc=5",
-   "source": "日本経済新聞",
+   "source": "nikkei.com",
    "published_at": "2026-10-02T01:26:40Z",
    "tags": [
     "ai_datacenter"
@@ -10000,7 +10024,7 @@
   {
    "title": "日経平均株価が3日ぶり反落 終値は647円安の6万8309円",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB3cHU5U3JldkgzMDdhZkpndmxLVEF4czdmMm5obGdQZHcyb000TldBdm15WGtvUm90NmF5TmtrNHlrMEY3aEotTkZFYW9KZXBZVzJic3VJaEIxcDRCZ0R1V2h1dkFWV3BiY09OcA?oc=5",
-   "source": "日本経済新聞",
+   "source": "nikkei.com",
    "published_at": "2026-10-02T00:03:57Z",
    "tags": []
   },
@@ -10014,37 +10038,12 @@
    ]
   },
   {
-   "title": "日経平均急伸始まった10月相場とAI相場の賞味期限 バブル崩壊の目安「25％ルール」から探る持続性（土信田雅之）",
+   "title": "日経平均急伸始まった10月相場とAI相場の賞味期限 バブル崩壊の目安「25％ルール」から探る持続性（土信田雅之） - media.rakuten-sec.net",
    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBuaG04bkxDeWZMV05maU1Cb2R4d3ZMcS1fdy1XekdJdEx0UTBUQV91ZEtfWmI2UzFXR25ObzdSV0xHM0xRNXJSemhjX3FFNXNneEZBMGhGbmJzUQ?oc=5",
-   "source": "トウシル",
+   "source": "Google News 株式",
    "published_at": "2026-10-01T23:00:00Z",
    "tags": [
     "ai_datacenter"
-   ]
-  },
-  {
-   "title": "シカゴ日本株先物概況・1日 日経平均先物は1405円高の6万8520円",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE12VHlxOXJ2V29peTh0OUg5V0w2TWdsOGhWckx2QU1JVkpxZDVoQkpxaGRfVzRDYTJKeW9XQXBEZFdvdXZleE9Vb1pUUUhJQVBiWi1Hc1JLbTJEdlkzdTcxa0REZHd2eVNscTIxTA?oc=5",
-   "source": "日本経済新聞",
-   "published_at": "2026-10-01T21:51:53Z",
-   "tags": []
-  },
-  {
-   "title": "円相場 1円以上値下がり アメリカの長期金利上昇など受け",
-   "url": "https://news.web.nhk/newsweb/na/nd-20261001de53695",
-   "source": "NHK経済",
-   "published_at": "2026-10-01T10:11:57Z",
-   "tags": [
-    "banks"
-   ]
-  },
-  {
-   "title": "日銀短観 大企業の製造業の景気判断 6期連続で改善",
-   "url": "https://news.web.nhk/newsweb/na/nd-20261001de53527",
-   "source": "NHK経済",
-   "published_at": "2026-10-01T09:28:28Z",
-   "tags": [
-    "banks"
    ]
   }
  ],
@@ -10475,8 +10474,8 @@
     "決算"
    ],
    "tone": "neutral",
-   "move_pct": -6.25,
-   "move_basis": "day",
+   "move_pct": null,
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10491,8 +10490,8 @@
     "増資・希薄化"
    ],
    "tone": "neg",
-   "move_pct": -3.76,
-   "move_basis": "day",
+   "move_pct": null,
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10507,8 +10506,8 @@
     "増資・希薄化"
    ],
    "tone": "neg",
-   "move_pct": 5.93,
-   "move_basis": "day",
+   "move_pct": null,
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10523,8 +10522,8 @@
     "提携・買収"
    ],
    "tone": "neutral",
-   "move_pct": 5.93,
-   "move_basis": "day",
+   "move_pct": null,
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10539,8 +10538,8 @@
     "増資・希薄化"
    ],
    "tone": "neg",
-   "move_pct": 0.54,
-   "move_basis": "day",
+   "move_pct": null,
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10555,8 +10554,8 @@
     "増資・希薄化"
    ],
    "tone": "neg",
-   "move_pct": -3.27,
-   "move_basis": "day",
+   "move_pct": null,
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10587,8 +10586,8 @@
     "提携・買収"
    ],
    "tone": "neutral",
-   "move_pct": -3.45,
-   "move_basis": "day",
+   "move_pct": null,
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10603,8 +10602,8 @@
     "増資・希薄化"
    ],
    "tone": "neg",
-   "move_pct": -2.0,
-   "move_basis": "day",
+   "move_pct": null,
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10619,8 +10618,8 @@
     "増資・希薄化"
    ],
    "tone": "neg",
-   "move_pct": -1.57,
-   "move_basis": "day",
+   "move_pct": null,
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10635,8 +10634,8 @@
     "増資・希薄化"
    ],
    "tone": "neg",
-   "move_pct": 0.0,
-   "move_basis": "day",
+   "move_pct": null,
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10667,8 +10666,8 @@
     "増資・希薄化"
    ],
    "tone": "neg",
-   "move_pct": 1.41,
-   "move_basis": "day",
+   "move_pct": null,
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10683,8 +10682,8 @@
     "増資・希薄化"
    ],
    "tone": "neg",
-   "move_pct": -2.78,
-   "move_basis": "day",
+   "move_pct": null,
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -11149,10 +11148,10 @@
     "増資・希薄化"
    ],
    "tone": "neg",
-   "move_pct": 0.41,
+   "move_pct": 0.27,
    "move_basis": "pts",
-   "pts_price": 73.3,
-   "pts_time": "2026-10-02T23:56:00+09:00",
+   "pts_price": 73.2,
+   "pts_time": "2026-10-02T23:58:00+09:00",
    "limit": null
   },
   {
