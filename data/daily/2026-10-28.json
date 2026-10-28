@@ -1,7 +1,7 @@
 {
  "schema_version": 4,
  "date": "2026-10-28",
- "generated_at": "2026-10-28T15:21:45.314721Z",
+ "generated_at": "2026-10-28T18:48:35.222547Z",
  "sources": [
   "yfinance",
   "JPX TOPIX構成銘柄ウエイト（2026-08-31時点）",
@@ -168,13 +168,13 @@
    "name": "日経平均先物(CME)",
    "ticker": "NIY=F",
    "category": "futures_vol",
-   "close": 64650.0,
-   "change": 315.0,
-   "change_pct": 0.49,
-   "change_5d_pct": -0.28,
-   "change_20d_pct": -3.23,
-   "change_5d": -180.0,
-   "change_20d": -2160.0,
+   "close": 64770.0,
+   "change": 435.0,
+   "change_pct": 0.68,
+   "change_5d_pct": -0.09,
+   "change_20d_pct": -3.05,
+   "change_5d": -60.0,
+   "change_20d": -2040.0,
    "spark": [
     68270.0,
     69855.0,
@@ -195,7 +195,7 @@
     62540.0,
     62705.0,
     64335.0,
-    64650.0
+    64770.0
    ],
    "as_of": "2026-10-28",
    "is_proxy": false,
@@ -244,13 +244,13 @@
    "name": "ドル円",
    "ticker": "USDJPY=X",
    "category": "fx",
-   "close": 158.2,
-   "change": 0.676,
-   "change_pct": 0.43,
-   "change_5d_pct": -0.04,
-   "change_20d_pct": 0.51,
-   "change_5d": -0.064,
-   "change_20d": 0.8,
+   "close": 157.87,
+   "change": 0.345,
+   "change_pct": 0.22,
+   "change_5d_pct": -0.25,
+   "change_20d_pct": 0.3,
+   "change_5d": -0.395,
+   "change_20d": 0.469,
    "spark": [
     157.558,
     157.927,
@@ -271,7 +271,7 @@
     156.494,
     156.83,
     157.528,
-    158.204
+    157.873
    ],
    "as_of": "2026-10-28",
    "is_proxy": false,
@@ -282,13 +282,13 @@
    "name": "ユーロ円",
    "ticker": "EURJPY=X",
    "category": "fx",
-   "close": 176.14,
-   "change": 0.124,
-   "change_pct": 0.07,
-   "change_5d_pct": -0.86,
-   "change_20d_pct": -1.33,
-   "change_5d": -1.533,
-   "change_20d": -2.369,
+   "close": 176.3,
+   "change": 0.282,
+   "change_pct": 0.16,
+   "change_5d_pct": -0.77,
+   "change_20d_pct": -1.24,
+   "change_5d": -1.375,
+   "change_20d": -2.211,
    "spark": [
     178.464,
     177.625,
@@ -309,7 +309,7 @@
     175.597,
     175.917,
     176.017,
-    176.141
+    176.299
    ],
    "as_of": "2026-10-28",
    "is_proxy": false,
@@ -320,13 +320,13 @@
    "name": "S&P500",
    "ticker": "^GSPC",
    "category": "overseas",
-   "close": 7739.11,
-   "change": 16.5098,
-   "change_pct": 0.21,
-   "change_5d_pct": -0.23,
-   "change_20d_pct": 1.14,
-   "change_5d": -18.0601,
-   "change_20d": 87.5698,
+   "close": 7749.33,
+   "change": 26.73,
+   "change_pct": 0.35,
+   "change_5d_pct": -0.1,
+   "change_20d_pct": 1.28,
+   "change_5d": -7.8398,
+   "change_20d": 97.79,
    "spark": [
     7666.4502,
     7722.7202,
@@ -347,7 +347,7 @@
     7623.6802,
     7676.77,
     7722.6001,
-    7739.1099
+    7749.3301
    ],
    "as_of": "2026-10-28",
    "is_proxy": false,
@@ -358,13 +358,13 @@
    "name": "NASDAQ",
    "ticker": "^IXIC",
    "category": "overseas",
-   "close": 26479.02,
-   "change": 1.2109,
-   "change_pct": 0.0,
-   "change_5d_pct": -0.84,
-   "change_20d_pct": -1.42,
-   "change_5d": -223.8379,
-   "change_20d": -382.0391,
+   "close": 26540.99,
+   "change": 63.1758,
+   "change_pct": 0.24,
+   "change_5d_pct": -0.61,
+   "change_20d_pct": -1.19,
+   "change_5d": -161.873,
+   "change_20d": -320.0742,
    "spark": [
     26871.5996,
     27190.8594,
@@ -385,7 +385,7 @@
     25955.3398,
     26169.3809,
     26477.8105,
-    26479.0215
+    26540.9863
    ],
    "as_of": "2026-10-28",
    "is_proxy": false,
@@ -396,13 +396,13 @@
    "name": "NYダウ",
    "ticker": "^DJI",
    "category": "overseas",
-   "close": 52536.59,
-   "change": 159.0195,
-   "change_pct": 0.3,
-   "change_5d_pct": -0.6,
-   "change_20d_pct": 3.2,
-   "change_5d": -319.5,
-   "change_20d": 1630.5391,
+   "close": 52541.82,
+   "change": 164.25,
+   "change_pct": 0.31,
+   "change_5d_pct": -0.59,
+   "change_20d_pct": 3.21,
+   "change_5d": -314.2695,
+   "change_20d": 1635.7695,
    "spark": [
     50926.5586,
     51176.9609,
@@ -423,7 +423,7 @@
     52215.1602,
     52361.5781,
     52377.5703,
-    52536.5898
+    52541.8203
    ],
    "as_of": "2026-10-28",
    "is_proxy": false,
@@ -434,13 +434,13 @@
    "name": "SOX指数",
    "ticker": "^SOX",
    "category": "overseas",
-   "close": 11588.7,
-   "change": 106.2031,
-   "change_pct": 0.92,
-   "change_5d_pct": 0.72,
-   "change_20d_pct": -8.23,
-   "change_5d": 83.1436,
-   "change_20d": -1039.917,
+   "close": 11686.31,
+   "change": 203.8105,
+   "change_pct": 1.77,
+   "change_5d_pct": 1.57,
+   "change_20d_pct": -7.46,
+   "change_5d": 180.751,
+   "change_20d": -942.3096,
    "spark": [
     12829.0,
     13136.6699,
@@ -461,7 +461,7 @@
     10779.46,
     11083.4697,
     11482.5,
-    11588.7031
+    11686.3105
    ],
    "as_of": "2026-10-28",
    "is_proxy": false,
@@ -472,13 +472,13 @@
    "name": "VIX",
    "ticker": "^VIX",
    "category": "overseas",
-   "close": 17.27,
-   "change": -0.25,
-   "change_pct": -1.43,
-   "change_5d_pct": 3.54,
-   "change_20d_pct": 5.69,
-   "change_5d": 0.59,
-   "change_20d": 0.93,
+   "close": 17.1,
+   "change": -0.42,
+   "change_pct": -2.4,
+   "change_5d_pct": 2.52,
+   "change_20d_pct": 4.65,
+   "change_5d": 0.42,
+   "change_20d": 0.76,
    "spark": [
     16.39,
     15.31,
@@ -499,7 +499,7 @@
     19.45,
     18.39,
     17.52,
-    17.27
+    17.1
    ],
    "as_of": "2026-10-28",
    "is_proxy": false,
@@ -700,13 +700,13 @@
    "name": "米国 3ヶ月",
    "ticker": "^IRX",
    "category": "rates",
-   "close": 4.028,
-   "change": -0.012,
-   "change_pct": -0.3,
-   "change_5d_pct": -0.86,
-   "change_20d_pct": -0.05,
-   "change_5d": -0.035,
-   "change_20d": -0.002,
+   "close": 4.005,
+   "change": -0.035,
+   "change_pct": -0.87,
+   "change_5d_pct": -1.43,
+   "change_20d_pct": -0.62,
+   "change_5d": -0.058,
+   "change_20d": -0.025,
    "spark": [
     3.982,
     3.993,
@@ -727,7 +727,7 @@
     4.032,
     4.025,
     4.04,
-    4.028
+    4.005
    ],
    "as_of": "2026-10-28",
    "is_proxy": false,
@@ -776,13 +776,13 @@
    "name": "米国 10年",
    "ticker": "^TNX",
    "category": "rates",
-   "close": 5.032,
-   "change": 0.039,
-   "change_pct": 0.78,
-   "change_5d_pct": -2.22,
-   "change_20d_pct": -4.93,
-   "change_5d": -0.114,
-   "change_20d": -0.261,
+   "close": 5.028,
+   "change": 0.035,
+   "change_pct": 0.7,
+   "change_5d_pct": -2.29,
+   "change_20d_pct": -5.01,
+   "change_5d": -0.118,
+   "change_20d": -0.265,
    "spark": [
     5.237,
     5.277,
@@ -803,7 +803,7 @@
     4.988,
     4.986,
     4.993,
-    5.032
+    5.028
    ],
    "as_of": "2026-10-28",
    "is_proxy": false,
@@ -814,13 +814,13 @@
    "name": "米国 30年",
    "ticker": "^TYX",
    "category": "rates",
-   "close": 5.331,
-   "change": 0.026,
-   "change_pct": 0.49,
-   "change_5d_pct": -1.99,
-   "change_20d_pct": -5.45,
-   "change_5d": -0.108,
-   "change_20d": -0.307,
+   "close": 5.326,
+   "change": 0.021,
+   "change_pct": 0.4,
+   "change_5d_pct": -2.08,
+   "change_20d_pct": -5.53,
+   "change_5d": -0.113,
+   "change_20d": -0.312,
    "spark": [
     5.603,
     5.63,
@@ -841,7 +841,7 @@
     5.315,
     5.301,
     5.305,
-    5.331
+    5.326
    ],
    "as_of": "2026-10-28",
    "is_proxy": false,
@@ -852,13 +852,13 @@
    "name": "WTI原油",
    "ticker": "CL=F",
    "category": "commodity",
-   "close": 102.45,
-   "change": 2.55,
-   "change_pct": 2.55,
-   "change_5d_pct": 5.46,
-   "change_20d_pct": 13.3,
-   "change_5d": 5.3,
-   "change_20d": 12.03,
+   "close": 102.65,
+   "change": 2.75,
+   "change_pct": 2.75,
+   "change_5d_pct": 5.66,
+   "change_20d_pct": 13.53,
+   "change_5d": 5.5,
+   "change_20d": 12.23,
    "spark": [
     92.87,
     91.11,
@@ -879,7 +879,7 @@
     103.27,
     101.76,
     99.9,
-    102.45
+    102.65
    ],
    "as_of": "2026-10-28",
    "is_proxy": false,
@@ -890,13 +890,13 @@
    "name": "金",
    "ticker": "GC=F",
    "category": "commodity",
-   "close": 4057.3,
-   "change": -17.3,
-   "change_pct": -0.42,
-   "change_5d_pct": -2.23,
-   "change_20d_pct": -3.09,
-   "change_5d": -92.7,
-   "change_20d": -129.4001,
+   "close": 4065.0,
+   "change": -9.6001,
+   "change_pct": -0.24,
+   "change_5d_pct": -2.05,
+   "change_20d_pct": -2.91,
+   "change_5d": -85.0,
+   "change_20d": -121.7002,
    "spark": [
     4202.2998,
     4162.2998,
@@ -917,7 +917,7 @@
     4007.8999,
     4038.3999,
     4074.6001,
-    4057.3
+    4065.0
    ],
    "as_of": "2026-10-28",
    "is_proxy": false,
@@ -1039,10 +1039,10 @@
   },
   {
    "name": "電気機器",
-   "change_pct": 2.05,
-   "median_pct": 1.13,
-   "advancers": 82,
-   "decliners": 45,
+   "change_pct": 1.97,
+   "median_pct": 1.01,
+   "advancers": 81,
+   "decliners": 46,
    "count": 128,
    "topix_weight_pct": 20.62,
    "leaders": [
@@ -1137,14 +1137,14 @@
      ]
     },
     {
-     "code": "6701",
-     "name": "日本電気",
+     "code": "6787",
+     "name": "メイコー",
      "sector33": "電気機器",
-     "close": 5292.0,
-     "change_pct": -1.65,
-     "turnover": 38722000000.0,
-     "volume": 7317000.0,
-     "volume_ratio": 1.19,
+     "close": 10150.0,
+     "change_pct": -47.84,
+     "turnover": 10454000000.0,
+     "volume": 1030000.0,
+     "volume_ratio": 1.53,
      "disclosures": []
     }
    ]
@@ -2093,8 +2093,8 @@
   },
   {
    "name": "サービス業",
-   "change_pct": -0.5,
-   "median_pct": -1.5,
+   "change_pct": -0.54,
+   "median_pct": -1.51,
    "advancers": 16,
    "decliners": 135,
    "count": 154,
@@ -2844,11 +2844,11 @@
   },
   {
    "name": "電気・ガス業",
-   "change_pct": -1.49,
-   "median_pct": -1.37,
+   "change_pct": -1.47,
+   "median_pct": -1.35,
    "advancers": 1,
-   "decliners": 21,
-   "count": 22,
+   "decliners": 22,
+   "count": 23,
    "topix_weight_pct": 1.24,
    "leaders": [
     {
@@ -4558,7 +4558,7 @@
      ]
     }
    ],
-   "news_count": 11
+   "news_count": 13
   },
   {
    "key": "semi_materials",
@@ -5373,7 +5373,7 @@
      ]
     }
    ],
-   "news_count": 0
+   "news_count": 1
   },
   {
    "key": "electronic_parts",
@@ -6046,7 +6046,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 6
+   "news_count": 7
   },
   {
    "key": "space",
@@ -6155,7 +6155,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 0
+   "news_count": 1
   },
   {
    "key": "dc_power_cooling",
@@ -7174,137 +7174,6 @@
    "news_count": 2
   },
   {
-   "key": "nuclear",
-   "name": "原発",
-   "change_pct": 0.33,
-   "advancers_ratio": 0.64,
-   "count": 11,
-   "members": [
-    {
-     "code": "6330",
-     "name": "東洋エンジ",
-     "sector33": "建設業",
-     "close": 2343.0,
-     "change_pct": 2.76,
-     "turnover": 5391000000.0,
-     "volume": 2301000.0,
-     "volume_ratio": 0.85,
-     "disclosures": []
-    },
-    {
-     "code": "5631",
-     "name": "日本製鋼所",
-     "sector33": "機械",
-     "close": 6213.0,
-     "change_pct": 1.77,
-     "turnover": 4652000000.0,
-     "volume": 748700.0,
-     "volume_ratio": 0.9,
-     "disclosures": []
-    },
-    {
-     "code": "7711",
-     "name": "助川電気工業",
-     "sector33": null,
-     "close": 4460.0,
-     "change_pct": 1.36,
-     "turnover": 99000000.0,
-     "volume": 22100.0,
-     "volume_ratio": 0.39,
-     "disclosures": []
-    },
-    {
-     "code": "6378",
-     "name": "木村化工機",
-     "sector33": "機械",
-     "close": 1133.0,
-     "change_pct": 0.71,
-     "turnover": 92000000.0,
-     "volume": 81300.0,
-     "volume_ratio": 0.93,
-     "disclosures": []
-    },
-    {
-     "code": "7011",
-     "name": "三菱重工",
-     "sector33": "機械",
-     "close": 3550.0,
-     "change_pct": 0.65,
-     "turnover": 45808000000.0,
-     "volume": 12903800.0,
-     "volume_ratio": 0.86,
-     "disclosures": []
-    },
-    {
-     "code": "1963",
-     "name": "日揮HD",
-     "sector33": "建設業",
-     "close": 2147.5,
-     "change_pct": 0.47,
-     "turnover": 3110000000.0,
-     "volume": 1448400.0,
-     "volume_ratio": 1.1,
-     "disclosures": []
-    },
-    {
-     "code": "6501",
-     "name": "日立",
-     "sector33": "電気機器",
-     "close": 5620.0,
-     "change_pct": 0.09,
-     "turnover": 59056000000.0,
-     "volume": 10508100.0,
-     "volume_ratio": 0.95,
-     "disclosures": []
-    },
-    {
-     "code": "6366",
-     "name": "千代田化工",
-     "sector33": null,
-     "close": 611.0,
-     "change_pct": -0.16,
-     "turnover": 1321000000.0,
-     "volume": 2161800.0,
-     "volume_ratio": 0.96,
-     "disclosures": []
-    },
-    {
-     "code": "7013",
-     "name": "IHI",
-     "sector33": "機械",
-     "close": 2384.5,
-     "change_pct": -0.71,
-     "turnover": 35696000000.0,
-     "volume": 14970100.0,
-     "volume_ratio": 1.33,
-     "disclosures": []
-    },
-    {
-     "code": "9503",
-     "name": "関西電力",
-     "sector33": "電気・ガス業",
-     "close": 2708.0,
-     "change_pct": -1.35,
-     "turnover": 7519000000.0,
-     "volume": 2776500.0,
-     "volume_ratio": 0.77,
-     "disclosures": []
-    },
-    {
-     "code": "9501",
-     "name": "東京電力HD",
-     "sector33": "電気・ガス業",
-     "close": 487.2,
-     "change_pct": -1.95,
-     "turnover": 11928000000.0,
-     "volume": 24482800.0,
-     "volume_ratio": 0.82,
-     "disclosures": []
-    }
-   ],
-   "news_count": 0
-  },
-  {
    "key": "shipbuilding",
    "name": "造船",
    "change_pct": 0.29,
@@ -7584,6 +7453,148 @@
    "news_count": 5
   },
   {
+   "key": "nuclear",
+   "name": "原発",
+   "change_pct": 0.2,
+   "advancers_ratio": 0.58,
+   "count": 12,
+   "members": [
+    {
+     "code": "6330",
+     "name": "東洋エンジ",
+     "sector33": "建設業",
+     "close": 2343.0,
+     "change_pct": 2.76,
+     "turnover": 5391000000.0,
+     "volume": 2301000.0,
+     "volume_ratio": 0.85,
+     "disclosures": []
+    },
+    {
+     "code": "5631",
+     "name": "日本製鋼所",
+     "sector33": "機械",
+     "close": 6213.0,
+     "change_pct": 1.77,
+     "turnover": 4652000000.0,
+     "volume": 748700.0,
+     "volume_ratio": 0.9,
+     "disclosures": []
+    },
+    {
+     "code": "7711",
+     "name": "助川電気工業",
+     "sector33": null,
+     "close": 4460.0,
+     "change_pct": 1.36,
+     "turnover": 99000000.0,
+     "volume": 22100.0,
+     "volume_ratio": 0.39,
+     "disclosures": []
+    },
+    {
+     "code": "6378",
+     "name": "木村化工機",
+     "sector33": "機械",
+     "close": 1133.0,
+     "change_pct": 0.71,
+     "turnover": 92000000.0,
+     "volume": 81300.0,
+     "volume_ratio": 0.93,
+     "disclosures": []
+    },
+    {
+     "code": "7011",
+     "name": "三菱重工",
+     "sector33": "機械",
+     "close": 3550.0,
+     "change_pct": 0.65,
+     "turnover": 45808000000.0,
+     "volume": 12903800.0,
+     "volume_ratio": 0.86,
+     "disclosures": []
+    },
+    {
+     "code": "1963",
+     "name": "日揮HD",
+     "sector33": "建設業",
+     "close": 2147.5,
+     "change_pct": 0.47,
+     "turnover": 3110000000.0,
+     "volume": 1448400.0,
+     "volume_ratio": 1.1,
+     "disclosures": []
+    },
+    {
+     "code": "6501",
+     "name": "日立",
+     "sector33": "電気機器",
+     "close": 5620.0,
+     "change_pct": 0.09,
+     "turnover": 59056000000.0,
+     "volume": 10508100.0,
+     "volume_ratio": 0.95,
+     "disclosures": []
+    },
+    {
+     "code": "6366",
+     "name": "千代田化工",
+     "sector33": null,
+     "close": 611.0,
+     "change_pct": -0.16,
+     "turnover": 1321000000.0,
+     "volume": 2161800.0,
+     "volume_ratio": 0.96,
+     "disclosures": []
+    },
+    {
+     "code": "7013",
+     "name": "IHI",
+     "sector33": "機械",
+     "close": 2384.5,
+     "change_pct": -0.71,
+     "turnover": 35696000000.0,
+     "volume": 14970100.0,
+     "volume_ratio": 1.33,
+     "disclosures": []
+    },
+    {
+     "code": "9508",
+     "name": "九州電力",
+     "sector33": "電気・ガス業",
+     "close": 2004.0,
+     "change_pct": -1.23,
+     "turnover": 1778000000.0,
+     "volume": 887300.0,
+     "volume_ratio": 0.55,
+     "disclosures": []
+    },
+    {
+     "code": "9503",
+     "name": "関西電力",
+     "sector33": "電気・ガス業",
+     "close": 2708.0,
+     "change_pct": -1.35,
+     "turnover": 7519000000.0,
+     "volume": 2776500.0,
+     "volume_ratio": 0.77,
+     "disclosures": []
+    },
+    {
+     "code": "9501",
+     "name": "東京電力HD",
+     "sector33": "電気・ガス業",
+     "close": 487.2,
+     "change_pct": -1.95,
+     "turnover": 11928000000.0,
+     "volume": 24482800.0,
+     "volume_ratio": 0.82,
+     "disclosures": []
+    }
+   ],
+   "news_count": 0
+  },
+  {
    "key": "resources",
    "name": "資源・非鉄",
    "change_pct": -0.07,
@@ -7701,7 +7712,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "defense",
@@ -8269,9 +8280,9 @@
   {
    "key": "power_utilities",
    "name": "電力",
-   "change_pct": -1.1,
+   "change_pct": -1.11,
    "advancers_ratio": 0.08,
-   "count": 12,
+   "count": 13,
    "members": [
     {
      "code": "9519",
@@ -8337,6 +8348,17 @@
      "turnover": 1360000000.0,
      "volume": 1252400.0,
      "volume_ratio": 0.69,
+     "disclosures": []
+    },
+    {
+     "code": "9508",
+     "name": "九州電力",
+     "sector33": "電気・ガス業",
+     "close": 2004.0,
+     "change_pct": -1.23,
+     "turnover": 1778000000.0,
+     "volume": 887300.0,
+     "volume_ratio": 0.55,
      "disclosures": []
     },
     {
@@ -8930,7 +8952,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "inbound",
@@ -9406,7 +9428,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 4
+   "news_count": 3
   },
   {
    "key": "game_ent",
@@ -9624,13 +9646,13 @@
   }
  ],
  "breadth": {
-  "advancers": 432,
-  "decliners": 1172,
+  "advancers": 431,
+  "decliners": 1174,
   "unchanged": 28,
-  "total": 1632,
+  "total": 1633,
   "adv_dec_ratio_25d": 89.2,
   "new_highs": 7,
-  "new_lows": 95
+  "new_lows": 96
  },
  "rankings": {
   "gainers": [
@@ -9812,6 +9834,17 @@
    }
   ],
   "losers": [
+   {
+    "code": "6787",
+    "name": "メイコー",
+    "sector33": "電気機器",
+    "close": 10150.0,
+    "change_pct": -47.84,
+    "turnover": 10454000000.0,
+    "volume": 1030000.0,
+    "volume_ratio": 1.53,
+    "disclosures": []
+   },
    {
     "code": "2737",
     "name": "トーメンデバイス",
@@ -10059,17 +10092,6 @@
     "turnover": 5504000000.0,
     "volume": 1252600.0,
     "volume_ratio": 2.02,
-    "disclosures": []
-   },
-   {
-    "code": "2501",
-    "name": "サッポロビール",
-    "sector33": "食料品",
-    "close": 1881.0,
-    "change_pct": -5.24,
-    "turnover": 2480000000.0,
-    "volume": 1318600.0,
-    "volume_ratio": 1.16,
     "disclosures": []
    }
   ],
@@ -10530,6 +10552,17 @@
    ]
   },
   {
+   "title": "中国・譜析光晶、特殊用途のパワー半導体開発 地下深部から宇宙まで",
+   "url": "https://www.nikkei.com/article/DGXZQOUC284R10Y6A021C2000000/",
+   "source": "日経速報",
+   "published_at": "2026-10-28T17:00:00Z",
+   "tags": [
+    "semiconductor",
+    "power_logic_semi",
+    "space"
+   ]
+  },
+  {
    "title": "【↑】日経平均 大引け｜ 続伸、AI・半導体関連が引き続き買われる (10月28日)(株探ニュース)",
    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNeU84OTB4TFJVWVNRM0w1VTdzdTc1OEEwdGlhODY3SmZPc01aSnpta0xVMlZ5MFJxUGRJNmsxSlZJVmVCOGFZR3d0dm04VTBpck5kWXhibzNLYjhFdFFDSFJ5aTh0ZDBuWFYxeFprRVRGTG9Jek1qUUpPb204Ml9SbEZmV3U0aUU?oc=5",
    "source": "Yahoo!ファイナンス",
@@ -10547,6 +10580,16 @@
    "tags": [
     "semiconductor",
     "game_ent"
+   ]
+  },
+  {
+   "title": "【↑】日経平均 大引け｜ 続伸、AI・半導体関連が引き続き買われる (10月28日)",
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0ydWN5azgzWG5DOG1Ra2FnYlMxZ2FlZnAybEpRQUlmb0hfaUJja3V2ZkNvX3NJUkx0Tmo1RjNWbFpDYm9OMlJRMGt4bUlDVDVyTEE?oc=5",
+   "source": "株探",
+   "published_at": "2026-10-28T09:14:48Z",
+   "tags": [
+    "semiconductor",
+    "ai_datacenter"
    ]
   },
   {
@@ -10569,12 +10612,11 @@
    ]
   },
   {
-   "title": "カナダ中銀が3年ぶり利上げ 原油高に波及リスク、追加利上げも示唆",
-   "url": "https://www.nikkei.com/article/DGXZQOGN28BE20Y6A021C2000000/",
-   "source": "日経速報",
-   "published_at": "2026-10-28T13:59:04Z",
+   "title": "FRB 政策金利を据え置き 2会合ぶり インフレへの影響見極めか",
+   "url": "https://news.web.nhk/newsweb/na/nd-20261029de67441",
+   "source": "NHK経済",
+   "published_at": "2026-10-28T18:44:13Z",
    "tags": [
-    "resources",
     "banks"
    ]
   },
@@ -10585,16 +10627,6 @@
    "published_at": "2026-10-28T13:26:46Z",
    "tags": [
     "power_utilities",
-    "cyber_security"
-   ]
-  },
-  {
-   "title": "ソニー生命、不正アクセスで顧客情報38.5万件漏洩 保険契約や住所",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5JOUFaMG5TVWJEenJYSlRzVXcxM3NDanZSWjZpSFRsTXNWekc0QVpBRjEtY1pjQWt2WmdXSmV4dkVWSDNxeWd5WjNuMi1CYklwdkEwYzVncXVnTUFISkNjd25tRDBiWmFYOHNUQw?oc=5",
-   "source": "日本経済新聞",
-   "published_at": "2026-10-28T11:50:37Z",
-   "tags": [
-    "insurance",
     "cyber_security"
    ]
   },
@@ -10644,9 +10676,9 @@
   },
   {
    "title": "日経平均後場1000円高、SK好決算受け韓国株が急騰",
-   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1NcTgxY3NKdDlfT0tLWkpGaGlfNkVkUk5FOVliUk53NV9GNGpjcmdEeDdYcTI2LWRvSzFZN0Y1Yzl5OXlpSUZMZ3ZXWGhNM0tyU2c?oc=5",
-   "source": "株探",
-   "published_at": "2026-10-28T03:42:00Z",
+   "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBpZk5ILWRNeWRnLV9LM0NIbjB6bXZnYjZmMmRXaHlrc2RFNDQ0eUNlTzBlRVYxOGMza1BweEpXSHdCd3lLNGx1MA?oc=5",
+   "source": "みんかぶ FX/為替",
+   "published_at": "2026-10-28T03:33:29Z",
    "tags": []
   },
   {
@@ -10688,15 +10720,6 @@
    ]
   },
   {
-   "title": "ＮＹ市場サマリー（27日）ＦＯＭＣにらみドル小幅高 長短金利差縮小 株は続伸",
-   "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1fUHBVUjFEZU9hS3VDemI4UnF6dElmdExGNlhHT3I0U2VNWlUxcXdVR29FY0ozUThXVmJUR3puQ3R1OWh1RU9pM290NGlXdUZuV0pMRHdWdmRQcmZnclZKTVVESlVwamtJOGItOTJDNG5Md1ZxelRRa21kbE9KQQ?oc=5",
-   "source": "Reuters",
-   "published_at": "2026-10-27T22:07:45Z",
-   "tags": [
-    "banks"
-   ]
-  },
-  {
    "title": "金利上昇で価格下落の投信売却 今年度決算赤字へ JAさが",
    "url": "https://news.web.nhk/newsweb/na/nd-20261027de66647",
    "source": "NHK経済",
@@ -10716,10 +10739,19 @@
    ]
   },
   {
-   "title": "米国の個人破産がコロナ後最高 1〜9月、金利・物価高が家計圧迫",
-   "url": "https://www.nikkei.com/article/DGXZQOGN170260X11C26A0000000/",
+   "title": "迫る日銀の節目 「基調物価」「2%目標」とは？ 注目ワードを読む",
+   "url": "https://www.nikkei.com/article/DGXZQOUB2734Q0X21C26A0000000/",
    "source": "日経速報",
-   "published_at": "2026-10-28T14:07:30Z",
+   "published_at": "2026-10-28T17:00:00Z",
+   "tags": [
+    "banks"
+   ]
+  },
+  {
+   "title": "【ＮＹ為替オープニング】FOMC据え置き予想、12月の利上げの可能性を判断へ",
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE14c3dWbWU3b3ZMN2YxVldQVG41VmhEVWZoa2txRkptSDBTOW5qdzRwMmRtclF1bTJFVEtocXl0QWhWM3B0YWZ3LWdHbmRzSlUzMFE?oc=5",
+   "source": "ザイFX！",
+   "published_at": "2026-10-28T14:18:00Z",
    "tags": [
     "banks"
    ]
@@ -10763,13 +10795,6 @@
    "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBmWXVxeDZuY2pMbjM0aWppbGNham9LZUNINEd6dTJOTTRKdkNSeW1BRWM2OWpoODl2dndYaTRzSTdITktZZEprRUlkWlNQY1NnOUtRNnRCTdIBV0FVX3lxTFBmWXVxeDZuY2pMbjM0aWppbGNham9LZUNINEd6dTJOTTRKdkNSeW1BRWM2OWpoODl2dndYaTRzSTdITktZZEprRUlkWlNQY1NnOUtRNnRCTQ?oc=5",
    "source": "マネクリ",
    "published_at": "2026-10-28T07:22:00Z",
-   "tags": []
-  },
-  {
-   "title": "決算プラス・インパクト銘柄 【東証プライム】引け後 … 信越化、ＭＡＲＵＷＡ、シマノ (10月27日発表分)(株探ニュース)",
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOem9Ja0ZUYi1jSVZhWC1kUW5hYzFzc01UR0MxdWluYkN0ckFYNUVwZHRxNTFZdjBDNmI5cnQxNm5aR2txNmNlUVdLakphWmVoM3ljZWVLQ25YTzhZQzNJMXYzRG5EWENBU3o0QVZmMU1UYVBIRm5WUjZTSlF2TmItUDI3cU1Uam8?oc=5",
-   "source": "Yahoo!ファイナンス",
-   "published_at": "2026-10-28T06:49:05Z",
    "tags": []
   }
  ],
@@ -11430,10 +11455,10 @@
     "決算"
    ],
    "tone": "neutral",
-   "move_pct": -3.9,
+   "move_pct": -2.58,
    "move_basis": "pts",
-   "pts_price": 5401.0,
-   "pts_time": "2026-10-28T23:58:00+09:00",
+   "pts_price": 5475.0,
+   "pts_time": "2026-10-29T01:30:00+09:00",
    "limit": null
   },
   {
@@ -11446,10 +11471,10 @@
     "決算"
    ],
    "tone": "neutral",
-   "move_pct": 6.18,
+   "move_pct": 7.96,
    "move_basis": "pts",
-   "pts_price": 37090.0,
-   "pts_time": "2026-10-29T00:18:00+09:00",
+   "pts_price": 37710.0,
+   "pts_time": "2026-10-29T01:55:00+09:00",
    "limit": null
   },
   {
@@ -11462,10 +11487,10 @@
     "増資・希薄化"
    ],
    "tone": "neg",
-   "move_pct": 6.18,
+   "move_pct": 7.96,
    "move_basis": "pts",
-   "pts_price": 37090.0,
-   "pts_time": "2026-10-29T00:18:00+09:00",
+   "pts_price": 37710.0,
+   "pts_time": "2026-10-29T01:55:00+09:00",
    "limit": null
   },
   {
@@ -11478,10 +11503,10 @@
     "自社株買い"
    ],
    "tone": "pos",
-   "move_pct": 6.18,
+   "move_pct": 7.96,
    "move_basis": "pts",
-   "pts_price": 37090.0,
-   "pts_time": "2026-10-29T00:18:00+09:00",
+   "pts_price": 37710.0,
+   "pts_time": "2026-10-29T01:55:00+09:00",
    "limit": null
   },
   {
@@ -11510,10 +11535,10 @@
     "決算"
    ],
    "tone": "neutral",
-   "move_pct": 0.18,
+   "move_pct": 1.01,
    "move_basis": "pts",
-   "pts_price": 1436.1,
-   "pts_time": "2026-10-28T23:58:00+09:00",
+   "pts_price": 1448.0,
+   "pts_time": "2026-10-29T01:54:00+09:00",
    "limit": null
   },
   {
@@ -12265,7 +12290,7 @@
     -0.55,
     0.12,
     -1.15,
-    -0.5
+    -0.54
    ],
    "情報・通信業": [
     1.9,
@@ -12375,7 +12400,7 @@
     -1.33,
     -1.43,
     2.4,
-    2.05
+    1.97
    ],
    "化学": [
     2.22,
@@ -12485,7 +12510,7 @@
     -0.03,
     2.14,
     -0.57,
-    -1.49
+    -1.47
    ],
    "石油・石炭製品": [
     0.72,
@@ -13149,7 +13174,7 @@
     -1.11,
     0.8,
     1.07,
-    0.33
+    0.2
    ],
    "power_utilities": [
     2.16,
@@ -13171,7 +13196,7 @@
     -0.29,
     1.28,
     -0.54,
-    -1.1
+    -1.11
    ],
    "resources": [
     1.54,
