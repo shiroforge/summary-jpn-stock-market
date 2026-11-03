@@ -1,7 +1,7 @@
 {
  "schema_version": 4,
  "date": "2026-11-02",
- "generated_at": "2026-11-03T16:27:37.162696Z",
+ "generated_at": "2026-11-03T20:04:26.280432Z",
  "sources": [
   "yfinance",
   "JPX TOPIX構成銘柄ウエイト（2026-08-31時点）",
@@ -4989,7 +4989,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 0
+   "news_count": 1
   },
   {
    "key": "next_gen_battery",
@@ -6584,7 +6584,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 1
+   "news_count": 2
   },
   {
    "key": "semi_equipment",
@@ -7186,7 +7186,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 0
+   "news_count": 1
   },
   {
    "key": "cyber_security",
@@ -7323,7 +7323,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 3
+   "news_count": 5
   },
   {
    "key": "biotech",
@@ -7521,7 +7521,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 2
+   "news_count": 0
   },
   {
    "key": "game_ent",
@@ -8271,7 +8271,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 3
+   "news_count": 2
   },
   {
    "key": "banks",
@@ -9878,7 +9878,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 3
+   "news_count": 1
   },
   {
    "key": "mlcc",
@@ -10284,7 +10284,7 @@
      ]
     }
    ],
-   "news_count": 2
+   "news_count": 1
   },
   {
    "key": "memory_hbm",
@@ -12138,18 +12138,6 @@
  },
  "news": [
   {
-   "title": "【本日、米中間選挙】金（ゴールド）・ビットコイン・米国株・日経平均・円は今夜決着？▶イラン和平協議へ原油7%急落、アップル決算は予想超えも中華圏ミス▶ドル円157円・エヌビディア・アンソロピックIPO",
-   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1HRi14TjlsbFNtclh3R3lkOTJ1clFEeGVlNTc4ZlBVLUgtTmhyYV82UExrQ0pjZlRBQngyeGtwRE5CLW9KVEpVTmEzbUdlSGpjV3JhWmZuOTJrRk13?oc=5",
-   "source": "YouTube",
-   "published_at": "2026-11-02T22:15:04Z",
-   "tags": [
-    "semiconductor",
-    "ipo",
-    "resources",
-    "game_ent"
-   ]
-  },
-  {
    "title": "Anthropic、IPO申請書を修正 7～9月売上高は約170億ドル、インフラ契約額は約8954億ドル",
    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9BS2JRX2FaOVpRRlBDRVRDblJfNlAxWjlXNi1kZkQ5QzQtOXpZRklLLXd0SUdBTVBENlA4WUhCamZqY1QxRzc3RFVYYTR0MU0tVGM4VUd0eHBJaE0zMUQxOTFkMWQtNkt1X2c?oc=5",
    "source": "ITmedia",
@@ -12218,61 +12206,11 @@
    ]
   },
   {
-   "title": "シカゴ日経平均先物 大取終値比 480円安 （11月2日）(株探ニュース)",
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNYlhkV2JMR1RGS1EtRG5fdkFPMXFvbHFXdG02NzFHMUJNYTlhV3Vlb1QyR01ZUWxVV3RvZC1VOVNFdXIzMmpVY1QxMWFjWHE2YXR2WUdWX3hreVU5YWxJeG83TlBIa3Vmb2tHX2Q5Q3VyRnAtSk5wZGNnVUtPLU5ER1ZucXhyS2M?oc=5",
-   "source": "Yahoo!ファイナンス",
-   "published_at": "2026-11-02T22:46:12Z",
-   "tags": []
-  },
-  {
-   "title": "シカゴ日経平均先物 大取終値比 480円安 （11月2日） 投稿日時： 2026/11/03 07:45[株探]",
-   "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBPNGFPWVNjdjNKWHJsT3VnSFd1ZURNbUF3RmxoUjZmaFhKOHFvek1zVnMzOWtpTFFoZUY2a1NvUmY3dndOTGNVcg?oc=5",
-   "source": "みんかぶ",
-   "published_at": "2026-11-02T22:45:39Z",
-   "tags": []
-  },
-  {
    "title": "シカゴ日本株先物概況・2日 日経平均先物は180円高の6万2780円",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBXUm4zV3psVlhCV3h6OTNHeDlHZDg2cDA5emdBeE41LVVJVFV6UTBaWnlQNjVXSUtPcElmbURvWVpxOUlvTVV6WGVGRVhRQ3ZZT09fUVRrcXZxaGpkdkdxeVpHMWlJOXVQY1pGSw?oc=5",
    "source": "日本経済新聞",
    "published_at": "2026-11-02T21:59:53Z",
    "tags": []
-  },
-  {
-   "title": "バイオベンチャー・マブジェネシス 東証グロース上場、「宮大発」企業第１号",
-   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBDUjFENXJidnM3ZFNncUdWQktUeENrc1psdGtQMHVKc19YSm1QNnUzY1d2NjdDaEVwb214dkliVjRhVnhXelVmM0ViUQ?oc=5",
-   "source": "47NEWS",
-   "published_at": "2026-11-02T21:05:22Z",
-   "tags": [
-    "biotech"
-   ]
-  },
-  {
-   "title": "バイオベンチャー・マブジェネシス 東証グロース上場、「宮大発」企業第1号",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1UZDk1OFhfN3AwcGRfSERVS29BOVB3SkxkMnNLZnBSclFkUGY5X19VbmZ1TGhoZDdjRnhDVktaTERxelJWTU9pd3kxOEpMQTE4WGxuT084N21rRWgwb19lWWUta1NzMUtCZVVBamNB?oc=5",
-   "source": "au Webポータル",
-   "published_at": "2026-11-02T21:00:00Z",
-   "tags": [
-    "biotech"
-   ]
-  },
-  {
-   "title": "トグルホールディングス 東証グロース新規上場",
-   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBIaFd3WVpzTk5adTNOcmVYd2dxMVQxLXFpVGpqbU8zUjRneXVzcm1rbUMxQm0tdFcxTGZMdmFUT0FMNzk3YTcwOHdEZHJuU050d3c?oc=5",
-   "source": "住宅新報",
-   "published_at": "2026-11-02T17:58:23Z",
-   "tags": [
-    "ipo"
-   ]
-  },
-  {
-   "title": "【ＮＹ為替オープニング】米イラン紛争の外交的解決期待に原油安、ドル軟調、ISM製造業景況指数に注目",
-   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBrSEl6bzZlVG1ScXFXOGVRSElaVFp6U29BcE1kY3NRM1d5WDgzZFBvZDVtV3I1M0pzSDJ3Nl9nYWNBWjFwdHRsRU1iUXBwbmpXRGc?oc=5",
-   "source": "ザイFX！",
-   "published_at": "2026-11-02T14:48:00Z",
-   "tags": [
-    "resources"
-   ]
   },
   {
    "title": "株価 小幅な値下がり AI関連には売り注文も",
@@ -12363,6 +12301,15 @@
    ]
   },
   {
+   "title": "新豊洲「東京クリスマスマーケット2026」に、ストーブ付きのVIPドームが登場！アフタヌーンティーやローストビーフも",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1LM1VZbldOM1ppU0ZlTE9XZndoNUU0SzMzOGExSFdXRmR4VFlNZ3lQNkFDNXZrVEdYc2NDbVJ1eU5vQU5pSk16T0JjRXU0elZwV01kUVhvVEgwOTVqNTBwMjMtbl8taThXWjBB?oc=5",
+   "source": "とよすと",
+   "published_at": "2026-11-02T23:02:31Z",
+   "tags": [
+    "game_ent"
+   ]
+  },
+  {
    "title": "シカゴ日経平均先物 大取終値比 480円安 （11月2日）",
    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE96MFYwbk5JLWQ2LU94cGFPbk9uS25FUDM5QW9iamtmUVJVaFFoeEowcDRzeGMzWUdfSVVCOWUwN3dyc0RRMDMyek1KQ3EwZTZjMmlMbVBxZEJVVEVzYjNiVw?oc=5",
    "source": "株探",
@@ -12376,6 +12323,15 @@
    "published_at": "2026-11-02T22:30:00Z",
    "tags": [
     "cyber_security"
+   ]
+  },
+  {
+   "title": "豊田章男会長にはハイブリッド車の未来が見えていた…テスラを捨てたアメリカ人がトヨタに乗り換える理由",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBsd0Jxc3pZOEh2Ujc0c0Z4RXlTZ2FvZVE3MXNsUHFFakhkRTVlcVhTb2kwSW1vTlYwbFZWLW9TY3FOSjYzXy1EWFlMRG8xM1pPZmJyNmVaZVBMcFU3NVVUTUc2REFlUlVqSW9aaDI4Rkxwdjk3aDF5aE1tdXhNMVk?oc=5",
+   "source": "Yahoo!ニュース",
+   "published_at": "2026-11-02T22:15:39Z",
+   "tags": [
+    "autos"
    ]
   },
   {
@@ -12403,6 +12359,51 @@
    "published_at": "2026-11-02T20:10:00Z",
    "tags": [
     "cyber_security"
+   ]
+  },
+  {
+   "title": "GMO 経営トップ含めセキュリティーリスク対応の体制構築が課題",
+   "url": "https://news.web.nhk/newsweb/na/nd-20261103de69861",
+   "source": "NHK経済",
+   "published_at": "2026-11-02T20:02:00Z",
+   "tags": [
+    "cyber_security"
+   ]
+  },
+  {
+   "title": "「医療インバウンド」検証へ、病院の負担や地域医療へのしわ寄せなど…厚労省",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE93WnpkSWVQbEhmc3JCUE12a3RxV3BnRmxJUlpkQW9HbnY2alFpcjFRQWVlZUJxZkwtLXZhekJkalpvTTVVcEw1eGkyanltMXYzRW9yVzdSb2JqNW9BUkhOb0N2eXplUQ?oc=5",
+   "source": "読売新聞",
+   "published_at": "2026-11-02T20:00:00Z",
+   "tags": [
+    "inbound"
+   ]
+  },
+  {
+   "title": "GMO 不正アクセス問題 熊谷社長ら記者会見【詳細】",
+   "url": "https://news.web.nhk/newsweb/na/nd-20261102de69492",
+   "source": "NHK経済",
+   "published_at": "2026-11-02T15:46:36Z",
+   "tags": [
+    "cyber_security"
+   ]
+  },
+  {
+   "title": "【市場反応】米10月ISM製造業景況指数は予想上回る、9月建設支出は予想外の減少、ドルまちまち",
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBsbkZ6aFFxX0Z6aVJEb0w3amRIRlM1NVVVb1Y0bkQ1WFdwMEhPT2dHTnlFYWl1a2dSb3laMHItSUg1THdqRldxaUZsc1pZUDh3NEE?oc=5",
+   "source": "ザイFX！",
+   "published_at": "2026-11-02T15:42:00Z",
+   "tags": [
+    "construction"
+   ]
+  },
+  {
+   "title": "NY外為：ドルは軟化、NY原油先物は100ドル割れ、イラン最高指導者が交渉許可との報",
+   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAtMmxmekluR2xrX0VuZHNsWndodWJEYmdRS1JpelNCQWd4Y1hxOHdmRi04NktVZXg2MEFxUXZkYV9LS3VrUXNGTnFDcjRpenp0Z2RtcTJQWmgtSTltQjF3cXRuNA?oc=5",
+   "source": "財経新聞",
+   "published_at": "2026-11-02T13:56:23Z",
+   "tags": [
+    "resources"
    ]
   }
  ],
