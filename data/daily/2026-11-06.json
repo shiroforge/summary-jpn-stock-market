@@ -1,7 +1,7 @@
 {
  "schema_version": 4,
  "date": "2026-11-06",
- "generated_at": "2026-11-06T16:10:17.005527Z",
+ "generated_at": "2026-11-06T19:56:19.814461Z",
  "sources": [
   "yfinance",
   "JPX TOPIX構成銘柄ウエイト（2026-08-31時点）",
@@ -167,13 +167,13 @@
    "name": "日経平均先物(CME)",
    "ticker": "NIY=F",
    "category": "futures_vol",
-   "close": 58465.0,
-   "change": 1300.0,
-   "change_pct": 2.27,
-   "change_5d_pct": -6.69,
-   "change_20d_pct": -15.19,
-   "change_5d": -4195.0,
-   "change_20d": -10475.0,
+   "close": 58255.0,
+   "change": 1090.0,
+   "change_pct": 1.91,
+   "change_5d_pct": -7.03,
+   "change_20d_pct": -15.5,
+   "change_5d": -4405.0,
+   "change_20d": -10685.0,
    "spark": [
     68345.0,
     67955.0,
@@ -194,7 +194,7 @@
     63840.0,
     63055.0,
     57165.0,
-    58465.0
+    58255.0
    ],
    "as_of": "2026-11-06",
    "is_proxy": false,
@@ -243,13 +243,13 @@
    "name": "ドル円",
    "ticker": "USDJPY=X",
    "category": "fx",
-   "close": 158.24,
-   "change": -0.118,
-   "change_pct": -0.07,
-   "change_5d_pct": 0.28,
-   "change_20d_pct": 0.11,
-   "change_5d": 0.435,
-   "change_20d": 0.176,
+   "close": 158.49,
+   "change": 0.128,
+   "change_pct": 0.08,
+   "change_5d_pct": 0.43,
+   "change_20d_pct": 0.27,
+   "change_5d": 0.681,
+   "change_20d": 0.422,
    "spark": [
     158.203,
     158.52,
@@ -270,7 +270,7 @@
     157.915,
     158.469,
     158.357,
-    158.239
+    158.485
    ],
    "as_of": "2026-11-06",
    "is_proxy": false,
@@ -281,13 +281,13 @@
    "name": "ユーロ円",
    "ticker": "EURJPY=X",
    "category": "fx",
-   "close": 176.43,
-   "change": -1.481,
-   "change_pct": -0.83,
-   "change_5d_pct": -0.02,
-   "change_20d_pct": -0.45,
-   "change_5d": -0.044,
-   "change_20d": -0.802,
+   "close": 176.53,
+   "change": -1.376,
+   "change_pct": -0.77,
+   "change_5d_pct": 0.03,
+   "change_20d_pct": -0.39,
+   "change_5d": 0.061,
+   "change_20d": -0.697,
    "spark": [
     177.256,
     176.911,
@@ -308,7 +308,7 @@
     176.71,
     177.595,
     177.909,
-    176.428
+    176.533
    ],
    "as_of": "2026-11-06",
    "is_proxy": false,
@@ -319,13 +319,13 @@
    "name": "S&P500",
    "ticker": "^GSPC",
    "category": "overseas",
-   "close": 7411.89,
-   "change": 58.1602,
-   "change_pct": 0.79,
-   "change_5d_pct": -2.22,
-   "change_20d_pct": -5.12,
-   "change_5d": -168.1797,
-   "change_20d": -399.6499,
+   "close": 7396.9,
+   "change": 43.1699,
+   "change_pct": 0.59,
+   "change_5d_pct": -2.42,
+   "change_20d_pct": -5.31,
+   "change_5d": -183.1699,
+   "change_20d": -414.6401,
    "spark": [
     7807.2402,
     7805.4502,
@@ -346,7 +346,7 @@
     7568.9199,
     7688.6201,
     7353.73,
-    7411.8901
+    7396.8999
    ],
    "as_of": "2026-11-06",
    "is_proxy": false,
@@ -357,13 +357,13 @@
    "name": "NASDAQ",
    "ticker": "^IXIC",
    "category": "overseas",
-   "close": 24640.17,
-   "change": 325.166,
+   "close": 24641.15,
+   "change": 326.1523,
    "change_pct": 1.34,
    "change_5d_pct": -3.13,
    "change_20d_pct": -9.96,
-   "change_5d": -796.834,
-   "change_20d": -2726.0039,
+   "change_5d": -795.8477,
+   "change_20d": -2725.0176,
    "spark": [
     27245.9004,
     27204.3809,
@@ -384,7 +384,7 @@
     25372.0098,
     25736.5098,
     24315.0,
-    24640.166
+    24641.1523
    ],
    "as_of": "2026-11-06",
    "is_proxy": false,
@@ -395,13 +395,13 @@
    "name": "NYダウ",
    "ticker": "^DJI",
    "category": "overseas",
-   "close": 51567.04,
-   "change": 43.9805,
-   "change_pct": 0.09,
-   "change_5d_pct": -0.39,
-   "change_20d_pct": -0.17,
-   "change_5d": -203.2695,
-   "change_20d": -87.9102,
+   "close": 51405.79,
+   "change": -117.2695,
+   "change_pct": -0.23,
+   "change_5d_pct": -0.7,
+   "change_20d_pct": -0.48,
+   "change_5d": -364.5195,
+   "change_20d": -249.1602,
    "spark": [
     51850.5508,
     51670.1016,
@@ -422,7 +422,7 @@
     51786.7188,
     53356.1211,
     51523.0586,
-    51567.0391
+    51405.7891
    ],
    "as_of": "2026-11-06",
    "is_proxy": false,
@@ -433,13 +433,13 @@
    "name": "SOX指数",
    "ticker": "^SOX",
    "category": "overseas",
-   "close": 9315.71,
-   "change": 304.5713,
-   "change_pct": 3.38,
-   "change_5d_pct": -12.85,
-   "change_20d_pct": -25.9,
-   "change_5d": -1373.0889,
-   "change_20d": -3256.709,
+   "close": 9385.36,
+   "change": 374.2217,
+   "change_pct": 4.15,
+   "change_5d_pct": -12.19,
+   "change_20d_pct": -25.35,
+   "change_5d": -1303.4385,
+   "change_20d": -3187.0586,
    "spark": [
     12236.79,
     12208.79,
@@ -460,7 +460,7 @@
     10600.4004,
     10268.6504,
     9011.1396,
-    9315.7109
+    9385.3613
    ],
    "as_of": "2026-11-06",
    "is_proxy": false,
@@ -471,13 +471,13 @@
    "name": "VIX",
    "ticker": "^VIX",
    "category": "overseas",
-   "close": 24.17,
-   "change": -4.01,
-   "change_pct": -14.23,
-   "change_5d_pct": 24.46,
-   "change_20d_pct": 62.87,
-   "change_5d": 4.75,
-   "change_20d": 9.33,
+   "close": 24.52,
+   "change": -3.66,
+   "change_pct": -12.99,
+   "change_5d_pct": 26.26,
+   "change_20d_pct": 65.23,
+   "change_5d": 5.1,
+   "change_20d": 9.68,
    "spark": [
     15.21,
     15.27,
@@ -498,7 +498,7 @@
     20.83,
     16.61,
     28.18,
-    24.17
+    24.52
    ],
    "as_of": "2026-11-06",
    "is_proxy": false,
@@ -699,13 +699,13 @@
    "name": "米国 3ヶ月",
    "ticker": "^IRX",
    "category": "rates",
-   "close": 4.0,
-   "change": 0.013,
-   "change_pct": 0.33,
-   "change_5d_pct": 0.68,
-   "change_20d_pct": -1.4,
-   "change_5d": 0.027,
-   "change_20d": -0.057,
+   "close": 4.003,
+   "change": 0.016,
+   "change_pct": 0.4,
+   "change_5d_pct": 0.76,
+   "change_20d_pct": -1.33,
+   "change_5d": 0.03,
+   "change_20d": -0.054,
    "spark": [
     4.05,
     4.057,
@@ -726,7 +726,7 @@
     4.025,
     4.025,
     3.987,
-    4.0
+    4.003
    ],
    "as_of": "2026-11-06",
    "is_proxy": false,
@@ -775,13 +775,13 @@
    "name": "米国 10年",
    "ticker": "^TNX",
    "category": "rates",
-   "close": 4.859,
-   "change": 0.022,
-   "change_pct": 0.45,
-   "change_5d_pct": -1.42,
-   "change_20d_pct": -7.34,
-   "change_5d": -0.07,
-   "change_20d": -0.385,
+   "close": 4.855,
+   "change": 0.018,
+   "change_pct": 0.37,
+   "change_5d_pct": -1.5,
+   "change_20d_pct": -7.42,
+   "change_5d": -0.074,
+   "change_20d": -0.389,
    "spark": [
     5.24,
     5.217,
@@ -802,7 +802,7 @@
     4.952,
     4.894,
     4.837,
-    4.859
+    4.855
    ],
    "as_of": "2026-11-06",
    "is_proxy": false,
@@ -813,13 +813,13 @@
    "name": "米国 30年",
    "ticker": "^TYX",
    "category": "rates",
-   "close": 5.254,
-   "change": 0.003,
-   "change_pct": 0.06,
-   "change_5d_pct": -1.04,
-   "change_20d_pct": -6.18,
-   "change_5d": -0.055,
-   "change_20d": -0.346,
+   "close": 5.256,
+   "change": 0.005,
+   "change_pct": 0.1,
+   "change_5d_pct": -1.0,
+   "change_20d_pct": -6.14,
+   "change_5d": -0.053,
+   "change_20d": -0.344,
    "spark": [
     5.598,
     5.563,
@@ -840,7 +840,7 @@
     5.324,
     5.282,
     5.251,
-    5.254
+    5.256
    ],
    "as_of": "2026-11-06",
    "is_proxy": false,
@@ -851,13 +851,13 @@
    "name": "WTI原油",
    "ticker": "CL=F",
    "category": "commodity",
-   "close": 90.32,
-   "change": -0.2,
-   "change_pct": -0.22,
-   "change_5d_pct": -13.25,
-   "change_20d_pct": -1.67,
-   "change_5d": -13.8,
-   "change_20d": -1.53,
+   "close": 90.99,
+   "change": 0.47,
+   "change_pct": 0.52,
+   "change_5d_pct": -12.61,
+   "change_20d_pct": -0.94,
+   "change_5d": -13.13,
+   "change_20d": -0.86,
    "spark": [
     93.74,
     94.14,
@@ -878,7 +878,7 @@
     96.09,
     88.12,
     90.52,
-    90.32
+    90.99
    ],
    "as_of": "2026-11-06",
    "is_proxy": false,
@@ -889,13 +889,13 @@
    "name": "金",
    "ticker": "GC=F",
    "category": "commodity",
-   "close": 4064.1,
-   "change": -49.3999,
-   "change_pct": -1.2,
-   "change_5d_pct": 4.24,
-   "change_20d_pct": -3.61,
-   "change_5d": 165.2002,
-   "change_20d": -152.1997,
+   "close": 4073.8,
+   "change": -39.7,
+   "change_pct": -0.97,
+   "change_5d_pct": 4.49,
+   "change_20d_pct": -3.38,
+   "change_5d": 174.9001,
+   "change_20d": -142.4998,
    "spark": [
     4190.6001,
     4177.2998,
@@ -916,7 +916,7 @@
     3940.3999,
     4073.0,
     4113.5,
-    4064.1001
+    4073.8
    ],
    "as_of": "2026-11-06",
    "is_proxy": false,
@@ -6794,7 +6794,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 1
+   "news_count": 2
   },
   {
    "key": "autos",
@@ -11042,8 +11042,8 @@
  "news": [
   {
    "title": "世界株急落、AI供給網へ売り波及 アンソロピックIPOの成否焦点に",
-   "url": "https://www.nikkei.com/article/DGXZQOUB0662Q0W6A101C2000000/",
-   "source": "日経速報",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB6MDJqWnBpSC05ajBaQjlzdXVVSHNxX28wY3RoZHVtaW5YWWhzTkJOMUlaUlhZVmlYTWJ6a2lVc1RBM1lGb3poaENmTzhpd0hIdnZYV0FsOTBuZ1VSQW5wMTRJY2Q0RGZibUFVVQ?oc=5",
+   "source": "日本経済新聞",
    "published_at": "2026-11-06T12:42:55Z",
    "tags": [
     "ai_datacenter",
@@ -11092,10 +11092,10 @@
    ]
   },
   {
-   "title": "東証急落、終値は3643円安 世界同時株安、AI関連銘柄売り",
-   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE8xczJVZVd6ZkJLQ2l4ZkplLTVrd0d5Z0gtbV84X1lQTlBtb29yd2hpOTBJMS1nN1FFbUl4Y0U0SVlHYlFEQmN1Z210MA?oc=5",
-   "source": "47NEWS",
-   "published_at": "2026-11-06T07:57:00Z",
+   "title": "東証急落、終値は3643円安 世界同時株安、AI関連銘柄売り（共同通信）",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE14aDR0bUFoUGRlXzQ1dmFXVEN4a2JfVkFlM0RkRTZTNU9VLTV5VjZvcGowY2dhdzVVVkdoMlZtM2NuVW9GcXdIZDd1clZlLUtYd2E3MVZLQkJUMFJsUDRIUWJoRzFEUE9ndG1sNzRZMy02RTRDNXZ4dXlLaVpXQ1E?oc=5",
+   "source": "Yahoo!ニュース",
+   "published_at": "2026-11-06T06:43:28Z",
    "tags": [
     "ai_datacenter"
    ]
@@ -11153,16 +11153,7 @@
    "title": "来週(11/9～11/13)の日経平均株価の予想レンジは､5万4000～6万円！ 暴落後の自律反発が期待される一方、米国のAIデータセンター規制の行方には要警戒！",
    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1SdTJncU94M1ZsWktwNTdmcXlqb29lZDV4UXN0djNTYkM4VmZ0MU53MDRlTTBPblBZUHlsY2E1ZFdVR1Y0b3VzcjlwRFJiNmhJdDdV?oc=5",
    "source": "ダイヤモンド・オンライン",
-   "published_at": "2026-11-06T16:02:06Z",
-   "tags": [
-    "ai_datacenter"
-   ]
-  },
-  {
-   "title": "AIデータセンターに“逆風”…日経平均 一時4300円下落 なぜ？民主党大勝で株安に（テレビ朝日系（ANN））",
-   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE84LVVVMTZ3R21jVERCSTlvLTZkUlkzRklfbk05bm92TU5XMlVaRTVkb2xzTnR0V0h3UlVaUzVhdWJhVU9TODRDYU44MmVaMnZ1c3VYV1gzNm8zLUlvYUpNc1g4eTRabXRiZ2lwT2ZsOXpBcmxKREo2SlVvUVNwb1E?oc=5",
-   "source": "Yahoo!ニュース",
-   "published_at": "2026-11-06T14:54:16Z",
+   "published_at": "2026-11-06T19:05:08Z",
    "tags": [
     "ai_datacenter"
    ]
@@ -11171,7 +11162,16 @@
    "title": "日経平均株価5ヶ月半ぶり安値 米民主党の大勝でAI銘柄への逆風は続くのか？ 野村證券・岡崎康平",
    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBHUlczbHhzRW44amp4NHhfMGZpMldhQk5xa2k5ZUo2RWpIY0c3bE5XOWprUmpYbUFQdmstaW5FR3R2dzdYbWh5Z0gzWGZXNTdaR3huYldFNy1mdFJIUkhz?oc=5",
    "source": "野村證券",
-   "published_at": "2026-11-06T14:03:14Z",
+   "published_at": "2026-11-06T17:04:40Z",
+   "tags": [
+    "ai_datacenter"
+   ]
+  },
+  {
+   "title": "AIデータセンターに“逆風”…日経平均 一時4300円下落 なぜ？民主党大勝で株安に",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBGSTRkNWxnUjl3WFV4VFNMLVktSGZDeXQ3VGJsWDBucnJkTWpwNC03dEx5Q2ZyYXAtUnZSNmZrVGxWdkRhSFR4cmU5ZFlHb25NV0NtOGRCUzVVWGZicE5xcmM0VkFiZXFBajZWSzR0WGQ0UQ?oc=5",
+   "source": "テレ朝NEWS",
+   "published_at": "2026-11-06T14:52:00Z",
    "tags": [
     "ai_datacenter"
    ]
@@ -11183,16 +11183,6 @@
    "published_at": "2026-11-06T13:04:04Z",
    "tags": [
     "banks"
-   ]
-  },
-  {
-   "title": "政府のサイバー脆弱性対策、米AI企業とどこまで協力？ 識者に聞く",
-   "url": "https://www.nikkei.com/article/DGXZQOUA05C1Z0V01C26A1000000/",
-   "source": "日経速報",
-   "published_at": "2026-11-06T12:00:00Z",
-   "tags": [
-    "ai_datacenter",
-    "cyber_security"
    ]
   },
   {
@@ -11235,19 +11225,19 @@
    ]
   },
   {
-   "title": "公的年金運用、赤字５．２兆円 ＧＰＩＦ、金利上昇・円高で―２６年７～９月期",
-   "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE41ZGdjUGRRWDBIbEhMTGV5clM4WFB6enNvaWdiQUNDNFBTc3E3bWtnSmNCa2NWUllTR3ZOY1ZSTUlLa3pIeWpMQ2VTb1lLa3JxWFZ2U19MTGVoVVhwVGp2SjkzTQ?oc=5",
-   "source": "時事ドットコム",
-   "published_at": "2026-11-06T08:57:00Z",
-   "tags": [
-    "banks"
-   ]
-  },
-  {
    "title": "来週の株式相場に向けて＝日経平均は史上３番目の下落幅、反データセンターの衝撃響く",
    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE53YWx6c25ZblBXZGxfY3ptclJPelk5a0xwNzNUQ1FZU24tc0dtVVVSRWkzdUVpVHhTUkJrc281RDBLek91QXV2dWJaLTlQZjdpZXhoN2RUU3kydEVwQlJTeQ?oc=5",
    "source": "株探",
    "published_at": "2026-11-06T08:48:00Z",
+   "tags": [
+    "ai_datacenter"
+   ]
+  },
+  {
+   "title": "【速報】日経平均株価の終値が歴代3位の下げ幅に 一時4000円超急落 アメリカでのAI規制強化への警戒感広まる",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5DS1RsLUpUS2VQaEFZUzMtQkFvYTRQREFCVnFsUlcyRWZIQ21CTmtxQURRdUJVU1RJVkZUTTFZaFFOdVZtU1Y0d242YWFoQzhnal9wbjE0bmxrLVpUdXFyS3NlNXpYemlZZ1pRQWN6UDMxY0V4akpPenhUZDMyVlk?oc=5",
+   "source": "Yahoo!ニュース",
+   "published_at": "2026-11-06T07:46:20Z",
    "tags": [
     "ai_datacenter"
    ]
@@ -11273,19 +11263,20 @@
   {
    "title": "“AIブーム”減速？投資家の懸念収まらず 日経平均終値3643円安、過去3番目の下げ幅 6万円割り込む 背景に米中間選挙",
    "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBhSVhHVkRFNW5sWXhwWWt1MnNHZmZVaWlxZE5JTXhlUm1QMFNtZFUtR0FYcFRDM3VMZ1VWV1hDM1Z1SFhIOWpIWVdmT3hlMUc2YzlfLUw4UQ?oc=5",
-   "source": "TBS NEWS DIG",
+   "source": "TBSテレビ",
    "published_at": "2026-11-06T07:18:59Z",
    "tags": [
     "ai_datacenter"
    ]
   },
   {
-   "title": "東証急落、終値は3643円安 AI投資減速懸念で全面安（共同通信）",
-   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE14aDR0bUFoUGRlXzQ1dmFXVEN4a2JfVkFlM0RkRTZTNU9VLTV5VjZvcGowY2dhdzVVVkdoMlZtM2NuVW9GcXdIZDd1clZlLUtYd2E3MVZLQkJUMFJsUDRIUWJoRzFEUE9ndG1sNzRZMy02RTRDNXZ4dXlLaVpXQ1E?oc=5",
-   "source": "Yahoo!ニュース",
-   "published_at": "2026-11-06T06:43:28Z",
+   "title": "横浜銀行、カードローンなど顧客情報流出か 提携先保証会社で不正アクセス",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ZaGEzTUtrNnJIZUUtaW9rMVFHS0xxR2ZLeTVGOEJrc3dyVVFCSjY1dkVmcjduTmpnaFdrbEtNWWNmajdCWGQ0NHhnenNlcUs1ZTFxb3N3UDdvb1dnVWZ5MXBfR0dJMy0w?oc=5",
+   "source": "カナロコ",
+   "published_at": "2026-11-06T06:00:00Z",
    "tags": [
-    "ai_datacenter"
+    "banks",
+    "cyber_security"
    ]
   },
   {
@@ -11322,6 +11313,16 @@
    "source": "日本経済新聞",
    "published_at": "2026-11-06T00:25:45Z",
    "tags": []
+  },
+  {
+   "title": "OpenAI、データセンター立地地域への約束と政策提言を発表 電力費の全額負担や公職者とのNDA不使用など",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1pdHhmVUUxd1hLZFVTNFRuWUNOZndZOFZWVVJ2TTNzZFh4NTRYdmhTeFZvaERmNHlFOS05MERsa3JNZTBROHF6emM2OGo2QklTR2tSdHd0dU5QRzZrZk5fQUNKN0VweWlJMnc?oc=5",
+   "source": "ITmedia",
+   "published_at": "2026-11-05T22:03:55Z",
+   "tags": [
+    "ai_datacenter",
+    "power_utilities"
+   ]
   }
  ],
  "disclosures_session": [
@@ -12090,10 +12091,10 @@
     "決算"
    ],
    "tone": "neutral",
-   "move_pct": 3.86,
+   "move_pct": 3.87,
    "move_basis": "pts",
-   "pts_price": 2819.9,
-   "pts_time": "2026-11-06T23:54:00+09:00",
+   "pts_price": 2820.0,
+   "pts_time": "2026-11-07T02:44:00+09:00",
    "limit": null
   },
   {
@@ -12106,10 +12107,10 @@
     "業績修正"
    ],
    "tone": "neutral",
-   "move_pct": 3.86,
+   "move_pct": 3.87,
    "move_basis": "pts",
-   "pts_price": 2819.9,
-   "pts_time": "2026-11-06T23:54:00+09:00",
+   "pts_price": 2820.0,
+   "pts_time": "2026-11-07T02:44:00+09:00",
    "limit": null
   },
   {
