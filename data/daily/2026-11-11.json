@@ -1,7 +1,7 @@
 {
  "schema_version": 4,
  "date": "2026-11-11",
- "generated_at": "2026-11-11T16:30:06.708771Z",
+ "generated_at": "2026-11-11T20:10:07.359768Z",
  "sources": [
   "yfinance",
   "JPX TOPIX構成銘柄ウエイト（2026-08-31時点）",
@@ -167,13 +167,13 @@
    "name": "日経平均先物(CME)",
    "ticker": "NIY=F",
    "category": "futures_vol",
-   "close": 62280.0,
-   "change": 2370.0,
-   "change_pct": 3.96,
-   "change_5d_pct": -1.23,
-   "change_20d_pct": -6.32,
-   "change_5d": -775.0,
-   "change_20d": -4200.0,
+   "close": 62155.0,
+   "change": 2245.0,
+   "change_pct": 3.75,
+   "change_5d_pct": -1.43,
+   "change_20d_pct": -6.51,
+   "change_5d": -900.0,
+   "change_20d": -4325.0,
    "spark": [
     65480.0,
     63720.0,
@@ -194,7 +194,7 @@
     58145.0,
     60940.0,
     59910.0,
-    62280.0
+    62155.0
    ],
    "as_of": "2026-11-11",
    "is_proxy": false,
@@ -243,13 +243,13 @@
    "name": "ドル円",
    "ticker": "USDJPY=X",
    "category": "fx",
-   "close": 159.85,
-   "change": 1.864,
-   "change_pct": 1.18,
-   "change_5d_pct": 0.87,
-   "change_20d_pct": 0.96,
-   "change_5d": 1.378,
-   "change_20d": 1.525,
+   "close": 159.86,
+   "change": 1.88,
+   "change_pct": 1.19,
+   "change_5d_pct": 0.88,
+   "change_20d_pct": 0.97,
+   "change_5d": 1.394,
+   "change_20d": 1.541,
    "spark": [
     157.957,
     158.143,
@@ -270,7 +270,7 @@
     157.498,
     158.292,
     157.983,
-    159.847
+    159.863
    ],
    "as_of": "2026-11-11",
    "is_proxy": false,
@@ -281,13 +281,13 @@
    "name": "ユーロ円",
    "ticker": "EURJPY=X",
    "category": "fx",
-   "close": 177.35,
-   "change": 0.053,
+   "close": 177.34,
+   "change": 0.047,
    "change_pct": 0.03,
    "change_5d_pct": -0.14,
-   "change_20d_pct": 0.02,
-   "change_5d": -0.247,
-   "change_20d": 0.032,
+   "change_20d_pct": 0.01,
+   "change_5d": -0.253,
+   "change_20d": 0.026,
    "spark": [
     176.828,
     177.323,
@@ -308,7 +308,7 @@
     176.821,
     176.448,
     177.295,
-    177.348
+    177.342
    ],
    "as_of": "2026-11-11",
    "is_proxy": false,
@@ -319,13 +319,13 @@
    "name": "S&P500",
    "ticker": "^GSPC",
    "category": "overseas",
-   "close": 7610.66,
-   "change": 89.73,
-   "change_pct": 1.19,
-   "change_5d_pct": -1.01,
-   "change_20d_pct": -1.4,
-   "change_5d": -77.96,
-   "change_20d": -108.2798,
+   "close": 7625.38,
+   "change": 104.4497,
+   "change_pct": 1.39,
+   "change_5d_pct": -0.82,
+   "change_20d_pct": -1.21,
+   "change_5d": -63.2402,
+   "change_20d": -93.5601,
    "spark": [
     7744.0601,
     7659.4399,
@@ -346,7 +346,7 @@
     7376.8599,
     7549.9399,
     7520.9302,
-    7610.6602
+    7625.3799
    ],
    "as_of": "2026-11-11",
    "is_proxy": false,
@@ -357,13 +357,13 @@
    "name": "NASDAQ",
    "ticker": "^IXIC",
    "category": "overseas",
-   "close": 25521.82,
-   "change": 455.9551,
-   "change_pct": 1.82,
-   "change_5d_pct": -0.83,
-   "change_20d_pct": -4.39,
-   "change_5d": -214.6855,
-   "change_20d": -1171.0449,
+   "close": 25505.67,
+   "change": 439.8027,
+   "change_pct": 1.75,
+   "change_5d_pct": -0.9,
+   "change_20d_pct": -4.45,
+   "change_5d": -230.8379,
+   "change_20d": -1187.1973,
    "spark": [
     26713.0293,
     26140.0293,
@@ -384,7 +384,7 @@
     24579.4297,
     25253.1406,
     25065.8691,
-    25521.8242
+    25505.6719
    ],
    "as_of": "2026-11-11",
    "is_proxy": false,
@@ -395,13 +395,13 @@
    "name": "NYダウ",
    "ticker": "^DJI",
    "category": "overseas",
-   "close": 52244.55,
-   "change": 12.6602,
-   "change_pct": 0.02,
-   "change_5d_pct": -2.08,
-   "change_20d_pct": 1.21,
-   "change_5d": -1111.5703,
-   "change_20d": 623.0703,
+   "close": 52488.03,
+   "change": 256.1406,
+   "change_pct": 0.49,
+   "change_5d_pct": -1.63,
+   "change_20d_pct": 1.68,
+   "change_5d": -868.0898,
+   "change_20d": 866.5508,
    "spark": [
     52177.6914,
     52002.4102,
@@ -422,7 +422,7 @@
     51285.7305,
     52389.75,
     52231.8906,
-    52244.5508
+    52488.0312
    ],
    "as_of": "2026-11-11",
    "is_proxy": false,
@@ -433,13 +433,13 @@
    "name": "SOX指数",
    "ticker": "^SOX",
    "category": "overseas",
-   "close": 10662.99,
-   "change": 664.6553,
-   "change_pct": 6.65,
-   "change_5d_pct": 3.84,
-   "change_20d_pct": -8.74,
-   "change_5d": 394.335,
-   "change_20d": -1021.3945,
+   "close": 10602.71,
+   "change": 604.3828,
+   "change_pct": 6.04,
+   "change_5d_pct": 3.25,
+   "change_20d_pct": -9.26,
+   "change_5d": 334.0625,
+   "change_20d": -1081.667,
    "spark": [
     11581.21,
     11137.29,
@@ -460,7 +460,7 @@
     9390.25,
     10033.9297,
     9998.3301,
-    10662.9854
+    10602.7129
    ],
    "as_of": "2026-11-11",
    "is_proxy": false,
@@ -471,13 +471,13 @@
    "name": "VIX",
    "ticker": "^VIX",
    "category": "overseas",
-   "close": 17.76,
-   "change": -1.7,
-   "change_pct": -8.74,
-   "change_5d_pct": 6.92,
-   "change_20d_pct": 5.28,
-   "change_5d": 1.15,
-   "change_20d": 0.89,
+   "close": 17.46,
+   "change": -2.0,
+   "change_pct": -10.28,
+   "change_5d_pct": 5.12,
+   "change_20d_pct": 3.5,
+   "change_5d": 0.85,
+   "change_20d": 0.59,
    "spark": [
     16.46,
     19.99,
@@ -498,7 +498,7 @@
     25.64,
     19.92,
     19.46,
-    17.76
+    17.46
    ],
    "as_of": "2026-11-11",
    "is_proxy": false,
@@ -851,13 +851,13 @@
    "name": "WTI原油",
    "ticker": "CL=F",
    "category": "commodity",
-   "close": 88.02,
-   "change": 1.98,
-   "change_pct": 2.3,
-   "change_5d_pct": -0.11,
-   "change_20d_pct": -7.44,
-   "change_5d": -0.1,
-   "change_20d": -7.07,
+   "close": 86.35,
+   "change": 0.31,
+   "change_pct": 0.36,
+   "change_5d_pct": -2.01,
+   "change_20d_pct": -9.19,
+   "change_5d": -1.77,
+   "change_20d": -8.74,
    "spark": [
     97.97,
     101.41,
@@ -878,7 +878,7 @@
     90.83,
     86.85,
     86.04,
-    88.02
+    86.35
    ],
    "as_of": "2026-11-11",
    "is_proxy": false,
@@ -889,13 +889,13 @@
    "name": "金",
    "ticker": "GC=F",
    "category": "commodity",
-   "close": 4013.2,
-   "change": -17.0,
-   "change_pct": -0.42,
-   "change_5d_pct": -1.47,
-   "change_20d_pct": -2.31,
-   "change_5d": -59.8,
-   "change_20d": -94.7,
+   "close": 3991.5,
+   "change": -38.7,
+   "change_pct": -0.96,
+   "change_5d_pct": -2.0,
+   "change_20d_pct": -2.83,
+   "change_5d": -81.5,
+   "change_20d": -116.3999,
    "spark": [
     4170.1001,
     4181.1001,
@@ -916,7 +916,7 @@
     4074.8999,
     4114.5,
     4030.2,
-    4013.2
+    3991.5
    ],
    "as_of": "2026-11-11",
    "is_proxy": false,
@@ -5005,7 +5005,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 6
+   "news_count": 8
   },
   {
    "key": "semi_equipment",
@@ -6763,7 +6763,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "shipping",
@@ -7151,7 +7151,7 @@
      ]
     }
    ],
-   "news_count": 1
+   "news_count": 2
   },
   {
    "key": "banks",
@@ -7288,7 +7288,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 6
+   "news_count": 8
   },
   {
    "key": "ai_datacenter",
@@ -7480,7 +7480,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 8
+   "news_count": 11
   },
   {
    "key": "trading_houses",
@@ -7960,7 +7960,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 0
+   "news_count": 1
   },
   {
    "key": "ipo",
@@ -9135,7 +9135,7 @@
      ]
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "cyber_security",
@@ -9222,7 +9222,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 2
+   "news_count": 0
   },
   {
    "key": "real_estate",
@@ -11673,14 +11673,14 @@
    ]
   },
   {
-   "title": "重要インフラのサイバー脅威、自衛隊が平時から探知 安保3文書へ検討",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB4NDI3aWFwU2luTVVkRVBfOXdVU2poUktmRFJKVHYzcUtlNTZCalVJS3o5RjZnTVR3ZHFMcVhFWERidkc2dW9mS0I5TnJzQlNuVFZ2VHY0M0drV1BwWlBtWlR5Ylpyc1RST3BPNg?oc=5",
+   "title": "工作機械活況、裏では部品争奪戦 AI特需の半導体向けは顧客もライバル",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1xS3RHRHpFQ1J3RDhZUEUtNFZPd05lUkJPekdELWJaYmFITWIwYkh6UkVCTC1kOU1MMzF2MlRuNXJULV9WczFSMS1KT3VQNnNYTjltUDQ0UlN0Znh1YVZySzBuOHdkSHRWb0w5Vw?oc=5",
    "source": "日本経済新聞",
-   "published_at": "2026-11-11T08:00:00Z",
+   "published_at": "2026-11-11T06:06:25Z",
    "tags": [
-    "defense",
-    "construction",
-    "cyber_security"
+    "semiconductor",
+    "ai_datacenter",
+    "robotics_fa"
    ]
   },
   {
@@ -11705,12 +11705,32 @@
    ]
   },
   {
+   "title": "【決算比較】コマツ・日立建機ら「建機4社」、AI特需の裏で明暗分けた“3つの要因” ｜Seizo Trend",
+   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBlNnQzRGZrUDRvQmlKNUFOb0JHcmpDTXRiQ3IyeWFRM2x2cXJOMTFFZVhCZ19VcDVoSGZwbUo2Mm43em01S0ZQRVhkVGNqWUU?oc=5",
+   "source": "ビジネス+IT",
+   "published_at": "2026-11-10T22:20:00Z",
+   "tags": [
+    "ai_datacenter",
+    "construction_machinery"
+   ]
+  },
+  {
    "title": "(NEXT FUNDS)東証銀行業株価指数連動型上場投信【1615】：株価・株式情報（夜間PTS含む）",
    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5fTDhrZV9KLThoNVp2MzZuTnhHSmxRNGtEcTBkQ1Z1V1FYWjBLZEhSU2xzaVM1ME45VGpmR0M0eUEzVUZuSFRCeGRqTW5DalBVSEE?oc=5",
    "source": "Yahoo!ファイナンス",
    "published_at": "2026-11-11T13:54:44Z",
    "tags": [
     "banks"
+   ]
+  },
+  {
+   "title": "アンソロピックの大型IPO、応募殺到で大幅な超過需要に－関係者",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9FOTZlblBsSGlSNGtYNFRSUGIxUVFxV1hJT3pFYTV5aFZHR0RNNFZrcjh0b1BWdGoxQ0FrcTlzVzNaZzFhcE5LMlhJUm1RMjhicnlIUUVTTUp3MG84VDE3aGJoZDgzdUI1S3N1VjBIWUhMRkk2cjFB?oc=5",
+   "source": "Bloomberg.com",
+   "published_at": "2026-11-11T13:30:38Z",
+   "tags": [
+    "ipo",
+    "game_ent"
    ]
   },
   {
@@ -11751,19 +11771,27 @@
    ]
   },
   {
-   "title": "アンソロピックのIPO、日本での募集金額は4739億－5529億円に",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFA1TEFTckQ2dXZJemNmWGxrZDcxbFU5TUI4RUZhOXYtTVgwbTNUTTJ5bl9NTmlkdmNfSVotWVcxSWZ1d0RqOGluSEhRTnBDZmg1dUFwakpVeTNUQ0xFSnBucU14eWZrZU5CbHZZTTBlamVsdlRPWDg4?oc=5",
-   "source": "Bloomberg.com",
-   "published_at": "2026-11-11T07:19:00Z",
+   "title": "後場の日経平均は906円高でスタート、KOKUSAIや太陽誘電などが上昇／後場の寄り付き概況(フィスコ)",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQSkttN2ZXYkhUZUk1TjNnUWZ3Ums5cWM1X0czZDJrSFEtS25hYzIwVnp6a2FmTUxxVncwbFNSLXZieFhMX3ZFa3JOdHNnRTRvNUFwUFhWejJ6WU9SSzhHVzVrdTQzS0h5S2JteXNWRFhjTW9saTVfeENndmxZVmZpaE9IZTRFbjQ?oc=5",
+   "source": "Yahoo!ファイナンス",
+   "published_at": "2026-11-11T03:47:29Z",
    "tags": [
-    "ipo",
-    "game_ent"
+    "ai_datacenter"
    ]
   },
   {
    "title": "日経平均は3日続伸、半導体関連株高が相場をけん引／後場の投資戦略",
    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1MdUxoT0dZb254UjBvSXlvb0dqeVNoU0NUYzM1U1R4eDhDVWJITUlIQzI2aHoxT192MHNGTzdDRHJaeG16SEhnSDltakxBSFI2aXc?oc=5",
    "source": "株探",
+   "published_at": "2026-11-11T03:25:48Z",
+   "tags": [
+    "semiconductor"
+   ]
+  },
+  {
+   "title": "日経平均は3日続伸、半導体関連株高が相場をけん引／後場の投資戦略(フィスコ)",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNWFkT1UxMmJYTkpBNG0tSHBzajJsOE5fOUpLRTVwOHM1Vy14clhQa1M1bzIwMUxnNW5GSVB6SlUzMVZHUExzeWphS2cyZDJOM01DcmNGdDZTRTdLdnAzTXlZLW9oX2RTdHNwUGxfVFpFeVQ0enlXcUlab3E5V3k1WDFBd2lXRnM?oc=5",
+   "source": "Yahoo!ファイナンス",
    "published_at": "2026-11-11T03:25:48Z",
    "tags": [
     "semiconductor"
@@ -11788,6 +11816,15 @@
    ]
   },
   {
+   "title": "日経平均、一時500円超高 半年ぶり安値水準で値ごろ感、半導体株に買い戻し",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5XN0VtWUtSdFlybjJ0SzhRZU1UV3d3dmdWVXhsdTYyX2VfM1NCMEtkMzVETlA2aTZYd2xpXzVWZmZYalZRSFZ0eU1WWjNhLU9jWHp3bzJDZWZkZUdsN2lnbGlFX3l4dFJVX0h1SS12QzZfbnhX?oc=5",
+   "source": "BigGo ファイナンス",
+   "published_at": "2026-11-11T02:06:00Z",
+   "tags": [
+    "semiconductor"
+   ]
+  },
+  {
    "title": "日経平均は３日続伸、半導体株の一角が持ち直す＝１１日前場(ウエルスアドバイザー)",
    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPX1BzdDZuejFoXzd5WWhJNDl1aHQtSGh1elk2b0hiMThRMllheXY4d2tES0sxNzRXN2ZSSFR3NUx1VTdSNnlzTWlDX08wdElUX2FzZnZmdExiWEdhcVhJUWtlQUNabjRsUjg1cG1BSGdkSHVzOHlucER4WV9oS3VKNFpNUDhPN2c?oc=5",
    "source": "Yahoo!ファイナンス",
@@ -11806,21 +11843,30 @@
    ]
   },
   {
-   "title": "データと収益がAI楽観に火をつけ、日経平均は3日連続で上昇",
-   "url": "https://news.google.com/rss/articles/CBMigwNBVV95cUxNSUZaMjZxc2U5Zmwtd1A1eW1oT2oxS1ZiUTVIbXR2QjlweTFVR192dUVwc0dtSExhSV9mOEhSY3pLYUY5SEJPTDVTT0lFNHlvUEpKVm9rSlAwZXJUNnJ0SG9IVFlXV0RZM2tpa1F0cm9ZZ0h3aFM3bzdLaldEVmY0OGJSTkRiRnJvTmt6a3Z2dERfYlZBNjYzcjdYOE50RVVweHMyeVd0SC12aXNlNFNyVUFGU284aDdvVHVJeDZGTjlyOTVBUHRWMmJ4cG9WcTBFMjNiWGMwM0x4MWl5bEtQb296c2NjZWF2eXJkZEhRTllyZVRwcTU3d21xZWg1ZnRxc2dNQXIxeC1MMjEtY1VLMHh6NGtJUDBWTHNWMUExbjA5VHZ1VFl5R3ZUTDVkWnE3cmc0Tlg3dUVRLU0yV3psZ3hNSTlvUFViSHRPM3RpenV6Zlk1dXo0TGl4enFla1lWNF9CdTI4dkRyd0tfQ2JJRFAyYlBRNmdaZnVEMkpDQzNtVk0?oc=5",
-   "source": "アラブニュース",
-   "published_at": "2026-11-11T13:14:30Z",
+   "title": "円相場1ドル＝159円台後半 FRBの追加利上げ観測で",
+   "url": "https://news.web.nhk/newsweb/na/nd-20261112de74514",
+   "source": "NHK経済",
+   "published_at": "2026-11-11T19:09:15Z",
    "tags": [
-    "ai_datacenter"
+    "banks"
    ]
   },
   {
-   "title": "(NEXT FUNDS) 日経半導体株指数連動型上場投信【200A】：株価・株式情報（夜間PTS含む）",
-   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9VS2pDdHZPSTQtaE56MUxrRUxzVENvU2QwdTlpclBITmt5aGhlWnRKaGNNNk9YT0dsRUtTT0ZHUmxLNEY0elMwTmJIN2NNY0ltOGc?oc=5",
-   "source": "Yahoo!ファイナンス",
-   "published_at": "2026-11-11T11:08:03Z",
+   "title": "欧州国債概況11日 独10年債利回り上昇、米金利の先高観測で",
+   "url": "https://www.nikkei.com/article/DGXZQOFL11CKY0R11C26A1000000/",
+   "source": "日経速報",
+   "published_at": "2026-11-11T18:09:27Z",
    "tags": [
-    "semiconductor"
+    "banks"
+   ]
+  },
+  {
+   "title": "データと収益がAI楽観に火をつけ、日経平均は3日連続で上昇",
+   "url": "https://news.google.com/rss/articles/CBMigwNBVV95cUxNSUZaMjZxc2U5Zmwtd1A1eW1oT2oxS1ZiUTVIbXR2QjlweTFVR192dUVwc0dtSExhSV9mOEhSY3pLYUY5SEJPTDVTT0lFNHlvUEpKVm9rSlAwZXJUNnJ0SG9IVFlXV0RZM2tpa1F0cm9ZZ0h3aFM3bzdLaldEVmY0OGJSTkRiRnJvTmt6a3Z2dERfYlZBNjYzcjdYOE50RVVweHMyeVd0SC12aXNlNFNyVUFGU284aDdvVHVJeDZGTjlyOTVBUHRWMmJ4cG9WcTBFMjNiWGMwM0x4MWl5bEtQb296c2NjZWF2eXJkZEhRTllyZVRwcTU3d21xZWg1ZnRxc2dNQXIxeC1MMjEtY1VLMHh6NGtJUDBWTHNWMUExbjA5VHZ1VFl5R3ZUTDVkWnE3cmc0Tlg3dUVRLU0yV3psZ3hNSTlvUFViSHRPM3RpenV6Zlk1dXo0TGl4enFla1lWNF9CdTI4dkRyd0tfQ2JJRFAyYlBRNmdaZnVEMkpDQzNtVk0?oc=5",
+   "source": "アラブニュース",
+   "published_at": "2026-11-11T16:13:36Z",
+   "tags": [
+    "ai_datacenter"
    ]
   },
   {
@@ -11878,29 +11924,6 @@
    ]
   },
   {
-   "title": "【サイバー攻撃】ＳＭＢＣ日興証券、持ち株会会員５万６４８７人分の個人情報漏えい…投資銘柄情報含まれる可能性",
-   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE14WnZDZTcyTzU5c3Atcmw3a2FWSTJMV2pHQWtEalc4V3VlVE9RWVpVOUZmV2s0NmRTR3VSa1JQTXlDOHg0LTNWQU8xUFM0ZjJ3YmJVZlVMdlpHT01KdGhDcDFWb1Q?oc=5",
-   "source": "読売新聞",
-   "published_at": "2026-11-11T08:17:00Z",
-   "tags": [
-    "cyber_security"
-   ]
-  },
-  {
-   "title": "決算マイナス・インパクト銘柄 【東証プライム】引け後 … 川重、住友鉱、ホンダ (11月10日発表分)(株探ニュース)",
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQOTJBNDUwanp6dXg1bHZ1N1hjN2NTZ1JoMVdTWjYtNGhFT1dPVXlqaVpUWGhrLWNpNTkyMDhKejZ5NU1KM0VLNlZfQXRsRGlELUhFd3piYmdGbl9YRGdLM2lmV2VMU0JPMXJEVG9yTWhYR0hpdDFiUUZ1Q2V1aEFkUEJfSkx2VGM?oc=5",
-   "source": "Yahoo!ファイナンス",
-   "published_at": "2026-11-11T06:50:23Z",
-   "tags": []
-  },
-  {
-   "title": "決算プラス・インパクト銘柄 【東証プライム】引け後 … ＳＢＧ、三井Ｅ＆Ｓ、りそなＨＤ (11月10日発表分)(株探ニュース)",
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNeHduc1RRLU5CazBnNkdMQ2RLczhGT3p3VmxWMm5ORm9XVnY3SUpCdElmeVBETG54WHphMnIyZzlNM1M2TzBKZkRBSlhNLVFPZ3VNR0lRclJlT0dPOVpDUlNaMTlVYi1vajRwSGJoTGxIYXd4N05SVG1jbUZOWWpLcjNLdUhpLXc?oc=5",
-   "source": "Yahoo!ファイナンス",
-   "published_at": "2026-11-11T06:50:23Z",
-   "tags": []
-  },
-  {
    "title": "日経平均11日大引け＝3日続伸、789円高の6万1248円(株探ニュース)",
    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQMG1RWjFXYUY0RmJMbG1FcEFEZVU5M3o3VkhvSlVyR05SUGx1LWY1NGhHdE8xLXBKLVhtWUxjSnpLX1VwZFpkY3A0LWNFd2FyNDBhTUFmaTJzdkJCMWN0aEVLY3RaM1QxV3hxTS1WWFh3b0E3M3hiNTlSM3QxODV4NVNXOGg1N3M?oc=5",
    "source": "Yahoo!ファイナンス",
@@ -11915,20 +11938,6 @@
    "tags": [
     "autos"
    ]
-  },
-  {
-   "title": "15時の日経平均は822円高の6万1281円、アドテストが368.93円押し上げ(株探ニュース)",
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQX3Bha2lBVm9QWU4xcFF0U2FmNGFKRW12YzB2bmhKbC1CVTVIOHpiVmFTTk92aUtnbV9icjR1LWhaaEJBcXpCR3dyRkViWlpqS3NJUnZCVFBZLVpuR0xoaUgta09MLTRsbGhyYjdCYy1hQi1UZzRpZG1FOUczU05xRlcxNWV1dnM?oc=5",
-   "source": "Yahoo!ファイナンス",
-   "published_at": "2026-11-11T06:01:52Z",
-   "tags": []
-  },
-  {
-   "title": "日経平均は883円高、引き続き企業決算に関心",
-   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBCeGYxdmRTakpyTUFFMTNJWmRnaU9ZckJjSVlVaUdBdXZxRFowelVZS2xxSE9tcnlEbFp6M1RwWWl6OVdUUTJaWURZY0h6d3V0cXc?oc=5",
-   "source": "株探",
-   "published_at": "2026-11-11T05:52:01Z",
-   "tags": []
   }
  ],
  "disclosures_session": [
