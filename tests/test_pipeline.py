@@ -312,5 +312,44 @@ def test_early_attempt_waits_for_coverage(tmp_path: Path) -> None:
     early.final = False
     with pytest.raises(StaleDataError, match="TOPIX weight"):
         build_summary(T, settings(tmp_path), early)
-    s = build_summary(T, settings(tmp_path / "b"), deps(PartialSource(), IndexClose(T, 4128.59, 4075.30)))
+    lenient = settings(tmp_path / "b").model_copy(update={"coverage_min_pct": 10.0})
+    s = build_summary(T, lenient, deps(PartialSource(), IndexClose(T, 4128.59, 4075.30)))
     assert any("TOPIXウエイト" in w for w in s.warnings)
+
+
+class NikkeiGapSource(FakeSource):
+    """yfinance's ^N225 lacks the target day while the stocks have it (seen 11/2026, D-28)."""
+
+    def daily_bars(self, symbols: list[str], start: dt.date, end: dt.date) -> pd.DataFrame:
+        df = super().daily_bars(symbols, start, end)
+        return df[~((df["date"] == T) & (df["symbol"] == "^N225"))]
+
+
+def test_nikkei_gap_is_filled_from_yahoo_jp(tmp_path: Path) -> None:
+    d = deps(NikkeiGapSource(), IndexClose(T, 4128.59, 4075.30))
+    d.final = False
+    d.nikkei_history = [(T, 45000.0, 45500.0, 44800.0, 45354.99), (D(2026, 9, 24), 1.0, 1.0, 1.0, 1.0)]
+    s = build_summary(T, settings(tmp_path), d)
+    nk = s.quote("nikkei225")
+    assert nk is not None and nk.close == 45354.99  # only the missing day is taken from Yahoo
+    assert not any("日経平均" in w for w in s.warnings)
+
+
+def test_nikkei_gap_unfilled(tmp_path: Path) -> None:
+    early = deps(NikkeiGapSource(), IndexClose(T, 4128.59, 4075.30))
+    early.final = False
+    with pytest.raises(StaleDataError, match="N225"):
+        build_summary(T, settings(tmp_path), early)  # earlier attempts wait for it
+    s = build_summary(T, settings(tmp_path / "b"), deps(NikkeiGapSource(), IndexClose(T, 4128.59, 4075.30)))
+    assert s.quote("nikkei225") is None  # never yesterday's close shown as today's
+    assert s.quote("topix") is not None and any("日経平均" in w for w in s.warnings)
+
+
+def test_final_attempt_does_not_publish_without_stock_closes(tmp_path: Path) -> None:
+    class IndexOnly(FakeSource):
+        def daily_bars(self, symbols: list[str], start: dt.date, end: dt.date) -> pd.DataFrame:
+            df = super().daily_bars(symbols, start, end)
+            return df[(df["date"] != T) | (df["symbol"] == "^N225")]
+
+    with pytest.raises(StaleDataError, match="TOPIX weight"):
+        build_summary(T, settings(tmp_path), deps(IndexOnly(), IndexClose(T, 4128.59, 4075.30)))

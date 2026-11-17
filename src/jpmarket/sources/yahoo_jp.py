@@ -19,6 +19,7 @@ log = logging.getLogger(__name__)
 
 URL = "https://finance.yahoo.co.jp/quote/{code}"
 USER_AGENT = "Mozilla/5.0 (compatible; jpmarket/0.1)"
+JST = dt.timezone(dt.timedelta(hours=9))
 
 
 @dataclass(frozen=True)
@@ -53,7 +54,11 @@ def _num(s: str | None) -> float | None:
         return None
 
 
-def parse_index_page(html: str, *, year: int) -> IndexClose | None:
+CLOSE_STAMP = "15:30"  # the TSE close; earlier "HH:MM" stamps are intraday values
+
+
+def _parse_legacy(html: str, *, year: int) -> IndexClose | None:
+    """The page format until autumn 2026: plain JSON with openPriceDatetime ("MM/DD")."""
     close = _num(_field(html, "price"))
     prev = _num(_field(html, "previousPrice"))
     day = _field(html, "openPriceDatetime")  # "MM/DD" of the session the price belongs to
@@ -70,8 +75,62 @@ def parse_index_page(html: str, *, year: int) -> IndexClose | None:
     )
 
 
+_DETAIL_ITEM = re.compile(
+    r'\{"name":"[^"]*","value":"([^"]*)","move":"[^"]*","updateDate":"([^"]*)"[^{}]*?"wordKey":"(\w+)"\}'
+)
+
+
+def _parse_price_board(html: str, *, year: int, now: dt.datetime | None) -> IndexClose | None:
+    """The current format (escaped JSON): priceBoard.price {value, changePrice, updateDate} and a
+    valueList of {name, value, updateDate, wordKey} for the previous close / open / high / low.
+
+    updateDate is "HH:MM" on the session day (only >= 15:30 is the close) or "MM/DD" afterwards.
+    """
+    text = html.replace('\\"', '"')
+    m = re.search(r'"priceBoard":\{"code":"[^"]*".*?"price":\{([^{}]*)\}', text)
+    if not m:
+        return None
+    board = m.group(1)
+    close, change, stamp = (
+        _num(_field(board, "value")),
+        _num(_field(board, "changePrice")),
+        _field(board, "updateDate"),
+    )
+    if close is None or not stamp:
+        return None
+    items = {key: (value, when) for value, when, key in _DETAIL_ITEM.findall(text)}
+    if re.fullmatch(r"\d{2}/\d{2}", stamp):
+        month, dom = map(int, stamp.split("/"))
+        session = dt.date(year, month, dom)
+    elif re.fullmatch(r"\d{2}:\d{2}", stamp) and now is not None and stamp >= CLOSE_STAMP:
+        session = now.astimezone(JST).date()
+    else:
+        return None  # intraday, or no clock to date an "HH:MM" stamp
+    prev = _num(items.get("previousPrice", ("", ""))[0])
+    if prev is None:
+        if change is None:
+            return None
+        prev = round(close - change, 2)
+    return IndexClose(
+        date=session,
+        close=close,
+        prev_close=prev,
+        open=_num(items.get("openPrice", ("", ""))[0]),
+        high=_num(items.get("highPrice", ("", ""))[0]),
+        low=_num(items.get("lowPrice", ("", ""))[0]),
+    )
+
+
+def parse_index_page(html: str, *, year: int, now: dt.datetime | None = None) -> IndexClose | None:
+    return _parse_legacy(html, year=year) or _parse_price_board(html, year=year, now=now)
+
+
 def fetch_index_close(
-    target: dt.date, code: str = "998405.T", *, client: httpx.Client | None = None
+    target: dt.date,
+    code: str = "998405.T",
+    *,
+    client: httpx.Client | None = None,
+    now: dt.datetime | None = None,
 ) -> IndexClose | None:
     """The index close for `target`, or None if unavailable / not yet updated for that date."""
     try:
@@ -81,7 +140,7 @@ def fetch_index_close(
     except httpx.HTTPError as e:
         log.warning("yahoo_jp fetch failed: %s", e)
         return None
-    parsed = parse_index_page(r.text, year=target.year)
+    parsed = parse_index_page(r.text, year=target.year, now=now or dt.datetime.now(JST))
     if parsed is None or parsed.date != target:
         log.warning("yahoo_jp %s not updated for %s (got %s)", code, target, parsed and parsed.date)
         return None
@@ -91,7 +150,6 @@ def fetch_index_close(
 # --- individual stocks: TSE close + evening PTS (Japannext J-Market, 17:00-06:00) -----------------
 
 STOCK_URL = "https://finance.yahoo.co.jp/quote/{code}.T"
-JST = dt.timezone(dt.timedelta(hours=9))
 
 
 @dataclass(frozen=True)

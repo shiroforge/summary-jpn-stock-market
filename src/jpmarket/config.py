@@ -70,6 +70,7 @@ class Settings(BaseSettings):
     yf_max_retries: int = 3
     min_turnover_for_ranking: float = 1e9  # JPY
     coverage_warn_pct: float = 95.0
+    coverage_min_pct: float = 50.0  # below this even the final attempt does not publish (D-28)
 
     def _yaml(self, name: str) -> dict[str, Any]:
         data = yaml.safe_load((self.config_dir / name).read_text(encoding="utf-8"))

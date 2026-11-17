@@ -4,7 +4,7 @@ from pathlib import Path
 import httpx
 import pytest
 
-from jpmarket.sources.yahoo_jp import fetch_index_close, parse_index_page
+from jpmarket.sources.yahoo_jp import IndexClose, fetch_index_close, parse_index_page
 
 HTML = (Path(__file__).parent / "fixtures" / "yahoo_jp_topix.html").read_text(encoding="utf-8")
 
@@ -97,3 +97,36 @@ def test_fetch_history_stops_at_since() -> None:
         "998405.T", since=dt.date(2026, 1, 1), client=client, max_pages=3, sleep=lambda s: None
     )
     assert len(pages) == 4
+
+
+# The page format since autumn 2026: escaped JSON with priceBoard.price and a valueList (P4-1).
+BOARD = (Path(__file__).parent / "fixtures" / "yahoo_jp_topix_2026-11.html").read_text(encoding="utf-8")
+JST = dt.timezone(dt.timedelta(hours=9))
+AFTER_CLOSE = dt.datetime(2026, 11, 17, 16, 0, tzinfo=JST)
+
+
+def _stamped(stamp: str) -> str:
+    return BOARD.replace('\\"updateDate\\":\\"10:16\\"', f'\\"updateDate\\":\\"{stamp}\\"')
+
+
+def test_price_board_intraday_is_not_a_close() -> None:
+    assert parse_index_page(BOARD, year=2026, now=AFTER_CLOSE) is None
+
+
+def test_price_board_after_close() -> None:
+    p = parse_index_page(_stamped("15:30"), year=2026, now=AFTER_CLOSE)
+    assert p == IndexClose(dt.date(2026, 11, 17), 3863.80, 3901.37, 3872.69, 3876.16, 3836.39)
+    assert fetch_index_close(dt.date(2026, 11, 17), client=_client(_stamped("15:30")), now=AFTER_CLOSE)
+
+
+def test_price_board_dated_stamp() -> None:
+    p = parse_index_page(_stamped("11/17"), year=2026)  # shown as a date once the day is over
+    assert p is not None and p.date == dt.date(2026, 11, 17)
+    assert fetch_index_close(dt.date(2026, 11, 16), client=_client(_stamped("11/17"))) is None
+
+
+def test_price_board_without_clock_or_previous_close() -> None:
+    assert parse_index_page(_stamped("15:30"), year=2026) is None  # "HH:MM" needs today's date
+    no_prev = _stamped("11/17").replace("previousPrice", "x")
+    p = parse_index_page(no_prev, year=2026)
+    assert p is not None and p.prev_close == round(3863.80 + 37.57, 2)

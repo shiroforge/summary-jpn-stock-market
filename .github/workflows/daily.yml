@@ -1,4 +1,6 @@
 name: daily
+# 定刻の配信は外部の cron（summary-usa-stock-market の worker/）が workflow_dispatch で起動する（15:50〜17:00 JST、D-28）。
+# 下の schedule は GitHub の cron で、6〜10時間遅れる。外部の起動が止まったときの予備で、生成済みなら何もしない。
 # 平日 15:47 JST に1回目を実行（Actions の開始遅れ込みで 16:00 前後に配信）。
 # データが未確定・不完全なら終了コード75で見送り、16:33 / 17:33 JST の回で再試行する。
 # 17:33 が最終回で、そこでは欠けがあっても警告付きで生成する（DECISIONS D-22）。
@@ -22,6 +24,10 @@ on:
         description: "Discordに通知する"
         type: boolean
         default: true
+      early:
+        description: "データが揃っていなければ生成を見送る（外部の定時起動用）"
+        type: boolean
+        default: false
 
 concurrency:
   group: daily
@@ -78,6 +84,9 @@ jobs:
           if [ "${{ github.event_name }}" = "schedule" ] && [ "${{ github.event.schedule }}" != "33 8 * * 1-5" ] && [ "$EVENING" != "true" ]; then
             mode=--early
           fi
+          if [ "${{ inputs.early }}" = "true" ]; then
+            mode=--early
+          fi
           set +e
           uv run jpmarket -v run --date ${{ steps.plan.outputs.date }} --force $mode
           code=$?
@@ -89,7 +98,7 @@ jobs:
             echo "::warning::data for ${{ steps.plan.outputs.date }} not ready yet"
             # the 17:33 JST run is the last attempt of the day
             if [ "${{ github.event.schedule }}" = "33 8 * * 1-5" ]; then
-              uv run jpmarket notify-error "${{ steps.plan.outputs.date }} のデータが17:33時点でも未確定のため、生成を見送りました。" --run-url "$RUN_URL"
+              uv run jpmarket notify-error "${{ steps.plan.outputs.date }} のデータが最終回でも未確定のため、生成を見送りました。" --run-url "$RUN_URL"
             fi
           else
             exit $code

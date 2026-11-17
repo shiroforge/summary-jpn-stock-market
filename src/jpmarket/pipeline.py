@@ -38,6 +38,7 @@ log = logging.getLogger(__name__)
 JST = dt.timezone(dt.timedelta(hours=9))
 FRESHNESS_SYMBOL = "^N225"
 TOPIX_SYMBOL = "998405.T"  # stored alongside yfinance bars; OHLC from Yahoo!ファイナンス (D-26)
+NIKKEI_YAHOO_JP = "998407.O"  # fills ^N225 days missing from yfinance (D-28)
 
 
 class StaleDataError(RuntimeError):
@@ -60,6 +61,9 @@ class Deps:
     ipos: list[Listing] | None = None  # None -> JPX new-listing pages
     topix_history: list[tuple[dt.date, float, float, float, float]] | None = (
         None  # None -> Yahoo history pages
+    )
+    nikkei_history: list[tuple[dt.date, float, float, float, float]] | None = (
+        None  # None -> Yahoo!ファイナンス, only when yfinance lacks the target day
     )
     failed_feeds: list[str] = field(default_factory=list)
 
@@ -200,6 +204,48 @@ def update_topix_history(store: PriceStore, target: dt.date, official: IndexClos
     store.save()
 
 
+def fill_nikkei(store: PriceStore, target: dt.date, deps: Deps) -> bool:
+    """yfinance's ^N225 sometimes lacks a whole day for days (11/2026). Fill such gaps from
+    Yahoo!ファイナンス's Nikkei 225 (history page + today's close). Returns whether `target` is present."""
+    have = set(store.bars.loc[store.bars["symbol"] == FRESHNESS_SYMBOL, "date"])
+    if target in have:
+        return True
+    rows = deps.nikkei_history
+    if rows is None:
+        rows = fetch_index_history(
+            NIKKEI_YAHOO_JP, since=target - dt.timedelta(days=30), client=deps.http, max_pages=2
+        )
+        if all(d != target for d, *_ in rows):
+            today = fetch_index_close(target, NIKKEI_YAHOO_JP, client=deps.http, now=deps.now)
+            if (
+                today is not None
+                and today.open is not None
+                and today.high is not None
+                and today.low is not None
+            ):
+                rows = [*rows, (target, today.open, today.high, today.low, today.close)]
+    gaps = [r for r in rows if r[0] not in have and r[0] <= target and is_trading_day(r[0])]
+    if gaps:
+        log.info("filled %d ^N225 day(s) from Yahoo!ファイナンス: %s", len(gaps), [d for d, *_ in gaps])
+        bars = pd.DataFrame(
+            [
+                {
+                    "symbol": FRESHNESS_SYMBOL,
+                    "date": d,
+                    "open": o,
+                    "high": h,
+                    "low": lo,
+                    "close": c,
+                    "volume": 0.0,
+                }
+                for d, o, h, lo, c in gaps
+            ]
+        )
+        store.upsert(bars, today=target)
+        store.save()
+    return any(d == target for d, *_ in gaps)
+
+
 def topix_quote(
     spec: QuoteSpec,
     official: IndexClose | None,
@@ -262,9 +308,12 @@ def build(target: dt.date, settings: Settings, deps: Deps) -> BuildResult:
     store = PriceStore(settings.cache_dir / "prices" / "bars.parquet")
     store.update(deps.source, list(dict.fromkeys(codes + theme_codes + etf_codes + quote_tickers)), target)
     store.save()
+    has_nikkei = fill_nikkei(store, target, deps)
+    if not has_nikkei:
+        if not deps.final:
+            raise StaleDataError(f"{FRESHNESS_SYMBOL} has no close for {target} yet")
+        warnings.append("日経平均の当日の値を取得できませんでした。")
     all_closes = store.closes(end=target)
-    if FRESHNESS_SYMBOL not in all_closes.columns or pd.isna(all_closes[FRESHNESS_SYMBOL].get(target)):
-        raise StaleDataError(f"{FRESHNESS_SYMBOL} has no close for {target} yet")
     # Overseas/FX tickers trade on JP holidays; stock-level analytics use TSE sessions only.
     tse_days = [d for d in all_closes.index if is_trading_day(d)]
     closes = all_closes.loc[tse_days]
@@ -272,9 +321,10 @@ def build(target: dt.date, settings: Settings, deps: Deps) -> BuildResult:
     rets = core.returns_pct(closes)
 
     weights = pd.Series({c.code: c.topix_weight_pct for c in master.constituents}, dtype=float)
-    cov = core.coverage_pct(core.row(rets, target), weights)
+    # also the staleness check now that ^N225 may be missing: no stock closes -> nothing to publish (D-28)
+    cov = core.coverage_pct(core.row(rets, target), weights) if target in rets.index else 0.0
     if cov < settings.coverage_warn_pct:
-        if not deps.final:
+        if not deps.final or cov < settings.coverage_min_pct:
             raise StaleDataError(f"only {cov:.1f}% of TOPIX weight has a close for {target}")
         warnings.append(
             f"当日の株価を取得できた銘柄がTOPIXウエイトの{cov:.1f}%にとどまります（推計値の誤差が大きくなります）。"
@@ -309,6 +359,8 @@ def build(target: dt.date, settings: Settings, deps: Deps) -> BuildResult:
         elif spec.source == "fred":
             fred[spec.ticker] = rates.load_fred(spec.ticker, client=deps.http)
             q = core.build_quote(spec, fred[spec.ticker], target)
+        elif spec.ticker == FRESHNESS_SYMBOL and not has_nikkei:
+            q = None  # build_quote would show the previous session's close as today's
         elif spec.ticker in all_closes.columns:
             q = core.build_quote(spec, all_closes[spec.ticker].astype(float), target)
         else:
