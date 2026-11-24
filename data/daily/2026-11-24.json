@@ -1,14 +1,15 @@
 {
  "schema_version": 4,
  "date": "2026-11-24",
- "generated_at": "2026-11-24T06:50:47.185616Z",
+ "generated_at": "2026-11-24T22:59:32.524160Z",
  "sources": [
   "yfinance",
   "JPX TOPIX構成銘柄ウエイト（2026-08-31時点）",
-  "Yahoo!ファイナンス（TOPIX）",
-  "RSS（NHK経済、Yahoo!ニュース経済、Yahoo!ニュース国際、日経速報、Google News 株式、Google News ビジネス、東洋経済）"
+  "RSS（NHK経済、Yahoo!ニュース経済、Yahoo!ニュース国際、日経速報、Google News 株式、東洋経済）"
  ],
- "warnings": [],
+ "warnings": [
+  "一部のニュースを取得できませんでした（Google News ビジネス）。"
+ ],
  "comment": "日経平均は+3.91%、TOPIXは+2.47%。電気機器・非鉄金属が上昇を主導し、鉱業・水産・農林業が軟調。テーマでは「メモリ・HBM」(+9.82%)が強い。「ゲーム・エンタメ」(-1.36%)は売られた。",
  "quotes": [
   {
@@ -168,13 +169,13 @@
    "name": "日経平均先物(CME)",
    "ticker": "NIY=F",
    "category": "futures_vol",
-   "close": 58900.0,
-   "change": 940.0,
-   "change_pct": 1.62,
-   "change_5d_pct": 0.02,
-   "change_20d_pct": -8.45,
-   "change_5d": 10.0,
-   "change_20d": -5435.0,
+   "close": 57380.0,
+   "change": -580.0,
+   "change_pct": -1.0,
+   "change_5d_pct": -2.56,
+   "change_20d_pct": -10.81,
+   "change_5d": -1510.0,
+   "change_20d": -6955.0,
    "spark": [
     64880.0,
     64770.0,
@@ -195,7 +196,7 @@
     57900.0,
     54555.0,
     57960.0,
-    58900.0
+    57380.0
    ],
    "as_of": "2026-11-24",
    "is_proxy": false,
@@ -244,13 +245,13 @@
    "name": "ドル円",
    "ticker": "USDJPY=X",
    "category": "fx",
-   "close": 159.33,
-   "change": 0.4,
-   "change_pct": 0.25,
-   "change_5d_pct": -0.12,
-   "change_20d_pct": 1.14,
-   "change_5d": -0.192,
-   "change_20d": 1.803,
+   "close": 159.26,
+   "change": 0.328,
+   "change_pct": 0.21,
+   "change_5d_pct": -0.17,
+   "change_20d_pct": 1.1,
+   "change_5d": -0.264,
+   "change_20d": 1.731,
    "spark": [
     157.993,
     157.833,
@@ -271,7 +272,7 @@
     159.381,
     159.707,
     158.931,
-    159.331
+    159.259
    ],
    "as_of": "2026-11-24",
    "is_proxy": false,
@@ -282,13 +283,13 @@
    "name": "ユーロ円",
    "ticker": "EURJPY=X",
    "category": "fx",
-   "close": 173.74,
-   "change": -0.634,
-   "change_pct": -0.36,
-   "change_5d_pct": -0.97,
-   "change_20d_pct": -1.29,
-   "change_5d": -1.697,
-   "change_20d": -2.277,
+   "close": 174.63,
+   "change": 0.255,
+   "change_pct": 0.15,
+   "change_5d_pct": -0.46,
+   "change_20d_pct": -0.79,
+   "change_5d": -0.808,
+   "change_20d": -1.388,
    "spark": [
     175.792,
     176.063,
@@ -309,7 +310,7 @@
     174.867,
     175.168,
     174.374,
-    173.74
+    174.629
    ],
    "as_of": "2026-11-24",
    "is_proxy": false,
@@ -320,15 +321,14 @@
    "name": "S&P500",
    "ticker": "^GSPC",
    "category": "overseas",
-   "close": 7237.17,
-   "change": 326.7798,
-   "change_pct": 4.73,
-   "change_5d_pct": -2.42,
-   "change_20d_pct": -5.73,
-   "change_5d": -179.4199,
-   "change_20d": -439.6001,
+   "close": 7201.09,
+   "change": -36.0801,
+   "change_pct": -0.5,
+   "change_5d_pct": -1.9,
+   "change_20d_pct": -6.75,
+   "change_5d": -139.4399,
+   "change_20d": -521.5103,
    "spark": [
-    7722.6001,
     7743.98,
     7720.3901,
     7580.0698,
@@ -347,9 +347,10 @@
     7323.6299,
     7175.8301,
     6910.3901,
-    7237.1699
+    7237.1699,
+    7201.0898
    ],
-   "as_of": "2026-11-23",
+   "as_of": "2026-11-24",
    "is_proxy": false,
    "unit": ""
   },
@@ -358,15 +359,14 @@
    "name": "NASDAQ",
    "ticker": "^IXIC",
    "category": "overseas",
-   "close": 24089.56,
-   "change": 1471.8301,
-   "change_pct": 6.51,
-   "change_5d_pct": -1.71,
-   "change_20d_pct": -7.95,
-   "change_5d": -420.1992,
-   "change_20d": -2079.8203,
+   "close": 23733.54,
+   "change": -356.0254,
+   "change_pct": -1.48,
+   "change_5d_pct": -2.45,
+   "change_20d_pct": -10.36,
+   "change_5d": -594.8457,
+   "change_20d": -2744.2754,
    "spark": [
-    26477.8105,
     26549.8496,
     26184.7207,
     25437.0,
@@ -385,9 +385,10 @@
     24429.8809,
     23879.1992,
     22617.7305,
-    24089.5605
+    24089.5605,
+    23733.5352
    ],
-   "as_of": "2026-11-23",
+   "as_of": "2026-11-24",
    "is_proxy": false,
    "unit": ""
   },
@@ -396,15 +397,14 @@
    "name": "NYダウ",
    "ticker": "^DJI",
    "category": "overseas",
-   "close": 49595.31,
-   "change": 1447.9805,
-   "change_pct": 3.01,
-   "change_5d_pct": -3.9,
-   "change_20d_pct": -5.28,
-   "change_5d": -2012.8633,
-   "change_20d": -2766.2695,
+   "close": 50018.7,
+   "change": 423.3906,
+   "change_pct": 0.85,
+   "change_5d_pct": -1.46,
+   "change_20d_pct": -4.5,
+   "change_5d": -740.7227,
+   "change_20d": -2358.8711,
    "spark": [
-    52377.5703,
     52475.1016,
     52342.5586,
     51770.3086,
@@ -423,9 +423,10 @@
     50198.1719,
     49097.0586,
     48147.3281,
-    49595.3086
+    49595.3086,
+    50018.6992
    ],
-   "as_of": "2026-11-23",
+   "as_of": "2026-11-24",
    "is_proxy": false,
    "unit": ""
   },
@@ -434,15 +435,14 @@
    "name": "SOX指数",
    "ticker": "^SOX",
    "category": "overseas",
-   "close": 9588.05,
-   "change": 1179.46,
-   "change_pct": 14.03,
-   "change_5d_pct": -0.24,
-   "change_20d_pct": -13.49,
-   "change_5d": -22.6006,
-   "change_20d": -1495.4199,
+   "close": 8832.5,
+   "change": -755.5488,
+   "change_pct": -7.88,
+   "change_5d_pct": -8.4,
+   "change_20d_pct": -23.08,
+   "change_5d": -810.3789,
+   "change_20d": -2649.999,
    "spark": [
-    11482.5,
     11684.0,
     11518.2002,
     10688.7998,
@@ -461,9 +461,10 @@
     9652.7998,
     9419.7197,
     8408.5898,
-    9588.0498
+    9588.0498,
+    8832.501
    ],
-   "as_of": "2026-11-23",
+   "as_of": "2026-11-24",
    "is_proxy": false,
    "unit": ""
   },
@@ -472,15 +473,14 @@
    "name": "VIX",
    "ticker": "^VIX",
    "category": "overseas",
-   "close": 26.62,
-   "change": -9.27,
-   "change_pct": -25.83,
-   "change_5d_pct": 16.19,
-   "change_20d_pct": 44.75,
-   "change_5d": 3.71,
-   "change_20d": 8.23,
+   "close": 26.36,
+   "change": -0.26,
+   "change_pct": -0.98,
+   "change_5d_pct": 3.53,
+   "change_20d_pct": 50.46,
+   "change_5d": 0.9,
+   "change_20d": 8.84,
    "spark": [
-    17.52,
     16.91,
     17.2,
     19.42,
@@ -499,9 +499,10 @@
     24.56,
     28.44,
     35.89,
-    26.62
+    26.62,
+    26.36
    ],
-   "as_of": "2026-11-23",
+   "as_of": "2026-11-24",
    "is_proxy": false,
    "unit": ""
   },
@@ -700,15 +701,14 @@
    "name": "米国 3ヶ月",
    "ticker": "^IRX",
    "category": "rates",
-   "close": 4.147,
-   "change": 0.025,
-   "change_pct": 0.61,
-   "change_5d_pct": 0.53,
-   "change_20d_pct": 3.03,
-   "change_5d": 0.022,
-   "change_20d": 0.122,
+   "close": 4.168,
+   "change": 0.021,
+   "change_pct": 0.51,
+   "change_5d_pct": 0.72,
+   "change_20d_pct": 3.17,
+   "change_5d": 0.03,
+   "change_20d": 0.128,
    "spark": [
-    4.04,
     3.995,
     3.998,
     3.973,
@@ -727,9 +727,10 @@
     4.145,
     4.147,
     4.122,
-    4.147
+    4.147,
+    4.168
    ],
-   "as_of": "2026-11-23",
+   "as_of": "2026-11-24",
    "is_proxy": false,
    "unit": "%"
   },
@@ -739,14 +740,13 @@
    "ticker": "DGS2",
    "category": "rates",
    "close": 4.63,
-   "change": -0.13,
-   "change_pct": -2.73,
-   "change_5d_pct": -5.12,
-   "change_20d_pct": -0.43,
-   "change_5d": -0.25,
-   "change_20d": -0.02,
+   "change": 0.0,
+   "change_pct": 0.0,
+   "change_5d_pct": -4.14,
+   "change_20d_pct": -1.28,
+   "change_5d": -0.2,
+   "change_20d": -0.06,
    "spark": [
-    4.69,
     4.68,
     4.7,
     4.67,
@@ -765,9 +765,10 @@
     4.8,
     4.8,
     4.76,
+    4.63,
     4.63
    ],
-   "as_of": "2026-11-20",
+   "as_of": "2026-11-23",
    "is_proxy": false,
    "unit": "%"
   },
@@ -776,15 +777,14 @@
    "name": "米国 10年",
    "ticker": "^TNX",
    "category": "rates",
-   "close": 4.918,
-   "change": 0.006,
-   "change_pct": 0.12,
-   "change_5d_pct": -3.96,
-   "change_20d_pct": -1.36,
-   "change_5d": -0.203,
-   "change_20d": -0.068,
+   "close": 4.904,
+   "change": -0.014,
+   "change_pct": -0.28,
+   "change_5d_pct": -3.9,
+   "change_20d_pct": -1.78,
+   "change_5d": -0.199,
+   "change_20d": -0.089,
    "spark": [
-    4.993,
     5.045,
     4.989,
     4.929,
@@ -803,9 +803,10 @@
     5.066,
     5.052,
     4.912,
-    4.918
+    4.918,
+    4.904
    ],
-   "as_of": "2026-11-23",
+   "as_of": "2026-11-24",
    "is_proxy": false,
    "unit": "%"
   },
@@ -814,15 +815,14 @@
    "name": "米国 30年",
    "ticker": "^TYX",
    "category": "rates",
-   "close": 5.294,
-   "change": -0.009,
-   "change_pct": -0.17,
-   "change_5d_pct": -3.16,
-   "change_20d_pct": -0.13,
-   "change_5d": -0.173,
-   "change_20d": -0.007,
+   "close": 5.292,
+   "change": -0.002,
+   "change_pct": -0.04,
+   "change_5d_pct": -3.04,
+   "change_20d_pct": -0.25,
+   "change_5d": -0.166,
+   "change_20d": -0.013,
    "spark": [
-    5.305,
     5.361,
     5.329,
     5.309,
@@ -841,9 +841,10 @@
     5.412,
     5.401,
     5.303,
-    5.294
+    5.294,
+    5.292
    ],
-   "as_of": "2026-11-23",
+   "as_of": "2026-11-24",
    "is_proxy": false,
    "unit": "%"
   },
@@ -852,13 +853,13 @@
    "name": "WTI原油",
    "ticker": "CL=F",
    "category": "commodity",
-   "close": 79.82,
-   "change": -0.35,
-   "change_pct": -0.44,
-   "change_5d_pct": -7.2,
-   "change_20d_pct": -20.1,
-   "change_5d": -6.19,
-   "change_20d": -20.08,
+   "close": 81.69,
+   "change": 1.52,
+   "change_pct": 1.9,
+   "change_5d_pct": -5.02,
+   "change_20d_pct": -18.23,
+   "change_5d": -4.32,
+   "change_20d": -18.21,
    "spark": [
     102.78,
     102.0,
@@ -879,7 +880,7 @@
     83.21,
     83.98,
     80.17,
-    79.82
+    81.69
    ],
    "as_of": "2026-11-24",
    "is_proxy": false,
@@ -890,13 +891,13 @@
    "name": "金",
    "ticker": "GC=F",
    "category": "commodity",
-   "close": 3617.1,
-   "change": -34.2998,
-   "change_pct": -0.94,
-   "change_5d_pct": -6.39,
-   "change_20d_pct": -11.23,
-   "change_5d": -247.0999,
-   "change_20d": -457.5,
+   "close": 3555.1,
+   "change": -96.2998,
+   "change_pct": -2.64,
+   "change_5d_pct": -8.0,
+   "change_20d_pct": -12.75,
+   "change_5d": -309.0999,
+   "change_20d": -519.5,
    "spark": [
     4051.6001,
     4031.3999,
@@ -917,7 +918,7 @@
     3685.5,
     3515.3999,
     3651.3999,
-    3617.1001
+    3555.1001
    ],
    "as_of": "2026-11-24",
    "is_proxy": false,
@@ -3152,13 +3153,24 @@
   },
   {
    "name": "電気・ガス業",
-   "change_pct": -0.63,
-   "median_pct": -0.34,
-   "advancers": 7,
+   "change_pct": -0.52,
+   "median_pct": -0.11,
+   "advancers": 8,
    "decliners": 15,
-   "count": 22,
+   "count": 23,
    "topix_weight_pct": 1.24,
    "leaders": [
+    {
+     "code": "9508",
+     "name": "九州電力",
+     "sector33": "電気・ガス業",
+     "close": 1939.5,
+     "change_pct": 0.96,
+     "turnover": 2229000000.0,
+     "volume": 1149500.0,
+     "volume_ratio": 0.76,
+     "disclosures": []
+    },
     {
      "code": "9503",
      "name": "関西電力",
@@ -3179,17 +3191,6 @@
      "turnover": 849000000.0,
      "volume": 448300.0,
      "volume_ratio": 0.61,
-     "disclosures": []
-    },
-    {
-     "code": "9551",
-     "name": "メタウォーター",
-     "sector33": "電気・ガス業",
-     "close": 3510.0,
-     "change_pct": 2.33,
-     "turnover": 394000000.0,
-     "volume": 112300.0,
-     "volume_ratio": 0.54,
      "disclosures": []
     }
    ],
@@ -4254,7 +4255,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 22
+   "news_count": 23
   },
   {
    "key": "semi_equipment",
@@ -4756,7 +4757,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "robotics_fa",
@@ -5029,7 +5030,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "power_logic_semi",
@@ -6013,7 +6014,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 0
+   "news_count": 1
   },
   {
    "key": "space",
@@ -6340,138 +6341,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 2
-  },
-  {
-   "key": "nuclear",
-   "name": "原発",
-   "change_pct": 2.53,
-   "advancers_ratio": 0.91,
-   "count": 11,
-   "members": [
-    {
-     "code": "5631",
-     "name": "日本製鋼所",
-     "sector33": "機械",
-     "close": 4641.0,
-     "change_pct": 4.72,
-     "turnover": 4760000000.0,
-     "volume": 1025600.0,
-     "volume_ratio": 0.9,
-     "disclosures": []
-    },
-    {
-     "code": "6501",
-     "name": "日立",
-     "sector33": "電気機器",
-     "close": 4974.0,
-     "change_pct": 4.43,
-     "turnover": 60748000000.0,
-     "volume": 12213100.0,
-     "volume_ratio": 0.85,
-     "disclosures": []
-    },
-    {
-     "code": "7013",
-     "name": "IHI",
-     "sector33": "機械",
-     "close": 2275.5,
-     "change_pct": 4.33,
-     "turnover": 31167000000.0,
-     "volume": 13696700.0,
-     "volume_ratio": 0.95,
-     "disclosures": []
-    },
-    {
-     "code": "7011",
-     "name": "三菱重工",
-     "sector33": "機械",
-     "close": 2814.5,
-     "change_pct": 3.4,
-     "turnover": 93407000000.0,
-     "volume": 33187800.0,
-     "volume_ratio": 1.09,
-     "disclosures": []
-    },
-    {
-     "code": "6330",
-     "name": "東洋エンジ",
-     "sector33": "建設業",
-     "close": 1870.0,
-     "change_pct": 3.37,
-     "turnover": 2925000000.0,
-     "volume": 1564400.0,
-     "volume_ratio": 0.85,
-     "disclosures": []
-    },
-    {
-     "code": "6378",
-     "name": "木村化工機",
-     "sector33": "機械",
-     "close": 1069.0,
-     "change_pct": 2.49,
-     "turnover": 91000000.0,
-     "volume": 85000.0,
-     "volume_ratio": 0.87,
-     "disclosures": []
-    },
-    {
-     "code": "1963",
-     "name": "日揮HD",
-     "sector33": "建設業",
-     "close": 1975.0,
-     "change_pct": 2.09,
-     "turnover": 2700000000.0,
-     "volume": 1367300.0,
-     "volume_ratio": 0.93,
-     "disclosures": []
-    },
-    {
-     "code": "7711",
-     "name": "助川電気工業",
-     "sector33": null,
-     "close": 3490.0,
-     "change_pct": 2.05,
-     "turnover": 125000000.0,
-     "volume": 35800.0,
-     "volume_ratio": 0.64,
-     "disclosures": []
-    },
-    {
-     "code": "6366",
-     "name": "千代田化工",
-     "sector33": null,
-     "close": 601.0,
-     "change_pct": 0.84,
-     "turnover": 1675000000.0,
-     "volume": 2786400.0,
-     "volume_ratio": 0.55,
-     "disclosures": []
-    },
-    {
-     "code": "9503",
-     "name": "関西電力",
-     "sector33": "電気・ガス業",
-     "close": 2522.0,
-     "change_pct": 0.14,
-     "turnover": 8517000000.0,
-     "volume": 3377000.0,
-     "volume_ratio": 0.86,
-     "disclosures": []
-    },
-    {
-     "code": "9501",
-     "name": "東京電力HD",
-     "sector33": "電気・ガス業",
-     "close": 415.3,
-     "change_pct": -0.05,
-     "turnover": 9800000000.0,
-     "volume": 23597300.0,
-     "volume_ratio": 0.79,
-     "disclosures": []
-    }
-   ],
-   "news_count": 1
+   "news_count": 3
   },
   {
    "key": "ai_datacenter",
@@ -6646,7 +6516,149 @@
      "disclosures": []
     }
    ],
-   "news_count": 12
+   "news_count": 20
+  },
+  {
+   "key": "nuclear",
+   "name": "原発",
+   "change_pct": 2.4,
+   "advancers_ratio": 0.92,
+   "count": 12,
+   "members": [
+    {
+     "code": "5631",
+     "name": "日本製鋼所",
+     "sector33": "機械",
+     "close": 4641.0,
+     "change_pct": 4.72,
+     "turnover": 4760000000.0,
+     "volume": 1025600.0,
+     "volume_ratio": 0.9,
+     "disclosures": []
+    },
+    {
+     "code": "6501",
+     "name": "日立",
+     "sector33": "電気機器",
+     "close": 4974.0,
+     "change_pct": 4.43,
+     "turnover": 60748000000.0,
+     "volume": 12213100.0,
+     "volume_ratio": 0.85,
+     "disclosures": []
+    },
+    {
+     "code": "7013",
+     "name": "IHI",
+     "sector33": "機械",
+     "close": 2275.5,
+     "change_pct": 4.33,
+     "turnover": 31167000000.0,
+     "volume": 13696700.0,
+     "volume_ratio": 0.95,
+     "disclosures": []
+    },
+    {
+     "code": "7011",
+     "name": "三菱重工",
+     "sector33": "機械",
+     "close": 2814.5,
+     "change_pct": 3.4,
+     "turnover": 93407000000.0,
+     "volume": 33187800.0,
+     "volume_ratio": 1.09,
+     "disclosures": []
+    },
+    {
+     "code": "6330",
+     "name": "東洋エンジ",
+     "sector33": "建設業",
+     "close": 1870.0,
+     "change_pct": 3.37,
+     "turnover": 2925000000.0,
+     "volume": 1564400.0,
+     "volume_ratio": 0.85,
+     "disclosures": []
+    },
+    {
+     "code": "6378",
+     "name": "木村化工機",
+     "sector33": "機械",
+     "close": 1069.0,
+     "change_pct": 2.49,
+     "turnover": 91000000.0,
+     "volume": 85000.0,
+     "volume_ratio": 0.87,
+     "disclosures": []
+    },
+    {
+     "code": "1963",
+     "name": "日揮HD",
+     "sector33": "建設業",
+     "close": 1975.0,
+     "change_pct": 2.09,
+     "turnover": 2700000000.0,
+     "volume": 1367300.0,
+     "volume_ratio": 0.93,
+     "disclosures": []
+    },
+    {
+     "code": "7711",
+     "name": "助川電気工業",
+     "sector33": null,
+     "close": 3490.0,
+     "change_pct": 2.05,
+     "turnover": 125000000.0,
+     "volume": 35800.0,
+     "volume_ratio": 0.64,
+     "disclosures": []
+    },
+    {
+     "code": "9508",
+     "name": "九州電力",
+     "sector33": "電気・ガス業",
+     "close": 1939.5,
+     "change_pct": 0.96,
+     "turnover": 2229000000.0,
+     "volume": 1149500.0,
+     "volume_ratio": 0.76,
+     "disclosures": []
+    },
+    {
+     "code": "6366",
+     "name": "千代田化工",
+     "sector33": null,
+     "close": 601.0,
+     "change_pct": 0.84,
+     "turnover": 1675000000.0,
+     "volume": 2786400.0,
+     "volume_ratio": 0.55,
+     "disclosures": []
+    },
+    {
+     "code": "9503",
+     "name": "関西電力",
+     "sector33": "電気・ガス業",
+     "close": 2522.0,
+     "change_pct": 0.14,
+     "turnover": 8517000000.0,
+     "volume": 3377000.0,
+     "volume_ratio": 0.86,
+     "disclosures": []
+    },
+    {
+     "code": "9501",
+     "name": "東京電力HD",
+     "sector33": "電気・ガス業",
+     "close": 415.3,
+     "change_pct": -0.05,
+     "turnover": 9800000000.0,
+     "volume": 23597300.0,
+     "volume_ratio": 0.79,
+     "disclosures": []
+    }
+   ],
+   "news_count": 0
   },
   {
    "key": "construction_machinery",
@@ -7034,7 +7046,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 2
+   "news_count": 0
   },
   {
    "key": "construction",
@@ -7193,7 +7205,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 0
+   "news_count": 2
   },
   {
    "key": "insurance",
@@ -7291,7 +7303,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "cyber_security",
@@ -7378,7 +7390,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "ipo",
@@ -7982,7 +7994,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 0
+   "news_count": 1
   },
   {
    "key": "trading_houses",
@@ -8616,15 +8628,26 @@
      "disclosures": []
     }
    ],
-   "news_count": 2
+   "news_count": 0
   },
   {
    "key": "power_utilities",
    "name": "電力",
-   "change_pct": -0.38,
-   "advancers_ratio": 0.33,
-   "count": 12,
+   "change_pct": -0.27,
+   "advancers_ratio": 0.38,
+   "count": 13,
    "members": [
+    {
+     "code": "9508",
+     "name": "九州電力",
+     "sector33": "電気・ガス業",
+     "close": 1939.5,
+     "change_pct": 0.96,
+     "turnover": 2229000000.0,
+     "volume": 1149500.0,
+     "volume_ratio": 0.76,
+     "disclosures": []
+    },
     {
      "code": "9511",
      "name": "沖縄電力",
@@ -8758,7 +8781,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "pharma",
@@ -9123,10 +9146,10 @@
   }
  ],
  "breadth": {
-  "advancers": 1007,
+  "advancers": 1008,
   "decliners": 583,
   "unchanged": 41,
-  "total": 1631,
+  "total": 1632,
   "adv_dec_ratio_25d": 81.2,
   "new_highs": 19,
   "new_lows": 80
@@ -9649,14 +9672,55 @@
  },
  "news": [
   {
-   "title": "電線株が上昇、古河電気工業16%高 NVIDIAファン氏復帰で銅反発",
-   "url": "https://www.nikkei.com/article/DGXZQOUB242MF0U6A121C2000000/",
-   "source": "日経速報",
-   "published_at": "2026-11-24T05:58:47Z",
+   "title": "日経平均2207円高 NVIDIAファンCEO復帰でAI・半導体株が急反発【日経CNBC／きょうのポイント、明日のヒント】",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5zakZpdHhqMHpDTTZZRFBqU2NXR3p1VDljaVNPLXdjXy10QVJ6S3pHb042ZzFQS3FkenJLTzBiVGFKLUwydFpxekFfSjhkb0tFQTQtUXNwY3hWb2VFU2xKbm51eXZNQVE?oc=5",
+   "source": "テレ東BIZ",
+   "published_at": "2026-11-24T09:00:00Z",
    "tags": [
     "semiconductor",
-    "optical_cable",
-    "resources"
+    "ai_datacenter"
+   ]
+  },
+  {
+   "title": "日経平均株価、米AI・半導体株安が下押し材料（先読み株式相場）",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB5aXY1MXJoTUplRkNfTUdjcEpXNWdyTXZLRFNXLTNaUHloTGFSa0dDdFVrQy1oTm5LUS1KcWUzaUV5Si1iNDdxVkcxUlZtcHBVXzV1Y2h6Vkw4Q3BCX3JKUXRHdTFFZmZlSGw1eQ?oc=5",
+   "source": "日本経済新聞",
+   "published_at": "2026-11-24T22:35:58Z",
+   "tags": [
+    "semiconductor",
+    "ai_datacenter"
+   ]
+  },
+  {
+   "title": "一時5万9000円を回復した日経平均株価を示すモニター＝24日午前、東京・東新橋 - 市場好感AI銘柄上昇 フアンCEO電撃復帰 NY株1447ドル高、エヌビディア株は3割上昇 - 写真・画像(1/1)",
+   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5BTTVqQ3ozUHNWenY2S2luc28xSVA1YUFzeDRqYzdMYjBMNmZPczBia29HU2U0RG9leWNBMExURnY4bGhIRXliOHpNV2JZMzlVOUdIQnZkUQ?oc=5",
+   "source": "西日本新聞me",
+   "published_at": "2026-11-24T21:35:12Z",
+   "tags": [
+    "semiconductor",
+    "ai_datacenter"
+   ]
+  },
+  {
+   "title": "防衛AIはアメリカ製か国産か…元装備庁長官が警告する日米共同作戦の｢時間差｣と､建設業に眠る巨大需要",
+   "url": "https://toyokeizai.net/articles/-/964885?utm_source=rss&utm_medium=http&utm_campaign=link_back",
+   "source": "東洋経済",
+   "published_at": "2026-11-24T20:50:00Z",
+   "tags": [
+    "ai_datacenter",
+    "defense",
+    "construction"
+   ]
+  },
+  {
+   "title": "アンソロピックIPO、手数料スペースX超え 880億円が投資銀行に",
+   "url": "https://www.nikkei.com/article/DGXZQOGN24BOR0U6A121C2000000/",
+   "source": "日経速報",
+   "published_at": "2026-11-24T20:40:11Z",
+   "tags": [
+    "ipo",
+    "banks",
+    "game_ent"
    ]
   },
   {
@@ -9680,6 +9744,16 @@
    ]
   },
   {
+   "title": "日経平均株価が大幅反発 一時2800円超の急上昇 フアン氏CEO復帰でNY市場急伸 AIや半導体など買い広がる",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBLWmlKV1l0T3dDMzBRSWM2MHNMUm4ydVdCWUJiVEg1cl9hbzJRb0FMWTVnQk0tQ0w3emo5NUJSd25ta0M5OUQyZ2otbmZKSDNVdDIwWW56RkpGVmdQTk5PcnQ0bE5RZmhidFkxQmFMOG8xWjhRVFlwR3JXOHR3elk?oc=5",
+   "source": "Yahoo!ニュース",
+   "published_at": "2026-11-24T03:21:33Z",
+   "tags": [
+    "semiconductor",
+    "ai_datacenter"
+   ]
+  },
+  {
    "title": "東証前引け 日経平均は反発 上げ幅一時2800円 AI半導体に買い",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5FWE9nSWN2cmNnTWZmTlJ5NlNDYktmamNOdGtFejA5aDlmeVM2Nlk3cGV3Y0lyX2hfempMcXZFNW5VcVZ0VDNNempxNGQwSXJQYnotc3hDWmx0emtYVERybUhQNVN4TmFyZDF3Tw?oc=5",
    "source": "日本経済新聞",
@@ -9693,7 +9767,7 @@
    "title": "日経平均、一時5万9000円台回復 AI・半導体株に買い戻し",
    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1nQ3hlZGNRTXZRcVQtWjU4Z1lLSXlDcWtycjNNMUxkUWFyb2lCUk1BOTFxYjluUW5jUXc3YUx1UmVzZE5waV9ua1gwdTh5TnYzaXVCRjVjY2NMckVSV183Tzl1dVB2QTQwRVhMMkhEdS1haVBm?oc=5",
    "source": "BigGo ファイナンス",
-   "published_at": "2026-11-24T02:25:00Z",
+   "published_at": "2026-11-24T02:32:30Z",
    "tags": [
     "semiconductor",
     "ai_datacenter"
@@ -9710,39 +9784,20 @@
    ]
   },
   {
-   "title": "東証反発、終値5万8644円 フアン氏のエヌビディアCEO「復帰」AI関連好調",
-   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9iTHI2TlNYdFBPRzhYV2dRdzQ3ekFsMlBpVmVjUnp3Zm9hQkExOTdnSjNkR21sYm43WlBwOFNTVTlSTjNEWEtiVlpETXoyTkNMbFlBcVUtRDY4akVTbEdubFB3MTNzdTgzTEtaSmxsVlpKMnlTUFE?oc=5",
-   "source": "産経ニュース",
-   "published_at": "2026-11-24T06:47:11Z",
+   "title": "【↑】日経平均 大引け｜ 急反発、エヌビディア効果でAI関連に買い戻し (11月24日)",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAxR1I2ODNLblhoSmhTd0pqRlBmRDdoOVBoSWE5dm1VRjUxek5Mb3BubXVJWGFfdHZ5MHJ4aGZsNGJJcUVPRkJmaE56aFZmRms5TE43S2czOVhENE01eUdTbQ?oc=5",
+   "source": "株探",
+   "published_at": "2026-11-24T09:08:05Z",
    "tags": [
     "semiconductor",
     "ai_datacenter"
    ]
   },
   {
-   "title": "米エヌビディアのフアン氏復帰を好感、ＮＹ・東京市場で株上昇…日経平均の午前の終値は２２３９円高の５万８６７５円",
-   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1KRkhNTDRtZE8zZENvVmdkdjduNTJzMXVsMVpPQl9DSmRCT29IUWtVTnRZbzJVRlpDdnNZZnFuSGFKOEZoOS1ieTJfdF9pcjI0ZDg2OVdEdGJWWHpwYTN6T1MtN00?oc=5",
-   "source": "読売新聞",
-   "published_at": "2026-11-24T02:47:00Z",
-   "tags": [
-    "semiconductor"
-   ]
-  },
-  {
-   "title": "都心の中古マンション価格、13年半ぶり前年割れ 金利上昇で退潮",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8wNjNYejMwWFlnZVNpTVRDUzVHQXpPWDJPMzV2UUtTY3Fwc1VXQnd6QmJ3OWtGUFZUV3pVOG90YVdydjlHVUpGQjhiQzhyeWJYcGttQm40ekQ5MG9YTnhMVV9wS3lLT010NFU5aQ?oc=5",
-   "source": "日本経済新聞",
-   "published_at": "2026-11-24T02:00:00Z",
-   "tags": [
-    "banks",
-    "real_estate"
-   ]
-  },
-  {
-   "title": "【速報】日経平均 一時2200円超値上がり NVIDIAフアンCEO復帰でAI半導体関連に買い",
-   "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5MaU53QVU0U2pLRVAyRzFMN0lpTkZ3NmxmX1RfcDUtQ05Ka25SSEZsaEYxM2h3MnlwcjZrTHh1Yy1hYWpuMkZfODFsRHBsc0hY?oc=5",
-   "source": "Yahoo!ニュース",
-   "published_at": "2026-11-24T00:36:37Z",
+   "title": "東証反発、終値5万8644円 フアン氏のエヌビディアCEO「復帰」AI関連好調",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNZzVPN0pXdURJLUU5YVB1SnNUNnFOMnRDd2lIRjhHd3BZR20zTGJ5MUdIX3BTTWliUVFsdTZsODNReXZ4T3dlZzE4R3BLb2FqMF9SRENDWTdVV1BKa0tQMURZVU5pR21wZlhBUDF4WEtnX2hYVWFTZ2xVSzFabG9QblE1T3RuSUN4LXNCOA?oc=5",
+   "source": "産経ニュース",
+   "published_at": "2026-11-24T06:47:11Z",
    "tags": [
     "semiconductor",
     "ai_datacenter"
@@ -9752,16 +9807,7 @@
    "title": "東証寄り付き 日経平均は反発で始まる 5万8000円上回る 一時1700円高 米エヌビディア急伸で",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9scDVrOEE1Z3oycXdSaHBQa1Y5bDdVZjFVd08wY2ZDbVZoNWU4TGVpQUpmcGRhdXIzZjZhVlJmV240UUM0UFJMSmoyRUdZWkR6bEV0UXVKQ2wxU1MwNk1NdGV3WkYyLTRxbEJpMw?oc=5",
    "source": "日本経済新聞",
-   "published_at": "2026-11-24T00:23:21Z",
-   "tags": [
-    "semiconductor"
-   ]
-  },
-  {
-   "title": "日経平均、反発で始まる 5万7000円上回る 一時1300円高 米半導体株高で",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE96VS00Q212dUtKc2ZmZk5oRlJpQWNtVUJmYnR4RnB5ZDN6RU13a1NHc2p5OHRKRXQyR1JZXzJVWUFJQnV2c1N4dnIwcl9pQ2ZYU3QtbzVUdDRNZ2dpMzgxZ2tkTU4taHlLWVV2NQ?oc=5",
-   "source": "日本経済新聞",
-   "published_at": "2026-11-24T00:09:57Z",
+   "published_at": "2026-11-24T00:24:03Z",
    "tags": [
     "semiconductor"
    ]
@@ -9777,16 +9823,6 @@
    ]
   },
   {
-   "title": "｢金利が上がれば地価は下がる｣は本当か？ 武蔵野･三鷹は加速､調布･府中は鈍化… 最新基準地価に見た｢静かな地殻変動｣",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9qdUhDbkpsYm93QjI1V0VkejNIcHNSdzlQM2FGcWQtRHM5UWNlNHJKZ1c1RnRMOE5PVTl1WjAwMVVpWHA1OXgxVGpRWkJzemtkSGlfdV9SYm0yQmM?oc=5",
-   "source": "東洋経済オンライン",
-   "published_at": "2026-11-23T20:15:00Z",
-   "tags": [
-    "banks",
-    "real_estate"
-   ]
-  },
-  {
    "title": "株価 3000円超の下落 AI・半導体業界の先行き懸念でほぼ全面安",
    "url": "https://news.web.nhk/newsweb/na/nd-20261120de78808",
    "source": "NHK経済",
@@ -9797,13 +9833,124 @@
    ]
   },
   {
-   "title": "キャリア決済、子どもがスマホゲーム無断課金 国が事業者に対策促す",
-   "url": "https://www.nikkei.com/article/DGXZQOUD135WS0T11C26A1000000/",
+   "title": "ナスダック一転1.5%安 AI投資と利上げの二重不安 迫る弱気相場の影",
+   "url": "https://www.nikkei.com/article/DGXZQOGN24BJ10U6A121C2000000/",
    "source": "日経速報",
-   "published_at": "2026-11-24T05:00:00Z",
+   "published_at": "2026-11-24T21:34:02Z",
    "tags": [
-    "electronic_parts",
-    "game_ent"
+    "ai_datacenter",
+    "banks"
+   ]
+  },
+  {
+   "title": "建設現場でフィジカルAI活用広がる 人手不足に対応",
+   "url": "https://news.web.nhk/newsweb/na/nd-20261124de80898",
+   "source": "NHK経済",
+   "published_at": "2026-11-24T21:29:47Z",
+   "tags": [
+    "ai_datacenter",
+    "construction"
+   ]
+  },
+  {
+   "title": "エヌビディア･ファン氏の疑惑でアメリカ政府が東南アジアやブラジル向けAI半導体輸出を規制 中国への締め付け強化",
+   "url": "https://toyokeizai.net/articles/-/965571?utm_source=rss&utm_medium=http&utm_campaign=link_back",
+   "source": "東洋経済",
+   "published_at": "2026-11-24T21:00:00Z",
+   "tags": [
+    "semiconductor",
+    "ai_datacenter"
+   ]
+  },
+  {
+   "title": "(NEXT FUNDS)東証銀行業株価指数連動型上場投信【1615】：株価・株式情報（夜間PTS含む）",
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5fTDhrZV9KLThoNVp2MzZuTnhHSmxRNGtEcTBkQ1Z1V1FYWjBLZEhSU2xzaVM1ME45VGpmR0M0eUEzVUZuSFRCeGRqTW5DalBVSEE?oc=5",
+   "source": "Yahoo!ファイナンス",
+   "published_at": "2026-11-24T20:23:47Z",
+   "tags": [
+    "banks"
+   ]
+  },
+  {
+   "title": "プリファード、AI製品から半導体まで全方位 企業連合に開発ノウハウ提供",
+   "url": "https://www.nikkei.com/article/DGXZQOUC25B440V20C26A9000000/",
+   "source": "日経速報",
+   "published_at": "2026-11-24T20:00:00Z",
+   "tags": [
+    "semiconductor",
+    "ai_datacenter"
+   ]
+  },
+  {
+   "title": "【日本株】エヌビディアCEO復帰で株価は急反発したものの下落基調は継続!? 日経平均株価が200日移動平均線を上回るまで警戒を解かずにリスク管理を厳格に",
+   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB1NzdrYUdWYk8waDBUbWZsajRmbnE3OVRhZTJ5eGpqRjdWTGRTRUlFWUpha0gxdzVPZU9UeEVJUGlwZnU2djh3eG1sX09nVzNkblVj?oc=5",
+   "source": "ダイヤモンド・オンライン",
+   "published_at": "2026-11-24T11:20:00Z",
+   "tags": [
+    "semiconductor"
+   ]
+  },
+  {
+   "title": "エヌビディア急伸でイビデンがストップ高、ワコムはMBO発表/日経平均反発【今日の注目株＆日本株市場見通し】「デイリーZAi」11月24日号（ダイヤモンド・ザイ）",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5uM2w3OWdHUHNJMmsyWHpQUlNvamhUN1VtenBicHYtVUozeDBOeGc0MmhIdXc4ZTU0OXZ2RlRxdFIzOEpCdTFLUnZCeG5XbTRVRjkzRVdGcjFRUEVsQmJ1c3NyOUNZQlZUQVRpSWV2N1NpZkVSZVpULWx3dUZGOUE?oc=5",
+   "source": "Yahoo!ニュース",
+   "published_at": "2026-11-24T11:10:27Z",
+   "tags": [
+    "semiconductor"
+   ]
+  },
+  {
+   "title": "日経平均は戻り高値から2割下落で値ごろ感、AI関連株から反発か",
+   "url": "https://news.google.com/rss/articles/CBMi8wJBVV95cUxOeVltanhnNnFpOVhIYnc1QXVUa3JxdHVwT3JHT0o4S3Z6RVVodHRBT3ZsSndxM0MzUmlabHdCNklfYjB2U3ZiVko5WG1DalhNdldoeWFRWm1pX0FBcWY5OHpXcENkeFFlcVA3UjA1eUFzdklwZXhYX3VjbjFjcUZ1ek1NSy1RajIzdEs5dzk4dExJTDdfS3JrU1V5MXBmLXM5TWhNMW9Zc0VnSjNaUlpLNmxGZDJRZDQ2UTRnUC1XbVlTOWI3MFNad1dYbjBHNmR1TjlnOUdwVkFTWm1oM1BjX2N1WG1WZFQxVDJJUjFzamxMcEhQeW1UcUhzcE9vLXM3ZFRwcGNQN3RueGNncTJEMzRPeTVTZV8xTEdUUWdYaHR3a1hIV2oxU0dlR1RpbWFyamVvcEc3WkRsT0Q2SUg2Z3NjUnVzRm5RdzkwSGF3ME1jUDBkbDhUUHdWZFlDYUswcGpLeXFXejgwZlVZQkE1MDRrUQ?oc=5",
+   "source": "SBI証券",
+   "published_at": "2026-11-24T09:12:39Z",
+   "tags": [
+    "ai_datacenter"
+   ]
+  },
+  {
+   "title": "（まとめ）エヌビディア前CEO復帰報道を材料に日経平均は2,207円高の58,644円と大幅反発",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9kREFINUJYN0d6aXJLN1A0Zm9kUVVkbHEyYXhhSlJTUTdZNjh3MGt2Rjg1ZWZZQVBlbUZEQW5pYzNoODhiRWF0MHAxMGo0dXNIRm9ZTdIBV0FVX3lxTE1keENQWGFpWkdFSl9OM0tfbDlsZmFJekRTYk9XY0FwVUY0ZVFZM1pCTzhVY01LZy1sbWg4dlUxbEEzRUR2QjZfM1NydWUzZDNhM3pfQ3E4OA?oc=5",
+   "source": "マネクリ",
+   "published_at": "2026-11-24T07:15:00Z",
+   "tags": [
+    "semiconductor"
+   ]
+  },
+  {
+   "title": "【速報】日経平均株価 終値2207円上昇5万8644円 一時2800円超値上がり5万9000円を回復する場面も フアン氏のエヌビディア・CEO復帰受け",
+   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1BV3dxRUZtSnNZWElBeTZtMXp6S0NJbmFKd1RSLWg5emc1ZDdYX1JUbFBkTmNYWkhONUp6TFp3OHdsZ1d3NkRUSHN0MExkUi14X0ttYXVCTQ?oc=5",
+   "source": "TBS NEWS DIG",
+   "published_at": "2026-11-24T07:12:33Z",
+   "tags": [
+    "semiconductor"
+   ]
+  },
+  {
+   "title": "日経平均は大幅反発、エヌビディアＣＥＯ復帰受けた米株高が支え（ロイター）",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE11eklIUFJrQlhZak5mSzNkLU9HSjRBcmtoZmg1M3BNWGhtZ2VrdlBITVRDWUxRT0E1emRZMlZjdHQwLWs0VTBfWXIzVmdGSDJFeVJMWlh0WVUycHVhN2RZNVRaNk1QRkhiRDhKOUJrNm5wR215VmYzdmRESjBPMmc?oc=5",
+   "source": "Yahoo!ニュース",
+   "published_at": "2026-11-24T06:54:38Z",
+   "tags": [
+    "semiconductor"
+   ]
+  },
+  {
+   "title": "日経平均は大幅反発、エヌビディアＣＥＯ復帰受けた米株高が支え",
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPOE11WjRmdFc1UXhsQzVvMU5TUFd3T0lwZnlmQzlaOVF4cURVbnFLTTdpSWliN29URkhza0JSOVlPMHlCMUFITlg4TmhwV1VUVFgwLXpEcW00S1ZnNjNLSHE1VFNvTlhEM3VqWTAwTHBlZDhGNm55a1BtQlkyZThqaUcwazRRQQ?oc=5",
+   "source": "Reuters",
+   "published_at": "2026-11-24T06:54:00Z",
+   "tags": [
+    "semiconductor"
+   ]
+  },
+  {
+   "title": "東証反発、終値は2207円高 半導体関連中心に買い（共同通信）",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBETXp5WmU4X1dzV2g3eUJhbTNtR2MyODhMaVhIMHg1OVd1ZkZ6VG1rTjRocU1RWHJoOUFNcTN1ODN0ZnNSVlFSaHpGbnZ4bmllWHB0MmRtSFZ4SS1PRlIydm5FajBMZTdTWFYwOHB4QWJOVlMxZXVjbjRWa1loc3M?oc=5",
+   "source": "Yahoo!ニュース",
+   "published_at": "2026-11-24T06:40:43Z",
+   "tags": [
+    "semiconductor"
    ]
   },
   {
@@ -9813,126 +9960,6 @@
    "published_at": "2026-11-24T03:30:00Z",
    "tags": [
     "ai_datacenter"
-   ]
-  },
-  {
-   "title": "日経平均株価 一時2800円超の大幅値上がり エヌビディア・フアンCEOの復帰受け 「復帰の選択肢は頭になかった」市場関係者から驚きの声",
-   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5XVXdkVjZQYlNGTHNWZl9aU19nSU9FUWV5RFp5QjdTcG8wRGlIMmNXX3pUd3JqYmdNR3A1OXhxVkQ4U3BuR2l1cW52Q0hCT0NEZ2FvSk4yVQ?oc=5",
-   "source": "TBS NEWS DIG",
-   "published_at": "2026-11-24T03:24:38Z",
-   "tags": [
-    "semiconductor"
-   ]
-  },
-  {
-   "title": "日経平均、午前終値2239円高 NVIDIAファン氏復帰で悲観の揺り戻し",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBLMVBMelFrWHY3VXZuSWkzTG0xeHhCUWE1MzVIVnBhTGloWmhPeWE0NUNSb3pvWllSTUJJdVJ3VXlZWkdtTm5WS1JNcmVQbnJoWjEzZWQyTmlsSlp1MVI0TTRBczNSMEQ1bVVvRA?oc=5",
-   "source": "日本経済新聞",
-   "published_at": "2026-11-24T03:05:02Z",
-   "tags": [
-    "semiconductor"
-   ]
-  },
-  {
-   "title": "午前の日経平均は急反発、米株高受けＡＩ・半導体株買い先行 一時5万9000円回復（ロイター）",
-   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5jM2Nib293OTUtQmtIc1RZYzlrOVVmMzBEQ2dhWXpNTGRYWjAxZVRONE1wbWpGQ3JHNkhhakl4dFd0LS0xN2Y4Y1Y4cDA3TTlWcG1US3dlWElrUkJQOW9FRlAwUVlGNzYxR2tMUGFvdlpLZl9FVDJ3QWpEck1HS2s?oc=5",
-   "source": "Yahoo!ニュース",
-   "published_at": "2026-11-24T02:59:46Z",
-   "tags": [
-    "semiconductor"
-   ]
-  },
-  {
-   "title": "午前の日経平均は急反発、米株高受けＡＩ・半導体株買い先行 一時5万9000円回復",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNRzZtTVJzeGxXYkw5NG9sdElkMXgxSTltX2ZZNjZ0YWlkcmUyYXo3OHROdFJJWTNLWmN0c203YnBOWEZvOXVGbF8wdktJLXJrVHlrSF9uRDBBb2NUMTJ2SlJFR0hvYlhYSVdfNzE4SHJ2VmozWVZQLXBxTnBuQnhhbjlzc2ZmZw?oc=5",
-   "source": "Reuters",
-   "published_at": "2026-11-24T02:59:00Z",
-   "tags": [
-    "semiconductor"
-   ]
-  },
-  {
-   "title": "東証、一時5万9000円回復 米国株高、原油下落が追い風（共同通信）",
-   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5RcXllZHU5S2c2RG9ObjZNXzR6M2lybHFXREtfTzdxdklFTWJ4SWFPSmFsR3VNNWxzcWZWWWZLMzhpdGNkLWFYNHc3bUNrZWNNbGFvMVpROHpGaTJIdnJhNmlaT2JPMmRyXzEwYUVVTTVmekhONFA1V3FfZzJld1k?oc=5",
-   "source": "Yahoo!ニュース",
-   "published_at": "2026-11-24T02:49:21Z",
-   "tags": [
-    "resources"
-   ]
-  },
-  {
-   "title": "日経平均株価 一時2200円超の大幅値上がり 5万8000円台回復 エヌビディア・フアンCEOの復帰を受け",
-   "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE85OTJtQk5nVkRMYTNsbXFLLXhSalJPN3U0cEJ4WFRNX0RPb2E2aHN1Q3pvaU9KanBTXzlIeVI4aU9DLWtHcERNcVd4ZEREWmJmLXl6UUd1NA?oc=5",
-   "source": "TBS NEWS DIG",
-   "published_at": "2026-11-24T00:57:39Z",
-   "tags": [
-    "semiconductor"
-   ]
-  },
-  {
-   "title": "【速報】日経平均が大幅反発 一時2000円超上げ フアン氏復帰でAI相場を巡る不安が後退 東京株式市場",
-   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5hcXdKekNQVmRhWDRTcmNKdk52TDNQWnozT1hpSWVaVXRLZzNOSndiSFhiQkNDbHEyOUU2NkN1ZFBhcXNYbjJXblJJdU5Tblo3bXo5UWlhNllocmNWcTFQNUFBZTVDeU5NOFdMY0J1YzVQa0NpekN5em9tUFNkQjQ?oc=5",
-   "source": "Yahoo!ニュース",
-   "published_at": "2026-11-24T00:24:24Z",
-   "tags": [
-    "ai_datacenter"
-   ]
-  },
-  {
-   "title": "日経平均は反発で寄り付く、ＡＩ・半導体関連株先導で買い先行",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQNk12eDNKOUJCWGNPVUp4SmRrbld5R093RmlnT3d0Y3E4VDkyMnFpdlVQZVJ3MUgwMndBbzhUbWZwOWlmWWMyZTRuRzYyZzRROXV2dVVYdW1NbVRNaWNFMmp3dVl0bmZ1cFhFcnR5Unc3U3dfMGJxRUgxOXEwLWJTQkdnYmFPUQ?oc=5",
-   "source": "Reuters",
-   "published_at": "2026-11-24T00:20:00Z",
-   "tags": [
-    "semiconductor"
-   ]
-  },
-  {
-   "title": "AI業界を牽引するエヌビディアのCEO復帰劇…舞台裏ではトランプ大統領とバンス副大統領による異例の直接介入",
-   "url": "https://toyokeizai.net/articles/-/965645?utm_source=rss&utm_medium=http&utm_campaign=link_back",
-   "source": "東洋経済",
-   "published_at": "2026-11-23T23:35:00Z",
-   "tags": [
-    "semiconductor",
-    "ai_datacenter"
-   ]
-  },
-  {
-   "title": "日経平均株価、NVIDIA急伸が追い風（先読み株式相場）",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8zU0hfcm1tV1RzdWtVdDZ3WkV1X3o3cGZQSTZQaXpLYjluYnduWVZpZU91a3JrYUtsQXNhaDN0Q0o4S2JLUktvb01ZbWZvYkFFZ21DWlJoRVh2RmlfZ0NMNmhxanJINnlfdmhCZg?oc=5",
-   "source": "日本経済新聞",
-   "published_at": "2026-11-23T23:32:54Z",
-   "tags": [
-    "semiconductor"
-   ]
-  },
-  {
-   "title": "｢サイバー保険に入っているから大丈夫｣が危うい理由､補償の対象外で揉める前に確かめたい3つの観点",
-   "url": "https://toyokeizai.net/articles/-/965510?utm_source=rss&utm_medium=http&utm_campaign=link_back",
-   "source": "東洋経済",
-   "published_at": "2026-11-23T22:30:00Z",
-   "tags": [
-    "insurance",
-    "cyber_security"
-   ]
-  },
-  {
-   "title": "【速報】米10年債利回り4.90％⇒4.98％まで上昇、エヌビディア関連報好感で米株先物が大幅高｜FX・為替ニュース",
-   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBSc1NkejVBRGVXend5MHF0WlNCa2w5UXVZc1hYeGFIOFVOX0VWVGxJYjBsRm9hTjNzRnJyNlVzb19EZ2R4ajd1a2c1RERkYUI3ekE?oc=5",
-   "source": "ザイFX！",
-   "published_at": "2026-11-23T14:17:00Z",
-   "tags": [
-    "semiconductor"
-   ]
-  },
-  {
-   "title": "柏崎刈羽原発7号機 テロ対策施設 完成「延期」で調整 東京電力",
-   "url": "https://news.web.nhk/newsweb/na/nd-20261120de79137",
-   "source": "NHK経済",
-   "published_at": "2026-11-20T08:24:00Z",
-   "tags": [
-    "nuclear",
-    "power_utilities"
    ]
   }
  ],
@@ -10584,6 +10611,70 @@
  ],
  "disclosures_after": [
   {
+   "code": "4661",
+   "name": "ＯＬＣ",
+   "time": "2026-11-24T17:30:00+09:00",
+   "title": "自己株式の取得および自己株式の消却に係る事項の決定に関するお知らせ",
+   "url": "https://www.release.tdnet.info/inbs/140120261124585361.pdf",
+   "tags": [
+    "自社株買い"
+   ],
+   "tone": "pos",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
+  },
+  {
+   "code": "9009",
+   "name": "京成",
+   "time": "2026-11-24T18:00:00+09:00",
+   "title": "株式会社オリエンタルランドが実施する自己株式立会外買付取引による自己株式の買付けへの応募並びに特別利益及び特別損失の計上見込みに関するお知らせ",
+   "url": "https://www.release.tdnet.info/inbs/140120261119583443.pdf",
+   "tags": [
+    "特別損失"
+   ],
+   "tone": "neg",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
+  },
+  {
+   "code": "8570",
+   "name": "イオンＦＳ",
+   "time": "2026-11-24T17:00:00+09:00",
+   "title": "連結子会社の吸収合併（簡易合併・略式合併）に関するお知らせ",
+   "url": "https://www.release.tdnet.info/inbs/140120261120584128.pdf",
+   "tags": [
+    "提携・買収"
+   ],
+   "tone": "neutral",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
+  },
+  {
+   "code": "3106",
+   "name": "クラボウ",
+   "time": "2026-11-24T17:00:00+09:00",
+   "title": "自己株式の取得及び自己株式立会外買付取引（ToSTNeT－3）による自己株式の買付け並びに自己株式の消却に関するお知らせ",
+   "url": "https://www.release.tdnet.info/inbs/140120261117582211.pdf",
+   "tags": [
+    "自社株買い"
+   ],
+   "tone": "pos",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
+  },
+  {
    "code": "7482",
    "name": "シモジマ",
    "time": "2026-11-24T15:30:00+09:00",
@@ -10594,7 +10685,247 @@
    ],
    "tone": "neutral",
    "move_pct": null,
-   "move_basis": "pts",
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
+  },
+  {
+   "code": "9896",
+   "name": "ＪＫＨＤ",
+   "time": "2026-11-24T16:30:00+09:00",
+   "title": "第三者割当による自己株式処分の引受けに関するお知らせ",
+   "url": "https://www.release.tdnet.info/inbs/140120261124584585.pdf",
+   "tags": [
+    "増資・希薄化"
+   ],
+   "tone": "neg",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
+  },
+  {
+   "code": "6572",
+   "name": "オープンＧ",
+   "time": "2026-11-24T18:00:00+09:00",
+   "title": "主要株主の異動（予定）およびオープングループ株式会社（証券コード：6572）に対する公開買付けに準ずる行為として政令で定める買集め行為に関するお知らせ",
+   "url": "https://www.release.tdnet.info/inbs/140120261124585392.pdf",
+   "tags": [
+    "TOB・MBO"
+   ],
+   "tone": "pos",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
+  },
+  {
+   "code": "2345",
+   "name": "ＨＯＤＬ１",
+   "time": "2026-11-24T17:00:00+09:00",
+   "title": "第三者割当により発行される新株式及び第18回新株予約権の募集並びに主要株主である筆頭株主の異動に関するお知らせ",
+   "url": "https://www.release.tdnet.info/inbs/140120261124585282.pdf",
+   "tags": [
+    "増資・希薄化"
+   ],
+   "tone": "neg",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
+  },
+  {
+   "code": "2345",
+   "name": "ＨＯＤＬ１",
+   "time": "2026-11-24T17:00:00+09:00",
+   "title": "SuperX Industries株式会社との業務提携に関する基本合意書締結のお知らせ",
+   "url": "https://www.release.tdnet.info/inbs/140120261117581977.pdf",
+   "tags": [
+    "提携・買収"
+   ],
+   "tone": "neutral",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
+  },
+  {
+   "code": "2345",
+   "name": "ＨＯＤＬ１",
+   "time": "2026-11-24T17:00:00+09:00",
+   "title": "臨時株主総会の招集決定に関するお知らせ（付議議案：第三者割当による新株式及び第18回新株予約権の発行の件）",
+   "url": "https://www.release.tdnet.info/inbs/140120261124585262.pdf",
+   "tags": [
+    "増資・希薄化"
+   ],
+   "tone": "neg",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
+  },
+  {
+   "code": "2345",
+   "name": "ＨＯＤＬ１",
+   "time": "2026-11-24T17:00:00+09:00",
+   "title": "ファイナンス補足説明資料（第三者割当増資及び今後の経営方針について）",
+   "url": "https://www.release.tdnet.info/inbs/140120261124585274.pdf",
+   "tags": [
+    "増資・希薄化"
+   ],
+   "tone": "neg",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
+  },
+  {
+   "code": "5592",
+   "name": "Ｇ－くすりの窓口",
+   "time": "2026-11-24T17:00:00+09:00",
+   "title": "自己株式の取得及び自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ",
+   "url": "https://www.release.tdnet.info/inbs/140120261124585289.pdf",
+   "tags": [
+    "自社株買い"
+   ],
+   "tone": "pos",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
+  },
+  {
+   "code": "4576",
+   "name": "Ｇ－ＤＷＴＩ",
+   "time": "2026-11-24T16:45:00+09:00",
+   "title": "第14回新株予約権（行使価額修正条項付）の大量行使に関するお知らせ",
+   "url": "https://www.release.tdnet.info/inbs/140120261119583677.pdf",
+   "tags": [
+    "増資・希薄化"
+   ],
+   "tone": "neg",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
+  },
+  {
+   "code": "4628",
+   "name": "エスケー化研",
+   "time": "2026-11-24T16:30:00+09:00",
+   "title": "自己株式の取得及び自己株式立会外買付取引（ＴｏＳＴＮｅＴ－３）による自己株式の買付けに関するお知らせ",
+   "url": "https://www.release.tdnet.info/inbs/140120261120584340.pdf",
+   "tags": [
+    "自社株買い"
+   ],
+   "tone": "pos",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
+  },
+  {
+   "code": "7049",
+   "name": "Ｇ－識学",
+   "time": "2026-11-24T16:30:00+09:00",
+   "title": "連結子会社による株式会社中込製作所の株式の取得（孫会社化）に関するお知らせ",
+   "url": "https://www.release.tdnet.info/inbs/140120261124585251.pdf",
+   "tags": [
+    "提携・買収"
+   ],
+   "tone": "neutral",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
+  },
+  {
+   "code": "9063",
+   "name": "岡県運送",
+   "time": "2026-11-24T16:25:00+09:00",
+   "title": "自己株式の取得及び自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ",
+   "url": "https://www.release.tdnet.info/inbs/140120261124585283.pdf",
+   "tags": [
+    "自社株買い"
+   ],
+   "tone": "pos",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
+  },
+  {
+   "code": "7815",
+   "name": "東京ボード工業",
+   "time": "2026-11-24T16:15:00+09:00",
+   "title": "第三者割当による自己株式の処分及び主要株主の異動に関するお知らせ",
+   "url": "https://www.release.tdnet.info/inbs/140120261124585138.pdf",
+   "tags": [
+    "増資・希薄化"
+   ],
+   "tone": "neg",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
+  },
+  {
+   "code": "319A",
+   "name": "Ｇ－技術承継機構",
+   "time": "2026-11-24T16:00:00+09:00",
+   "title": "当社連結子会社による武田精機株式会社の株式の取得(連結子会社化)に関するお知らせ",
+   "url": "https://www.release.tdnet.info/inbs/140120261123584553.pdf",
+   "tags": [
+    "提携・買収"
+   ],
+   "tone": "neutral",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
+  },
+  {
+   "code": "3808",
+   "name": "オーケーウェブ",
+   "time": "2026-11-24T16:00:00+09:00",
+   "title": "（開示事項の経過）人員削減等の合理化の実施結果及び特別損失の計上に関するお知らせ",
+   "url": "https://www.release.tdnet.info/inbs/140120261120583986.pdf",
+   "tags": [
+    "特別損失"
+   ],
+   "tone": "neg",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
+   "limit": null
+  },
+  {
+   "code": "4735",
+   "name": "京進",
+   "time": "2026-11-24T16:00:00+09:00",
+   "title": "公認会計士等の合併に伴う異動に関するお知らせ",
+   "url": "https://www.release.tdnet.info/inbs/140120261120584387.pdf",
+   "tags": [
+    "提携・買収"
+   ],
+   "tone": "neutral",
+   "move_pct": null,
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10610,7 +10941,7 @@
    ],
    "tone": "neutral",
    "move_pct": null,
-   "move_basis": "pts",
+   "move_basis": null,
    "pts_price": null,
    "pts_time": null,
    "limit": null
@@ -10618,8 +10949,8 @@
  ],
  "disclosure_counts": {
   "session": 267,
-  "after": 54,
-  "pts_unavailable": 0
+  "after": 135,
+  "pts_unavailable": 1
  },
  "sector_history": {
   "dates": [
@@ -11039,7 +11370,7 @@
     -0.16,
     -0.95,
     -2.76,
-    -0.63
+    -0.52
    ],
    "石油・石炭製品": [
     3.02,
@@ -11703,7 +12034,7 @@
     -0.02,
     -0.16,
     -5.75,
-    2.53
+    2.4
    ],
    "power_utilities": [
     1.28,
@@ -11725,7 +12056,7 @@
     -0.69,
     -1.27,
     -2.82,
-    -0.38
+    -0.27
    ],
    "resources": [
     1.92,
