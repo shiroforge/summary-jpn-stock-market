@@ -1,11 +1,10 @@
 {
  "schema_version": 4,
  "date": "2026-11-20",
- "generated_at": "2026-11-22T10:50:31.860741Z",
+ "generated_at": "2026-11-24T00:46:58.736525Z",
  "sources": [
   "yfinance",
   "JPX TOPIX構成銘柄ウエイト（2026-08-31時点）",
-  "Yahoo!ファイナンス（TOPIX）",
   "RSS（NHK経済、Yahoo!ニュース経済、Yahoo!ニュース国際、日経速報、Google News 株式、Google News ビジネス、東洋経済）"
  ],
  "warnings": [],
@@ -510,15 +509,14 @@
    "name": "日本 1年",
    "ticker": "1年",
    "category": "rates",
-   "close": 1.659,
-   "change": -0.013,
-   "change_pct": -0.78,
-   "change_5d_pct": 0.36,
-   "change_20d_pct": 6.48,
-   "change_5d": 0.006,
-   "change_20d": 0.101,
+   "close": 1.651,
+   "change": -0.008,
+   "change_pct": -0.48,
+   "change_5d_pct": -0.72,
+   "change_20d_pct": 4.43,
+   "change_5d": -0.012,
+   "change_20d": 0.07,
    "spark": [
-    1.581,
     1.578,
     1.627,
     1.652,
@@ -537,9 +535,10 @@
     1.667,
     1.67,
     1.672,
-    1.659
+    1.659,
+    1.651
    ],
-   "as_of": "2026-11-19",
+   "as_of": "2026-11-20",
    "is_proxy": false,
    "unit": "%"
   },
@@ -548,15 +547,14 @@
    "name": "日本 2年",
    "ticker": "2年",
    "category": "rates",
-   "close": 1.853,
-   "change": -0.019,
-   "change_pct": -1.01,
-   "change_5d_pct": -0.22,
-   "change_20d_pct": 0.05,
-   "change_5d": -0.004,
-   "change_20d": 0.001,
+   "close": 1.826,
+   "change": -0.027,
+   "change_pct": -1.46,
+   "change_5d_pct": -2.98,
+   "change_20d_pct": -2.25,
+   "change_5d": -0.056,
+   "change_20d": -0.042,
    "spark": [
-    1.868,
     1.849,
     1.912,
     1.948,
@@ -575,9 +573,10 @@
     1.878,
     1.878,
     1.872,
-    1.853
+    1.853,
+    1.826
    ],
-   "as_of": "2026-11-19",
+   "as_of": "2026-11-20",
    "is_proxy": false,
    "unit": "%"
   },
@@ -586,15 +585,14 @@
    "name": "日本 5年",
    "ticker": "5年",
    "category": "rates",
-   "close": 2.235,
-   "change": -0.033,
-   "change_pct": -1.46,
-   "change_5d_pct": 1.18,
-   "change_20d_pct": -3.2,
-   "change_5d": 0.026,
-   "change_20d": -0.074,
+   "close": 2.198,
+   "change": -0.037,
+   "change_pct": -1.66,
+   "change_5d_pct": -2.83,
+   "change_20d_pct": -5.34,
+   "change_5d": -0.064,
+   "change_20d": -0.124,
    "spark": [
-    2.322,
     2.305,
     2.4,
     2.423,
@@ -613,9 +611,10 @@
     2.27,
     2.274,
     2.268,
-    2.235
+    2.235,
+    2.198
    ],
-   "as_of": "2026-11-19",
+   "as_of": "2026-11-20",
    "is_proxy": false,
    "unit": "%"
   },
@@ -624,15 +623,14 @@
    "name": "日本 10年",
    "ticker": "10年",
    "category": "rates",
-   "close": 2.87,
-   "change": -0.046,
-   "change_pct": -1.58,
-   "change_5d_pct": 1.02,
-   "change_20d_pct": -4.27,
-   "change_5d": 0.029,
-   "change_20d": -0.128,
+   "close": 2.838,
+   "change": -0.032,
+   "change_pct": -1.11,
+   "change_5d_pct": -2.1,
+   "change_20d_pct": -5.18,
+   "change_5d": -0.061,
+   "change_20d": -0.155,
    "spark": [
-    2.993,
     2.981,
     3.073,
     3.071,
@@ -651,9 +649,10 @@
     2.927,
     2.925,
     2.916,
-    2.87
+    2.87,
+    2.838
    ],
-   "as_of": "2026-11-19",
+   "as_of": "2026-11-20",
    "is_proxy": false,
    "unit": "%"
   },
@@ -662,15 +661,14 @@
    "name": "日本 30年",
    "ticker": "30年",
    "category": "rates",
-   "close": 4.03,
-   "change": -0.052,
-   "change_pct": -1.27,
-   "change_5d_pct": 1.41,
-   "change_20d_pct": -1.1,
-   "change_5d": 0.056,
-   "change_20d": -0.045,
+   "close": 4.014,
+   "change": -0.016,
+   "change_pct": -0.4,
+   "change_5d_pct": -0.59,
+   "change_20d_pct": -0.82,
+   "change_5d": -0.024,
+   "change_20d": -0.033,
    "spark": [
-    4.047,
     4.044,
     4.115,
     4.112,
@@ -689,9 +687,10 @@
     4.062,
     4.069,
     4.082,
-    4.03
+    4.03,
+    4.014
    ],
-   "as_of": "2026-11-19",
+   "as_of": "2026-11-20",
    "is_proxy": false,
    "unit": "%"
   },
@@ -738,15 +737,14 @@
    "name": "米国 2年",
    "ticker": "DGS2",
    "category": "rates",
-   "close": 4.76,
-   "change": -0.04,
-   "change_pct": -0.83,
-   "change_5d_pct": -2.06,
-   "change_20d_pct": -1.04,
-   "change_5d": -0.1,
-   "change_20d": -0.05,
+   "close": 4.63,
+   "change": -0.13,
+   "change_pct": -2.73,
+   "change_5d_pct": -5.12,
+   "change_20d_pct": -0.43,
+   "change_5d": -0.25,
+   "change_20d": -0.02,
    "spark": [
-    4.65,
     4.69,
     4.68,
     4.7,
@@ -765,9 +763,10 @@
     4.83,
     4.8,
     4.8,
-    4.76
+    4.76,
+    4.63
    ],
-   "as_of": "2026-11-19",
+   "as_of": "2026-11-20",
    "is_proxy": false,
    "unit": "%"
   },
@@ -4561,7 +4560,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "power_utilities",
@@ -6071,7 +6070,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 1
+   "news_count": 0
   },
   {
    "key": "biotech",
@@ -6492,7 +6491,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 5
+   "news_count": 4
   },
   {
    "key": "defense",
@@ -7281,7 +7280,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 8
+   "news_count": 7
   },
   {
    "key": "nuclear",
@@ -8700,7 +8699,7 @@
      "disclosures": []
     }
    ],
-   "news_count": 4
+   "news_count": 3
   },
   {
    "key": "semi_equipment",
@@ -9547,16 +9546,6 @@
    ]
   },
   {
-   "title": "アンソロピック株、取引開始1時間で11％安──史上最大約15兆円のIPO直後",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE54bU9lc2t2cHh0S25Ddm96YkstbjNJNFJSVmduOWhHUWwzN0NEZEVtMHlKd0o1Q0VWa1ZmejZlNHJnZGh3UmdTWGdmQUxSM2tGcDM1bUNpdUtldw?oc=5",
-   "source": "Forbes JAPAN",
-   "published_at": "2026-11-20T22:30:00Z",
-   "tags": [
-    "ipo",
-    "game_ent"
-   ]
-  },
-  {
    "title": "株価 3000円超の下落 AI・半導体業界の先行き懸念でほぼ全面安",
    "url": "https://news.web.nhk/newsweb/na/nd-20261120de78808",
    "source": "NHK経済",
@@ -9564,16 +9553,6 @@
    "tags": [
     "semiconductor",
     "ai_datacenter"
-   ]
-  },
-  {
-   "title": "「パッチ地獄」が米IT障害誘発、AIがせかす脆弱性修正 銀行や空港停止",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4tOWZ5dkdna29oY0dlWVMyYWQ1SlRDVkxLb1NCYkxGRkttb2xiYmw4UXhZcU5SNk5YUXltZVhZLWhxSDM4MFhQQ2tyYVNUVlp5UnFsSDZnZUN0NzVRUmY3SzVwM3k0OHFIUUlfMA?oc=5",
-   "source": "日本経済新聞",
-   "published_at": "2026-11-20T19:04:40Z",
-   "tags": [
-    "ai_datacenter",
-    "banks"
    ]
   },
   {
@@ -9621,15 +9600,6 @@
    "published_at": "2026-11-20T22:01:32Z",
    "tags": [
     "ai_datacenter"
-   ]
-  },
-  {
-   "title": "米商務長官、中国への半導体密輸警告を無視＝共和議員",
-   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOTzlEUGRQMWEzdkluODM5YVh0TXhrLXlURlZHcnJOdE56MmhmU0ktSjNkSGhPOWxyelRINkxDbUlyUzYxWVFTcmJCd2dBazZrSUYtenpKUlQtQk10T096b0h6Mk9rcXd6QzlTa3czYVdBWEUzUWlualZhTUo5QW9VMzhuZUM3UXJKR0JvT01icy1TVmxocUVGX2d0WnBGb1BRYVJWTl9Paw?oc=5",
-   "source": "WSJ",
-   "published_at": "2026-11-20T18:50:00Z",
-   "tags": [
-    "semiconductor"
    ]
   },
   {
@@ -9741,38 +9711,10 @@
    ]
   },
   {
-   "title": "アングル：ＡＩブームの恩恵届かぬ韓国個人投資家、株乱高下で消費も冷え込む",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNUG9zYnJTbXYxZ1FST3U2ME90VkhJQVlacmdUNzVoblFMSHBHVDVqQTFXWi1td204dzhEcnZTMFJMWnhETHF2NnBvX29xcW5sWWMya0kxcENEY0FnVVBELXNnUHRnazJzOERXRGtJS1ZVVWFSX01DTnNDWi14T1p6OGFzbFRIUQ?oc=5",
-   "source": "Reuters",
-   "published_at": "2026-11-20T23:08:54Z",
-   "tags": []
-  },
-  {
-   "title": "｢日本円の紙くず化｣へのカウントダウンが始まった…高市首相が狙う｢借金1342兆円を帳消しにする｣禁断の処方箋【円安の行方3選】",
-   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9KdXljaEMzX2NnLV9VdmIyV3NJR1o2eTVVSUNONWFNZGlYaVhCclMzQmN4RnJXZU9uZ2tNSmNaTTNvZGRIbFhBdlEta2hDb0M2bFM1dDhhNjk?oc=5",
-   "source": "PRESIDENT Online（プレジデントオンライン）",
-   "published_at": "2026-11-20T21:00:00Z",
-   "tags": []
-  },
-  {
    "title": "ダウ平均株価が5万ドル割れ 終値としては約5か月ぶり",
    "url": "https://news.web.nhk/newsweb/na/nd-20261120de78760",
    "source": "NHK経済",
    "published_at": "2026-11-19T22:15:13Z",
-   "tags": []
-  },
-  {
-   "title": "ランボルギーニ初の格納式ハードトップ搭載、新型スーパーカー『テメラリオ スパイダー』発表 2枚目の写真・画像",
-   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBWOHBzbVBSUHVsQmVlQnV2LWVFU3Ywb0dIbEo4dzhPU0dva1QzQjlfNWYwQ1IwVmN1QVdwdUxjU1ZSdTdmdTBKenV5WDRhSlE3aHhPeGxtTzJVbHA3aXVLTXkxdk12RTNDeWNnRERvS19xZw?oc=5",
-   "source": "レスポンス（Response.jp）",
-   "published_at": "2026-11-20T23:00:03Z",
-   "tags": []
-  },
-  {
-   "title": "東関東道、22日に南へ延伸開通！ 千葉‐北関東をつなぐ“最後の23km”いつできる？",
-   "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5IQ3M0NV9lejFhemFUeDVqazg0LVNZRXI2OFFUdkEzNGozSW92a1VXUFlpemtTS0JpZUluanhKb0F6OGtuM1daMWxR?oc=5",
-   "source": "乗りものニュース",
-   "published_at": "2026-11-20T22:42:00Z",
    "tags": []
   },
   {
@@ -9783,10 +9725,59 @@
    "tags": []
   },
   {
-   "title": "ＰＨＰの脆弱性公表から１か月、現在も続く日本企業への攻撃…停止・終了したサイトも数多く",
-   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5weHNpaG91ejNLcDk5djhoZWJsdE5tM2hPQXhvSFlPN0d1cVNfaHd4T0VyalJlZElpZ0lxWUdiOXNFVnJKeHVYVWdYcmp3T2Rza09UYno0SVNLcHBOYzhoVU1TY2tyZw?oc=5",
-   "source": "読売新聞",
-   "published_at": "2026-11-20T20:00:00Z",
+   "title": "大崎電気 ネット上に技術情報の掲載確認 ランサムウエア攻撃で",
+   "url": "https://news.web.nhk/newsweb/na/nd-20261120de79441",
+   "source": "NHK経済",
+   "published_at": "2026-11-20T13:28:36Z",
+   "tags": []
+  },
+  {
+   "title": "タマホーム「不適切請求の疑い」で調査 なお全容解明に至らず",
+   "url": "https://news.web.nhk/newsweb/na/nd-20261120de79435",
+   "source": "NHK経済",
+   "published_at": "2026-11-20T12:38:02Z",
+   "tags": []
+  },
+  {
+   "title": "新米収穫量 予想比微減も備蓄米10万トン追加買い戻しへ",
+   "url": "https://news.web.nhk/newsweb/na/nd-20261120de79370",
+   "source": "NHK経済",
+   "published_at": "2026-11-20T11:00:35Z",
+   "tags": []
+  },
+  {
+   "title": "太平洋クロマグロ 韓国や台湾との協議で大型魚25％増枠へ",
+   "url": "https://news.web.nhk/newsweb/na/nd-20261120de79372",
+   "source": "NHK経済",
+   "published_at": "2026-11-20T10:59:00Z",
+   "tags": []
+  },
+  {
+   "title": "物価高 アイスは値上げ 居酒屋やピザ店は低価格で 農家は悲鳴",
+   "url": "https://news.web.nhk/newsweb/na/nd-20261120de78800",
+   "source": "NHK経済",
+   "published_at": "2026-11-20T10:02:00Z",
+   "tags": []
+  },
+  {
+   "title": "自民 税制調査会「賃上げ促進税制」の存続求める意見",
+   "url": "https://news.web.nhk/newsweb/na/nd-20261120de79237",
+   "source": "NHK経済",
+   "published_at": "2026-11-20T08:58:05Z",
+   "tags": []
+  },
+  {
+   "title": "ペルー フジモリ大統領 日本からの投資や企業進出を呼びかけ",
+   "url": "https://news.web.nhk/newsweb/na/nd-20261120de79139",
+   "source": "NHK経済",
+   "published_at": "2026-11-20T08:16:00Z",
+   "tags": []
+  },
+  {
+   "title": "来春卒業予定の大学生 就職内定率73％ 去年とほぼ同水準",
+   "url": "https://news.web.nhk/newsweb/na/nd-20261120de79029",
+   "source": "NHK経済",
+   "published_at": "2026-11-20T07:48:28Z",
    "tags": []
   }
  ],
@@ -10541,10 +10532,10 @@
     "TOB・MBO"
    ],
    "tone": "pos",
-   "move_pct": 15.04,
-   "move_basis": "pts",
-   "pts_price": 765.0,
-   "pts_time": "2026-11-20T19:41:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -10557,10 +10548,10 @@
     "TOB・MBO"
    ],
    "tone": "pos",
-   "move_pct": 15.04,
-   "move_basis": "pts",
-   "pts_price": 765.0,
-   "pts_time": "2026-11-20T19:41:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -10573,10 +10564,10 @@
     "減配"
    ],
    "tone": "neg",
-   "move_pct": 15.04,
-   "move_basis": "pts",
-   "pts_price": 765.0,
-   "pts_time": "2026-11-20T19:41:00+09:00",
+   "move_pct": null,
+   "move_basis": null,
+   "pts_price": null,
+   "pts_time": null,
    "limit": null
   },
   {
@@ -10686,7 +10677,7 @@
     "増資・希薄化"
    ],
    "tone": "neg",
-   "move_pct": 1.9,
+   "move_pct": -10.83,
    "move_basis": "pts",
    "pts_price": 21.4,
    "pts_time": "2026-11-20T17:07:00+09:00",
@@ -10750,7 +10741,7 @@
     "増資・希薄化"
    ],
    "tone": "neg",
-   "move_pct": -10.89,
+   "move_pct": -3.23,
    "move_basis": "pts",
    "pts_price": 90.0,
    "pts_time": "2026-11-20T23:55:00+09:00",
@@ -10786,7 +10777,7 @@
    "move_basis": "pts",
    "pts_price": 765.0,
    "pts_time": "2026-11-20T23:57:00+09:00",
-   "limit": "S高"
+   "limit": null
   },
   {
    "code": "6573",
@@ -10798,7 +10789,7 @@
     "増資・希薄化"
    ],
    "tone": "neg",
-   "move_pct": 35.29,
+   "move_pct": 4.55,
    "move_basis": "pts",
    "pts_price": 23.0,
    "pts_time": "2026-11-20T23:58:00+09:00",
@@ -10878,7 +10869,7 @@
     "TOB・MBO"
    ],
    "tone": "pos",
-   "move_pct": 0.0,
+   "move_pct": -0.25,
    "move_basis": "pts",
    "pts_price": 785.0,
    "pts_time": "2026-11-20T23:57:00+09:00",
@@ -10926,7 +10917,7 @@
     "株式分割"
    ],
    "tone": "pos",
-   "move_pct": 7.28,
+   "move_pct": -2.12,
    "move_basis": "pts",
    "pts_price": 3049.0,
    "pts_time": "2026-11-20T21:30:00+09:00",
@@ -10974,7 +10965,7 @@
     "決算"
    ],
    "tone": "neutral",
-   "move_pct": 0.22,
+   "move_pct": -1.21,
    "move_basis": "pts",
    "pts_price": 1800.0,
    "pts_time": "2026-11-20T23:40:00+09:00",
@@ -11038,7 +11029,7 @@
     "増資・希薄化"
    ],
    "tone": "neg",
-   "move_pct": 1.4,
+   "move_pct": 3.47,
    "move_basis": "pts",
    "pts_price": 50.7,
    "pts_time": "2026-11-20T23:41:00+09:00",
@@ -11054,7 +11045,7 @@
     "業績修正"
    ],
    "tone": "neutral",
-   "move_pct": 0.12,
+   "move_pct": -2.37,
    "move_basis": "pts",
    "pts_price": 866.0,
    "pts_time": "2026-11-20T22:51:00+09:00",
@@ -11070,7 +11061,7 @@
     "業績修正"
    ],
    "tone": "neutral",
-   "move_pct": 0.12,
+   "move_pct": -2.37,
    "move_basis": "pts",
    "pts_price": 866.0,
    "pts_time": "2026-11-20T22:51:00+09:00",
